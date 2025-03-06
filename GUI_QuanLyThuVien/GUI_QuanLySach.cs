@@ -24,5 +24,15 @@ namespace GUI_QuanLyThuVien
             dgvListBook.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvListBook.DataSource = bll_QuanLySach.XemDanhSachToanBoSach();
         }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

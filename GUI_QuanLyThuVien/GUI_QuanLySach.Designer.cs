@@ -28,53 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnRefesh = new System.Windows.Forms.Button();
+            this.btnAddBook = new System.Windows.Forms.Button();
+            this.btnSearchBook = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             this.dgvListBook = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBook)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnRefesh
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(253, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRefesh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRefesh.Location = new System.Drawing.Point(253, 46);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefesh.TabIndex = 0;
+            this.btnRefesh.Text = "Làm mới";
+            this.btnRefesh.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAddBook
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(379, 46);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAddBook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddBook.Location = new System.Drawing.Point(362, 46);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(125, 23);
+            this.btnAddBook.TabIndex = 1;
+            this.btnAddBook.Text = "Thêm sách mới";
+            this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
-            // button3
+            // btnSearchBook
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(510, 46);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSearchBook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSearchBook.Location = new System.Drawing.Point(510, 46);
+            this.btnSearchBook.Name = "btnSearchBook";
+            this.btnSearchBook.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchBook.TabIndex = 2;
+            this.btnSearchBook.Text = "Tìm sách ";
+            this.btnSearchBook.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnDel
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(667, 46);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDel.Location = new System.Drawing.Point(667, 46);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(75, 23);
+            this.btnDel.TabIndex = 3;
+            this.btnDel.Text = "Xóa sách";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // dgvListBook
             // 
@@ -93,10 +95,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 450);
             this.Controls.Add(this.dgvListBook);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnSearchBook);
+            this.Controls.Add(this.btnAddBook);
+            this.Controls.Add(this.btnRefesh);
             this.Name = "GUI_QuanLySach";
             this.Text = "GUI_QuanLySach";
             this.Load += new System.EventHandler(this.GUI_QuanLySach_Load);
@@ -107,10 +109,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnRefesh;
+        private System.Windows.Forms.Button btnAddBook;
+        private System.Windows.Forms.Button btnSearchBook;
+        private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.DataGridView dgvListBook;
     }
 }
