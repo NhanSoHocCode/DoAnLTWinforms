@@ -99,7 +99,24 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
-
-
+        public string DoiMatKhau(string username, string passwordNew)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_doimatkhau", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", passwordNew);
+                cmd.ExecuteNonQuery();
+                return "Đổi mật khẩu thành công!";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
