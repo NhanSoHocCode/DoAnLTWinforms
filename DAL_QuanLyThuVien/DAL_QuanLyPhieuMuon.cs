@@ -137,9 +137,76 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
+        public DTO_PhieuMuon viewphieumuontheoma(int maPhieuMuon)  // hien thi thong tin phieu muon theo ma roi chinh sua (ra text box) 
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_viewphieumuontheoma", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@MaPhieuMuon", maPhieuMuon);
+                DTO_PhieuMuon dTO_PhieuMuon = new DTO_PhieuMuon();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    dTO_PhieuMuon.sMaPhieuMuon = dr.GetInt32(0);
+                    dTO_PhieuMuon.sMaDocGia = dr.GetInt32(1);
+                    dTO_PhieuMuon.sTenDocGia = dr.GetString(2);
+                    dTO_PhieuMuon.sTrangThai = dr.GetInt32(3);
+                    dTO_PhieuMuon.sNgayMuon = dr.GetDateTime(4);
+                    dTO_PhieuMuon.sNgayTra = dr.GetDateTime(5);
+                    dTO_PhieuMuon.sMaThuThu = dr.GetInt32(6);
+                    dTO_PhieuMuon.sTenThuThu = dr.GetString(7);
+                }
+                return dTO_PhieuMuon;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public string ChinhSuaPhieuMuon(DTO_PhieuMuon pm) // CHINH SUA THONG TIN PHIEU MUON
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_updatephieumuon", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maphieumuon", pm.sMaPhieuMuon);
+                cmd.Parameters.AddWithValue("@trangthai", pm.sTrangThai);
+                cmd.Parameters.AddWithValue("@ngaymuon", pm.sNgayMuon);
+                cmd.Parameters.AddWithValue("@ngaytra", pm.sNgayTra);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Chinh sua thanh cong";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public string ChinhSuaSoLuongSachMuon(int maphieumuon,int soluongsach)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_updatesoluongsachmuon", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maphieumuon", maphieumuon);
+                cmd.Parameters.AddWithValue("@soluongsach", soluongsach);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Chinh sua so luong sach muon thanh cong";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
 
 
-
-    }
+        }
 }
