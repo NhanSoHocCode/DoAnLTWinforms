@@ -30,9 +30,9 @@ namespace BLL_QuanLyThuVien
         {
             return bllPhieuMuon.XoaPhieuMuon(MaPhieuMuon);
         }
-        public DTO_PhieuMuon ChinhSuaPhieuMuon(string maPhieuMuon)
+        public string ChinhSuaPhieuMuon(DTO_PhieuMuon pm)
         {
-            
+            return bllPhieuMuon.ChinhSuaPhieuMuon(pm);
         }
     }
 }

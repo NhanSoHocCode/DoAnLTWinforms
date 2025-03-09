@@ -187,7 +187,7 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
-        public string ChinhSuaSoLuongSachMuon(int maphieumuon,int soluongsach)
+        public string ChinhSuaSoLuongSachMuon(int maphieumuon, int soluongsach)
         {
             SqlConnection conn = SqlConnectionData.Connect();
             conn.Open();
@@ -205,8 +205,6 @@ namespace DAL_QuanLyThuVien
             {
                 throw ex;
             }
-
-
-
         }
+    }
 }
