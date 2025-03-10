@@ -34,6 +34,8 @@
             this.btnpw = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnQuenMK = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtName
@@ -87,11 +89,32 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
+            // btnQuenMK
+            // 
+            this.btnQuenMK.Location = new System.Drawing.Point(327, 328);
+            this.btnQuenMK.Name = "btnQuenMK";
+            this.btnQuenMK.Size = new System.Drawing.Size(75, 23);
+            this.btnQuenMK.TabIndex = 6;
+            this.btnQuenMK.Text = "tại đây";
+            this.btnQuenMK.UseVisualStyleBackColor = true;
+            this.btnQuenMK.Click += new System.EventHandler(this.btnQuenMK_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(204, 331);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "quên mật khẩu click ";
+            // 
             // GUI_DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnQuenMK);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnpw);
@@ -113,5 +136,7 @@
         private System.Windows.Forms.Label btnpw;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnQuenMK;
+        private System.Windows.Forms.Label label1;
     }
 }

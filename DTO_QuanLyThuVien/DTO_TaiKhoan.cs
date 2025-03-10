@@ -11,5 +11,6 @@ namespace DTO_QuanLyThuVien
         public string sTenTK { get; set; }
         public string sMatKhau { get; set; }
         public int sMaQuyen { get; set; }
+        public string email { get; set; }
     }
 }

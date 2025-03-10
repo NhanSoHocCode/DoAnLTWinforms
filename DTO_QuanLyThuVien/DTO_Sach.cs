@@ -16,5 +16,6 @@ namespace DTO_QuanLyThuVien
         public int sSoLuong { get; set; }
         public string sDonGia { get; set; } 
         public string sMaThuThu { get; set; }   
+        public string sSourceImange { get; set; }
     }
 }

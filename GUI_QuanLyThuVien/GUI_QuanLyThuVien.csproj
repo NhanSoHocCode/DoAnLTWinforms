@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BookItem.Designer.cs">
+      <DependentUpon>BookItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_DangKyDG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,14 +70,29 @@
     <Compile Include="GUI_Home.Designer.cs">
       <DependentUpon>GUI_Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_ListBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_ListBook.Designer.cs">
+      <DependentUpon>GUI_ListBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_QuanLySach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI_QuanLySach.Designer.cs">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_XemChiTietSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_XemChiTietSach.Designer.cs">
+      <DependentUpon>GUI_XemChiTietSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookItem.resx">
+      <DependentUpon>BookItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_DangKyDG.resx">
       <DependentUpon>GUI_DangKyDG.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,8 +102,14 @@
     <EmbeddedResource Include="GUI_Home.resx">
       <DependentUpon>GUI_Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_ListBook.resx">
+      <DependentUpon>GUI_ListBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLySach.resx">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_XemChiTietSach.resx">
+      <DependentUpon>GUI_XemChiTietSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

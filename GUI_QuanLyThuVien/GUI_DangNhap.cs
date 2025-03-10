@@ -43,5 +43,10 @@ namespace GUI_QuanLyThuVien
             MessageBox.Show("Dang nhap thanh cong!");
             
         }
+
+        private void btnQuenMK_Click(object sender, EventArgs e)
+        {
+            bll_taikhoan.SendMailPassWord(txtName.Text);
+        }
     }
 }

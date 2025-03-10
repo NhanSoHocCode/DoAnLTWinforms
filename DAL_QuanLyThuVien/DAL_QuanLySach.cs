@@ -33,6 +33,8 @@ namespace DAL_QuanLyThuVien
                 cmd.Parameters.AddWithValue("@dongia", book.sDonGia);
                 cmd.Parameters.AddWithValue("@mathuthu", book.sMaThuThu);
                 cmd.Parameters.AddWithValue("@theloai", book.sTheLoai);
+                cmd.Parameters.AddWithValue("@soluong", book.sSoLuong);
+
                 cmd.ExecuteNonQuery();
                 conn.Close();  // nho dong ket noi
                 return "Thêm thành công";
