@@ -18,7 +18,7 @@ namespace GUI_QuanLyThuVien
         }
         private Form currentFormChild;
 
-        private void OpenChildForm(Form childForm)
+        private void OpenChildForm(Form childForm, Panel pl)
         {
             if (currentFormChild != null)
             {
@@ -28,15 +28,16 @@ namespace GUI_QuanLyThuVien
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panel_Body.Controls.Add(childForm);
-            panel_Body.Tag = childForm;
+            pl.Controls.Add(childForm);
+            pl.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
         public void btnSach_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new GUI_QuanLySach());
+            OpenChildForm(new GUI_QuanLySach(), panel_Head);
+            OpenChildForm(new GUI_ListBook(), panel_Body);
+
         }
     }
 }

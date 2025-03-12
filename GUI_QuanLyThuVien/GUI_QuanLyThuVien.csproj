@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BienToanCuc.cs" />
     <Compile Include="BookItem.cs">
       <SubType>UserControl</SubType>
     </Compile>

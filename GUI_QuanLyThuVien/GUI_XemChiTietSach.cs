@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DTO_QuanLyThuVien;
 namespace GUI_QuanLyThuVien
 {
     public partial class GUI_XemChiTietSach : Form
@@ -15,6 +15,13 @@ namespace GUI_QuanLyThuVien
         public GUI_XemChiTietSach()
         {
             InitializeComponent();
+        }
+        public string MaSach { get; set; }
+        private void btnMuonSach_Click(object sender, EventArgs e)
+        {
+            DTO_Sach sach = new DTO_Sach();
+            sach.sMaSach = MaSach;
+            BienToanCuc.BookList.Add(sach); 
         }
     }
 }

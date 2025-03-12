@@ -44,6 +44,7 @@
     <Compile Include="DAL_DangKyDG.cs" />
     <Compile Include="DAL_QuanLyPhieuMuon.cs" />
     <Compile Include="DAL_QuanLySach.cs" />
+    <Compile Include="DAL_QuanLyPerson.cs" />
     <Compile Include="DAL_TaiKhoanAccess.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

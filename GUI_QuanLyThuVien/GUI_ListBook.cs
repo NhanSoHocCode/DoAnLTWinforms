@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_QuanLyThuVien;
+using DTO_QuanLyThuVien;
 
 namespace GUI_QuanLyThuVien
 {
@@ -16,7 +17,7 @@ namespace GUI_QuanLyThuVien
         public GUI_ListBook()
         {
             InitializeComponent();
-            LoadBooks("Tình Yêu"); 
+            LoadBooks("Tình Yêu");
         }
         private BLL_QuanLySach bll = new BLL_QuanLySach();
         private void LoadBooks(string theloai)
@@ -60,6 +61,33 @@ namespace GUI_QuanLyThuVien
         {
             flpListBook.Controls.Clear();
             LoadBooks("Đời Sống");
+        }
+
+        private void btnSearchBook_Click(object sender, EventArgs e)
+        {
+            flpListBook.Controls.Clear();
+            DTO_Sach book = new DTO_Sach();
+            book.sTenSach = tbxSearchBook.Text;
+            DataTable dt = bll.TimKiemSach(book);
+            foreach (DataRow dr in dt.Rows)
+            {
+                BookItem bookItem = new BookItem();
+                bookItem.book.sTenSach = dr["tensach"].ToString();
+                bookItem.book.sSoLuong = int.Parse(dr["soluong"].ToString());
+                bookItem.book.sSourceImange = dr["source_image"].ToString();
+                bookItem.LoadBook();
+                flpListBook.Controls.Add(bookItem);
+            }
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            for (int i = 0; i < BienToanCuc.BookList.Count; i++)
+            {
+                str += BienToanCuc.BookList[i].sMaSach + "\n";
+            }
+            MessageBox.Show("Đã thêm vào giỏ hàng\n" + str);
         }
     }
 }

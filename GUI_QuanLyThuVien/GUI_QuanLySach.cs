@@ -20,9 +20,7 @@ namespace GUI_QuanLyThuVien
 
         private void GUI_QuanLySach_Load(object sender, EventArgs e)
         {
-            BLL_QuanLySach bll_QuanLySach = new BLL_QuanLySach();
-            dgvListBook.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvListBook.DataSource = bll_QuanLySach.XemDanhSachToanBoSach();
+            
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)

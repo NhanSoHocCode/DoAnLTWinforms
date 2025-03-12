@@ -31,14 +31,14 @@
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnSearchBook = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
-            this.dgvListBook = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListBook)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddBook
             // 
             this.btnAddBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddBook.Location = new System.Drawing.Point(292, 46);
+            this.btnAddBook.Location = new System.Drawing.Point(221, 37);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(125, 23);
             this.btnAddBook.TabIndex = 1;
@@ -49,7 +49,7 @@
             // btnSearchBook
             // 
             this.btnSearchBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSearchBook.Location = new System.Drawing.Point(470, 46);
+            this.btnSearchBook.Location = new System.Drawing.Point(400, 37);
             this.btnSearchBook.Name = "btnSearchBook";
             this.btnSearchBook.Size = new System.Drawing.Size(75, 23);
             this.btnSearchBook.TabIndex = 2;
@@ -59,7 +59,7 @@
             // btnDel
             // 
             this.btnDel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDel.Location = new System.Drawing.Point(605, 46);
+            this.btnDel.Location = new System.Drawing.Point(568, 37);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(75, 23);
             this.btnDel.TabIndex = 3;
@@ -67,30 +67,27 @@
             this.btnDel.UseVisualStyleBackColor = true;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // dgvListBook
+            // panel1
             // 
-            this.dgvListBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvListBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListBook.Location = new System.Drawing.Point(3, 110);
-            this.dgvListBook.Name = "dgvListBook";
-            this.dgvListBook.RowHeadersWidth = 51;
-            this.dgvListBook.RowTemplate.Height = 24;
-            this.dgvListBook.Size = new System.Drawing.Size(904, 295);
-            this.dgvListBook.TabIndex = 4;
+            this.panel1.Controls.Add(this.btnDel);
+            this.panel1.Controls.Add(this.btnAddBook);
+            this.panel1.Controls.Add(this.btnSearchBook);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(883, 100);
+            this.panel1.TabIndex = 4;
             // 
             // GUI_QuanLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 450);
-            this.Controls.Add(this.dgvListBook);
-            this.Controls.Add(this.btnDel);
-            this.Controls.Add(this.btnSearchBook);
-            this.Controls.Add(this.btnAddBook);
+            this.ClientSize = new System.Drawing.Size(883, 414);
+            this.Controls.Add(this.panel1);
             this.Name = "GUI_QuanLySach";
             this.Text = "GUI_QuanLySach";
             this.Load += new System.EventHandler(this.GUI_QuanLySach_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListBook)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -99,6 +96,6 @@
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button btnSearchBook;
         private System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.DataGridView dgvListBook;
+        private System.Windows.Forms.Panel panel1;
     }
 }

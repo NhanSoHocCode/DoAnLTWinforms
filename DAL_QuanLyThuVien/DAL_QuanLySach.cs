@@ -45,7 +45,7 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
-        public DataTable TimKiemSach(DTO_Sach book)
+        public DataTable TimKiemSach(DTO_Sach book)   // co tim kiem ten sach gan dung , ex: nhap ten sach la "Yeu" thi ket qua la "Tinh Yeu"
         {
             if(book.sMaSach != null)
             {
@@ -68,9 +68,9 @@ namespace DAL_QuanLyThuVien
                     throw ex;
                 }
             }
-            if (book.sTenSach != null)
+            if (book.sTenSach != null)             
             {
-                String strSql = "proc_searchbookbytensach";
+                String strSql = "proc_searchbookbytensachGanDung";
                 SqlConnection conn = SqlConnectionData.Connect();
                 conn.Open();
                 try
@@ -82,7 +82,7 @@ namespace DAL_QuanLyThuVien
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     conn.Close();  // nho dong ket noi
-                    return dt;
+                    return dt;   // theo thu tu truong trong database 
                 }
                 catch (Exception ex)
                 {
