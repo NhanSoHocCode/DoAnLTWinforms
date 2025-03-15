@@ -83,6 +83,12 @@
     <Compile Include="GUI_QuanLySach.Designer.cs">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_QuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuenMatKhau.Designer.cs">
+      <DependentUpon>GUI_QuenMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_XemChiTietSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLySach.resx">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuenMatKhau.resx">
+      <DependentUpon>GUI_QuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_XemChiTietSach.resx">
       <DependentUpon>GUI_XemChiTietSach.cs</DependentUpon>

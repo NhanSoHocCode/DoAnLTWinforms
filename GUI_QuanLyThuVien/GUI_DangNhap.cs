@@ -46,7 +46,8 @@ namespace GUI_QuanLyThuVien
 
         private void btnQuenMK_Click(object sender, EventArgs e)
         {
-            bll_taikhoan.SendMailPassWord(txtName.Text);
+            GUI_QuenMatKhau quenMK = new GUI_QuenMatKhau();
+            quenMK.Show();
         }
     }
 }

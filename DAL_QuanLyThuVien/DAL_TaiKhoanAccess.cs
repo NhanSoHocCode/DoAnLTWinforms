@@ -16,6 +16,35 @@ namespace DAL_QuanLyThuVien
             string info = DBConnect.CheckLogin(taikhoan);
             return info;
         }
+        public string DoiMatKhauBangOTP(string taikhoan, int OTP)
+        {
+            string info = "";
+            string strSql = "proc_changepassbyOTP";
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                if (taikhoan == null)
+                {
+                    return "Tài khoản không tồn tại!";
+                }
+                else
+                {
+                    SqlCommand cmd = new SqlCommand(strSql, conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@email", taikhoan);
+                    cmd.Parameters.AddWithValue("@newpass", OTP);
+                    cmd.ExecuteNonQuery();
+                    info = "Đổi mật khẩu thành công!";
+                    conn.Close();
+                    return info;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public DTO_TaiKhoan GetMail(string username)
         {
             string strSql = "proc_getemailtouser";
