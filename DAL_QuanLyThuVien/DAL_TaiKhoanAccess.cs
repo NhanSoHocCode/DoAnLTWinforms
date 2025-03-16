@@ -111,6 +111,27 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
+        public string LayQuyenUser(string user)
+        {
+            string strSql = "proc_GetRoleUser";
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(strSql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@user", user);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                string role = reader["role"].ToString();
+                conn.Close();
+                return role;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         
     }
 }

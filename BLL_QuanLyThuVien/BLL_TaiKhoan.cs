@@ -41,5 +41,9 @@ namespace BLL_QuanLyThuVien
         {
             return dal_taikhoan.MailHopLe(email);
         }
+        public string LayQuyenUser(string username)
+        {
+            return dal_taikhoan.LayQuyenUser(username);
+        }
     }
 }

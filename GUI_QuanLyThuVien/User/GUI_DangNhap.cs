@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BLL_QuanLyThuVien;
 using System.Collections;
 using GUI_QuanLyThuVien.User;
+using GUI_QuanLyThuVien.Administration;
 
 namespace GUI_QuanLyThuVien
 {
@@ -28,6 +29,7 @@ namespace GUI_QuanLyThuVien
         {
             taikhoan.sTenTK = txtName.Text;
             taikhoan.sMatKhau = txtPw.Text;
+            taikhoan.sMaQuyen = int.Parse(bll_taikhoan.LayQuyenUser(txtName.Text));
             string getUser = bll_taikhoan.CheckeLogin(taikhoan);
             switch (getUser)
             {
@@ -41,8 +43,25 @@ namespace GUI_QuanLyThuVien
                     MessageBox.Show("Tai khoan hoac mat khau khong dung!");
                     return;
             }
-            MessageBox.Show("Dang nhap thanh cong!");
-            
+            if (taikhoan.sMaQuyen == 3)
+            {
+                GUI_HomeManager homeManager = new GUI_HomeManager();
+                homeManager.role = taikhoan.sMaQuyen;
+                homeManager.username = taikhoan.sTenTK;
+                homeManager.Show();
+            } else if(taikhoan.sMaQuyen == 1)
+            {
+                GUI_Home home = new GUI_Home();
+                home.Show();
+            }
+            else
+            {
+                GUI_Home home = new GUI_Home();
+                home.Show();
+            }
+
+
+
         }
 
         private void btnQuenMK_Click(object sender, EventArgs e)

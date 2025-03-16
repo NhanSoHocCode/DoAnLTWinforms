@@ -38,9 +38,9 @@
             // btnAddBook
             // 
             this.btnAddBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddBook.Location = new System.Drawing.Point(221, 37);
+            this.btnAddBook.Location = new System.Drawing.Point(407, 26);
             this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(125, 23);
+            this.btnAddBook.Size = new System.Drawing.Size(260, 47);
             this.btnAddBook.TabIndex = 1;
             this.btnAddBook.Text = "Thêm sách mới";
             this.btnAddBook.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@
             // btnSearchBook
             // 
             this.btnSearchBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSearchBook.Location = new System.Drawing.Point(400, 37);
+            this.btnSearchBook.Location = new System.Drawing.Point(759, 26);
             this.btnSearchBook.Name = "btnSearchBook";
-            this.btnSearchBook.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchBook.Size = new System.Drawing.Size(210, 47);
             this.btnSearchBook.TabIndex = 2;
             this.btnSearchBook.Text = "Tìm sách ";
             this.btnSearchBook.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@
             // btnDel
             // 
             this.btnDel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDel.Location = new System.Drawing.Point(568, 37);
+            this.btnDel.Location = new System.Drawing.Point(1093, 26);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(75, 23);
+            this.btnDel.Size = new System.Drawing.Size(210, 47);
             this.btnDel.TabIndex = 3;
             this.btnDel.Text = "Xóa sách";
             this.btnDel.UseVisualStyleBackColor = true;
@@ -75,16 +75,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(883, 100);
+            this.panel1.Size = new System.Drawing.Size(1720, 100);
             this.panel1.TabIndex = 4;
             // 
             // GUI_QuanLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 414);
+            this.ClientSize = new System.Drawing.Size(1720, 980);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_QuanLySach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_QuanLySach";
             this.Load += new System.EventHandler(this.GUI_QuanLySach_Load);
             this.panel1.ResumeLayout(false);

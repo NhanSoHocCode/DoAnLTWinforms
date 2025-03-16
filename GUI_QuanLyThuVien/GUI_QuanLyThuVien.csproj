@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\GUI_HomeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\GUI_HomeManager.Designer.cs">
+      <DependentUpon>GUI_HomeManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="BienToanCuc.cs" />
     <Compile Include="BookItem.cs">
       <SubType>UserControl</SubType>
@@ -65,10 +71,10 @@
     <Compile Include="User\GUI_DangNhap.Designer.cs">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_Home.cs">
+    <Compile Include="Customer\GUI_Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_Home.Designer.cs">
+    <Compile Include="Customer\GUI_Home.Designer.cs">
       <DependentUpon>GUI_Home.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_ListBook.cs">
@@ -77,10 +83,10 @@
     <Compile Include="GUI_ListBook.Designer.cs">
       <DependentUpon>GUI_ListBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QuanLySach.cs">
+    <Compile Include="Administration\GUI_QuanLySach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_QuanLySach.Designer.cs">
+    <Compile Include="Administration\GUI_QuanLySach.Designer.cs">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
     </Compile>
     <Compile Include="User\GUI_NhapOTPDoiMatKhau.cs">
@@ -115,6 +121,9 @@
     <Compile Include="User\GUI_XacNhanOTP.Designer.cs">
       <DependentUpon>GUI_XacNhanOTP.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administration\GUI_HomeManager.resx">
+      <DependentUpon>GUI_HomeManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookItem.resx">
       <DependentUpon>BookItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,13 +133,13 @@
     <EmbeddedResource Include="User\GUI_DangNhap.resx">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_Home.resx">
+    <EmbeddedResource Include="Customer\GUI_Home.resx">
       <DependentUpon>GUI_Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_ListBook.resx">
       <DependentUpon>GUI_ListBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QuanLySach.resx">
+    <EmbeddedResource Include="Administration\GUI_QuanLySach.resx">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\GUI_NhapOTPDoiMatKhau.resx">
