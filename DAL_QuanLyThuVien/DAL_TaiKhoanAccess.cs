@@ -67,7 +67,50 @@ namespace DAL_QuanLyThuVien
             {
                 throw ex;
             }
-
         }
+        public Boolean MailHopLe(string email)
+        {
+            string strSql = "proc_mailhople";
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(strSql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@email", email);
+                SqlParameter outputParam = new SqlParameter("@result", SqlDbType.Bit)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(outputParam);
+                cmd.ExecuteNonQuery(); // Thực thi Stored Procedure
+                conn.Close();
+                return Convert.ToBoolean(outputParam.Value);    // tra ve gia tri true false truc tiep 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public string DoiMatKhau(string username, string passwordNew)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_doimatkhau", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", passwordNew);
+                cmd.ExecuteNonQuery();
+                return "Đổi mật khẩu thành công!";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        
     }
 }

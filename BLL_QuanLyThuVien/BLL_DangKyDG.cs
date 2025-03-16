@@ -49,7 +49,7 @@ namespace BLL_QuanLyThuVien
             {
                 return "Chức vụ độc giả không được để trống";
             }
-            return dalDangKyDG.ThemTKDG(person);
+            return dalDangKyDG.ThemTKDocGia(person);
         }
     }
 }

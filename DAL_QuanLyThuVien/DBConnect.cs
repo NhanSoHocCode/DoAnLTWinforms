@@ -17,7 +17,6 @@ namespace DAL_QuanLyThuVien
             SqlConnection conn = new SqlConnection(strCon);
             return conn;
         }
-
     }
     public class DBConnect
     {
@@ -47,39 +46,6 @@ namespace DAL_QuanLyThuVien
             }
             return user;
         }
-        public static string ThemTKDocGia(DTO_Person dtoPerson)
-        {
-            SqlConnection conn = SqlConnectionData.Connect();
-            try
-            {
-                conn.Open();
-                SqlCommand command = new SqlCommand("proc_addUser", conn);
-                command.CommandType = CommandType.StoredProcedure;
-
-           
-                command.Parameters.AddWithValue("@hoTen", dtoPerson.sHoTen);
-                command.Parameters.AddWithValue("@ngaySinh", dtoPerson.sNgaySinh);
-                command.Parameters.AddWithValue("@diaChi", dtoPerson.sDiaChi);
-                command.Parameters.AddWithValue("@gioiTinh", dtoPerson.sGioiTinh);
-                command.Parameters.AddWithValue("@soDT", dtoPerson.sSDT);
-                command.Parameters.AddWithValue("@email", dtoPerson.sEmail);
-                command.Parameters.AddWithValue("@username", dtoPerson.sUsername);
-
-                command.Parameters.AddWithValue("@password", dtoPerson.sPassword);
-                command.ExecuteNonQuery();
-                return "Tài khoản đã được thêm thành công!";
-                
-            }
-            catch (Exception ex)
-            {
-                return "Lỗi kết nối: " + ex.Message;
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
         public static DataTable Select(CommandType cmdType, String strSql)
         {
             SqlConnection conn = SqlConnectionData.Connect();
@@ -99,24 +65,6 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
-        public string DoiMatKhau(string username, string passwordNew)
-        {
-            SqlConnection conn = new SqlConnection();
-            conn = SqlConnectionData.Connect();
-            conn.Open();
-            try
-            {
-                SqlCommand cmd = new SqlCommand("proc_doimatkhau", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", passwordNew);
-                cmd.ExecuteNonQuery();
-                return "Đổi mật khẩu thành công!";
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        
     }
 }

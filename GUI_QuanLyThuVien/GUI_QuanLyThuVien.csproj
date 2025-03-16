@@ -53,16 +53,16 @@
     <Compile Include="BookItem.Designer.cs">
       <DependentUpon>BookItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_DangKyDG.cs">
+    <Compile Include="User\GUI_DangKyDG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_DangKyDG.Designer.cs">
+    <Compile Include="User\GUI_DangKyDG.Designer.cs">
       <DependentUpon>GUI_DangKyDG.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_DangNhap.cs">
+    <Compile Include="User\GUI_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_DangNhap.Designer.cs">
+    <Compile Include="User\GUI_DangNhap.Designer.cs">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_Home.cs">
@@ -83,10 +83,16 @@
     <Compile Include="GUI_QuanLySach.Designer.cs">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QuenMatKhau.cs">
+    <Compile Include="User\GUI_NhapOTPDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI_QuenMatKhau.Designer.cs">
+    <Compile Include="User\GUI_NhapOTPDoiMatKhau.Designer.cs">
+      <DependentUpon>GUI_NhapOTPDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\GUI_QuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\GUI_QuenMatKhau.Designer.cs">
       <DependentUpon>GUI_QuenMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_XemChiTietSach.cs">
@@ -97,13 +103,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\GUI_XacNhapMailDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\GUI_XacNhapMailDangKy.Designer.cs">
+      <DependentUpon>GUI_XacNhapMailDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\GUI_XacNhanOTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\GUI_XacNhanOTP.Designer.cs">
+      <DependentUpon>GUI_XacNhanOTP.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BookItem.resx">
       <DependentUpon>BookItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_DangKyDG.resx">
+    <EmbeddedResource Include="User\GUI_DangKyDG.resx">
       <DependentUpon>GUI_DangKyDG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_DangNhap.resx">
+    <EmbeddedResource Include="User\GUI_DangNhap.resx">
       <DependentUpon>GUI_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Home.resx">
@@ -115,7 +133,10 @@
     <EmbeddedResource Include="GUI_QuanLySach.resx">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QuenMatKhau.resx">
+    <EmbeddedResource Include="User\GUI_NhapOTPDoiMatKhau.resx">
+      <DependentUpon>GUI_NhapOTPDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\GUI_QuenMatKhau.resx">
       <DependentUpon>GUI_QuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_XemChiTietSach.resx">
@@ -130,6 +151,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="User\GUI_XacNhapMailDangKy.resx">
+      <DependentUpon>GUI_XacNhapMailDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\GUI_XacNhanOTP.resx">
+      <DependentUpon>GUI_XacNhanOTP.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

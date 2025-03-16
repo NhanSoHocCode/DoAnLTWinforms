@@ -34,6 +34,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSearchTK = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnclose = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,14 +54,14 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(359, 16);
+            this.label2.Size = new System.Drawing.Size(309, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Please enter your email address to search for your account.";
             // 
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(3, 35);
+            this.txtEmail.Location = new System.Drawing.Point(3, 51);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(362, 22);
             this.txtEmail.TabIndex = 2;
@@ -68,7 +69,7 @@
             // btnExit
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnExit.Location = new System.Drawing.Point(3, 63);
+            this.btnExit.Location = new System.Drawing.Point(84, 79);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 3;
@@ -78,7 +79,7 @@
             // btnSearchTK
             // 
             this.btnSearchTK.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSearchTK.Location = new System.Drawing.Point(84, 63);
+            this.btnSearchTK.Location = new System.Drawing.Point(3, 79);
             this.btnSearchTK.Name = "btnSearchTK";
             this.btnSearchTK.Size = new System.Drawing.Size(75, 23);
             this.btnSearchTK.TabIndex = 4;
@@ -91,20 +92,34 @@
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Controls.Add(this.label2);
             this.flowLayoutPanel1.Controls.Add(this.txtEmail);
-            this.flowLayoutPanel1.Controls.Add(this.btnExit);
             this.flowLayoutPanel1.Controls.Add(this.btnSearchTK);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(159, 39);
+            this.flowLayoutPanel1.Controls.Add(this.btnExit);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(34, 51);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(383, 246);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(346, 271);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // btnclose
+            // 
+            this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnclose.Location = new System.Drawing.Point(390, 12);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.Size = new System.Drawing.Size(27, 23);
+            this.btnclose.TabIndex = 2;
+            this.btnclose.Text = "X";
+            this.btnclose.UseVisualStyleBackColor = false;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // GUI_QuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(460, 373);
+            this.Controls.Add(this.btnclose);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_QuenMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_QuenMatKhau";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -119,5 +134,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btnclose;
     }
 }

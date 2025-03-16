@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIs\API_XacThucMail.cs" />
     <Compile Include="BLL_DangKyDG.cs" />
     <Compile Include="BLL_QuanLyPhieuMuon.cs" />
     <Compile Include="BLL_QuanLySach.cs" />

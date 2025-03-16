@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_QuanLyThuVien;
 using System.Collections;
+using GUI_QuanLyThuVien.User;
 
 namespace GUI_QuanLyThuVien
 {
@@ -48,6 +49,17 @@ namespace GUI_QuanLyThuVien
         {
             GUI_QuenMatKhau quenMK = new GUI_QuenMatKhau();
             quenMK.Show();
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnCreateTKnew_Click(object sender, EventArgs e)
+        {
+            GUI_XacNhapMailDangKy xacNhapMailDangKy = new GUI_XacNhapMailDangKy();
+            xacNhapMailDangKy.Show();
         }
     }
 }
