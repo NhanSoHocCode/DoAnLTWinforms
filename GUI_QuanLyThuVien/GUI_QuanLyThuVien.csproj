@@ -52,6 +52,12 @@
     <Compile Include="Administration\GUI_HomeManager.Designer.cs">
       <DependentUpon>GUI_HomeManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administration\GUI_AddEditSachMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\GUI_AddEditSachMoi.Designer.cs">
+      <DependentUpon>GUI_AddEditSachMoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="BienToanCuc.cs" />
     <Compile Include="BookItem.cs">
       <SubType>UserControl</SubType>
@@ -123,6 +129,9 @@
     </Compile>
     <EmbeddedResource Include="Administration\GUI_HomeManager.resx">
       <DependentUpon>GUI_HomeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\GUI_AddEditSachMoi.resx">
+      <DependentUpon>GUI_AddEditSachMoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookItem.resx">
       <DependentUpon>BookItem.cs</DependentUpon>

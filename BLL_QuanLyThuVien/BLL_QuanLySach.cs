@@ -24,6 +24,13 @@ namespace BLL_QuanLyThuVien
         {
             return dal_QuanLySach.TimKiemSach(book);
         }
-
+        public string XoaSach(DTO_Sach book) // tra ve thong{
+        {
+            return dal_QuanLySach.XoaSach(book);
+        }
+        public string SuaSach(DTO_Sach book)
+        {
+            return dal_QuanLySach.SuaSach(book);
+        }
     }
 }
