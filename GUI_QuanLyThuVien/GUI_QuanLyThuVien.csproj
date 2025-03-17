@@ -46,23 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\GUI_AddEditBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\GUI_AddEditBook.Designer.cs">
+      <DependentUpon>GUI_AddEditBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administration\GUI_HomeManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administration\GUI_HomeManager.Designer.cs">
       <DependentUpon>GUI_HomeManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administration\GUI_AddEditSachMoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administration\GUI_AddEditSachMoi.Designer.cs">
-      <DependentUpon>GUI_AddEditSachMoi.cs</DependentUpon>
-    </Compile>
     <Compile Include="BienToanCuc.cs" />
-    <Compile Include="BookItem.cs">
+    <Compile Include="Customer\BookItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BookItem.Designer.cs">
+    <Compile Include="Customer\BookItem.Designer.cs">
       <DependentUpon>BookItem.cs</DependentUpon>
     </Compile>
     <Compile Include="User\GUI_DangKyDG.cs">
@@ -127,13 +127,13 @@
     <Compile Include="User\GUI_XacNhanOTP.Designer.cs">
       <DependentUpon>GUI_XacNhanOTP.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administration\GUI_AddEditBook.resx">
+      <DependentUpon>GUI_AddEditBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\GUI_HomeManager.resx">
       <DependentUpon>GUI_HomeManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administration\GUI_AddEditSachMoi.resx">
-      <DependentUpon>GUI_AddEditSachMoi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BookItem.resx">
+    <EmbeddedResource Include="Customer\BookItem.resx">
       <DependentUpon>BookItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\GUI_DangKyDG.resx">

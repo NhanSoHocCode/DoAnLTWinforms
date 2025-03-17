@@ -26,15 +26,14 @@ namespace DAL_QuanLyThuVien
             {
                 SqlCommand cmd = new SqlCommand(strSql, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@masach", book.sMaSach);
                 cmd.Parameters.AddWithValue("@tacgia", book.sTacGia);
-                cmd.Parameters.AddWithValue("@tensach", book.sTenSach);
-                cmd.Parameters.AddWithValue("@nhaxb", book.sNhaXuatBan);
-                cmd.Parameters.AddWithValue("@dongia", book.sDonGia);
-                cmd.Parameters.AddWithValue("@mathuthu", book.sMaThuThu);
-                cmd.Parameters.AddWithValue("@theloai", book.sTheLoai);
+                cmd.Parameters.AddWithValue("@dongia", decimal.Parse(book.sDonGia));
                 cmd.Parameters.AddWithValue("@soluong", book.sSoLuong);
-
+                cmd.Parameters.AddWithValue("@theloai", book.sTheLoai);
+                cmd.Parameters.AddWithValue("@tensach", book.sTenSach);
+                cmd.Parameters.AddWithValue("@mathuthu", int.Parse(book.sMaThuThu));
+                cmd.Parameters.AddWithValue("@source_image", book.sSourceImange);
+                cmd.Parameters.AddWithValue("@nhaxb", book.sNhaXuatBan);
                 cmd.ExecuteNonQuery();
                 conn.Close();  // nho dong ket noi
                 return "Thêm thành công";

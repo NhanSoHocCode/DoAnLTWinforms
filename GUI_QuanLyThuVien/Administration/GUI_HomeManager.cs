@@ -18,8 +18,8 @@ namespace GUI_QuanLyThuVien.Administration
         {
             InitializeComponent();
         }
-        public int role;
-        public string username;
+        public int role = 3;
+        public string username = "adm";
         private void GUI_HomeManager_Load_1(object sender, EventArgs e)
         {
             BLL_LayAnhThe bll = new BLL_LayAnhThe();

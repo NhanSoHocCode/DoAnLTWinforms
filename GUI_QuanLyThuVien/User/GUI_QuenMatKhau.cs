@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using BLL_QuanLyThuVien;
 using BLL_QuanLyThuVien.APIs;
 using GUI_QuanLyThuVien.User;
 namespace GUI_QuanLyThuVien
