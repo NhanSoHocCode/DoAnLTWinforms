@@ -46,12 +46,12 @@
             this.txtXacNhanpw = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbInfoRePass = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.lbInFo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnclose = new System.Windows.Forms.Button();
-            this.lbInfoRePass = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,9 +71,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(31, 88);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 16);
+            this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Birth day";
+            this.label4.Text = "Ngày Sinh";
             // 
             // label5
             // 
@@ -89,27 +89,27 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(22, 174);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 16);
+            this.label7.Size = new System.Drawing.Size(92, 16);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Telephone Numer";
+            this.label7.Text = "Số ĐIện Thoại";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(251, 88);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 16);
+            this.label8.Size = new System.Drawing.Size(60, 16);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Set";
+            this.label8.Text = "Giới Tính";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(22, 223);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 16);
+            this.label9.Size = new System.Drawing.Size(49, 16);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Address";
+            this.label9.Text = "Địa Chỉ";
             // 
             // label10
             // 
@@ -216,6 +216,16 @@
             this.panel1.Size = new System.Drawing.Size(321, 190);
             this.panel1.TabIndex = 23;
             // 
+            // lbInfoRePass
+            // 
+            this.lbInfoRePass.AutoSize = true;
+            this.lbInfoRePass.ForeColor = System.Drawing.Color.Red;
+            this.lbInfoRePass.Location = new System.Drawing.Point(131, 155);
+            this.lbInfoRePass.Name = "lbInfoRePass";
+            this.lbInfoRePass.Size = new System.Drawing.Size(166, 16);
+            this.lbInfoRePass.TabIndex = 23;
+            this.lbInfoRePass.Text = "mật khẩu không trùng khớp";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label4);
@@ -274,16 +284,6 @@
             this.btnclose.Text = "X";
             this.btnclose.UseVisualStyleBackColor = false;
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
-            // 
-            // lbInfoRePass
-            // 
-            this.lbInfoRePass.AutoSize = true;
-            this.lbInfoRePass.ForeColor = System.Drawing.Color.Red;
-            this.lbInfoRePass.Location = new System.Drawing.Point(131, 155);
-            this.lbInfoRePass.Name = "lbInfoRePass";
-            this.lbInfoRePass.Size = new System.Drawing.Size(166, 16);
-            this.lbInfoRePass.TabIndex = 23;
-            this.lbInfoRePass.Text = "mật khẩu không trùng khớp";
             // 
             // GUI_DangKyDG
             // 
