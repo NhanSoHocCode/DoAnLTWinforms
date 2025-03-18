@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace GUI_QuanLyThuVien.User
 {
@@ -18,7 +19,10 @@ namespace GUI_QuanLyThuVien.User
         public GUI_XacNhapMailDangKy()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(20, 52, 75);
+            txtEmail.BackColor = Color.FromArgb(20, 52, 75);
         }
+        
         public BLL_TaiKhoan bll_taikhoan = new BLL_TaiKhoan();
         public API_XacThucMail api = new API_XacThucMail();
         
@@ -47,6 +51,31 @@ namespace GUI_QuanLyThuVien.User
                 xacNhanOTP.Show();
             }
 
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "")
+            {
+                txtEmail.Text = "Email Address";
+                txtEmail.ForeColor = Color.Gray; // Màu placeholder
+            }
+        }
+
+        private void txtEmail_Enter(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "Email Address")
+            {
+                txtEmail.Text = "";
+                txtEmail.ForeColor = Color.White; // Đổi màu chữ thành trắng
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pen = new Pen(Color.Gray, 2);
+            g.DrawLine(pen, 80, 50, 335, 50);
         }
     }
 }
