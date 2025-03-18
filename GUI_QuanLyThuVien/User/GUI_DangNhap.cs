@@ -36,7 +36,7 @@ namespace GUI_QuanLyThuVien
             Graphics g = e.Graphics;
             Pen pen = new Pen(Color.Gray, 2);
             g.DrawLine(pen, 10, 230, 250, 230);
-            g.DrawLine(pen, 10, 285, 250, 285);
+            g.DrawLine(pen, 10, 287, 250, 287);
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -149,6 +149,11 @@ namespace GUI_QuanLyThuVien
         {
             GUI_QuenMatKhau quenMK = new GUI_QuenMatKhau();
             quenMK.Show();
+        }
+
+        private void picShow_Click(object sender, EventArgs e)
+        {
+            txtPw.UseSystemPasswordChar = !txtPw.UseSystemPasswordChar;
         }
     }
 }
