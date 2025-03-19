@@ -157,7 +157,7 @@ namespace DAL_QuanLyThuVien
             conn.Open();
             try
             {
-                SqlCommand cmd = new SqlCommand("proc_editBook", conn);
+                SqlCommand cmd = new SqlCommand("proc_updatebook", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@masach",int.Parse(book.sMaSach));
                 cmd.Parameters.AddWithValue("@tacgia", book.sTacGia);
@@ -166,7 +166,7 @@ namespace DAL_QuanLyThuVien
                 cmd.Parameters.AddWithValue("@theloai", book.sTheLoai);
                 cmd.Parameters.AddWithValue("@tensach", book.sTenSach);
                 cmd.Parameters.AddWithValue("@mathuthu", int.Parse(book.sMaThuThu));
-                cmd.Parameters.AddWithValue("@sourceimage", book.sSourceImange);
+                cmd.Parameters.AddWithValue("@source_image", book.sSourceImange);
                 cmd.Parameters.AddWithValue("@nhaxb", book.sNhaXuatBan);
                 cmd.ExecuteNonQuery();
                 conn.Close();

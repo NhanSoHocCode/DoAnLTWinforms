@@ -26,7 +26,7 @@ namespace GUI_QuanLyThuVien.Administration
             lbname.Text = username;
             lbnameRole.Text = "Quản trị viên master";
             string a = bll.LayAnhThe(username);
-            string path = a.Contains(":") ? a : "C:\\Users\\acer\\Documents\\Zalo Received Files\\images" + a;
+            string path = a.Contains(":") ? a : "D:\\K25_Project_LTWinform\\DoAn\\images\\" + a;
             pictureBoxAdm.Image = Image.FromFile(path);
         }
         private Form currentFormChild;

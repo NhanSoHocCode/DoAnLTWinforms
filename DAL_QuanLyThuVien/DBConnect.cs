@@ -13,8 +13,7 @@ namespace DAL_QuanLyThuVien
     {
         public static SqlConnection Connect()
         {
-            string strCon = "Data Source=LAPTOP-6KP13OSJ;Initial Catalog=QuanLyThuVienNew1;Integrated Security=True;TrustServerCertificate=True;Connect Timeout=30;";
-
+            string strCon = "Data Source=DANGNGOCNHAN;Initial Catalog=QuanLyThuVIenNew;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
             SqlConnection conn = new SqlConnection(strCon);
             return conn;
         }

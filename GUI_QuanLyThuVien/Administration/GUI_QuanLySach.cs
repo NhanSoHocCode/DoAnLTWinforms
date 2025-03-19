@@ -102,5 +102,12 @@ namespace GUI_QuanLyThuVien
             dtg1.DataSource = bll.XemDanhSachToanBoSach();
         }
 
+        private void txtSearchBook_KeyDown(object sender, KeyEventArgs e)
+        {
+            DTO_Sach dTO_Sach = new DTO_Sach();
+            dTO_Sach.sTenSach = txtSearchBook.Text;
+            dtg1.ClearSelection();
+            dtg1.DataSource = bll.TimKiemSach(dTO_Sach);
+        }
     }
 }

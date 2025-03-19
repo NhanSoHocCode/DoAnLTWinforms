@@ -18,7 +18,7 @@ namespace GUI_QuanLyThuVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI_XacNhanOTP());
+            Application.Run(new GUI_QuanLySach());
         }
     }
 }
