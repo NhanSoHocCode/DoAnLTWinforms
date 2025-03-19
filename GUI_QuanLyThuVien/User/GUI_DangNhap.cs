@@ -48,6 +48,7 @@ namespace GUI_QuanLyThuVien
                 GUI_HomeManager homeManager = new GUI_HomeManager();
                 homeManager.role = taikhoan.sMaQuyen;
                 homeManager.username = taikhoan.sTenTK;
+                // lam tu day de lay time 
                 homeManager.Show();
             } else if(taikhoan.sMaQuyen == 1)
             {

@@ -45,5 +45,9 @@ namespace BLL_QuanLyThuVien
         {
             return dal_taikhoan.LayQuyenUser(username);
         }
+        public string LuuThoiGianLogin(string username, DateTime time)
+        {
+            return dal_taikhoan.LuuThoiGianDangNhap(username, time);
+        }
     }
 }

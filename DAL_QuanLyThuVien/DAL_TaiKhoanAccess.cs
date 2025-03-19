@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO_QuanLyThuVien;
+using Microsoft.SqlServer.Server;
 
 namespace DAL_QuanLyThuVien
 {
@@ -126,6 +127,26 @@ namespace DAL_QuanLyThuVien
                 string role = reader["role"].ToString();
                 conn.Close();
                 return role;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public string LuuThoiGianDangNhap(string user, DateTime time)
+        {
+            string strSql = "proc_updateTimeLogin";
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(strSql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@username", user);
+                cmd.Parameters.AddWithValue("@time", time);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Update Time Login";
             }
             catch (Exception ex)
             {
