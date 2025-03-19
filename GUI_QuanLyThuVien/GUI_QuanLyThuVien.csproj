@@ -168,7 +168,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User\GUI_XacNhanOTP.vi.resx">
+      <DependentUpon>GUI_XacNhanOTP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\GUI_XacNhapMailDangKy.resx">
       <DependentUpon>GUI_XacNhapMailDangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +201,21 @@
       <Project>{8fbdb4bb-72fa-4fbe-9885-4cfb3308c367}</Project>
       <Name>DTO_QuanLyThuVien</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eeg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

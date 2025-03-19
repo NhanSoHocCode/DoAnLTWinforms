@@ -139,7 +139,9 @@
             this.Controls.Add(this.btnDongVat);
             this.Controls.Add(this.btnTinhYeu);
             this.Controls.Add(this.flpListBook);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_ListBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_ListBook";
             this.ResumeLayout(false);
             this.PerformLayout();

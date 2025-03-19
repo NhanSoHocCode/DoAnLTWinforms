@@ -37,11 +37,11 @@ namespace GUI_QuanLyThuVien.User
             }
             else if (txtOTP.Text == "")
             {
-                MessageBox.Show("Vui long nhap OTP");
+                MessageBox.Show("Vui Lòng Nhập Lại OTP");
             }
             else
             {
-                MessageBox.Show("OTP khong dung");
+                MessageBox.Show("OTP Không Đúng");
             }
             
         }
@@ -58,13 +58,13 @@ namespace GUI_QuanLyThuVien.User
             if (countdown > 0)
             {
                 countdown--;
-                lbtimer.Text = $"mã OTP của bạn có hiệu lực trong {countdown} s"; // Cập nhật Label
+                lbtimer.Text = $"Mã OTP Của Bạn Hết Hiệu Lực Trong {countdown}s"; // Cập nhật Label
             }
             else
             {
                 timer1.Stop();
                 OTP = -1;   // xoa bo OTP cua mail da goi di neu het thoi gian
-                MessageBox.Show("Thời gian đã hết!");
+                MessageBox.Show("Thời Gian Đã Hết Hạn!");
             }
         }
     }
