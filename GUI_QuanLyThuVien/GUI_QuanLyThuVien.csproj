@@ -52,11 +52,23 @@
     <Compile Include="Administration\GUI_AddEditBook.Designer.cs">
       <DependentUpon>GUI_AddEditBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administration\GUI_EditPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\GUI_EditPhieuMuon.Designer.cs">
+      <DependentUpon>GUI_EditPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administration\GUI_HomeManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administration\GUI_HomeManager.Designer.cs">
       <DependentUpon>GUI_HomeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\GUI_QuanLyPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\GUI_QuanLyPhieuMuon.Designer.cs">
+      <DependentUpon>GUI_QuanLyPhieuMuon.cs</DependentUpon>
     </Compile>
     <Compile Include="BienToanCuc.cs" />
     <Compile Include="Customer\BookItem.cs">
@@ -130,8 +142,14 @@
     <EmbeddedResource Include="Administration\GUI_AddEditBook.resx">
       <DependentUpon>GUI_AddEditBook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\GUI_EditPhieuMuon.resx">
+      <DependentUpon>GUI_EditPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\GUI_HomeManager.resx">
       <DependentUpon>GUI_HomeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\GUI_QuanLyPhieuMuon.resx">
+      <DependentUpon>GUI_QuanLyPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\BookItem.resx">
       <DependentUpon>BookItem.cs</DependentUpon>

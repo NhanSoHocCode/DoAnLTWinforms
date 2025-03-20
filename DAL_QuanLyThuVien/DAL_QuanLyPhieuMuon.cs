@@ -75,6 +75,7 @@ namespace DAL_QuanLyThuVien
         }
         public DataTable TimKiemPhieuMuon(DTO_PhieuMuon pm) // TIM KIEM PHIEU MUON THEO MA PHIEU MUON
         {
+            DataTable dt = new DataTable();
             if (pm.sMaPhieuMuon != 0)
             {
                 String strSql = "proc_searchphieumuonbymaphieumuon";
@@ -86,17 +87,15 @@ namespace DAL_QuanLyThuVien
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@maphieumuon", pm.sMaPhieuMuon);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
                     da.Fill(dt);
                     conn.Close();
-                    return dt;
                 }
                 catch (Exception ex)
                 {
                     throw ex;
                 }
             }
-            if (pm.sMaDocGia != 0)
+            if (pm.sTenDocGia != null)
             {
                 String strSql = "proc_searchphieumuonbymadocgia";
                 SqlConnection conn = SqlConnectionData.Connect();
@@ -105,19 +104,17 @@ namespace DAL_QuanLyThuVien
                 {
                     SqlCommand cmd = new SqlCommand(strSql, conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@madocgia", pm.sMaDocGia);
+                    cmd.Parameters.AddWithValue("@tendocgia", pm.sTenDocGia);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
                     da.Fill(dt);
                     conn.Close();
-                    return dt;
                 }
                 catch (Exception ex)
                 {
                     throw ex;
                 }
             }
-            return null;
+            return dt;
         }
         public string XoaPhieuMuon(int maPhieuMuon) // XOA PHIEU MUON THEO MA PHIEU MUON
         {
@@ -153,7 +150,7 @@ namespace DAL_QuanLyThuVien
                     dTO_PhieuMuon.sMaPhieuMuon = dr.GetInt32(0);
                     dTO_PhieuMuon.sMaDocGia = dr.GetInt32(1);
                     dTO_PhieuMuon.sTenDocGia = dr.GetString(2);
-                    dTO_PhieuMuon.sTrangThai = dr.GetInt32(3);
+                    dTO_PhieuMuon.sTrangThai = dr.GetString(3);
                     dTO_PhieuMuon.sNgayMuon = dr.GetDateTime(4);
                     dTO_PhieuMuon.sNgayTra = dr.GetDateTime(5);
                     dTO_PhieuMuon.sMaThuThu = dr.GetInt32(6);
@@ -165,6 +162,10 @@ namespace DAL_QuanLyThuVien
             {
                 throw ex;
             }
+        }
+        public DataTable ViewListPM()
+        {
+            return Select(CommandType.StoredProcedure, "proc_viewphieumuon");
         }
         public string ChinhSuaPhieuMuon(DTO_PhieuMuon pm) // CHINH SUA THONG TIN PHIEU MUON
         {

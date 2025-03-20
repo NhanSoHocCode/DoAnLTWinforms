@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,30 +10,30 @@ namespace BLL_QuanLyThuVien
 {
     public class BLL_QuanLyPhieuMuon
     {
-        BLL_QuanLyPhieuMuon bllPhieuMuon = new BLL_QuanLyPhieuMuon();
-        public string XemChiTiet()
-        {
-            return bllPhieuMuon.XemChiTiet();
-        }
+        DAL_QuanLyPhieuMuon dllPhieuMuon = new DAL_QuanLyPhieuMuon();
         public string ThemPhieuMuon(DTO_PhieuMuon phieumuon)
         {
-            return bllPhieuMuon.ThemPhieuMuon(phieumuon);
+            return dllPhieuMuon.ThemPhieuMuon(phieumuon);
         }
-        public string ThemSachVaoPhieuMuon(DTO_Sach book, string maPhieuMuon)
+        public string ThemSachVaoPhieuMuon(DTO_Sach book, int maPhieuMuon)
         {
-            return bllPhieuMuon.ThemSachVaoPhieuMuon(book, maPhieuMuon);
+            return dllPhieuMuon.ThemsachVaoPhieuMuon( book, maPhieuMuon);
         }
-        public string TimKiemPhieuMuon(DTO_PhieuMuon pm)
+        public DataTable TimKiemPhieuMuon(DTO_PhieuMuon pm)
         {
-            return bllPhieuMuon.TimKiemPhieuMuon(pm);
+            return dllPhieuMuon.TimKiemPhieuMuon(pm);
         }
         public string XoaPhieuMuon(int MaPhieuMuon)
         {
-            return bllPhieuMuon.XoaPhieuMuon(MaPhieuMuon);
+            return dllPhieuMuon.XoaPhieuMuon(MaPhieuMuon);
         }
         public string ChinhSuaPhieuMuon(DTO_PhieuMuon pm)
         {
-            return bllPhieuMuon.ChinhSuaPhieuMuon(pm);
+            return dllPhieuMuon.ChinhSuaPhieuMuon(pm);
+        }
+        public DataTable viewListPM()
+        {
+            return dllPhieuMuon.ViewListPM();
         }
     }
 }
