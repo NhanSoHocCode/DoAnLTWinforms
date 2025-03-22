@@ -46,16 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administration\GUI_AddEditBook.cs">
+    <Compile Include="Administration\QLDocGia\GUI_ControlChiTietDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administration\GUI_AddEditBook.Designer.cs">
+    <Compile Include="Administration\QLDocGia\GUI_ControlChiTietDocGia.Designer.cs">
+      <DependentUpon>GUI_ControlChiTietDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\QLSach\GUI_AddEditBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\QLSach\GUI_AddEditBook.Designer.cs">
       <DependentUpon>GUI_AddEditBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administration\GUI_EditPhieuMuon.cs">
+    <Compile Include="Administration\QLPhieuMuon\GUI_EditPhieuMuon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administration\GUI_EditPhieuMuon.Designer.cs">
+    <Compile Include="Administration\QLPhieuMuon\GUI_EditPhieuMuon.Designer.cs">
       <DependentUpon>GUI_EditPhieuMuon.cs</DependentUpon>
     </Compile>
     <Compile Include="Administration\GUI_HomeManager.cs">
@@ -64,17 +70,29 @@
     <Compile Include="Administration\GUI_HomeManager.Designer.cs">
       <DependentUpon>GUI_HomeManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administration\GUI_QuanLyPhieuMuon.cs">
+    <Compile Include="Administration\QLDocGia\GUI_QuanLyDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administration\GUI_QuanLyPhieuMuon.Designer.cs">
+    <Compile Include="Administration\QLDocGia\GUI_QuanLyDocGia.Designer.cs">
+      <DependentUpon>GUI_QuanLyDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\QLPhieuMuon\GUI_QuanLyPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\QLPhieuMuon\GUI_QuanLyPhieuMuon.Designer.cs">
       <DependentUpon>GUI_QuanLyPhieuMuon.cs</DependentUpon>
     </Compile>
-    <Compile Include="BienToanCuc.cs" />
-    <Compile Include="Customer\BookItem.cs">
+    <Compile Include="Administration\QLDocGia\PersonItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Customer\BookItem.Designer.cs">
+    <Compile Include="Administration\QLDocGia\PersonItem.Designer.cs">
+      <DependentUpon>PersonItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BienToanCuc.cs" />
+    <Compile Include="Administration\QLSach\BookItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administration\QLSach\BookItem.Designer.cs">
       <DependentUpon>BookItem.cs</DependentUpon>
     </Compile>
     <Compile Include="User\GUI_DangKyDG.cs">
@@ -101,10 +119,10 @@
     <Compile Include="GUI_ListBook.Designer.cs">
       <DependentUpon>GUI_ListBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administration\GUI_QuanLySach.cs">
+    <Compile Include="Administration\QLSach\GUI_QuanLySach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administration\GUI_QuanLySach.Designer.cs">
+    <Compile Include="Administration\QLSach\GUI_QuanLySach.Designer.cs">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
     </Compile>
     <Compile Include="User\GUI_NhapOTPDoiMatKhau.cs">
@@ -139,19 +157,28 @@
     <Compile Include="User\GUI_XacNhanOTP.Designer.cs">
       <DependentUpon>GUI_XacNhanOTP.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Administration\GUI_AddEditBook.resx">
+    <EmbeddedResource Include="Administration\QLDocGia\GUI_ControlChiTietDocGia.resx">
+      <DependentUpon>GUI_ControlChiTietDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\QLSach\GUI_AddEditBook.resx">
       <DependentUpon>GUI_AddEditBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administration\GUI_EditPhieuMuon.resx">
+    <EmbeddedResource Include="Administration\QLPhieuMuon\GUI_EditPhieuMuon.resx">
       <DependentUpon>GUI_EditPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\GUI_HomeManager.resx">
       <DependentUpon>GUI_HomeManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administration\GUI_QuanLyPhieuMuon.resx">
+    <EmbeddedResource Include="Administration\QLDocGia\GUI_QuanLyDocGia.resx">
+      <DependentUpon>GUI_QuanLyDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\QLPhieuMuon\GUI_QuanLyPhieuMuon.resx">
       <DependentUpon>GUI_QuanLyPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\BookItem.resx">
+    <EmbeddedResource Include="Administration\QLDocGia\PersonItem.resx">
+      <DependentUpon>PersonItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\QLSach\BookItem.resx">
       <DependentUpon>BookItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\GUI_DangKyDG.resx">
@@ -166,7 +193,7 @@
     <EmbeddedResource Include="GUI_ListBook.resx">
       <DependentUpon>GUI_ListBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administration\GUI_QuanLySach.resx">
+    <EmbeddedResource Include="Administration\QLSach\GUI_QuanLySach.resx">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\GUI_NhapOTPDoiMatKhau.resx">

@@ -43,7 +43,22 @@ namespace GUI_QuanLyThuVien
             Function = "Delete";  // lam sao de doi thu thu khi chon or click 
         }
 
-        private void dtg1_CellClick(object sender, DataGridViewCellEventArgs e)
+ 
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            dtg1.ClearSelection();
+            dtg1.DataSource = bll.XemDanhSachToanBoSach();
+        }
+
+        private void txtSearchBook_KeyDown(object sender, KeyEventArgs e)
+        {
+            DTO_Sach dTO_Sach = new DTO_Sach();
+            dTO_Sach.sTenSach = txtSearchBook.Text;
+            dtg1.ClearSelection();
+            dtg1.DataSource = bll.TimKiemSach(dTO_Sach);
+        }
+
+        private void dtg1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (dtg1 == null || bll == null || Function == null)
             {
@@ -95,19 +110,6 @@ namespace GUI_QuanLyThuVien
                     form.Show();
                 }
             }
-        }
-        private void btnRefesh_Click(object sender, EventArgs e)
-        {
-            dtg1.ClearSelection();
-            dtg1.DataSource = bll.XemDanhSachToanBoSach();
-        }
-
-        private void txtSearchBook_KeyDown(object sender, KeyEventArgs e)
-        {
-            DTO_Sach dTO_Sach = new DTO_Sach();
-            dTO_Sach.sTenSach = txtSearchBook.Text;
-            dtg1.ClearSelection();
-            dtg1.DataSource = bll.TimKiemSach(dTO_Sach);
         }
     }
 }

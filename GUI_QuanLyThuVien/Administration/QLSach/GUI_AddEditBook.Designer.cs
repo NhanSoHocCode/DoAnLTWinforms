@@ -236,10 +236,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 324);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "GUI_AddEditBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_AddEditBook";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.GUI_AddEditBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nrudSL)).EndInit();
             this.panel1.ResumeLayout(false);

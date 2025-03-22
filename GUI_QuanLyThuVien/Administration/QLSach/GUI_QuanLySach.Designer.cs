@@ -138,6 +138,7 @@
             this.dtg1.RowTemplate.Height = 24;
             this.dtg1.Size = new System.Drawing.Size(1720, 825);
             this.dtg1.TabIndex = 0;
+            this.dtg1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellClick_1);
             // 
             // GUI_QuanLySach
             // 

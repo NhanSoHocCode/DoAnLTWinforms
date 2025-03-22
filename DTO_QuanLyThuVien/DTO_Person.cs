@@ -19,5 +19,6 @@ namespace DTO_QuanLyThuVien
 
         public string sMa { get; set; }
         public string sPassword { get; set; }
+        public string sSourceImage { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,25 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
             return ps;
+        }
+        public DataTable ViewPerson(string Sqlstr)    // proc_viewthuthu, proc_viewdocgia
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand( Sqlstr, conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
         //// tim kiem theo ten gan dung // vi du nhap ten Nhan thi ket qua la Dang Ngoc Nhan
         //public DTO_Person TimKiemTheoTen(string strSql, string tenTT)   //proc_searchthuthutotenthuthu, proc_searchdocgiatotendocgia

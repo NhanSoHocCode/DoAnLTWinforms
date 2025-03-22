@@ -96,5 +96,11 @@ namespace GUI_QuanLyThuVien.Administration
                 }
             }
         }
+
+        private void btnListCanhCaoQuaHan_Click(object sender, EventArgs e)
+        {
+            dtg1.ClearSelection();
+            dtg1.DataSource = bll_quanlyphieumuon.ListCanhCaoQuaHan();
+        }
     }
 }

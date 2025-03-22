@@ -26,12 +26,12 @@ namespace GUI_QuanLyThuVien
 
             foreach (DataRow dr in dt.Rows)
             {
-                if (dr["theloai"].ToString() == theloai)
+                if (dr["Thể Loại"].ToString() == theloai)
                 {
                     BookItem bookItem = new BookItem();
-                    bookItem.book.sTenSach = dr["tensach"].ToString();
-                    bookItem.book.sSoLuong = int.Parse(dr["soluong"].ToString());
-                    bookItem.book.sSourceImange = dr["source_image"].ToString();
+                    bookItem.book.sTenSach = dr["Tên Sách"].ToString();
+                    bookItem.book.sSoLuong = int.Parse(dr["Số Lượng"].ToString());
+                    bookItem.book.sSourceImange = dr["Source Image"].ToString();
                     bookItem.LoadBook();
                     flpListBook.Controls.Add(bookItem);
                 }

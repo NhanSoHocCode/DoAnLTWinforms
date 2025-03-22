@@ -59,7 +59,9 @@ namespace GUI_QuanLyThuVien.Administration
 
         private void btnpheiumuon_Click(object sender, EventArgs e)
         {
-
+            GUI_QuanLyPhieuMuon form = new GUI_QuanLyPhieuMuon();
+            OpenChildForm(form, panel3);
+            currentFormChild = form;
         }
 
         private void btndocgia_Click(object sender, EventArgs e)

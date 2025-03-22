@@ -34,9 +34,10 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtg1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnListCanhCaoQuaHan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg1)).BeginInit();
@@ -96,6 +97,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnListCanhCaoQuaHan);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtSearchPhieu);
@@ -107,6 +109,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1702, 166);
             this.panel1.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(626, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(245, 16);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "lưu ý: search theo mã PM và tên độc giả ";
             // 
             // panel2
             // 
@@ -129,15 +141,16 @@
             this.dtg1.TabIndex = 0;
             this.dtg1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellClick);
             // 
-            // label2
+            // btnListCanhCaoQuaHan
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(626, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 16);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "lưu ý: search theo mã PM và tên độc giả ";
+            this.btnListCanhCaoQuaHan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnListCanhCaoQuaHan.Location = new System.Drawing.Point(1181, 12);
+            this.btnListCanhCaoQuaHan.Name = "btnListCanhCaoQuaHan";
+            this.btnListCanhCaoQuaHan.Size = new System.Drawing.Size(210, 47);
+            this.btnListCanhCaoQuaHan.TabIndex = 11;
+            this.btnListCanhCaoQuaHan.Text = "Danh sách cảnh cáo ";
+            this.btnListCanhCaoQuaHan.UseVisualStyleBackColor = true;
+            this.btnListCanhCaoQuaHan.Click += new System.EventHandler(this.btnListCanhCaoQuaHan_Click);
             // 
             // GUI_QuanLyPhieuMuon
             // 
@@ -169,5 +182,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dtg1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnListCanhCaoQuaHan;
     }
 }
