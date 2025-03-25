@@ -73,6 +73,16 @@ namespace GUI_QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap email_4x {
+            get {
+                object obj = ResourceManager.GetObject("email@4x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap password_icon {
             get {
                 object obj = ResourceManager.GetObject("password_icon", resourceCulture);
@@ -106,6 +116,16 @@ namespace GUI_QuanLyThuVien.Properties {
         internal static System.Drawing.Bitmap username {
             get {
                 object obj = ResourceManager.GetObject("username", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xac_nhan_emailll_4x {
+            get {
+                object obj = ResourceManager.GetObject("xac nhan emailll@4x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

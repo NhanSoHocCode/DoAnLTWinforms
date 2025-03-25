@@ -262,5 +262,11 @@
   <ItemGroup>
     <None Include="Resources\eeg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xac nhan emailll%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email%404x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

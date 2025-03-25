@@ -57,7 +57,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 126);
+            this.label2.Location = new System.Drawing.Point(100, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(258, 16);
             this.label2.TabIndex = 1;
@@ -133,7 +133,7 @@
             this.lbNameMail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbNameMail.AutoSize = true;
             this.lbNameMail.ForeColor = System.Drawing.Color.Red;
-            this.lbNameMail.Location = new System.Drawing.Point(128, 152);
+            this.lbNameMail.Location = new System.Drawing.Point(173, 161);
             this.lbNameMail.Name = "lbNameMail";
             this.lbNameMail.Size = new System.Drawing.Size(59, 16);
             this.lbNameMail.TabIndex = 8;
