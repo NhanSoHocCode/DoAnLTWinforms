@@ -100,11 +100,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(124, 16);
+            this.label2.Location = new System.Drawing.Point(71, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(225, 32);
+            this.label2.Size = new System.Drawing.Size(334, 32);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Quên Mật Khẩu";
+            this.label2.Text = "Xác Nhận Mail Đăng Ký";
             // 
             // pictureBox1
             // 
