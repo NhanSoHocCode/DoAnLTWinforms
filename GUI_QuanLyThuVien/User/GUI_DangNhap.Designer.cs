@@ -34,17 +34,18 @@
             this.btnpw = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCreateTKnew = new System.Windows.Forms.Button();
-            this.btnclose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.linkForGetPass = new System.Windows.Forms.LinkLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picShow = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtName
@@ -53,7 +54,7 @@
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(46, 262);
+            this.txtName.Location = new System.Drawing.Point(31, 227);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(267, 20);
             this.txtName.TabIndex = 1;
@@ -67,18 +68,19 @@
             this.txtPw.BackColor = System.Drawing.Color.White;
             this.txtPw.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPw.Location = new System.Drawing.Point(46, 331);
+            this.txtPw.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtPw.Location = new System.Drawing.Point(31, 296);
             this.txtPw.Name = "txtPw";
             this.txtPw.Size = new System.Drawing.Size(267, 20);
             this.txtPw.TabIndex = 2;
-            this.txtPw.UseSystemPasswordChar = true;
+            this.txtPw.Text = "Password";
             this.txtPw.Enter += new System.EventHandler(this.txtPw_Enter);
             this.txtPw.Leave += new System.EventHandler(this.txtPw_Leave);
             // 
             // lbName
             // 
             this.lbName.AutoSize = true;
-            this.lbName.Location = new System.Drawing.Point(38, 243);
+            this.lbName.Location = new System.Drawing.Point(23, 208);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(102, 16);
             this.lbName.TabIndex = 2;
@@ -87,7 +89,7 @@
             // btnpw
             // 
             this.btnpw.AutoSize = true;
-            this.btnpw.Location = new System.Drawing.Point(38, 312);
+            this.btnpw.Location = new System.Drawing.Point(23, 277);
             this.btnpw.Name = "btnpw";
             this.btnpw.Size = new System.Drawing.Size(62, 16);
             this.btnpw.TabIndex = 3;
@@ -99,7 +101,7 @@
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(15, 405);
+            this.btnLogin.Location = new System.Drawing.Point(26, 404);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(310, 31);
             this.btnLogin.TabIndex = 3;
@@ -113,7 +115,7 @@
             this.btnCreateTKnew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreateTKnew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateTKnew.ForeColor = System.Drawing.Color.White;
-            this.btnCreateTKnew.Location = new System.Drawing.Point(15, 456);
+            this.btnCreateTKnew.Location = new System.Drawing.Point(26, 455);
             this.btnCreateTKnew.Name = "btnCreateTKnew";
             this.btnCreateTKnew.Size = new System.Drawing.Size(310, 34);
             this.btnCreateTKnew.TabIndex = 4;
@@ -121,23 +123,12 @@
             this.btnCreateTKnew.UseVisualStyleBackColor = false;
             this.btnCreateTKnew.Click += new System.EventHandler(this.btnCreateTKnew_Click);
             // 
-            // btnclose
-            // 
-            this.btnclose.BackColor = System.Drawing.Color.Lime;
-            this.btnclose.Location = new System.Drawing.Point(318, 0);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(29, 23);
-            this.btnclose.TabIndex = 8;
-            this.btnclose.Text = "X";
-            this.btnclose.UseVisualStyleBackColor = false;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(96, 191);
+            this.label1.Location = new System.Drawing.Point(107, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 32);
             this.label1.TabIndex = 11;
@@ -148,7 +139,7 @@
             this.linkForGetPass.AutoSize = true;
             this.linkForGetPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkForGetPass.ForeColor = System.Drawing.Color.White;
-            this.linkForGetPass.Location = new System.Drawing.Point(228, 367);
+            this.linkForGetPass.Location = new System.Drawing.Point(239, 341);
             this.linkForGetPass.Name = "linkForGetPass";
             this.linkForGetPass.Size = new System.Drawing.Size(97, 16);
             this.linkForGetPass.TabIndex = 5;
@@ -160,7 +151,7 @@
             // 
             this.pictureBox3.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.password_icon;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(15, 327);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 292);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
             this.pictureBox3.TabIndex = 12;
@@ -170,7 +161,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.user;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(104, 38);
+            this.pictureBox2.Location = new System.Drawing.Point(89, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 150);
             this.pictureBox2.TabIndex = 10;
@@ -180,7 +171,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.username;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 255);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 223);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 25);
             this.pictureBox1.TabIndex = 9;
@@ -191,41 +182,51 @@
             this.picShow.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
             this.picShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picShow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picShow.Location = new System.Drawing.Point(309, 325);
+            this.picShow.Location = new System.Drawing.Point(294, 294);
             this.picShow.Name = "picShow";
             this.picShow.Size = new System.Drawing.Size(25, 25);
             this.picShow.TabIndex = 13;
             this.picShow.TabStop = false;
             this.picShow.Click += new System.EventHandler(this.picShow_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.picShow);
+            this.panel1.Controls.Add(this.txtName);
+            this.panel1.Controls.Add(this.txtPw);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.lbName);
+            this.panel1.Controls.Add(this.btnpw);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(12, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(324, 325);
+            this.panel1.TabIndex = 14;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // GUI_DangNhap
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 588);
-            this.Controls.Add(this.picShow);
+            this.ClientSize = new System.Drawing.Size(342, 527);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkForGetPass);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnclose);
             this.Controls.Add(this.btnCreateTKnew);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnpw);
-            this.Controls.Add(this.lbName);
-            this.Controls.Add(this.txtPw);
-            this.Controls.Add(this.txtName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "GUI_DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GUI_DangNhap";
+            this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.GUI_DangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,12 +240,12 @@
         private System.Windows.Forms.Label btnpw;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCreateTKnew;
-        private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.LinkLabel linkForGetPass;
         private System.Windows.Forms.PictureBox picShow;
+        private System.Windows.Forms.Panel panel1;
     }
 }

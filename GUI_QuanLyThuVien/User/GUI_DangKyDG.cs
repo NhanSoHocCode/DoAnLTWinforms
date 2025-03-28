@@ -20,7 +20,9 @@ namespace GUI_QuanLyThuVien
         public string mail;
         public GUI_DangKyDG()
         {
+            this.BackColor = Color.FromArgb(20, 52, 75);
             InitializeComponent();
+
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
@@ -53,7 +55,8 @@ namespace GUI_QuanLyThuVien
 
         private void GUI_DangKyDG_Load(object sender, EventArgs e)
         {
-            lbInFo.Text = "đang thực hiện với tư cách " + mail;
+            this.BackColor = Color.FromArgb(20, 52, 75);
+            lbInFo.Text = "Đang Thực Hiện Với Tư Cách " + mail;
         }
 
         private void btnclose_Click(object sender, EventArgs e)
@@ -69,7 +72,7 @@ namespace GUI_QuanLyThuVien
             } else
             {
                 txtXacNhanpw.ForeColor = Color.Black;
-                lbInfoRePass.Text = "mật khẩu trùng khớp";
+                lbInfoRePass.Text = "Mật Khẩu Trùng Khớp";
                 lbInfoRePass.ForeColor = Color.Black;
             }
         }
@@ -105,5 +108,133 @@ namespace GUI_QuanLyThuVien
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtUser_Leave(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "")
+            {
+                txtUser.Text = "Username";
+                txtUser.ForeColor = Color.Gray; // Màu placeholder
+            }
+        }
+
+        private void txtUser_Enter(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "Username")
+            {
+                txtUser.Text = "";
+                txtUser.ForeColor = Color.White;
+            }
+        }
+
+        private void txtpw_Enter(object sender, EventArgs e)
+        {
+            if (txtpw.Text == "Password")
+            {
+                txtpw.Text = "";
+                txtpw.ForeColor = Color.Gray; // Đổi màu chữ thành trắng
+            }
+
+        }
+
+        private void txtpw_Leave(object sender, EventArgs e)
+        {
+            if (txtpw.Text == "")
+            {
+                txtpw.Text = "Password";
+                txtpw.ForeColor = Color.Gray; // Màu placeholder
+            }
+        }
+
+        private void txtName_Enter(object sender, EventArgs e)
+        {
+             if (txtName.Text == "Họ Và Tên")
+            {
+                txtName.Text = "";
+                txtName.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+            if (txtName.Text == "")
+            {
+                txtName.Text = "Họ Và Tên";
+                txtName.ForeColor = Color.Gray; // Màu placeholder
+            }
+        }
+
+        private void txtSdt_Enter(object sender, EventArgs e)
+        {
+            if (txtSdt.Text == "Số Điện Thoại")
+            {
+                txtSdt.Text = "";
+                txtSdt.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtSdt_Leave(object sender, EventArgs e)
+        {
+            if (txtSdt.Text == "")
+            {
+                txtSdt.Text = "Số Điện Thoại";
+                txtSdt.ForeColor = Color.Gray; // Màu placeholder
+            }
+        }
+
+        private void txtDiaChi_Enter(object sender, EventArgs e)
+        {
+            if (txtDiaChi.Text == "Địa Chỉ")
+            {
+                txtDiaChi.Text = "";
+                txtDiaChi.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtDiaChi_Leave(object sender, EventArgs e)
+        {
+            if (txtDiaChi.Text == "")
+            {
+                txtDiaChi.Text = "Địa Chỉ";
+                txtDiaChi.ForeColor = Color.Gray; // Màu placeholder
+            }
+        }
+
+        private void txtpw_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtXacNhanpw_Enter(object sender, EventArgs e)
+        {
+            if (txtXacNhanpw.Text == "Password")
+            {
+                txtXacNhanpw.Text = "";
+                txtXacNhanpw.ForeColor = Color.Gray; // Đổi màu chữ thành trắng
+            }
+            
+        }
+
+        private void txtXacNhanpw_Leave(object sender, EventArgs e)
+        {
+            if (txtXacNhanpw.Text == "")
+            {
+                txtXacNhanpw.Text = "Password";
+                txtXacNhanpw.ForeColor = Color.Gray; // Màu placeholder
+            }
+
+        }
+
+        
     }
 }

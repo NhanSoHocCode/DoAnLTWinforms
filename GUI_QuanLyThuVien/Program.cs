@@ -18,7 +18,8 @@ namespace GUI_QuanLyThuVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI_XacNhapMailDangKy());
+            Application.Run(new GUI_DangKyDG());
+            //Application.Run(new GUI_DangNhap());
         }
     }
 }

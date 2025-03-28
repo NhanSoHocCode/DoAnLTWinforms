@@ -30,14 +30,7 @@ namespace GUI_QuanLyThuVien
             
 
         }
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-            Graphics g = e.Graphics;
-            Pen pen = new Pen(Color.Gray, 2);
-            g.DrawLine(pen, 10, 230, 250, 230);
-            g.DrawLine(pen, 10, 287, 250, 287);
-        }
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
             taikhoan.sTenTK = txtName.Text;
@@ -84,10 +77,7 @@ namespace GUI_QuanLyThuVien
         //    quenMK.Show();
         //}
 
-        private void btnclose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        
 
         private void btnCreateTKnew_Click(object sender, EventArgs e)
         {
@@ -156,5 +146,16 @@ namespace GUI_QuanLyThuVien
         {
             txtPw.UseSystemPasswordChar = !txtPw.UseSystemPasswordChar;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+        
+            base.OnPaint(e);
+            Graphics g = e.Graphics;
+            Pen pen = new Pen(Color.Gray, 2);
+            g.DrawLine(pen, 1, 203, 250, 203);
+            g.DrawLine(pen, 1, 260, 250, 260);
+       
+    }
     }
 }
