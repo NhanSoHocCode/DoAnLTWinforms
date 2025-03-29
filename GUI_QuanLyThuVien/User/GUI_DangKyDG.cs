@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,8 +22,29 @@ namespace GUI_QuanLyThuVien
         public GUI_DangKyDG()
         {
             this.BackColor = Color.FromArgb(20, 52, 75);
-            InitializeComponent();
 
+            InitializeComponent();
+            panel3.Dock = DockStyle.Top;
+            panel3.BackColor = Color.Transparent; // Làm trong suốt
+
+            this.Controls.Add(panel3);
+            panel3.MouseDown += PanelTitleBar_MouseDown;
+            txtDiaChi.BackColor = Color.FromArgb(20, 52, 75);
+            txtSdt.BackColor = Color.FromArgb(20, 52, 75);
+            txtName.BackColor = Color.FromArgb(20, 52, 75);
+            txtXacNhanpw.BackColor = Color.FromArgb(20, 52, 75);
+            txtpw.BackColor = Color.FromArgb(20, 52, 75);
+            txtUser.BackColor = Color.FromArgb(20, 52, 75);
+        }
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0xA1, 0x2, 0); // Gửi lệnh di chuyển cửa sổ
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
@@ -81,43 +103,24 @@ namespace GUI_QuanLyThuVien
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            base.OnPaint(e);
+            Graphics g = e.Graphics;
+            Pen pen = new Pen(Color.Gray, 2);
+            g.DrawLine(pen, 20, 158, 250, 158);
+            g.DrawLine(pen, 20, 190, 250, 190);
+            g.DrawLine(pen, 20, 220, 250, 220);
         }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbGioiTinh_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
+            base.OnPaint(e);
+            Graphics g = e.Graphics;
+            Pen pen = new Pen(Color.Gray, 2);
+            g.DrawLine(pen, 20, 45, 250, 45);
+            g.DrawLine(pen, 20, 115, 250, 115);
+            g.DrawLine(pen, 20, 150, 250, 150);
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void txtUser_Leave(object sender, EventArgs e)
         {
@@ -133,7 +136,7 @@ namespace GUI_QuanLyThuVien
             if (txtUser.Text == "Username")
             {
                 txtUser.Text = "";
-                txtUser.ForeColor = Color.White;
+                txtUser.ForeColor = Color.Gray;
             }
         }
 
@@ -142,17 +145,19 @@ namespace GUI_QuanLyThuVien
             if (txtpw.Text == "Password")
             {
                 txtpw.Text = "";
-                txtpw.ForeColor = Color.Gray; // Đổi màu chữ thành trắng
+                txtpw.ForeColor = Color.Black; // Trả lại màu chữ bình thường
+                txtpw.UseSystemPasswordChar = true; // Ẩn mật khẩu
             }
 
         }
 
         private void txtpw_Leave(object sender, EventArgs e)
         {
-            if (txtpw.Text == "")
+            if (string.IsNullOrWhiteSpace(txtpw.Text))
             {
                 txtpw.Text = "Password";
-                txtpw.ForeColor = Color.Gray; // Màu placeholder
+                txtpw.ForeColor = Color.Gray;
+                txtpw.UseSystemPasswordChar = false; // Hiện placeholder
             }
         }
 
@@ -210,31 +215,43 @@ namespace GUI_QuanLyThuVien
             }
         }
 
-        private void txtpw_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void txtXacNhanpw_Enter(object sender, EventArgs e)
         {
-            if (txtXacNhanpw.Text == "Password")
+            if (txtXacNhanpw.Text == "Confirm password")
             {
                 txtXacNhanpw.Text = "";
-                txtXacNhanpw.ForeColor = Color.Gray; // Đổi màu chữ thành trắng
+                txtXacNhanpw.ForeColor = Color.Black; // Trả lại màu chữ bình thường
+                txtXacNhanpw.UseSystemPasswordChar = true; // Ẩn mật khẩu
             }
-            
+
         }
 
         private void txtXacNhanpw_Leave(object sender, EventArgs e)
         {
-            if (txtXacNhanpw.Text == "")
+            if (string.IsNullOrWhiteSpace(txtXacNhanpw.Text))
             {
-                txtXacNhanpw.Text = "Password";
-                txtXacNhanpw.ForeColor = Color.Gray; // Màu placeholder
+                txtXacNhanpw.Text = "Confirm password";
+                txtXacNhanpw.ForeColor = Color.Gray;
+                txtXacNhanpw.UseSystemPasswordChar = false; // Hiện placeholder
             }
 
         }
 
-        
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
+        private void picShow_Click(object sender, EventArgs e)
+        {
+            txtpw.UseSystemPasswordChar = !txtpw.UseSystemPasswordChar;
+        }
+
+        private void picShowConfirm_Click(object sender, EventArgs e)
+        {
+            txtXacNhanpw.UseSystemPasswordChar = !txtXacNhanpw.UseSystemPasswordChar;
+        }
     }
 }

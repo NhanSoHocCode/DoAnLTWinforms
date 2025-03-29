@@ -13,6 +13,7 @@ using System.Collections;
 using GUI_QuanLyThuVien.User;
 using GUI_QuanLyThuVien.Administration;
 using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace GUI_QuanLyThuVien
 {
@@ -27,10 +28,28 @@ namespace GUI_QuanLyThuVien
             this.BackColor = Color.FromArgb(20, 52, 75);
             txtName.BackColor = Color.FromArgb(20, 52, 75);
             txtPw.BackColor = Color.FromArgb(20, 52, 75);
-            
+            this.FormBorderStyle = FormBorderStyle.None;
+
+            ////ssssss
+            ///
+            panel3.Dock = DockStyle.Top;
+            panel3.BackColor = Color.Transparent; // Làm trong suốt
+
+            this.Controls.Add(panel3);
+            panel3.MouseDown += PanelTitleBar_MouseDown;
 
         }
-        
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0xA1, 0x2, 0); // Gửi lệnh di chuyển cửa sổ
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             taikhoan.sTenTK = txtName.Text;
@@ -112,7 +131,7 @@ namespace GUI_QuanLyThuVien
             if (txtName.Text == "Username")
             {
                 txtName.Text = "";
-                txtName.ForeColor = Color.White; // Đổi màu chữ thành trắng
+                txtName.ForeColor = Color.Gray; // Đổi màu chữ thành trắng
             }
         }
 
@@ -157,5 +176,10 @@ namespace GUI_QuanLyThuVien
             g.DrawLine(pen, 1, 260, 250, 260);
        
     }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
