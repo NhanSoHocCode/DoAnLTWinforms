@@ -266,5 +266,10 @@ namespace GUI_QuanLyThuVien
         {
             txtXacNhanpw.UseSystemPasswordChar = !txtXacNhanpw.UseSystemPasswordChar;
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
