@@ -26,16 +26,17 @@ namespace BLL_QuanLyThuVien
         }
         public string CheckeLogin(DTO_TaiKhoan taikhoan)
         {
-            if (taikhoan.sTenTK == "")
+            if (taikhoan.sTenTK == "" || taikhoan.sTenTK == "Username")
             {
-                return "Vui long nhap ten tai khoan!";
-            }
-            if (taikhoan.sMatKhau == "")
+                return "nonename";
+            } else if (taikhoan.sMatKhau == "" || taikhoan.sMatKhau == "Password" )
             {
-                return "Vui long nhap mat khau!";
+                return "nonepass";
+            } else
+            {
+                string info = dal_taikhoan.CheckeLogin(taikhoan);
+                return info;
             }
-            string info = dal_taikhoan.CheckeLogin(taikhoan);
-            return info;
         }
         public Boolean MailHopLe(string email)
         {

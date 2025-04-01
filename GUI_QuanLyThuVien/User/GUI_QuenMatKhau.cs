@@ -78,5 +78,10 @@ namespace GUI_QuanLyThuVien
             Pen pen = new Pen(Color.Gray, 2);
             g.DrawLine(pen, 6, 146, 220, 146);
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -13,11 +13,15 @@ namespace BLL_QuanLyThuVien
         DAL_DangKyDG dalDangKyDG = new DAL_DangKyDG();
         public string ThemTKDocGia(DTO_Person person)
         {
-            if ( person.sMa == "")
+            if (person.sUsername == "Username")
             {
-                return "Mã độc giả không được để trống";
+                return "Username độc giả không được để trống";
             }
-            if (person.sHoTen == "")
+            if (person.sPassword == "Password")
+            {
+                return "Password độc giả không được để trống";
+            }
+            if (person.sHoTen == "Họ Và Tên")
             {
                 return "Họ tên độc giả không được để trống";
             }
@@ -25,7 +29,7 @@ namespace BLL_QuanLyThuVien
             {
                 return "Ngày sinh độc giả không được để trống";
             }
-            if (person.sDiaChi == "")
+            if (person.sDiaChi == "Địa Chỉ")
             {
                 return "Địa chỉ độc giả không được để trống";
             }
@@ -33,21 +37,9 @@ namespace BLL_QuanLyThuVien
             {
                 return "Email độc giả không được để trống";
             }
-            if (person.sSDT == "")
+            if (person.sSDT == "Số Điện Thoại")
             {
                 return "Số điện thoại độc giả không được để trống";
-            }
-            if (person.sUsername == "")
-            {
-                return "Username độc giả không được để trống";
-            }
-            if (person.sPassword == "")
-            {
-                return "Password độc giả không được để trống";
-            }
-            if (person.sChucVu == "")
-            {
-                return "Chức vụ độc giả không được để trống";
             }
             return dalDangKyDG.ThemTKDocGia(person);
         }

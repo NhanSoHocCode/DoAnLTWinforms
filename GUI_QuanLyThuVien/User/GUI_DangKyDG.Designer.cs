@@ -80,6 +80,7 @@
             this.txtUser.Size = new System.Drawing.Size(198, 23);
             this.txtUser.TabIndex = 10;
             this.txtUser.Text = "Username";
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
@@ -132,6 +133,7 @@
             this.txtpw.Size = new System.Drawing.Size(199, 23);
             this.txtpw.TabIndex = 17;
             this.txtpw.Text = "Password";
+            this.txtpw.TextChanged += new System.EventHandler(this.txtpw_TextChanged);
             this.txtpw.Enter += new System.EventHandler(this.txtpw_Enter);
             this.txtpw.Leave += new System.EventHandler(this.txtpw_Leave);
             // 

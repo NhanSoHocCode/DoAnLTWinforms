@@ -51,6 +51,15 @@ namespace GUI_QuanLyThuVien
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
+            person.sHoTen = txtName.Text;
+            DateTime ngaySinh = dtpNgaySinh.Value;
+            person.sNgaySinh = ngaySinh;
+            person.sGioiTinh = cbGioiTinh.Text == "Nam" ? true : false;
+            person.sDiaChi = txtDiaChi.Text;
+            person.sSDT = txtSdt.Text;
+            person.sEmail = mail;
+            person.sUsername = txtUser.Text;
+            person.sPassword = txtpw.Text;
             if (txtXacNhanpw.Text== "Confirm password" || txtpw.Text == "Password")
             {
                 MessageBox.Show("Chưa Nhập Mật Khẩu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -62,15 +71,6 @@ namespace GUI_QuanLyThuVien
                 MessageBox.Show("Mật Khẩu Không Trùng Khớp", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            person.sHoTen = txtName.Text;
-            DateTime ngaySinh = dtpNgaySinh.Value;
-            person.sNgaySinh = ngaySinh;
-            person.sGioiTinh = cbGioiTinh.Text == "Nam" ? true : false;
-            person.sDiaChi = txtDiaChi.Text;
-            person.sSDT = txtSdt.Text;
-            person.sEmail = mail;
-            person.sUsername = txtUser.Text;
-            person.sPassword = txtpw.Text;
             string resutl = bll_dangkydg.ThemTKDocGia(person);
             if (resutl == "Tài khoản đã được thêm thành công!")
             {
@@ -81,6 +81,7 @@ namespace GUI_QuanLyThuVien
                 MessageBox.Show(resutl);
                 // cho cac text box ve null
             }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -100,16 +101,11 @@ namespace GUI_QuanLyThuVien
 
         private void txtXacNhanpw_TextChanged(object sender, EventArgs e)
         {
-            //if (txtpw.Text != txtXacNhanpw.Text)
-            //{
-            //    txtXacNhanpw.ForeColor = Color.Red;
-            //}
-            //else
-            //{
-            //    txtXacNhanpw.ForeColor = Color.Black;
-            //    lbInfoRePass.Text = "Mật Khẩu Trùng Khớp";
-            //    lbInfoRePass.ForeColor = Color.Black;
-            //}
+            if (txtpw.Text != txtXacNhanpw.Text)
+            {
+                txtXacNhanpw.ForeColor = Color.Red;
+            }
+            else txtXacNhanpw.ForeColor = Color.Black;
         }
 
         
@@ -270,6 +266,23 @@ namespace GUI_QuanLyThuVien
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpw_TextChanged(object sender, EventArgs e)
+        {
+            if (txtXacNhanpw.Text != "Confirm password")
+            {
+                if (txtpw.Text != txtXacNhanpw.Text)
+                {
+                    txtXacNhanpw.ForeColor = Color.Red;
+                }
+                else txtXacNhanpw.ForeColor = Color.Black;
+            }
         }
     }
 }

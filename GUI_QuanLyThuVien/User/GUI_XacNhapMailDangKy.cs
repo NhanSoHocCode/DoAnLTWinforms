@@ -54,10 +54,17 @@ namespace GUI_QuanLyThuVien.User
                   // va them chuc nang trong qua trinh nhap hien do neu mail kh hop le !!!!
             {
                 int OTP = api.SendMailPassWord(txtEmail.Text);
-                GUI_XacNhanOTP xacNhanOTP = new GUI_XacNhanOTP();
-                xacNhanOTP.mail = txtEmail.Text;
-                xacNhanOTP.OTP = OTP;
-                xacNhanOTP.Show();
+                if (OTP == 0)
+                {
+                    MessageBox.Show("Email không tồn tại hoặc không hợp lệ!");
+                }
+                else
+                {
+                    GUI_XacNhanOTP xacNhanOTP = new GUI_XacNhanOTP();
+                    xacNhanOTP.mail = txtEmail.Text;
+                    xacNhanOTP.OTP = OTP;
+                    xacNhanOTP.Show();
+                }
             }
 
         }

@@ -54,20 +54,20 @@ namespace GUI_QuanLyThuVien
         {
             taikhoan.sTenTK = txtName.Text;
             taikhoan.sMatKhau = txtPw.Text;
-            taikhoan.sMaQuyen = int.Parse(bll_taikhoan.LayQuyenUser(txtName.Text));
             string getUser = bll_taikhoan.CheckeLogin(taikhoan);
             switch (getUser)
             {
-                case "Vui long nhap ten tai khoan!":
+                case "nonename":
                     MessageBox.Show("Vui long nhap ten tai khoan!");
                     return;
-                case "Vui long nhap mat khau!":
+                case "nonepass":
                     MessageBox.Show("Vui long nhap mat khau!");
                     return;
-                case "Tai khoan hoac mat khau khong dung!":
+                case "Eroll":
                     MessageBox.Show("Tai khoan hoac mat khau khong dung!");
                     return;
             }
+            taikhoan.sMaQuyen = int.Parse(bll_taikhoan.LayQuyenUser(txtName.Text));
             if (taikhoan.sMaQuyen == 3)
             {
                 GUI_HomeManager homeManager = new GUI_HomeManager();
