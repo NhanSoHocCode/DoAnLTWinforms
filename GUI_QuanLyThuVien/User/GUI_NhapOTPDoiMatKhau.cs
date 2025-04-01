@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,18 @@ namespace GUI_QuanLyThuVien.User
         public GUI_NhapOTPDoiMatKhau()
         {
             InitializeComponent();
+            panel2.MouseDown += PanelTitleBar_MouseDown;
         }
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0xA1, 0x2, 0); // Gửi lệnh di chuyển cửa sổ
+        }
+
         BLL_TaiKhoan bll_taikhoan = new BLL_TaiKhoan();
         public string mail;
         public int OTP;
@@ -34,7 +46,7 @@ namespace GUI_QuanLyThuVien.User
             if (countdown > 0)
             {
                 countdown--;
-                lbtimer.Text = $"mã OTP của bạn có hiệu lực trong {countdown} s"; // Cập nhật Label
+                lbtimer.Text = $"Mã OTP Của Bạn Có Hiệu Lực Trong {countdown}s"; // Cập nhật Label
             }
             else
             {
@@ -54,13 +66,14 @@ namespace GUI_QuanLyThuVien.User
         {
             if (txtOTP.Text == OTP.ToString())
             {
-                MessageBox.Show("thanh cong");  // tao them form doi pass moi
-            } else if (txtOTP.Text == "")
+                MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (txtOTP.Text == "")
             {
-                MessageBox.Show("Vui long nhap OTP");
+                MessageBox.Show("Vui Lòng Nhập OTP", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             } else
             {
-                MessageBox.Show("OTP khong dung");
+                MessageBox.Show("OTP Không Đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

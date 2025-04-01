@@ -22,7 +22,7 @@ namespace GUI_QuanLyThuVien.User
         public GUI_XacNhanOTP()
         {
             InitializeComponent();
-            //panel2.MouseDown += PanelTitleBar_MouseDown;
+            panel2.MouseDown += PanelTitleBar_MouseDown;
         }
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -89,7 +89,7 @@ namespace GUI_QuanLyThuVien.User
             if (txtOTP.Text == "")
             {
                 txtOTP.Text = "Nhập Mã OTP";
-                txtOTP.ForeColor = Color.Black; // Màu placeholder
+                txtOTP.ForeColor = Color.Gray; // Màu placeholder
             }
         }
 
@@ -98,8 +98,16 @@ namespace GUI_QuanLyThuVien.User
             if (txtOTP.Text == "Nhập Mã OTP")
             {
                 txtOTP.Text = "";
-                txtOTP.ForeColor = Color.Black; // Đổi màu chữ thành trắng
+                txtOTP.ForeColor = Color.Gray; // Đổi màu chữ thành trắng
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            Graphics g = e.Graphics;
+            Pen pen = new Pen(Color.Gray, 2);
+            g.DrawLine(pen, 5, 60, 240, 60);
         }
     }
 }

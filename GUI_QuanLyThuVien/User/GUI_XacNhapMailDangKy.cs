@@ -84,5 +84,10 @@ namespace GUI_QuanLyThuVien.User
         {
             
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
