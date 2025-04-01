@@ -21,20 +21,22 @@ namespace GUI_QuanLyThuVien
         public string mail;
         public GUI_DangKyDG()
         {
-            this.BackColor = Color.FromArgb(20, 52, 75);
+            //panel3.Dock = DockStyle.Top;
+            //this.BackColor = Color.FromArgb(210, 218, 255);
 
             InitializeComponent();
             panel3.Dock = DockStyle.Top;
             panel3.BackColor = Color.Transparent; // Làm trong suốt
 
             this.Controls.Add(panel3);
+            panel3.BackColor = Color.FromArgb(238, 241, 255);
             panel3.MouseDown += PanelTitleBar_MouseDown;
-            txtDiaChi.BackColor = Color.FromArgb(20, 52, 75);
-            txtSdt.BackColor = Color.FromArgb(20, 52, 75);
-            txtName.BackColor = Color.FromArgb(20, 52, 75);
-            txtXacNhanpw.BackColor = Color.FromArgb(20, 52, 75);
-            txtpw.BackColor = Color.FromArgb(20, 52, 75);
-            txtUser.BackColor = Color.FromArgb(20, 52, 75);
+            txtDiaChi.BackColor = Color.FromArgb(210, 218, 255);
+            txtSdt.BackColor = Color.FromArgb(210, 218, 255);
+            txtName.BackColor = Color.FromArgb(210, 218, 255);
+            txtXacNhanpw.BackColor = Color.FromArgb(210, 218, 255);
+            txtpw.BackColor = Color.FromArgb(210, 218, 255);
+            txtUser.BackColor = Color.FromArgb(210, 218, 255);
         }
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -49,6 +51,17 @@ namespace GUI_QuanLyThuVien
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
+            if (txtXacNhanpw.Text== "Confirm password" || txtpw.Text == "Password")
+            {
+                MessageBox.Show("Chưa Nhập Mật Khẩu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (txtpw.Text != txtXacNhanpw.Text)
+            {
+                txtXacNhanpw.ForeColor = Color.Red;
+                MessageBox.Show("Mật Khẩu Không Trùng Khớp", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             person.sHoTen = txtName.Text;
             DateTime ngaySinh = dtpNgaySinh.Value;
             person.sNgaySinh = ngaySinh;
@@ -77,8 +90,7 @@ namespace GUI_QuanLyThuVien
 
         private void GUI_DangKyDG_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(20, 52, 75);
-            lbInFo.Text = "Đang Thực Hiện Với Tư Cách " + mail;
+            lbInFo.Text = "Đăng Kí Với Tư Cách " + mail;
         }
 
         private void btnclose_Click(object sender, EventArgs e)
@@ -88,15 +100,16 @@ namespace GUI_QuanLyThuVien
 
         private void txtXacNhanpw_TextChanged(object sender, EventArgs e)
         {
-            if (txtpw.Text != txtXacNhanpw.Text)
-            {
-                txtXacNhanpw.ForeColor = Color.Red;
-            } else
-            {
-                txtXacNhanpw.ForeColor = Color.Black;
-                lbInfoRePass.Text = "Mật Khẩu Trùng Khớp";
-                lbInfoRePass.ForeColor = Color.Black;
-            }
+            //if (txtpw.Text != txtXacNhanpw.Text)
+            //{
+            //    txtXacNhanpw.ForeColor = Color.Red;
+            //}
+            //else
+            //{
+            //    txtXacNhanpw.ForeColor = Color.Black;
+            //    lbInfoRePass.Text = "Mật Khẩu Trùng Khớp";
+            //    lbInfoRePass.ForeColor = Color.Black;
+            //}
         }
 
         

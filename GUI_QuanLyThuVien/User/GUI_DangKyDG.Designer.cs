@@ -197,7 +197,6 @@
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lbInfoRePass);
             this.panel1.Controls.Add(this.txtXacNhanpw);
             this.panel1.Controls.Add(this.txtUser);
             this.panel1.Controls.Add(this.txtpw);
@@ -279,9 +278,9 @@
             // 
             this.lbInfoRePass.AutoSize = true;
             this.lbInfoRePass.ForeColor = System.Drawing.Color.Red;
-            this.lbInfoRePass.Location = new System.Drawing.Point(36, 285);
+            this.lbInfoRePass.Location = new System.Drawing.Point(636, 330);
             this.lbInfoRePass.Name = "lbInfoRePass";
-            this.lbInfoRePass.Size = new System.Drawing.Size(229, 20);
+            this.lbInfoRePass.Size = new System.Drawing.Size(175, 16);
             this.lbInfoRePass.TabIndex = 23;
             this.lbInfoRePass.Text = "Mật Khẩu Không Trùng Khớp";
             // 
@@ -362,29 +361,32 @@
             // lbInFo
             // 
             this.lbInFo.AutoSize = true;
-            this.lbInFo.ForeColor = System.Drawing.Color.Red;
-            this.lbInFo.Location = new System.Drawing.Point(3, 3);
+            this.lbInFo.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInFo.ForeColor = System.Drawing.Color.Gray;
+            this.lbInFo.Location = new System.Drawing.Point(3, 8);
             this.lbInFo.Name = "lbInFo";
-            this.lbInFo.Size = new System.Drawing.Size(281, 16);
+            this.lbInFo.Size = new System.Drawing.Size(238, 17);
             this.lbInFo.TabIndex = 26;
-            this.lbInFo.Text = "Đang Thực Hiện Với Tư Cách abc@gmail,com";
+            this.lbInFo.Text = "Đăng Kí Với Tư Cách abc@gmail,com";
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Controls.Add(this.btnClose);
             this.panel3.Controls.Add(this.lbInFo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(372, 35);
+            this.panel3.Size = new System.Drawing.Size(370, 35);
             this.panel3.TabIndex = 27;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(338, 3);
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.Location = new System.Drawing.Point(335, -2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.Size = new System.Drawing.Size(35, 35);
             this.btnClose.TabIndex = 27;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -394,13 +396,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(372, 611);
+            this.ClientSize = new System.Drawing.Size(370, 611);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDangKy);
+            this.Controls.Add(this.lbInfoRePass);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_DangKyDG";
@@ -424,6 +428,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

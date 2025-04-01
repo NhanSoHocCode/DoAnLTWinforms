@@ -25,15 +25,15 @@ namespace GUI_QuanLyThuVien
         public GUI_DangNhap()
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(20, 52, 75);
-            txtName.BackColor = Color.FromArgb(20, 52, 75);
-            txtPw.BackColor = Color.FromArgb(20, 52, 75);
+            this.BackColor = Color.FromArgb(210, 218, 255);
+            txtName.BackColor = Color.FromArgb(210, 218, 255);
+            txtPw.BackColor = Color.FromArgb(210, 218, 255);
             this.FormBorderStyle = FormBorderStyle.None;
 
             ////ssssss
             ///
             panel3.Dock = DockStyle.Top;
-            panel3.BackColor = Color.Transparent; // Làm trong suốt
+            panel3.BackColor = Color.FromArgb(238, 241, 255);
 
             this.Controls.Add(panel3);
             panel3.MouseDown += PanelTitleBar_MouseDown;
@@ -180,6 +180,11 @@ namespace GUI_QuanLyThuVien
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
