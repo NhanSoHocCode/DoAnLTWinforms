@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,11 +22,18 @@ namespace GUI_QuanLyThuVien.User
         public GUI_XacNhanOTP()
         {
             InitializeComponent();
+            //panel2.MouseDown += PanelTitleBar_MouseDown;
         }
-        private void btnclose_Click(object sender, EventArgs e)
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
-            Close();
+            ReleaseCapture();
+            SendMessage(Handle, 0xA1, 0x2, 0); // Gửi lệnh di chuyển cửa sổ
         }
+       
 
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -35,14 +43,13 @@ namespace GUI_QuanLyThuVien.User
                 dangKyDG.mail = mail;
                 dangKyDG.Show();
             }
-            else if (txtOTP.Text == "")
+            else if (txtOTP.Text == "Nhập Mã OTP")
             {
-                MessageBox.Show("Vui Lòng Nhập Lại OTP");
+                MessageBox.Show("Vui Lòng Nhập OTP", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Vui Lòng Nhập Lại OTP");
             }
-            else
-            {
-                MessageBox.Show("OTP Không Đúng");
-            }
+            else MessageBox.Show("OTP Không Đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             
         }
 
@@ -63,8 +70,35 @@ namespace GUI_QuanLyThuVien.User
             else
             {
                 timer1.Stop();
-                OTP = -1;   // xoa bo OTP cua mail da goi di neu het thoi gian
+                OTP = -1;
                 MessageBox.Show("Thời Gian Đã Hết Hạn!");
+            }
+        }
+
+       
+
+       
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void txtOTP_Leave(object sender, EventArgs e)
+        {
+            if (txtOTP.Text == "")
+            {
+                txtOTP.Text = "Nhập Mã OTP";
+                txtOTP.ForeColor = Color.Black; // Màu placeholder
+            }
+        }
+
+        private void txtOTP_Enter(object sender, EventArgs e)
+        {
+            if (txtOTP.Text == "Nhập Mã OTP")
+            {
+                txtOTP.Text = "";
+                txtOTP.ForeColor = Color.Black; // Đổi màu chữ thành trắng
             }
         }
     }

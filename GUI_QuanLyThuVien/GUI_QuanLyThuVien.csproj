@@ -215,6 +215,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User\GUI_XacNhanOTP.cy-GB.resx">
+      <DependentUpon>GUI_XacNhanOTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\GUI_XacNhanOTP.ve-ZA.resx">
+      <DependentUpon>GUI_XacNhanOTP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\GUI_XacNhanOTP.vi.resx">
       <DependentUpon>GUI_XacNhanOTP.cs</DependentUpon>
     </EmbeddedResource>
