@@ -30,7 +30,6 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -48,7 +47,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(24, 51);
+            this.button1.Location = new System.Drawing.Point(39, 38);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 37);
             this.button1.TabIndex = 0;
@@ -56,20 +55,9 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(189, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 37);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Thêm độc giả ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -115,7 +103,6 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;

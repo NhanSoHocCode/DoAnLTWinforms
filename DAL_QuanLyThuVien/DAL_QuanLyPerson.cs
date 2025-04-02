@@ -10,7 +10,7 @@ namespace DAL_QuanLyThuVien
 {
     public class DAL_QuanLyPerson : DBConnect
     {
-        public DTO_Person  TimKiemTheoMa(string strSql,string ma)     // proc_searchthuthutoma, proc_searchdocgiatoma
+        public DTO_Person TimKiemTheoMa(string strSql, string ma)     // proc_searchthuthutoma, proc_searchdocgiatoma
         {
             DTO_Person ps = new DTO_Person();
             SqlConnection conn = SqlConnectionData.Connect();
@@ -34,7 +34,7 @@ namespace DAL_QuanLyThuVien
                     ps.sPassword = dr[8].ToString();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -46,7 +46,7 @@ namespace DAL_QuanLyThuVien
             conn.Open();
             try
             {
-                SqlCommand cmd = new SqlCommand( Sqlstr, conn);
+                SqlCommand cmd = new SqlCommand(Sqlstr, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -69,7 +69,7 @@ namespace DAL_QuanLyThuVien
                     using (SqlCommand cmd = new SqlCommand(strSql, conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@ma",int.Parse(ps.sMa));
+                        cmd.Parameters.AddWithValue("@ma", int.Parse(ps.sMa));
                         cmd.Parameters.AddWithValue("@anhthe", ps.sSourceImage);
                         cmd.Parameters.AddWithValue("@diachi", ps.sDiaChi);
                         cmd.Parameters.AddWithValue("@sdt", ps.sSDT);
@@ -178,4 +178,5 @@ namespace DAL_QuanLyThuVien
             }
 
         }
+    }
 }
