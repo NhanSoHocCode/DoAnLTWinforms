@@ -14,6 +14,18 @@ namespace BLL_QuanLyThuVien
         {
             return dal_QuanLyPerson.ViewPerson("proc_viewdocgia");
         }
-        
+        public DataTable SearchDocGia(string strSearch)
+        {
+            int number;
+
+            if (int.TryParse(strSearch, out number))
+            {
+                return dal_QuanLyPerson.searchPersonToMa("proc_searchdocgiabyma", number);
+            }
+            else
+            {
+                return dal_QuanLyPerson.searchPersonToName("proc_searchdocgiabyname", strSearch);
+            }
+        }
     }
 }

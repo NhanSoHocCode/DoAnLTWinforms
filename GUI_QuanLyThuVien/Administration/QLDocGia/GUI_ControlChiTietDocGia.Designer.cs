@@ -43,13 +43,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtAnhthe = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtSdt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbAnhThe = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -185,13 +187,6 @@
             this.txtUsername.Size = new System.Drawing.Size(195, 22);
             this.txtUsername.TabIndex = 15;
             // 
-            // txtAnhthe
-            // 
-            this.txtAnhthe.Location = new System.Drawing.Point(118, 74);
-            this.txtAnhthe.Name = "txtAnhthe";
-            this.txtAnhthe.Size = new System.Drawing.Size(195, 22);
-            this.txtAnhthe.TabIndex = 16;
-            // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(114, 123);
@@ -208,14 +203,35 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbAnhThe);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.txtAnhthe);
-            this.panel1.Location = new System.Drawing.Point(301, 37);
+            this.panel1.Location = new System.Drawing.Point(301, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(343, 119);
+            this.panel1.Size = new System.Drawing.Size(343, 154);
             this.panel1.TabIndex = 20;
+            // 
+            // lbAnhThe
+            // 
+            this.lbAnhThe.AutoSize = true;
+            this.lbAnhThe.Location = new System.Drawing.Point(115, 76);
+            this.lbAnhThe.Name = "lbAnhThe";
+            this.lbAnhThe.Size = new System.Drawing.Size(27, 16);
+            this.lbAnhThe.TabIndex = 18;
+            this.lbAnhThe.Text = "null";
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(183, 108);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "chọn từ thư viện ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -236,8 +252,9 @@
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(120, 41);
             this.btnDel.TabIndex = 22;
-            this.btnDel.Text = "Xóa độc giả";
+            this.btnDel.Text = "Xóa ";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnEdit
             // 
@@ -247,6 +264,11 @@
             this.btnEdit.TabIndex = 23;
             this.btnEdit.Text = "Chỉnh sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // GUI_ControlChiTietDocGia
             // 
@@ -294,12 +316,14 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtAnhthe;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtSdt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label lbAnhThe;
     }
 }

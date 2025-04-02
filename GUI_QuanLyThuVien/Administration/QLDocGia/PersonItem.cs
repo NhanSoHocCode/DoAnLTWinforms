@@ -31,7 +31,7 @@ namespace GUI_QuanLyThuVien.Administration
             }
             lbMa.Text =  "Mã: "+ person.sMa;
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\" + person.sSourceImage;
+            string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\DocGia\\" + person.sSourceImage;
             pictureBox1.Image = Image.FromFile(path);
         }
 
@@ -40,7 +40,6 @@ namespace GUI_QuanLyThuVien.Administration
             GUI_ControlChiTietDocGia gui_ControlChiTietDocGia = new GUI_ControlChiTietDocGia();
             gui_ControlChiTietDocGia.person = person;
             gui_ControlChiTietDocGia.ShowDialog();
-
         }
     }
 }

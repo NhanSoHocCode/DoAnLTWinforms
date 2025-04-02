@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\QLThuThu\GUI_QuanLyThuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\QLThuThu\GUI_QuanLyThuThu.Designer.cs">
+      <DependentUpon>GUI_QuanLyThuThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administration\QLDocGia\GUI_ControlChiTietDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     <EmbeddedResource Include="Administration\QLSach\BookItem.resx">
       <DependentUpon>BookItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\QLThuThu\GUI_QuanLyThuThu.resx">
+      <DependentUpon>GUI_QuanLyThuThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\GUI_DangKyDG.resx">
       <DependentUpon>GUI_DangKyDG.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,5 +283,6 @@
   <ItemGroup>
     <None Include="Resources\email%404x.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

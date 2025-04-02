@@ -1,6 +1,6 @@
 ﻿namespace GUI_QuanLyThuVien.Administration
 {
-    partial class GUI_QuanLyDocGia
+    partial class GUI_QuanLyThuThu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,55 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnaddtt = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnListTT = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 90);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 360);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(24, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Xem danh sách ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(189, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 37);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Thêm độc giả ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnaddtt);
             this.panel1.Controls.Add(this.txtSearch);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnListTT);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 90);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 3;
             // 
             // label1
             // 
@@ -87,24 +58,51 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Search";
             // 
+            // btnaddtt
+            // 
+            this.btnaddtt.Location = new System.Drawing.Point(189, 51);
+            this.btnaddtt.Name = "btnaddtt";
+            this.btnaddtt.Size = new System.Drawing.Size(148, 37);
+            this.btnaddtt.TabIndex = 1;
+            this.btnaddtt.Text = "Thêm thủ thư";
+            this.btnaddtt.UseVisualStyleBackColor = true;
+            // 
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(433, 23);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(273, 22);
             this.txtSearch.TabIndex = 3;
-            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
-            // GUI_QuanLyDocGia
+            // btnListTT
+            // 
+            this.btnListTT.Location = new System.Drawing.Point(24, 51);
+            this.btnListTT.Name = "btnListTT";
+            this.btnListTT.Size = new System.Drawing.Size(148, 37);
+            this.btnListTT.TabIndex = 0;
+            this.btnListTT.Text = "Xem danh sách ";
+            this.btnListTT.UseVisualStyleBackColor = true;
+            this.btnListTT.Click += new System.EventHandler(this.btnListTT_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 90);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 360);
+            this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // GUI_QuanLyThuThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "GUI_QuanLyDocGia";
-            this.Text = "GUI_QuanLyDocGia";
-            this.Load += new System.EventHandler(this.GUI_QuanLyDocGia_Load);
+            this.Name = "GUI_QuanLyThuThu";
+            this.Text = "QuanLyThuThu";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -113,11 +111,11 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnaddtt;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnListTT;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

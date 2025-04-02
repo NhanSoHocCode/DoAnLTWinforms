@@ -18,9 +18,8 @@ namespace GUI_QuanLyThuVien.Administration
             InitializeComponent();
         }
         BLL_QuanLyDocGia bll_QuanLyDocGia = new BLL_QuanLyDocGia();
-        public void LoadListDocGia()
+        public void LoadListDG(DataTable dt)
         {
-            DataTable dt = bll_QuanLyDocGia.ViewDocGia();
             flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -39,6 +38,13 @@ namespace GUI_QuanLyThuVien.Administration
                 };
                 flowLayoutPanel1.Controls.Add(personItem);
             }
+        }
+        public void LoadListDocGia()
+        {
+            DataTable dt = bll_QuanLyDocGia.ViewDocGia();
+            LoadListDG(dt);
+
+
         } 
 
         private void GUI_QuanLyDocGia_Load(object sender, EventArgs e)
@@ -55,5 +61,25 @@ namespace GUI_QuanLyThuVien.Administration
         {
             LoadListDocGia();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            // them doc gia 
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = bll_QuanLyDocGia.SearchDocGia(txtSearch.Text);
+            LoadListDG(dt);
+        }
+
+        //private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    DataTable dt = new DataTable();
+        //    dt = bll_QuanLyDocGia.SearchDocGia(txtSearch.Text);
+        //    LoadListDG(dt);
+        //}
     }
 }

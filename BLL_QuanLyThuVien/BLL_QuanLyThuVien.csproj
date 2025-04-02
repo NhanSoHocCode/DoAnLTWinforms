@@ -46,6 +46,7 @@
     <Compile Include="BLL_QuanLyDocGia.cs" />
     <Compile Include="BLL_QuanLyPhieuMuon.cs" />
     <Compile Include="BLL_QuanLySach.cs" />
+    <Compile Include="BLL_QuanLyThuThu.cs" />
     <Compile Include="BLL_TaiKhoan.cs" />
     <Compile Include="Functions\BLL_LayAnhThe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
