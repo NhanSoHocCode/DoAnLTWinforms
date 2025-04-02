@@ -304,5 +304,17 @@
   <ItemGroup>
     <None Include="Resources\phieuthu_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lammoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thaydoiquydinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

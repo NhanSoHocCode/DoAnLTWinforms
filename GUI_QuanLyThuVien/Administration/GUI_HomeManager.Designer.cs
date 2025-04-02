@@ -35,20 +35,22 @@
             this.btnpheiumuon = new System.Windows.Forms.Button();
             this.btnSach = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBoxAdm = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBoxAdm = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdm)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnthuthu
             // 
+            this.btnthuthu.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthuthu.Location = new System.Drawing.Point(450, 3);
             this.btnthuthu.Name = "btnthuthu";
             this.btnthuthu.Size = new System.Drawing.Size(143, 44);
@@ -77,6 +79,7 @@
             // 
             // btndocgia
             // 
+            this.btndocgia.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndocgia.Location = new System.Drawing.Point(301, 3);
             this.btndocgia.Name = "btndocgia";
             this.btndocgia.Size = new System.Drawing.Size(143, 44);
@@ -87,6 +90,7 @@
             // 
             // btnpheiumuon
             // 
+            this.btnpheiumuon.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpheiumuon.Location = new System.Drawing.Point(152, 3);
             this.btnpheiumuon.Name = "btnpheiumuon";
             this.btnpheiumuon.Size = new System.Drawing.Size(143, 44);
@@ -97,6 +101,7 @@
             // 
             // btnSach
             // 
+            this.btnSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSach.Location = new System.Drawing.Point(3, 3);
             this.btnSach.Name = "btnSach";
             this.btnSach.Size = new System.Drawing.Size(143, 44);
@@ -107,6 +112,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Controls.Add(this.pictureBoxAdm);
             this.panel2.Controls.Add(this.lbnameRole);
@@ -116,6 +122,38 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1720, 139);
             this.panel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label2.Location = new System.Drawing.Point(544, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(510, 69);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Quản Lý Thư Viện";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnSach);
+            this.flowLayoutPanel1.Controls.Add(this.btnpheiumuon);
+            this.flowLayoutPanel1.Controls.Add(this.btndocgia);
+            this.flowLayoutPanel1.Controls.Add(this.btnthuthu);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(516, 83);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(666, 53);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // pictureBoxAdm
+            // 
+            this.pictureBoxAdm.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxAdm.Name = "pictureBoxAdm";
+            this.pictureBoxAdm.Size = new System.Drawing.Size(81, 119);
+            this.pictureBoxAdm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxAdm.TabIndex = 4;
+            this.pictureBoxAdm.TabStop = false;
             // 
             // btnClose
             // 
@@ -132,7 +170,7 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(6, 196);
+            this.panel3.Location = new System.Drawing.Point(3, 184);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1720, 980);
             this.panel3.TabIndex = 2;
@@ -140,16 +178,18 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.panel4.Controls.Add(this.buttonClose);
-            this.panel4.Location = new System.Drawing.Point(0, 1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1086, 40);
+            this.panel4.Size = new System.Drawing.Size(1920, 40);
             this.panel4.TabIndex = 3;
             // 
             // buttonClose
             // 
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(791, 0);
+            this.buttonClose.Location = new System.Drawing.Point(1043, 0);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(40, 40);
             this.buttonClose.TabIndex = 0;
@@ -157,31 +197,11 @@
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnSach);
-            this.flowLayoutPanel1.Controls.Add(this.btnpheiumuon);
-            this.flowLayoutPanel1.Controls.Add(this.btndocgia);
-            this.flowLayoutPanel1.Controls.Add(this.btnthuthu);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(356, 52);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(666, 53);
-            this.flowLayoutPanel1.TabIndex = 5;
-            // 
-            // pictureBoxAdm
-            // 
-            this.pictureBoxAdm.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.phieuthu_icon;
-            this.pictureBoxAdm.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxAdm.Name = "pictureBoxAdm";
-            this.pictureBoxAdm.Size = new System.Drawing.Size(81, 119);
-            this.pictureBoxAdm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxAdm.TabIndex = 4;
-            this.pictureBoxAdm.TabStop = false;
-            // 
             // GUI_HomeManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -193,9 +213,9 @@
             this.Load += new System.EventHandler(this.GUI_HomeManager_Load_1);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdm)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -214,5 +234,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label2;
     }
 }

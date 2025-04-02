@@ -18,6 +18,30 @@ namespace GUI_QuanLyThuVien
         public GUI_QuanLySach()
         {
             InitializeComponent();
+            btnRefesh.Image = new Bitmap(Properties.Resources.lammoi, btnRefesh.ClientSize.Height - 10, btnRefesh.ClientSize.Height - 10);
+            btnRefesh.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnRefesh.AutoSize = true;
+            btnRefesh.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRefesh.TextAlign = ContentAlignment.MiddleCenter;
+
+            btnAddBook.Image = new Bitmap(Properties.Resources.Plus_icon, btnAddBook.ClientSize.Height - 10, btnAddBook.ClientSize.Height - 10);
+            btnAddBook.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAddBook.AutoSize = true;
+            btnAddBook.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAddBook.TextAlign = ContentAlignment.MiddleCenter;
+
+            btnEdit.Image = new Bitmap(Properties.Resources.thaydoiquydinh, btnEdit.ClientSize.Height - 10, btnEdit.ClientSize.Height - 10);
+            btnEdit.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnEdit.AutoSize = true;
+            btnEdit.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEdit.TextAlign = ContentAlignment.MiddleCenter;
+
+
+            btnDel.Image = new Bitmap(Properties.Resources.close_icon, btnDel.ClientSize.Height - 10, btnDel.ClientSize.Height - 10);
+            btnDel.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnDel.AutoSize = true;
+            btnDel.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDel.TextAlign = ContentAlignment.MiddleCenter;
         }
         BLL_QuanLySach bll = new BLL_QuanLySach();
         public String Function = "";
