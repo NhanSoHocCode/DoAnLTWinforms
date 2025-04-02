@@ -10,36 +10,6 @@ namespace DAL_QuanLyThuVien
 {
     public class DAL_QuanLyPerson : DBConnect
     {
-        public DTO_Person TimKiemTheoMa(string strSql, string ma)     // proc_searchthuthutoma, proc_searchdocgiatoma
-        {
-            DTO_Person ps = new DTO_Person();
-            SqlConnection conn = SqlConnectionData.Connect();
-            conn.Open();
-            try
-            {
-                SqlCommand cmd = new SqlCommand(strSql, conn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ma", ma);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    ps.sMa = dr[0].ToString();
-                    ps.sHoTen = dr[1].ToString();
-                    ps.sNgaySinh = Convert.ToDateTime(dr[2]);
-                    ps.sGioiTinh = Convert.ToBoolean(dr[3]);
-                    ps.sDiaChi = dr[4].ToString();
-                    ps.sSDT = dr[5].ToString();
-                    ps.sEmail = dr[6].ToString();
-                    ps.sChucVu = dr[7].ToString();
-                    ps.sPassword = dr[8].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return ps;
-        }
         public DataTable ViewPerson(string Sqlstr)    // proc_viewthuthu, proc_viewdocgia
         {
             SqlConnection conn = SqlConnectionData.Connect();
@@ -143,19 +113,24 @@ namespace DAL_QuanLyThuVien
         }
         // chua update phan AddPerson
 
-        public string AddThuThu(DTO_Person dtoPerson)  //proc_addThuThu
+        public string AddThuThu(DTO_Person dtoPerson)
         {
             SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            SqlTransaction transaction = conn.BeginTransaction(); // Bắt đầu transaction
+
             try
             {
-                conn.Open();
-                SqlCommand command = new SqlCommand("proc_addTKnew", conn);
+                // Thêm tài khoản
+                SqlCommand command = new SqlCommand("proc_addTKnew", conn, transaction);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@email", dtoPerson.sEmail);
                 command.Parameters.AddWithValue("@username", dtoPerson.sUsername);
                 command.Parameters.AddWithValue("@password", dtoPerson.sPassword);
                 command.ExecuteNonQuery();
-                SqlCommand command1 = new SqlCommand("proc_addThuThu", conn);
+
+                // Thêm thủ thư
+                SqlCommand command1 = new SqlCommand("proc_addThuThu", conn, transaction);
                 command1.CommandType = CommandType.StoredProcedure;
                 command1.Parameters.AddWithValue("@hoten", dtoPerson.sHoTen);
                 command1.Parameters.AddWithValue("@ngaysinh", dtoPerson.sNgaySinh);
@@ -164,19 +139,22 @@ namespace DAL_QuanLyThuVien
                 command1.Parameters.AddWithValue("@set", dtoPerson.sGioiTinh);
                 command1.Parameters.AddWithValue("@sdt", dtoPerson.sSDT);
                 command1.Parameters.AddWithValue("@username", dtoPerson.sUsername);
+                command1.Parameters.AddWithValue("@anhthe", dtoPerson.sSourceImage);
                 command1.ExecuteNonQuery();
+
+                transaction.Commit(); // Xác nhận lưu dữ liệu
                 conn.Close();
-                return "Thu Thu đã được thêm thành công!";
+                return "Thủ thư đã được thêm thành công!";
             }
             catch (Exception ex)
             {
+                transaction.Rollback(); // Hoàn tác nếu có lỗi
                 return "Lỗi kết nối: " + ex.Message;
             }
             finally
             {
                 conn.Close();
             }
-
         }
     }
 }

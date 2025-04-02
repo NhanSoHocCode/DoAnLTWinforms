@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BLL_QuanLyThuVien;
 using DTO_QuanLyThuVien;
 using GUI_QuanLyThuVien.Administration.QLDocGia;
+using GUI_QuanLyThuVien.Administration.QLThuThu;
 namespace GUI_QuanLyThuVien.Administration
 {
     public partial class GUI_QuanLyThuThu : Form
@@ -26,6 +27,7 @@ namespace GUI_QuanLyThuVien.Administration
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 PersonItem personItem = new PersonItem();
+                personItem.DocGia = false;
                 personItem.person = new DTO_Person
                 {
                     sHoTen = dt.Rows[i]["tenThuTHu"].ToString(),
@@ -51,6 +53,13 @@ namespace GUI_QuanLyThuVien.Administration
         {
             flowLayoutPanel1.Controls.Clear();
             LoadListTT();
+        }
+
+        private void btnaddtt_Click(object sender, EventArgs e)
+        {
+            GUI_AddThuThu addTT = new GUI_AddThuThu();
+            addTT.Show();
+
         }
     }
 }

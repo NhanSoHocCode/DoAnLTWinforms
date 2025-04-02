@@ -24,6 +24,7 @@ namespace GUI_QuanLyThuVien.Administration
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 PersonItem personItem = new PersonItem();
+                personItem.DocGia = true;
                 personItem.person = new DTO_Person
                 {
                     sHoTen = dt.Rows[i]["hoTen"].ToString(),

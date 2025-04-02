@@ -28,6 +28,10 @@ namespace BLL_QuanLyThuVien
         {
             return dal_quanlythuthu.DelPerson(int.Parse(ma), "proc_editthuthu");
         }
+        public string AddThuThu(DTO_Person ps)
+        {
+            return dal_quanlythuthu.AddThuThu(ps);
+        }
 
     }
 }

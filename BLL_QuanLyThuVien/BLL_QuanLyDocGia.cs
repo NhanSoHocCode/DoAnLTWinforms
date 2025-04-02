@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL_QuanLyThuVien;
+using DTO_QuanLyThuVien;
 namespace BLL_QuanLyThuVien
 {
     public class BLL_QuanLyDocGia
@@ -26,6 +27,16 @@ namespace BLL_QuanLyThuVien
             {
                 return dal_QuanLyPerson.searchPersonToName("proc_searchdocgiabyname", strSearch);
             }
+        }
+        public string EditDocGia(DTO_Person ps)
+        {
+            return dal_QuanLyPerson.EditPerson(ps, "proc_editdocgia");
+        } 
+
+        public string DelDocGia(string ma)
+        {
+            int code = int.Parse(ma);
+            return dal_QuanLyPerson.DelPerson(code, "proc_deldocgia");
         }
     }
 }

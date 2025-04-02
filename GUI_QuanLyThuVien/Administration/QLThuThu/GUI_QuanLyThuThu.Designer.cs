@@ -66,6 +66,7 @@
             this.btnaddtt.TabIndex = 1;
             this.btnaddtt.Text = "Thêm thủ thư";
             this.btnaddtt.UseVisualStyleBackColor = true;
+            this.btnaddtt.Click += new System.EventHandler(this.btnaddtt_Click);
             // 
             // txtSearch
             // 

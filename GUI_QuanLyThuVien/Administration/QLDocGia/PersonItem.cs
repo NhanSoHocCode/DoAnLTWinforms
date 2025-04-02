@@ -18,6 +18,7 @@ namespace GUI_QuanLyThuVien.Administration
             InitializeComponent();
         }
         public DTO_Person person;
+        public Boolean DocGia = true;
 
         private void PersonItem_Load(object sender, EventArgs e)  // them phan khi nhan vao item thi hien them form thong tin chi tiet (co them vai chuc nang nho trong do )
         {
@@ -32,6 +33,10 @@ namespace GUI_QuanLyThuVien.Administration
             lbMa.Text =  "Mã: "+ person.sMa;
             OpenFileDialog openFileDialog = new OpenFileDialog();
             string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\DocGia\\" + person.sSourceImage;
+            if (DocGia != true)
+            {
+                path = "D:\\K25_Project_LTWinform\\DoAn\\images\\ThuThu\\" + person.sSourceImage;
+            }
             pictureBox1.Image = Image.FromFile(path);
         }
 
@@ -39,6 +44,7 @@ namespace GUI_QuanLyThuVien.Administration
         {
             GUI_ControlChiTietDocGia gui_ControlChiTietDocGia = new GUI_ControlChiTietDocGia();
             gui_ControlChiTietDocGia.person = person;
+            gui_ControlChiTietDocGia.DocGia = DocGia;
             gui_ControlChiTietDocGia.ShowDialog();
         }
     }

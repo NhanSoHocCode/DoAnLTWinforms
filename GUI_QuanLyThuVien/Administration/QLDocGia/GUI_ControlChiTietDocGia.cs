@@ -19,8 +19,10 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
         {
             InitializeComponent();
         }
+        public Boolean DocGia;
         public DTO_Person person;
         public BLL_QuanLyThuThu bll_QuanLyThuThu = new BLL_QuanLyThuThu();
+        public BLL_QuanLyDocGia bll_QuanLyDocGia = new BLL_QuanLyDocGia();
 
         private void GUI_ControlChiTietDocGia_Load(object sender, EventArgs e)  // mượn tạm của đọc giả 
         {
@@ -53,11 +55,16 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
                 MessageBox.Show("Bạn chưa chọn file.");
             }
         }
-        public void SaveImageToFolder(string sourcePath)
+        public void SaveImageToFolder(string sourcePath)  // nhan dang dang chinh sua cho doi tuong nao 
         {
+
             try
             {
-                string destinationFolder = "D:\\K25_Project_LTWinform\\DoAn\\images\\ThuThu\\";  
+                string destinationFolder = "D:\\K25_Project_LTWinform\\DoAn\\images\\ThuThu\\";
+                if (DocGia == true)
+                {
+                    destinationFolder = "D:\\K25_Project_LTWinform\\DoAn\\images\\DocGia\\";
+                }
                 if (!Directory.Exists(destinationFolder))
                 {
                     Directory.CreateDirectory(destinationFolder);
@@ -85,12 +92,24 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
                 person.sSourceImage = lbAnhThe.Text;
                 SaveImageToFolder(fileNameLong);
             }
-            MessageBox.Show(bll_QuanLyThuThu.EditThuThu(person));
+            if (DocGia == true)
+            {
+                MessageBox.Show(bll_QuanLyDocGia.EditDocGia(person));  
+            } else
+            {
+                MessageBox.Show(bll_QuanLyThuThu.EditThuThu(person));
+            }
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            bll_QuanLyThuThu.DelThuThu(person.sMa);
+            if (DocGia != true)
+            {
+                MessageBox.Show(bll_QuanLyThuThu.DelThuThu(person.sMa));
+            } else
+            {
+                MessageBox.Show(bll_QuanLyDocGia.DelDocGia(person.sMa));
+            }
         }
     }
 }
