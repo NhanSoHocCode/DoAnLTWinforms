@@ -105,9 +105,9 @@
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(20, 437);
+            this.btnLogin.Location = new System.Drawing.Point(23, 431);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(310, 31);
+            this.btnLogin.Size = new System.Drawing.Size(335, 31);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng Nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -119,9 +119,9 @@
             this.btnCreateTKnew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreateTKnew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateTKnew.ForeColor = System.Drawing.Color.White;
-            this.btnCreateTKnew.Location = new System.Drawing.Point(20, 488);
+            this.btnCreateTKnew.Location = new System.Drawing.Point(23, 482);
             this.btnCreateTKnew.Name = "btnCreateTKnew";
-            this.btnCreateTKnew.Size = new System.Drawing.Size(310, 34);
+            this.btnCreateTKnew.Size = new System.Drawing.Size(335, 34);
             this.btnCreateTKnew.TabIndex = 4;
             this.btnCreateTKnew.Text = "Đăng Kí Tài Khoản Mới";
             this.btnCreateTKnew.UseVisualStyleBackColor = false;
@@ -203,7 +203,7 @@
             this.panel1.Controls.Add(this.lbName);
             this.panel1.Controls.Add(this.btnpw);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(6, 36);
+            this.panel1.Location = new System.Drawing.Point(23, 33);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(324, 325);
             this.panel1.TabIndex = 14;
@@ -215,7 +215,7 @@
             this.panel3.Controls.Add(this.btnClose);
             this.panel3.Location = new System.Drawing.Point(6, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(334, 33);
+            this.panel3.Size = new System.Drawing.Size(380, 33);
             this.panel3.TabIndex = 14;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -233,7 +233,7 @@
             // btnClose
             // 
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(306, 0);
+            this.btnClose.Location = new System.Drawing.Point(338, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(33, 33);
             this.btnClose.TabIndex = 0;
@@ -246,7 +246,7 @@
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 527);
+            this.ClientSize = new System.Drawing.Size(370, 611);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkForGetPass);

@@ -96,5 +96,10 @@ namespace GUI_QuanLyThuVien.User
         {
 
         }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

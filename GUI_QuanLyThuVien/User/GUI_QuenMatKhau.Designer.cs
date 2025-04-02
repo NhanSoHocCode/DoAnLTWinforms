@@ -43,12 +43,12 @@
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F);
-            this.txtEmail.Location = new System.Drawing.Point(13, 155);
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(9, 107);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(285, 23);
+            this.txtEmail.Size = new System.Drawing.Size(295, 27);
             this.txtEmail.TabIndex = 2;
             this.txtEmail.Text = "Email Address";
             this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
@@ -58,9 +58,9 @@
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F);
-            this.btnExit.Location = new System.Drawing.Point(9, 231);
+            this.btnExit.Location = new System.Drawing.Point(18, 232);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(289, 34);
+            this.btnExit.Size = new System.Drawing.Size(301, 34);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Cancel";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -72,9 +72,9 @@
             this.btnSearchTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(49)))), ((int)(((byte)(218)))));
             this.btnSearchTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchTK.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F);
-            this.btnSearchTK.Location = new System.Drawing.Point(9, 188);
+            this.btnSearchTK.Location = new System.Drawing.Point(18, 189);
             this.btnSearchTK.Name = "btnSearchTK";
-            this.btnSearchTK.Size = new System.Drawing.Size(285, 37);
+            this.btnSearchTK.Size = new System.Drawing.Size(301, 37);
             this.btnSearchTK.TabIndex = 4;
             this.btnSearchTK.Text = "Search";
             this.btnSearchTK.UseVisualStyleBackColor = false;
@@ -83,7 +83,8 @@
             // btnclose
             // 
             this.btnclose.BackColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(291, 0);
+            this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnclose.Location = new System.Drawing.Point(314, 0);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(35, 35);
             this.btnclose.TabIndex = 2;
@@ -95,12 +96,10 @@
             // 
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.btnSearchTK);
             this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Location = new System.Drawing.Point(3, 44);
+            this.panel1.Location = new System.Drawing.Point(12, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(326, 336);
+            this.panel1.Size = new System.Drawing.Size(336, 142);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -110,7 +109,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label5.Location = new System.Drawing.Point(9, 126);
+            this.label5.Location = new System.Drawing.Point(2, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(289, 22);
             this.label5.TabIndex = 32;
@@ -122,7 +121,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label4.Location = new System.Drawing.Point(30, 65);
+            this.label4.Location = new System.Drawing.Point(23, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(245, 38);
             this.label4.TabIndex = 5;
@@ -132,9 +131,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.panel2.Controls.Add(this.btnclose);
-            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(326, 35);
+            this.panel2.Size = new System.Drawing.Size(351, 35);
             this.panel2.TabIndex = 4;
             // 
             // GUI_QuenMatKhau
@@ -142,9 +141,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(332, 422);
+            this.ClientSize = new System.Drawing.Size(350, 350);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnSearchTK);
+            this.Controls.Add(this.btnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_QuenMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
