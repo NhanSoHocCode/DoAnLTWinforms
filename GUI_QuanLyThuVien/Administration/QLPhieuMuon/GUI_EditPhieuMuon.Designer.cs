@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnOK = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.lbMaTT = new System.Windows.Forms.Label();
             this.dtp2 = new System.Windows.Forms.DateTimePicker();
@@ -41,7 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbbTT = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnOK = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(614, 243);
             this.panel1.TabIndex = 0;
+            // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(236, 189);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(104, 38);
+            this.btnOK.TabIndex = 14;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // label9
             // 
@@ -157,7 +167,7 @@
             this.cbbTT.Items.AddRange(new object[] {
             "Chưa trả",
             "Đã Trả "});
-            this.cbbTT.Location = new System.Drawing.Point(418, 146);
+            this.cbbTT.Location = new System.Drawing.Point(394, 146);
             this.cbbTT.Name = "cbbTT";
             this.cbbTT.Size = new System.Drawing.Size(121, 24);
             this.cbbTT.TabIndex = 3;
@@ -170,16 +180,6 @@
             this.label1.Size = new System.Drawing.Size(101, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã phiếu mượn ";
-            // 
-            // btnOK
-            // 
-            this.btnOK.Location = new System.Drawing.Point(470, 193);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(104, 38);
-            this.btnOK.TabIndex = 14;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // GUI_EditPhieuMuon
             // 

@@ -55,7 +55,7 @@
             // btnSearchFile
             // 
             this.btnSearchFile.ForeColor = System.Drawing.Color.Red;
-            this.btnSearchFile.Location = new System.Drawing.Point(669, 38);
+            this.btnSearchFile.Location = new System.Drawing.Point(669, 78);
             this.btnSearchFile.Name = "btnSearchFile";
             this.btnSearchFile.Size = new System.Drawing.Size(172, 35);
             this.btnSearchFile.TabIndex = 18;
@@ -65,14 +65,14 @@
             // 
             // nrudSL
             // 
-            this.nrudSL.Location = new System.Drawing.Point(383, 38);
+            this.nrudSL.Location = new System.Drawing.Point(387, 40);
             this.nrudSL.Name = "nrudSL";
             this.nrudSL.Size = new System.Drawing.Size(97, 22);
             this.nrudSL.TabIndex = 17;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(654, 216);
+            this.btnOK.Location = new System.Drawing.Point(659, 223);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(138, 38);
             this.btnOK.TabIndex = 16;
@@ -98,7 +98,7 @@
             // 
             // txtSource
             // 
-            this.txtSource.Location = new System.Drawing.Point(658, 10);
+            this.txtSource.Location = new System.Drawing.Point(669, 40);
             this.txtSource.Name = "txtSource";
             this.txtSource.Size = new System.Drawing.Size(194, 22);
             this.txtSource.TabIndex = 15;
@@ -113,7 +113,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(564, 13);
+            this.label8.Location = new System.Drawing.Point(552, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 16);
             this.label8.TabIndex = 7;
@@ -122,7 +122,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(287, 39);
+            this.label2.Location = new System.Drawing.Point(287, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 16);
             this.label2.TabIndex = 1;
@@ -130,7 +130,7 @@
             // 
             // txtMaThuThu
             // 
-            this.txtMaThuThu.Location = new System.Drawing.Point(356, 233);
+            this.txtMaThuThu.Location = new System.Drawing.Point(359, 239);
             this.txtMaThuThu.Name = "txtMaThuThu";
             this.txtMaThuThu.Size = new System.Drawing.Size(194, 22);
             this.txtMaThuThu.TabIndex = 9;

@@ -141,9 +141,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnpheiumuon);
             this.flowLayoutPanel1.Controls.Add(this.btndocgia);
             this.flowLayoutPanel1.Controls.Add(this.btnthuthu);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(516, 83);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(483, 86);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(666, 53);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(597, 53);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // pictureBoxAdm

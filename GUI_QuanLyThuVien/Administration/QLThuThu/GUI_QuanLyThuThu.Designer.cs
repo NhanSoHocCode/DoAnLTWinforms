@@ -52,7 +52,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(365, 26);
+            this.label1.Location = new System.Drawing.Point(367, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 4;
@@ -60,7 +60,7 @@
             // 
             // btnaddtt
             // 
-            this.btnaddtt.Location = new System.Drawing.Point(189, 51);
+            this.btnaddtt.Location = new System.Drawing.Point(194, 26);
             this.btnaddtt.Name = "btnaddtt";
             this.btnaddtt.Size = new System.Drawing.Size(148, 37);
             this.btnaddtt.TabIndex = 1;
@@ -70,14 +70,14 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(433, 23);
+            this.txtSearch.Location = new System.Drawing.Point(464, 33);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(273, 22);
             this.txtSearch.TabIndex = 3;
             // 
             // btnListTT
             // 
-            this.btnListTT.Location = new System.Drawing.Point(24, 51);
+            this.btnListTT.Location = new System.Drawing.Point(12, 23);
             this.btnListTT.Name = "btnListTT";
             this.btnListTT.Size = new System.Drawing.Size(148, 37);
             this.btnListTT.TabIndex = 0;

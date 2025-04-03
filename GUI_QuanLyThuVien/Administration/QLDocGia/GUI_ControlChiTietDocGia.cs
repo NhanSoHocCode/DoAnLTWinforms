@@ -111,5 +111,15 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
                 MessageBox.Show(bll_QuanLyDocGia.DelDocGia(person.sMa));
             }
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

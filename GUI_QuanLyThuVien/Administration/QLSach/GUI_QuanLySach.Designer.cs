@@ -32,16 +32,16 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnRefesh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearchBook = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtg1 = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnRefesh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddBook
@@ -50,7 +50,7 @@
             this.btnAddBook.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
             this.btnAddBook.Location = new System.Drawing.Point(178, 3);
             this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(260, 47);
+            this.btnAddBook.Size = new System.Drawing.Size(209, 47);
             this.btnAddBook.TabIndex = 1;
             this.btnAddBook.Text = "Thêm sách mới";
             this.btnAddBook.UseVisualStyleBackColor = true;
@@ -60,7 +60,7 @@
             // 
             this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.btnEdit.Location = new System.Drawing.Point(444, 3);
+            this.btnEdit.Location = new System.Drawing.Point(609, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(210, 47);
             this.btnEdit.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             this.btnDel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDel.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.btnDel.Location = new System.Drawing.Point(660, 3);
+            this.btnDel.Location = new System.Drawing.Point(393, 3);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(210, 47);
             this.btnDel.TabIndex = 3;
@@ -91,11 +91,35 @@
             this.panel1.Size = new System.Drawing.Size(1720, 155);
             this.panel1.TabIndex = 4;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnRefesh);
+            this.flowLayoutPanel1.Controls.Add(this.btnAddBook);
+            this.flowLayoutPanel1.Controls.Add(this.btnDel);
+            this.flowLayoutPanel1.Controls.Add(this.btnEdit);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(347, 21);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(827, 59);
+            this.flowLayoutPanel1.TabIndex = 10;
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRefesh.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.close_icon;
+            this.btnRefesh.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefesh.Location = new System.Drawing.Point(3, 3);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(169, 47);
+            this.btnRefesh.TabIndex = 4;
+            this.btnRefesh.Text = "Refesh";
+            this.btnRefesh.UseVisualStyleBackColor = true;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(439, 101);
+            this.label1.Location = new System.Drawing.Point(446, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 9;
@@ -104,7 +128,7 @@
             // txtSearchBook
             // 
             this.txtSearchBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchBook.Location = new System.Drawing.Point(538, 95);
+            this.txtSearchBook.Location = new System.Drawing.Point(561, 96);
             this.txtSearchBook.Name = "txtSearchBook";
             this.txtSearchBook.Size = new System.Drawing.Size(441, 22);
             this.txtSearchBook.TabIndex = 8;
@@ -131,30 +155,6 @@
             this.dtg1.TabIndex = 0;
             this.dtg1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellClick_1);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnRefesh);
-            this.flowLayoutPanel1.Controls.Add(this.btnAddBook);
-            this.flowLayoutPanel1.Controls.Add(this.btnEdit);
-            this.flowLayoutPanel1.Controls.Add(this.btnDel);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1018, 59);
-            this.flowLayoutPanel1.TabIndex = 10;
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRefesh.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.close_icon;
-            this.btnRefesh.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefesh.Location = new System.Drawing.Point(3, 3);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(169, 47);
-            this.btnRefesh.TabIndex = 4;
-            this.btnRefesh.Text = "Refesh";
-            this.btnRefesh.UseVisualStyleBackColor = true;
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
-            // 
             // GUI_QuanLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -169,9 +169,9 @@
             this.Load += new System.EventHandler(this.GUI_QuanLySach_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtg1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -34,10 +34,10 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnListCanhCaoQuaHan = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtg1 = new System.Windows.Forms.DataGridView();
-            this.btnListCanhCaoQuaHan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg1)).BeginInit();
@@ -65,7 +65,7 @@
             // btnRefesh
             // 
             this.btnRefesh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRefesh.Location = new System.Drawing.Point(262, 12);
+            this.btnRefesh.Location = new System.Drawing.Point(133, 48);
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Size = new System.Drawing.Size(169, 47);
             this.btnRefesh.TabIndex = 4;
@@ -76,9 +76,9 @@
             // btnDel
             // 
             this.btnDel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDel.Location = new System.Drawing.Point(899, 12);
+            this.btnDel.Location = new System.Drawing.Point(801, 48);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(210, 47);
+            this.btnDel.Size = new System.Drawing.Size(169, 47);
             this.btnDel.TabIndex = 3;
             this.btnDel.Text = "Xóa phiếu ";
             this.btnDel.UseVisualStyleBackColor = true;
@@ -87,9 +87,9 @@
             // btnEdit
             // 
             this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEdit.Location = new System.Drawing.Point(581, 12);
+            this.btnEdit.Location = new System.Drawing.Point(427, 48);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(210, 47);
+            this.btnEdit.Size = new System.Drawing.Size(169, 47);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Sửa phiếu";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -109,6 +109,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1702, 166);
             this.panel1.TabIndex = 6;
+            // 
+            // btnListCanhCaoQuaHan
+            // 
+            this.btnListCanhCaoQuaHan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnListCanhCaoQuaHan.Location = new System.Drawing.Point(1167, 48);
+            this.btnListCanhCaoQuaHan.Name = "btnListCanhCaoQuaHan";
+            this.btnListCanhCaoQuaHan.Size = new System.Drawing.Size(169, 47);
+            this.btnListCanhCaoQuaHan.TabIndex = 11;
+            this.btnListCanhCaoQuaHan.Text = "Danh sách cảnh cáo ";
+            this.btnListCanhCaoQuaHan.UseVisualStyleBackColor = true;
+            this.btnListCanhCaoQuaHan.Click += new System.EventHandler(this.btnListCanhCaoQuaHan_Click);
             // 
             // label2
             // 
@@ -140,17 +151,6 @@
             this.dtg1.Size = new System.Drawing.Size(1702, 767);
             this.dtg1.TabIndex = 0;
             this.dtg1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellClick);
-            // 
-            // btnListCanhCaoQuaHan
-            // 
-            this.btnListCanhCaoQuaHan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnListCanhCaoQuaHan.Location = new System.Drawing.Point(1181, 12);
-            this.btnListCanhCaoQuaHan.Name = "btnListCanhCaoQuaHan";
-            this.btnListCanhCaoQuaHan.Size = new System.Drawing.Size(210, 47);
-            this.btnListCanhCaoQuaHan.TabIndex = 11;
-            this.btnListCanhCaoQuaHan.Text = "Danh sách cảnh cáo ";
-            this.btnListCanhCaoQuaHan.UseVisualStyleBackColor = true;
-            this.btnListCanhCaoQuaHan.Click += new System.EventHandler(this.btnListCanhCaoQuaHan_Click);
             // 
             // GUI_QuanLyPhieuMuon
             // 
