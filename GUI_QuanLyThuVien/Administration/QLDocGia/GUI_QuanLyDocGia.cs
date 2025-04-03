@@ -76,6 +76,38 @@ namespace GUI_QuanLyThuVien.Administration
             LoadListDG(dt);
         }
 
+        string placeholder = "Search"; // Định nghĩa placeholder
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                txtSearch.Text = placeholder;
+                txtSearch.ForeColor = Color.Gray; // Đổi màu chữ thành nhạt
+            }
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == placeholder)
+            {
+                txtSearch.Text = "";
+                txtSearch.ForeColor = Color.Black; // Màu chữ bình thường
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            // Kiểm tra nếu người dùng xóa hết nội dung thì hiển thị lại placeholder
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                txtSearch.Text = placeholder;
+                txtSearch.ForeColor = Color.Gray;
+                txtSearch.SelectionStart = 0; // Đặt con trỏ về đầu
+            }
+        }
+
+
         //private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         //{
         //    DataTable dt = new DataTable();

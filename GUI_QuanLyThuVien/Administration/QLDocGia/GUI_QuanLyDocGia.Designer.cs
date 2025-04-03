@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,19 +44,11 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 360);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(28, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Xem danh sách ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.Artboard_21;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -66,22 +57,26 @@
             this.panel1.Size = new System.Drawing.Size(800, 90);
             this.panel1.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(370, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Search";
-            // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(472, 30);
+            this.txtSearch.Location = new System.Drawing.Point(248, 48);
+            this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(273, 22);
+            this.txtSearch.Size = new System.Drawing.Size(471, 27);
             this.txtSearch.TabIndex = 3;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.button1.Location = new System.Drawing.Point(37, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 78);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Xem danh sách ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // GUI_QuanLyDocGia
             // 
@@ -104,7 +99,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
     }
 }
