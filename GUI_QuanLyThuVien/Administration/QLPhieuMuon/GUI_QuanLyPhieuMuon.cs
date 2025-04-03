@@ -102,5 +102,20 @@ namespace GUI_QuanLyThuVien.Administration
             dtg1.ClearSelection();
             dtg1.DataSource = bll_quanlyphieumuon.ListCanhCaoQuaHan();
         }
+
+        private void dtg1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchPhieu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
