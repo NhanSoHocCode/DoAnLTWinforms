@@ -137,10 +137,12 @@ namespace GUI_QuanLyThuVien
 
         private void GUI_QuanLySach_Load(object sender, EventArgs e)
         {
+            flowLayoutPanelMain.Controls.Clear();
             DataTable dt = new DataTable();
             dt = bll.XemDanhSachToanBoSach();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
+
                 string maSach = dt.Rows[i]["Mã Sách"].ToString();
                 string tacGia = dt.Rows[i]["Tác Giả"].ToString();
                 string tenSach = dt.Rows[i]["Tên Sách"].ToString();
@@ -153,6 +155,11 @@ namespace GUI_QuanLyThuVien
                 img.Split(' ');
                 AddBookToPanel(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT);
             }
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            GUI_QuanLySach_Load(sender,e);
         }
 
 

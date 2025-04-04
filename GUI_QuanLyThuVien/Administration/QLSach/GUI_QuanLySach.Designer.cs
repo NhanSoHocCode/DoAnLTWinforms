@@ -110,6 +110,7 @@
             this.btnRefesh.TabIndex = 4;
             this.btnRefesh.Text = "Refesh";
             this.btnRefesh.UseVisualStyleBackColor = true;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // label1
             // 
