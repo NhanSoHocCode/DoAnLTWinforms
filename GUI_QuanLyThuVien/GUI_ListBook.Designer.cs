@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.flpListBook = new System.Windows.Forms.FlowLayoutPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnTinhYeu = new System.Windows.Forms.Button();
@@ -38,6 +39,8 @@
             this.tbxSearchBook = new System.Windows.Forms.TextBox();
             this.btnSearchBook = new System.Windows.Forms.Button();
             this.btnCart = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // flpListBook
@@ -125,6 +128,10 @@
             this.btnCart.UseVisualStyleBackColor = true;
             this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // GUI_ListBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -143,6 +150,7 @@
             this.Name = "GUI_ListBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_ListBook";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +168,6 @@
         private System.Windows.Forms.TextBox tbxSearchBook;
         private System.Windows.Forms.Button btnSearchBook;
         private System.Windows.Forms.Button btnCart;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

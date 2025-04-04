@@ -36,12 +36,9 @@
             this.btnRefesh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearchBook = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dtg1 = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddBook
@@ -113,7 +110,6 @@
             this.btnRefesh.TabIndex = 4;
             this.btnRefesh.Text = "Refesh";
             this.btnRefesh.UseVisualStyleBackColor = true;
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // label1
             // 
@@ -132,35 +128,22 @@
             this.txtSearchBook.Name = "txtSearchBook";
             this.txtSearchBook.Size = new System.Drawing.Size(441, 22);
             this.txtSearchBook.TabIndex = 8;
-            this.txtSearchBook.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBook_KeyDown);
             // 
-            // panel2
+            // flowLayoutPanelMain
             // 
-            this.panel2.Controls.Add(this.dtg1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 155);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1720, 825);
-            this.panel2.TabIndex = 5;
-            // 
-            // dtg1
-            // 
-            this.dtg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtg1.Location = new System.Drawing.Point(0, 0);
-            this.dtg1.Name = "dtg1";
-            this.dtg1.RowHeadersWidth = 51;
-            this.dtg1.RowTemplate.Height = 24;
-            this.dtg1.Size = new System.Drawing.Size(1720, 825);
-            this.dtg1.TabIndex = 0;
-            this.dtg1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellClick_1);
+            this.flowLayoutPanelMain.AutoScroll = true;
+            this.flowLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelMain.Location = new System.Drawing.Point(0, 155);
+            this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
+            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1720, 825);
+            this.flowLayoutPanelMain.TabIndex = 0;
             // 
             // GUI_QuanLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1720, 980);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.flowLayoutPanelMain);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_QuanLySach";
@@ -170,8 +153,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtg1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,8 +165,7 @@
         private System.Windows.Forms.Button btnRefesh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearchBook;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dtg1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMain;
     }
 }
