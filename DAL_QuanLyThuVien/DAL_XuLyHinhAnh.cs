@@ -13,23 +13,18 @@ namespace DAL_QuanLyThuVien
     {
         public string GetImage(string username)
         {
-            string strSql = "proc_getImage";
-            SqlConnection conn = SqlConnectionData.Connect();
-            conn.Open();
-            try
+            using (SqlConnection conn = SqlConnectionData.Connect()) 
             {
-                SqlCommand cmd = new SqlCommand(strSql, conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@user", username);
-                SqlDataReader reader = cmd.ExecuteReader();
-                reader.Read();
-                string image = reader["anhthe"].ToString();
-                conn.Close();
-                return image;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("proc_getImage", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@user", username);
+
+                    object result = cmd.ExecuteScalar();
+
+                    return result != null && result != DBNull.Value ? result.ToString() : "";
+                }
             }
         }
     }

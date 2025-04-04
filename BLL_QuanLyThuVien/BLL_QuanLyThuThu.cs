@@ -32,6 +32,19 @@ namespace BLL_QuanLyThuVien
         {
             return dal_quanlythuthu.AddThuThu(ps);
         }
+        public DataTable SearchThuThu(string search)
+        {
+
+            if ( int.TryParse(search, out int ma))
+            {
+                return dal_quanlythuthu.searchPersonToMa("proc_searchthuthubyma", ma);
+            } else
+            {
+                return dal_quanlythuthu.searchPersonToName("proc_searchthuthubyname", search);
+            }
+        }
+
+
 
     }
 }

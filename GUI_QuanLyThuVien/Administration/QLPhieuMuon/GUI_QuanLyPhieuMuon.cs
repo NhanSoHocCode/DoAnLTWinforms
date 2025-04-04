@@ -43,6 +43,7 @@ namespace GUI_QuanLyThuVien.Administration
             DTO_PhieuMuon pm = new DTO_PhieuMuon();
             pm.sMaPhieuMuon = int.TryParse(txtSearchPhieu.Text, out int maPhieu) ? maPhieu : 0;
             pm.sTenDocGia = txtSearchPhieu.Text;
+            dtg1.ClearSelection();
             dtg1.DataSource = bll_quanlyphieumuon.TimKiemPhieuMuon(pm);
         }
 
@@ -89,7 +90,6 @@ namespace GUI_QuanLyThuVien.Administration
                     pm.sNgayTra = DateTime.Parse(dtg1.Rows[e.RowIndex].Cells[2].Value?.ToString());  
                     pm.sTrangThai = dtg1.Rows[e.RowIndex].Cells[3].Value?.ToString();
                     pm.sTenDocGia = dtg1.Rows[e.RowIndex].Cells[4].Value?.ToString();
-                    pm.sTenThuThu = dtg1.Rows[e.RowIndex].Cells[5].Value?.ToString();
                     GUI_EditPhieuMuon form = new GUI_EditPhieuMuon();
                     form.pm = pm;
                     form.Show();

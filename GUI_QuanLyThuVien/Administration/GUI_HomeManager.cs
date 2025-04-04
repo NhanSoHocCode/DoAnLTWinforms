@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -27,7 +28,7 @@ namespace GUI_QuanLyThuVien.Administration
             lbname.Text = username;
             lbnameRole.Text = "Quản trị viên master";
             string a = bll.LayAnhThe(username);
-            string path = a.Contains(":") ? a : "D:\\K25_Project_LTWinform\\DoAn\\images\\" + a;
+            string path = a.Contains(":") ? a : Path.Combine(@"D:\K25_Project_LTWinform\DoAn\images\", a);
             pictureBoxAdm.Image = Image.FromFile(path);
             btnSach.Image = new Bitmap(Properties.Resources.book_icon, btnSach.ClientSize.Height - 10, btnSach.ClientSize.Height - 10);
             btnSach.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -100,12 +101,16 @@ namespace GUI_QuanLyThuVien.Administration
 
         private void btndocgia_Click(object sender, EventArgs e)
         {
-
+            GUI_QuanLyDocGia form = new GUI_QuanLyDocGia();
+            OpenChildForm(form, panel3);
+            currentFormChild = form;
         }
 
         private void btnthuthu_Click(object sender, EventArgs e)
         {
-
+            GUI_QuanLyThuThu form = new GUI_QuanLyThuThu();
+            OpenChildForm(form, panel3);
+            currentFormChild = form;
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

@@ -20,10 +20,8 @@ namespace GUI_QuanLyThuVien.Administration
             InitializeComponent();
         }
         BLL_QuanLyThuThu bll_quanlythuthu = new BLL_QuanLyThuThu();
-        public void LoadListTT()
+        public void LoadListTT(DataTable dt)
         {
-            DataTable dt = new DataTable();
-            dt = bll_quanlythuthu.ListThuThu();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 PersonItem personItem = new PersonItem();
@@ -46,20 +44,31 @@ namespace GUI_QuanLyThuVien.Administration
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadListTT();
+            DataTable dt = new DataTable();
+            dt = bll_quanlythuthu.ListThuThu();
+            LoadListTT(dt);
         }
 
         private void btnListTT_Click(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
+            dt = bll_quanlythuthu.ListThuThu();
             flowLayoutPanel1.Controls.Clear();
-            LoadListTT();
+            LoadListTT(dt);
         }
 
         private void btnaddtt_Click(object sender, EventArgs e)
         {
             GUI_AddThuThu addTT = new GUI_AddThuThu();
             addTT.Show();
+        }
 
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = bll_quanlythuthu.SearchThuThu(txtSearch.Text);
+            flowLayoutPanel1.Controls.Clear();
+            LoadListTT(dt);
         }
     }
 }

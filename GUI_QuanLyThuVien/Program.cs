@@ -21,7 +21,7 @@ namespace GUI_QuanLyThuVien
             //Application.Run(new GUI_QuanLyThuThu());
             //Application.Run(new GUI_DangNhap());
             //Application.Run(new GUI_QuanLyDocGia());
-            Application.Run(new GUI_AddEditBook());
+            Application.Run(new GUI_HomeManager());
         }
     }
 }

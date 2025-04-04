@@ -73,7 +73,7 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
-        public DataTable searchPersonToMa(string strSql, int ma)  //proc_searchdocgiabyma,
+        public DataTable searchPersonToMa(string strSql, int ma)  //proc_searchdocgiabyma,proc_searchthuthubyma
         {
             DataTable dt = new DataTable();
             SqlConnection conn = SqlConnectionData.Connect();
@@ -92,7 +92,7 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
-        public DataTable searchPersonToName(string strSql, string name)  //proc_searchdocgiabyname,
+        public DataTable searchPersonToName(string strSql, string name)  //proc_searchdocgiabyname, proc_searchthuthubyname
         {
             DataTable dt = new DataTable();
             SqlConnection conn = SqlConnectionData.Connect();

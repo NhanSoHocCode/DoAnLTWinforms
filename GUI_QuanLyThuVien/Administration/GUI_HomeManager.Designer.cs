@@ -143,7 +143,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnthuthu);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(483, 86);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(597, 53);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(841, 53);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // pictureBoxAdm
@@ -189,7 +189,7 @@
             // buttonClose
             // 
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(1043, 0);
+            this.buttonClose.Location = new System.Drawing.Point(1116, 0);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(40, 40);
             this.buttonClose.TabIndex = 0;

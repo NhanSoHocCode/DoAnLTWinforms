@@ -25,7 +25,6 @@ namespace GUI_QuanLyThuVien.Administration
         {
             lbMaDG.Text = pm.sTenDocGia.ToString();
             lbmaPM.Text = pm.sMaPhieuMuon.ToString();
-            lbMaTT.Text = pm.sTenThuThu.ToString();
             dtp1.Value = pm.sNgayMuon;
             dtp2.Value = pm.sNgayTra;
             cbbTT.Text = pm.sTrangThai;
