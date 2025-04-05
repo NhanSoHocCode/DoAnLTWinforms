@@ -63,7 +63,6 @@
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Sửa ";
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDel
             // 
@@ -75,7 +74,6 @@
             this.btnDel.TabIndex = 3;
             this.btnDel.Text = "Xóa sách";
             this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // panel1
             // 
@@ -129,6 +127,7 @@
             this.txtSearchBook.Name = "txtSearchBook";
             this.txtSearchBook.Size = new System.Drawing.Size(441, 22);
             this.txtSearchBook.TabIndex = 8;
+            this.txtSearchBook.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchBook_KeyPress);
             // 
             // flowLayoutPanelMain
             // 

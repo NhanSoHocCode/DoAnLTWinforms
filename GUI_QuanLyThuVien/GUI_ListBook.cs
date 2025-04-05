@@ -66,9 +66,7 @@ namespace GUI_QuanLyThuVien
         private void btnSearchBook_Click(object sender, EventArgs e)
         {
             flpListBook.Controls.Clear();
-            DTO_Sach book = new DTO_Sach();
-            book.sTenSach = tbxSearchBook.Text;
-            DataTable dt = bll.TimKiemSach(book);
+            DataTable dt = bll.TimKiemSach(tbxSearchBook.Text);
             foreach (DataRow dr in dt.Rows)
             {
                 BookItem bookItem = new BookItem();

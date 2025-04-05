@@ -46,7 +46,7 @@ namespace DAL_QuanLyThuVien
         }
         public DataTable TimKiemSach(DTO_Sach book)   // co tim kiem ten sach gan dung , ex: nhap ten sach la "Yeu" thi ket qua la "Tinh Yeu"
         {
-            if(book.sMaSach != null)
+            if (book.sMaSach != null)
             {
                 String strSql = "proc_searchbookbymasach";
                 SqlConnection conn = SqlConnectionData.Connect();
@@ -55,9 +55,9 @@ namespace DAL_QuanLyThuVien
                 {
                     SqlCommand cmd = new SqlCommand(strSql, conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@masach", book.sMaSach);
+                    cmd.Parameters.AddWithValue("@masach", int.Parse(book.sMaSach));
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
+                    DataTable dt = new DataTable(); 
                     da.Fill(dt);
                     conn.Close();  // nho dong ket noi
                     return dt;
@@ -67,7 +67,7 @@ namespace DAL_QuanLyThuVien
                     throw ex;
                 }
             }
-            if (book.sTenSach != null)             
+            if (book.sTenSach != null)
             {
                 String strSql = "proc_searchbookbytensachGanDung";
                 SqlConnection conn = SqlConnectionData.Connect();
@@ -88,49 +88,10 @@ namespace DAL_QuanLyThuVien
                     throw ex;
                 }
             }
-            if (book.sTacGia != null)
+            else
             {
-                String strSql = "proc_searchbookbytacgia";
-                SqlConnection conn = SqlConnectionData.Connect();
-                conn.Open();
-                try
-                {
-                    SqlCommand cmd = new SqlCommand(strSql, conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@tacgia", book.sTacGia);
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    conn.Close();  // nho dong ket noi
-                    return dt;
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                return null;
             }
-            if (book.sTheLoai != null)
-            {
-                String strSql = "proc_searchbookbytheloai";
-                SqlConnection conn = SqlConnectionData.Connect();
-                conn.Open();
-                try
-                {
-                    SqlCommand cmd = new SqlCommand(strSql, conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@theloai", book.sTheLoai);
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    conn.Close();  // nho dong ket noi
-                    return dt;
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            return null;
         }
         public String XoaSach(DTO_Sach book) // chi xoa theo ma sach 
         {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DAL_QuanLyThuVien;
 using System.Data;
 using DTO_QuanLyThuVien;
+using System.Diagnostics.Eventing.Reader;
 
 namespace BLL_QuanLyThuVien
 {
@@ -20,8 +21,16 @@ namespace BLL_QuanLyThuVien
         {
             return dal_QuanLySach.ThemSach(book);
         }
-        public DataTable TimKiemSach(DTO_Sach book)   // tim kiem theo 3 chuc nang : tim theo ma sach, ten sach, tac gia , fill ra data grid view
+        public DataTable TimKiemSach(string search)   // tim kiem theo 2 chuc nang : tim theo ma sach, ten sach
         {
+            DTO_Sach book = new DTO_Sach();
+            if (int.TryParse(search, out int ma))
+            {
+                book.sMaSach = search;
+            } else
+            {
+                book.sTenSach = search;
+            }
             return dal_QuanLySach.TimKiemSach(book);
         }
         public string XoaSach(DTO_Sach book) // tra ve thong{

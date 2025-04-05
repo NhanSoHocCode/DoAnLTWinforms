@@ -121,20 +121,6 @@ namespace GUI_QuanLyThuVien
             form.Add = true;
             form.Show();
         }
-        private void btnEdit_Click(object sender, EventArgs e)  // chinh sua lai thu tu dung chuc nang khi edit 
-        {
-            Function = "Edit";
-        }
-        private void btnDel_Click(object sender, EventArgs e)
-        {
-            Function = "Delete";  // lam sao de doi thu thu khi chon or click 
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void GUI_QuanLySach_Load(object sender, EventArgs e)
         {
             flowLayoutPanelMain.Controls.Clear();
@@ -160,6 +146,29 @@ namespace GUI_QuanLyThuVien
         private void btnRefesh_Click(object sender, EventArgs e)
         {
             GUI_QuanLySach_Load(sender,e);
+        }
+
+        private void txtSearchBook_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            flowLayoutPanelMain.Controls.Clear();
+            DataTable dt = new DataTable();
+            dt = bll.TimKiemSach(txtSearchBook.Text);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+
+                string maSach = dt.Rows[i]["maSach"].ToString();
+                string tacGia = dt.Rows[i]["tacGia"].ToString();
+                string tenSach = dt.Rows[i]["tenSach"].ToString();
+                string NXB = dt.Rows[i]["nhaXuatBan"].ToString();
+                string donGia = dt.Rows[i]["donGia"].ToString();
+                string soLuong = dt.Rows[i]["soLuong"].ToString();
+                string theLoai = dt.Rows[i]["theLoai"].ToString();
+                string MTT = dt.Rows[i]["maThuThu"].ToString();
+                string img = "D:\\K25_Project_LTWinform\\DoAn\\images\\" + dt.Rows[i]["source_image"].ToString();
+                img.Split(' ');
+                AddBookToPanel(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT);
+            }
+
         }
 
 
