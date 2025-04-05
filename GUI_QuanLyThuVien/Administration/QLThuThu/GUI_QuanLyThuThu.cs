@@ -20,6 +20,7 @@ namespace GUI_QuanLyThuVien.Administration
             InitializeComponent();
         }
         BLL_QuanLyThuThu bll_quanlythuthu = new BLL_QuanLyThuThu();
+//sdsadasdasdasdasdasdsdasd
         public void LoadListTT(DataTable dt)
         {
             for (int i = 0; i < dt.Rows.Count; i++)
