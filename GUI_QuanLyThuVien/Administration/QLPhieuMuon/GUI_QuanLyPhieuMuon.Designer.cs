@@ -31,11 +31,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtg1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSearchPhieu = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnListCanhCaoQuaHan = new System.Windows.Forms.Button();
             this.btnRefesh = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.txtSearchPhieu = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -53,7 +53,7 @@
             // dtg1
             // 
             this.dtg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg1.Location = new System.Drawing.Point(1, 0);
+            this.dtg1.Location = new System.Drawing.Point(1, 1);
             this.dtg1.Name = "dtg1";
             this.dtg1.RowHeadersWidth = 51;
             this.dtg1.RowTemplate.Height = 24;
@@ -76,6 +76,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1257, 166);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtSearchPhieu
+            // 
+            this.txtSearchPhieu.Animated = true;
+            this.txtSearchPhieu.AutoRoundedCorners = true;
+            this.txtSearchPhieu.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearchPhieu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchPhieu.DefaultText = "Lưu ý: Search theo mã PM và tên độc giả";
+            this.txtSearchPhieu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchPhieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchPhieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchPhieu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchPhieu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchPhieu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearchPhieu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchPhieu.Location = new System.Drawing.Point(269, 110);
+            this.txtSearchPhieu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchPhieu.Name = "txtSearchPhieu";
+            this.txtSearchPhieu.PlaceholderText = "";
+            this.txtSearchPhieu.SelectedText = "";
+            this.txtSearchPhieu.Size = new System.Drawing.Size(745, 39);
+            this.txtSearchPhieu.TabIndex = 13;
             // 
             // btnListCanhCaoQuaHan
             // 
@@ -126,28 +149,6 @@
             this.btnEdit.Text = "Sửa phiếu";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // txtSearchPhieu
-            // 
-            this.txtSearchPhieu.Animated = true;
-            this.txtSearchPhieu.AutoRoundedCorners = true;
-            this.txtSearchPhieu.BackColor = System.Drawing.Color.Transparent;
-            this.txtSearchPhieu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchPhieu.DefaultText = "Lưu ý: Search theo mã PM và tên độc giả";
-            this.txtSearchPhieu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchPhieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchPhieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchPhieu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchPhieu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchPhieu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearchPhieu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchPhieu.Location = new System.Drawing.Point(269, 110);
-            this.txtSearchPhieu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearchPhieu.Name = "txtSearchPhieu";
-            this.txtSearchPhieu.PlaceholderText = "";
-            this.txtSearchPhieu.SelectedText = "";
-            this.txtSearchPhieu.Size = new System.Drawing.Size(745, 39);
-            this.txtSearchPhieu.TabIndex = 13;
             // 
             // GUI_QuanLyPhieuMuon
             // 

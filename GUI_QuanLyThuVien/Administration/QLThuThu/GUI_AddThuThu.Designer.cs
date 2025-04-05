@@ -45,6 +45,7 @@
             this.btnDangKy = new System.Windows.Forms.Button();
             this.txtpw = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbanhthe = new System.Windows.Forms.Label();
             this.btnSearchFile = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.btnAddTT = new System.Windows.Forms.Button();
-            this.lbanhthe = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -166,6 +166,7 @@
             this.txtName.Size = new System.Drawing.Size(252, 23);
             this.txtName.TabIndex = 15;
             this.txtName.Text = "Họ Và Tên";
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // dtpNgaySinh
             // 
@@ -266,6 +267,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(321, 305);
             this.panel1.TabIndex = 30;
+            // 
+            // lbanhthe
+            // 
+            this.lbanhthe.AutoSize = true;
+            this.lbanhthe.Location = new System.Drawing.Point(106, 40);
+            this.lbanhthe.Name = "lbanhthe";
+            this.lbanhthe.Size = new System.Drawing.Size(35, 20);
+            this.lbanhthe.TabIndex = 33;
+            this.lbanhthe.Text = "null";
             // 
             // btnSearchFile
             // 
@@ -372,15 +382,6 @@
             this.btnAddTT.Text = "Add";
             this.btnAddTT.UseVisualStyleBackColor = true;
             this.btnAddTT.Click += new System.EventHandler(this.btnAddTT_Click);
-            // 
-            // lbanhthe
-            // 
-            this.lbanhthe.AutoSize = true;
-            this.lbanhthe.Location = new System.Drawing.Point(106, 40);
-            this.lbanhthe.Name = "lbanhthe";
-            this.lbanhthe.Size = new System.Drawing.Size(35, 20);
-            this.lbanhthe.TabIndex = 33;
-            this.lbanhthe.Text = "null";
             // 
             // openFileDialog1
             // 

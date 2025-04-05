@@ -63,5 +63,10 @@ namespace GUI_QuanLyThuVien.Administration.QLThuThu
                 MessageBox.Show("Bạn chưa chọn file.");
             }
         }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

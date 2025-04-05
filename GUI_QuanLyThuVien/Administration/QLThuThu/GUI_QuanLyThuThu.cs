@@ -70,5 +70,19 @@ namespace GUI_QuanLyThuVien.Administration
             flowLayoutPanel1.Controls.Clear();
             LoadListTT(dt);
         }
+
+        private void btnListTT_Click_1(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = bll_quanlythuthu.ListThuThu();
+            flowLayoutPanel1.Controls.Clear();
+            LoadListTT(dt);
+        }
+
+        private void btnaddtt_Click_1(object sender, EventArgs e)
+        {
+            GUI_AddThuThu addTT = new GUI_AddThuThu();
+            addTT.Show();
+        }
     }
 }
