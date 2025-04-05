@@ -28,41 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnthuthu = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
             this.lbnameRole = new System.Windows.Forms.Label();
             this.lbname = new System.Windows.Forms.Label();
-            this.btndocgia = new System.Windows.Forms.Button();
-            this.btnpheiumuon = new System.Windows.Forms.Button();
-            this.btnSach = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBoxAdm = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.buttonClose = new System.Windows.Forms.Button();
+            this.guna2TabControlMain = new Guna.UI2.WinForms.Guna2TabControl();
+            this.tabPageSach = new System.Windows.Forms.TabPage();
+            this.panelSach = new System.Windows.Forms.Panel();
+            this.tabPagePhieu = new System.Windows.Forms.TabPage();
+            this.panelPhieuMuon = new System.Windows.Forms.Panel();
+            this.tabPageDocGia = new System.Windows.Forms.TabPage();
+            this.panelDocGia = new System.Windows.Forms.Panel();
+            this.tabPageThuThu = new System.Windows.Forms.TabPage();
+            this.panelThuThu = new System.Windows.Forms.Panel();
+            this.guna2CirclePictureBoxAdm = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdm)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.guna2TabControlMain.SuspendLayout();
+            this.tabPageSach.SuspendLayout();
+            this.tabPagePhieu.SuspendLayout();
+            this.tabPageDocGia.SuspendLayout();
+            this.tabPageThuThu.SuspendLayout();
+            this.panelThuThu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBoxAdm)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnthuthu
-            // 
-            this.btnthuthu.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthuthu.Location = new System.Drawing.Point(450, 3);
-            this.btnthuthu.Name = "btnthuthu";
-            this.btnthuthu.Size = new System.Drawing.Size(143, 44);
-            this.btnthuthu.TabIndex = 3;
-            this.btnthuthu.Text = "Thủ thư";
-            this.btnthuthu.UseVisualStyleBackColor = true;
-            this.btnthuthu.Click += new System.EventHandler(this.btnthuthu_Click);
             // 
             // lbnameRole
             // 
             this.lbnameRole.AutoSize = true;
-            this.lbnameRole.Location = new System.Drawing.Point(90, 37);
+            this.lbnameRole.Location = new System.Drawing.Point(105, 46);
             this.lbnameRole.Name = "lbnameRole";
             this.lbnameRole.Size = new System.Drawing.Size(156, 16);
             this.lbnameRole.TabIndex = 3;
@@ -71,140 +69,190 @@
             // lbname
             // 
             this.lbname.AutoSize = true;
-            this.lbname.Location = new System.Drawing.Point(90, 3);
+            this.lbname.Location = new System.Drawing.Point(105, 3);
             this.lbname.Name = "lbname";
             this.lbname.Size = new System.Drawing.Size(44, 16);
             this.lbname.TabIndex = 1;
             this.lbname.Text = "admin";
             // 
-            // btndocgia
-            // 
-            this.btndocgia.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndocgia.Location = new System.Drawing.Point(301, 3);
-            this.btndocgia.Name = "btndocgia";
-            this.btndocgia.Size = new System.Drawing.Size(143, 44);
-            this.btndocgia.TabIndex = 1;
-            this.btndocgia.Text = "Độc giả ";
-            this.btndocgia.UseVisualStyleBackColor = true;
-            this.btndocgia.Click += new System.EventHandler(this.btndocgia_Click);
-            // 
-            // btnpheiumuon
-            // 
-            this.btnpheiumuon.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnpheiumuon.Location = new System.Drawing.Point(152, 3);
-            this.btnpheiumuon.Name = "btnpheiumuon";
-            this.btnpheiumuon.Size = new System.Drawing.Size(143, 44);
-            this.btnpheiumuon.TabIndex = 2;
-            this.btnpheiumuon.Text = "Phiếu mượn";
-            this.btnpheiumuon.UseVisualStyleBackColor = true;
-            this.btnpheiumuon.Click += new System.EventHandler(this.btnpheiumuon_Click);
-            // 
-            // btnSach
-            // 
-            this.btnSach.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSach.Location = new System.Drawing.Point(3, 3);
-            this.btnSach.Name = "btnSach";
-            this.btnSach.Size = new System.Drawing.Size(143, 44);
-            this.btnSach.TabIndex = 0;
-            this.btnSach.Text = "Sách";
-            this.btnSach.UseVisualStyleBackColor = true;
-            this.btnSach.Click += new System.EventHandler(this.btnSach_Click);
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Controls.Add(this.pictureBoxAdm);
+            this.panel2.Controls.Add(this.guna2CirclePictureBoxAdm);
             this.panel2.Controls.Add(this.lbnameRole);
             this.panel2.Controls.Add(this.lbname);
-            this.panel2.Location = new System.Drawing.Point(3, 42);
+            this.panel2.Location = new System.Drawing.Point(106, 126);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1257, 139);
+            this.panel2.Size = new System.Drawing.Size(1257, 81);
             this.panel2.TabIndex = 1;
             // 
-            // label2
+            // guna2TabControlMain
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label2.Location = new System.Drawing.Point(420, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(510, 69);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Quản Lý Thư Viện";
+            this.guna2TabControlMain.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.guna2TabControlMain.Controls.Add(this.tabPageSach);
+            this.guna2TabControlMain.Controls.Add(this.tabPagePhieu);
+            this.guna2TabControlMain.Controls.Add(this.tabPageDocGia);
+            this.guna2TabControlMain.Controls.Add(this.tabPageThuThu);
+            this.guna2TabControlMain.ItemSize = new System.Drawing.Size(180, 40);
+            this.guna2TabControlMain.Location = new System.Drawing.Point(0, 46);
+            this.guna2TabControlMain.Name = "guna2TabControlMain";
+            this.guna2TabControlMain.SelectedIndex = 0;
+            this.guna2TabControlMain.Size = new System.Drawing.Size(1257, 1080);
+            this.guna2TabControlMain.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
+            this.guna2TabControlMain.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.guna2TabControlMain.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.guna2TabControlMain.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2TabControlMain.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.guna2TabControlMain.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
+            this.guna2TabControlMain.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.guna2TabControlMain.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.guna2TabControlMain.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.guna2TabControlMain.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.guna2TabControlMain.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
+            this.guna2TabControlMain.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.guna2TabControlMain.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.guna2TabControlMain.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
+            this.guna2TabControlMain.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.guna2TabControlMain.TabButtonSize = new System.Drawing.Size(180, 40);
+            this.guna2TabControlMain.TabButtonTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2TabControlMain.TabIndex = 3;
+            this.guna2TabControlMain.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             // 
-            // flowLayoutPanel1
+            // tabPageSach
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnSach);
-            this.flowLayoutPanel1.Controls.Add(this.btnpheiumuon);
-            this.flowLayoutPanel1.Controls.Add(this.btndocgia);
-            this.flowLayoutPanel1.Controls.Add(this.btnthuthu);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(365, 86);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(628, 53);
-            this.flowLayoutPanel1.TabIndex = 5;
+            this.tabPageSach.Controls.Add(this.panelSach);
+            this.tabPageSach.Location = new System.Drawing.Point(184, 4);
+            this.tabPageSach.Name = "tabPageSach";
+            this.tabPageSach.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSach.Size = new System.Drawing.Size(1069, 1072);
+            this.tabPageSach.TabIndex = 0;
+            this.tabPageSach.Text = "Sách";
+            this.tabPageSach.UseVisualStyleBackColor = true;
             // 
-            // pictureBoxAdm
+            // panelSach
             // 
-            this.pictureBoxAdm.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxAdm.Name = "pictureBoxAdm";
-            this.pictureBoxAdm.Size = new System.Drawing.Size(81, 119);
-            this.pictureBoxAdm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxAdm.TabIndex = 4;
-            this.pictureBoxAdm.TabStop = false;
+            this.panelSach.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSach.Location = new System.Drawing.Point(3, 3);
+            this.panelSach.Name = "panelSach";
+            this.panelSach.Size = new System.Drawing.Size(1063, 1066);
+            this.panelSach.TabIndex = 0;
             // 
-            // btnClose
+            // tabPagePhieu
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Red;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1204, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(53, 40);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.tabPagePhieu.Controls.Add(this.panelPhieuMuon);
+            this.tabPagePhieu.Location = new System.Drawing.Point(184, 4);
+            this.tabPagePhieu.Name = "tabPagePhieu";
+            this.tabPagePhieu.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePhieu.Size = new System.Drawing.Size(1069, 515);
+            this.tabPagePhieu.TabIndex = 1;
+            this.tabPagePhieu.Text = "Phiếu Mượn";
+            this.tabPagePhieu.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // panelPhieuMuon
             // 
-            this.panel3.Location = new System.Drawing.Point(3, 187);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1257, 894);
-            this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panelPhieuMuon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPhieuMuon.Location = new System.Drawing.Point(3, 3);
+            this.panelPhieuMuon.Name = "panelPhieuMuon";
+            this.panelPhieuMuon.Size = new System.Drawing.Size(1063, 509);
+            this.panelPhieuMuon.TabIndex = 0;
             // 
-            // panel4
+            // tabPageDocGia
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.panel4.Controls.Add(this.buttonClose);
-            this.panel4.Controls.Add(this.btnClose);
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1260, 40);
-            this.panel4.TabIndex = 3;
+            this.tabPageDocGia.Controls.Add(this.panelDocGia);
+            this.tabPageDocGia.Location = new System.Drawing.Point(184, 4);
+            this.tabPageDocGia.Name = "tabPageDocGia";
+            this.tabPageDocGia.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageDocGia.Size = new System.Drawing.Size(1069, 515);
+            this.tabPageDocGia.TabIndex = 2;
+            this.tabPageDocGia.Text = "Độc Giả";
+            this.tabPageDocGia.UseVisualStyleBackColor = true;
             // 
-            // buttonClose
+            // panelDocGia
             // 
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(1519, 0);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(40, 40);
-            this.buttonClose.TabIndex = 0;
-            this.buttonClose.Text = "X";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            this.panelDocGia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDocGia.Location = new System.Drawing.Point(3, 3);
+            this.panelDocGia.Name = "panelDocGia";
+            this.panelDocGia.Size = new System.Drawing.Size(1063, 509);
+            this.panelDocGia.TabIndex = 0;
+            // 
+            // tabPageThuThu
+            // 
+            this.tabPageThuThu.Controls.Add(this.panelThuThu);
+            this.tabPageThuThu.Location = new System.Drawing.Point(184, 4);
+            this.tabPageThuThu.Name = "tabPageThuThu";
+            this.tabPageThuThu.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageThuThu.Size = new System.Drawing.Size(1069, 515);
+            this.tabPageThuThu.TabIndex = 3;
+            this.tabPageThuThu.Text = "Thủ Thư";
+            this.tabPageThuThu.UseVisualStyleBackColor = true;
+            // 
+            // panelThuThu
+            // 
+            this.panelThuThu.Controls.Add(this.panel2);
+            this.panelThuThu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelThuThu.Location = new System.Drawing.Point(3, 3);
+            this.panelThuThu.Name = "panelThuThu";
+            this.panelThuThu.Size = new System.Drawing.Size(1063, 509);
+            this.panelThuThu.TabIndex = 0;
+            // 
+            // guna2CirclePictureBoxAdm
+            // 
+            this.guna2CirclePictureBoxAdm.ImageRotate = 0F;
+            this.guna2CirclePictureBoxAdm.Location = new System.Drawing.Point(20, 3);
+            this.guna2CirclePictureBoxAdm.Name = "guna2CirclePictureBoxAdm";
+            this.guna2CirclePictureBoxAdm.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBoxAdm.Size = new System.Drawing.Size(70, 70);
+            this.guna2CirclePictureBoxAdm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBoxAdm.TabIndex = 4;
+            this.guna2CirclePictureBoxAdm.TabStop = false;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.RosyBrown;
+            this.guna2Panel1.Controls.Add(this.guna2ControlBox2);
+            this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1257, 45);
+            this.guna2Panel1.TabIndex = 4;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1212, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 45);
+            this.guna2ControlBox1.TabIndex = 0;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1167, 0);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 45);
+            this.guna2ControlBox2.TabIndex = 1;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // GUI_HomeManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1257, 1080);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2TabControlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_HomeManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -212,9 +260,14 @@
             this.Load += new System.EventHandler(this.GUI_HomeManager_Load_1);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdm)).EndInit();
-            this.panel4.ResumeLayout(false);
+            this.guna2TabControlMain.ResumeLayout(false);
+            this.tabPageSach.ResumeLayout(false);
+            this.tabPagePhieu.ResumeLayout(false);
+            this.tabPageDocGia.ResumeLayout(false);
+            this.tabPageThuThu.ResumeLayout(false);
+            this.panelThuThu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBoxAdm)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -223,16 +276,19 @@
         private System.Windows.Forms.Label lbnameRole;
         private System.Windows.Forms.Label lbname;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnthuthu;
-        private System.Windows.Forms.Button btnpheiumuon;
-        private System.Windows.Forms.Button btndocgia;
-        private System.Windows.Forms.Button btnSach;
-        private System.Windows.Forms.PictureBox pictureBoxAdm;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2TabControl guna2TabControlMain;
+        private System.Windows.Forms.TabPage tabPageSach;
+        private System.Windows.Forms.Panel panelSach;
+        private System.Windows.Forms.TabPage tabPagePhieu;
+        private System.Windows.Forms.Panel panelPhieuMuon;
+        private System.Windows.Forms.TabPage tabPageDocGia;
+        private System.Windows.Forms.Panel panelDocGia;
+        private System.Windows.Forms.TabPage tabPageThuThu;
+        private System.Windows.Forms.Panel panelThuThu;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBoxAdm;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

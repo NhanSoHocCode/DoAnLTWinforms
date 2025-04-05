@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_QuanLyThuVien;
 using BLL_QuanLyThuVien.Functions;
+using Guna.UI2.WinForms;
 
 namespace GUI_QuanLyThuVien.Administration
 {
@@ -19,9 +20,14 @@ namespace GUI_QuanLyThuVien.Administration
         public GUI_HomeManager()
         {
             InitializeComponent();
+            guna2DragControl1.TargetControl = guna2Panel1;
         }
         public int role = 3;
         public string username = "adm";
+        private Form currentFormChild;
+        private Form currentFormChild1;
+        private Form currentFormChild2;
+        private Form currentFormChild3;
         private void GUI_HomeManager_Load_1(object sender, EventArgs e)
         {
             BLL_LayAnhThe bll = new BLL_LayAnhThe();
@@ -29,43 +35,31 @@ namespace GUI_QuanLyThuVien.Administration
             lbnameRole.Text = "Quản trị viên master";
             string a = bll.LayAnhThe(username);
             string path = a.Contains(":") ? a : Path.Combine(@"D:\K25_Project_LTWinform\DoAn\images\", a);
-            pictureBoxAdm.Image = Image.FromFile(path);
-            btnSach.Image = new Bitmap(Properties.Resources.book_icon, btnSach.ClientSize.Height - 10, btnSach.ClientSize.Height - 10);
-            btnSach.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnSach.AutoSize = true;
-            btnSach.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSach.TextAlign = ContentAlignment.MiddleCenter;
+            //pictureBoxAdm.Image = Image.FromFile(path);
+            guna2CirclePictureBoxAdm.Image = Image.FromFile(path);
+            //guna2CirclePictureBoxAdm.SizeMode = PictureBoxSizeMode.StretchImage;
+            //guna2CirclePictureBoxAdm.ShadowDecoration.Mode = ShadowMode.Circle;
+            //guna2CirclePictureBoxAdm.BorderThickness = 2;
+            //guna2CirclePictureBoxAdm.BorderColor = Color.DeepSkyBlue;
+            GUI_QuanLySach formSach = new GUI_QuanLySach();
+            OpenChildForm(formSach, panelSach,currentFormChild);
+            currentFormChild = formSach;
 
-            btnpheiumuon.Image = new Bitmap(Properties.Resources.phieuthu_icon, btnpheiumuon.ClientSize.Height - 10, btnpheiumuon.ClientSize.Height - 10);
-            btnpheiumuon.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnpheiumuon.AutoSize = true;
-            btnpheiumuon.ImageAlign = ContentAlignment.MiddleLeft;
-            btnpheiumuon.TextAlign = ContentAlignment.MiddleCenter;
+            GUI_QuanLyPhieuMuon formPhieuMuon = new GUI_QuanLyPhieuMuon();
+            OpenChildForm(formPhieuMuon, panelPhieuMuon, currentFormChild1);
+            currentFormChild = formPhieuMuon;
 
-            btndocgia.Image = new Bitmap(Properties.Resources.docgia, btndocgia.ClientSize.Height - 10, btndocgia.ClientSize.Height - 10);
-            btndocgia.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btndocgia.AutoSize = true;
-            btndocgia.ImageAlign = ContentAlignment.MiddleLeft;
-            btndocgia.TextAlign = ContentAlignment.MiddleCenter;
+            GUI_QuanLyDocGia formDocGia = new GUI_QuanLyDocGia();
+            OpenChildForm(formDocGia, panelDocGia, currentFormChild2);
+            currentFormChild = formDocGia;
 
-            btnthuthu.Image = new Bitmap(Properties.Resources.book_icon, btnthuthu.ClientSize.Height - 10, btnthuthu.ClientSize.Height - 10);
-            btnthuthu.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnthuthu.AutoSize = true;
-            btnthuthu.ImageAlign = ContentAlignment.MiddleLeft;
-            btnthuthu.TextAlign = ContentAlignment.MiddleCenter;
-            panel4.MouseDown += PanelTitleBar_MouseDown;
+            GUI_QuanLyThuThu formThuThu = new GUI_QuanLyThuThu();
+            OpenChildForm(formThuThu, panelThuThu, currentFormChild3);
+            currentFormChild = formThuThu;
         }
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(Handle, 0xA1, 0x2, 0); // Gửi lệnh di chuyển cửa sổ
-        }
-        private Form currentFormChild;
-        private void OpenChildForm(Form childForm, Panel pl)
+        
+        
+        private void OpenChildForm(Form childForm, Panel pl, Form currentFormChild)
         {
             if (currentFormChild != null)
             {
@@ -83,34 +77,6 @@ namespace GUI_QuanLyThuVien.Administration
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void btnSach_Click(object sender, EventArgs e)
-        {
-            GUI_QuanLySach form = new GUI_QuanLySach();
-            OpenChildForm(form, panel3);
-            currentFormChild = form;
-        }
-
-        private void btnpheiumuon_Click(object sender, EventArgs e)
-        {
-            GUI_QuanLyPhieuMuon form = new GUI_QuanLyPhieuMuon();
-            OpenChildForm(form, panel3);
-            currentFormChild = form;
-        }
-
-        private void btndocgia_Click(object sender, EventArgs e)
-        {
-            GUI_QuanLyDocGia form = new GUI_QuanLyDocGia();
-            OpenChildForm(form, panel3);
-            currentFormChild = form;
-        }
-
-        private void btnthuthu_Click(object sender, EventArgs e)
-        {
-            GUI_QuanLyThuThu form = new GUI_QuanLyThuThu();
-            OpenChildForm(form, panel3);
-            currentFormChild = form;
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
