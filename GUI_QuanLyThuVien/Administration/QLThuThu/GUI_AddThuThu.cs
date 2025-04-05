@@ -68,5 +68,74 @@ namespace GUI_QuanLyThuVien.Administration.QLThuThu
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchFile1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                fileNameLong = openFileDialog1.FileName;
+                fileNameShort = Path.GetFileName(openFileDialog1.FileName);
+                lbanhthe.Text = fileNameShort;
+                ps.sSourceImage = fileNameShort;
+                ChangeImage = true;
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn file.");
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+            ps.sHoTen = txtName.Text;
+            ps.sGioiTinh = cbGioiTinh.Text == "Nam" ? true : false;
+            ps.sNgaySinh = dtpNgaySinh.Value;
+            ps.sEmail = txtEmail.Text;
+            ps.sSDT = txtSdt.Text;
+            ps.sUsername = txtUser.Text;
+            ps.sDiaChi = txtDiaChi.Text;
+            ps.sPassword = txtpw.Text;
+            if (ChangeImage)
+            {
+                ps.sSourceImage = fileNameShort;
+                MessageBox.Show(bll_quanlythuthu.AddThuThu(ps));
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa nhập thông tin file ảnh");
+                return;
+            }
+        }
+
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.lbnameRole = new System.Windows.Forms.Label();
             this.lbname = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2CirclePictureBoxAdm = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2TabControlMain = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPageSach = new System.Windows.Forms.TabPage();
             this.panelSach = new System.Windows.Forms.Panel();
@@ -41,19 +42,18 @@
             this.panelDocGia = new System.Windows.Forms.Panel();
             this.tabPageThuThu = new System.Windows.Forms.TabPage();
             this.panelThuThu = new System.Windows.Forms.Panel();
-            this.guna2CirclePictureBoxAdm = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBoxAdm)).BeginInit();
             this.guna2TabControlMain.SuspendLayout();
             this.tabPageSach.SuspendLayout();
             this.tabPagePhieu.SuspendLayout();
             this.tabPageDocGia.SuspendLayout();
             this.tabPageThuThu.SuspendLayout();
             this.panelThuThu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBoxAdm)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +84,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1257, 81);
             this.panel2.TabIndex = 1;
+            // 
+            // guna2CirclePictureBoxAdm
+            // 
+            this.guna2CirclePictureBoxAdm.ImageRotate = 0F;
+            this.guna2CirclePictureBoxAdm.Location = new System.Drawing.Point(20, 3);
+            this.guna2CirclePictureBoxAdm.Name = "guna2CirclePictureBoxAdm";
+            this.guna2CirclePictureBoxAdm.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBoxAdm.Size = new System.Drawing.Size(70, 70);
+            this.guna2CirclePictureBoxAdm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBoxAdm.TabIndex = 4;
+            this.guna2CirclePictureBoxAdm.TabStop = false;
             // 
             // guna2TabControlMain
             // 
@@ -142,7 +153,7 @@
             this.tabPagePhieu.Location = new System.Drawing.Point(184, 4);
             this.tabPagePhieu.Name = "tabPagePhieu";
             this.tabPagePhieu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePhieu.Size = new System.Drawing.Size(1069, 515);
+            this.tabPagePhieu.Size = new System.Drawing.Size(1069, 1072);
             this.tabPagePhieu.TabIndex = 1;
             this.tabPagePhieu.Text = "Phiếu Mượn";
             this.tabPagePhieu.UseVisualStyleBackColor = true;
@@ -152,7 +163,7 @@
             this.panelPhieuMuon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPhieuMuon.Location = new System.Drawing.Point(3, 3);
             this.panelPhieuMuon.Name = "panelPhieuMuon";
-            this.panelPhieuMuon.Size = new System.Drawing.Size(1063, 509);
+            this.panelPhieuMuon.Size = new System.Drawing.Size(1063, 1066);
             this.panelPhieuMuon.TabIndex = 0;
             // 
             // tabPageDocGia
@@ -161,7 +172,7 @@
             this.tabPageDocGia.Location = new System.Drawing.Point(184, 4);
             this.tabPageDocGia.Name = "tabPageDocGia";
             this.tabPageDocGia.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDocGia.Size = new System.Drawing.Size(1069, 515);
+            this.tabPageDocGia.Size = new System.Drawing.Size(1069, 1072);
             this.tabPageDocGia.TabIndex = 2;
             this.tabPageDocGia.Text = "Độc Giả";
             this.tabPageDocGia.UseVisualStyleBackColor = true;
@@ -171,7 +182,7 @@
             this.panelDocGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDocGia.Location = new System.Drawing.Point(3, 3);
             this.panelDocGia.Name = "panelDocGia";
-            this.panelDocGia.Size = new System.Drawing.Size(1063, 509);
+            this.panelDocGia.Size = new System.Drawing.Size(1063, 1066);
             this.panelDocGia.TabIndex = 0;
             // 
             // tabPageThuThu
@@ -180,7 +191,7 @@
             this.tabPageThuThu.Location = new System.Drawing.Point(184, 4);
             this.tabPageThuThu.Name = "tabPageThuThu";
             this.tabPageThuThu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageThuThu.Size = new System.Drawing.Size(1069, 515);
+            this.tabPageThuThu.Size = new System.Drawing.Size(1069, 1072);
             this.tabPageThuThu.TabIndex = 3;
             this.tabPageThuThu.Text = "Thủ Thư";
             this.tabPageThuThu.UseVisualStyleBackColor = true;
@@ -191,19 +202,8 @@
             this.panelThuThu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelThuThu.Location = new System.Drawing.Point(3, 3);
             this.panelThuThu.Name = "panelThuThu";
-            this.panelThuThu.Size = new System.Drawing.Size(1063, 509);
+            this.panelThuThu.Size = new System.Drawing.Size(1063, 1066);
             this.panelThuThu.TabIndex = 0;
-            // 
-            // guna2CirclePictureBoxAdm
-            // 
-            this.guna2CirclePictureBoxAdm.ImageRotate = 0F;
-            this.guna2CirclePictureBoxAdm.Location = new System.Drawing.Point(20, 3);
-            this.guna2CirclePictureBoxAdm.Name = "guna2CirclePictureBoxAdm";
-            this.guna2CirclePictureBoxAdm.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBoxAdm.Size = new System.Drawing.Size(70, 70);
-            this.guna2CirclePictureBoxAdm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBoxAdm.TabIndex = 4;
-            this.guna2CirclePictureBoxAdm.TabStop = false;
             // 
             // guna2Panel1
             // 
@@ -215,17 +215,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1257, 45);
             this.guna2Panel1.TabIndex = 4;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1212, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 45);
-            this.guna2ControlBox1.TabIndex = 0;
             // 
             // guna2ControlBox2
             // 
@@ -239,6 +228,17 @@
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 45);
             this.guna2ControlBox2.TabIndex = 1;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1212, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 45);
+            this.guna2ControlBox1.TabIndex = 0;
             // 
             // guna2DragControl1
             // 
@@ -260,13 +260,13 @@
             this.Load += new System.EventHandler(this.GUI_HomeManager_Load_1);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBoxAdm)).EndInit();
             this.guna2TabControlMain.ResumeLayout(false);
             this.tabPageSach.ResumeLayout(false);
             this.tabPagePhieu.ResumeLayout(false);
             this.tabPageDocGia.ResumeLayout(false);
             this.tabPageThuThu.ResumeLayout(false);
             this.panelThuThu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBoxAdm)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

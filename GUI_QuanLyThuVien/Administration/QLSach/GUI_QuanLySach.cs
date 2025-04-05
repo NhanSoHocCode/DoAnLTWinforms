@@ -171,6 +171,16 @@ namespace GUI_QuanLyThuVien
 
         }
 
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
 
         //private void btnRefesh_Click(object sender, EventArgs e)
         //{
