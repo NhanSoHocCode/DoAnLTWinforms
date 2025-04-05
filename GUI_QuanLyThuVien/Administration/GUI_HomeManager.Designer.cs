@@ -116,11 +116,10 @@
             this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Controls.Add(this.pictureBoxAdm);
             this.panel2.Controls.Add(this.lbnameRole);
-            this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.lbname);
             this.panel2.Location = new System.Drawing.Point(3, 42);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1720, 139);
+            this.panel2.Size = new System.Drawing.Size(1257, 139);
             this.panel2.TabIndex = 1;
             // 
             // label2
@@ -129,7 +128,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label2.Location = new System.Drawing.Point(544, 14);
+            this.label2.Location = new System.Drawing.Point(420, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(510, 69);
             this.label2.TabIndex = 6;
@@ -141,9 +140,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnpheiumuon);
             this.flowLayoutPanel1.Controls.Add(this.btndocgia);
             this.flowLayoutPanel1.Controls.Add(this.btnthuthu);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(483, 86);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(365, 86);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(841, 53);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(628, 53);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // pictureBoxAdm
@@ -160,9 +159,9 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1654, 12);
+            this.btnClose.Location = new System.Drawing.Point(1214, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(36, 30);
+            this.btnClose.Size = new System.Drawing.Size(46, 37);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -170,9 +169,9 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(3, 184);
+            this.panel3.Location = new System.Drawing.Point(3, 187);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1720, 980);
+            this.panel3.Size = new System.Drawing.Size(1257, 894);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -180,16 +179,16 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.panel4.Controls.Add(this.buttonClose);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Controls.Add(this.btnClose);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1920, 40);
+            this.panel4.Size = new System.Drawing.Size(1260, 40);
             this.panel4.TabIndex = 3;
             // 
             // buttonClose
             // 
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(1116, 0);
+            this.buttonClose.Location = new System.Drawing.Point(1519, 0);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(40, 40);
             this.buttonClose.TabIndex = 0;
@@ -202,7 +201,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1257, 1080);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

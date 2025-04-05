@@ -55,7 +55,7 @@
             // btnSearchFile
             // 
             this.btnSearchFile.ForeColor = System.Drawing.Color.Red;
-            this.btnSearchFile.Location = new System.Drawing.Point(669, 78);
+            this.btnSearchFile.Location = new System.Drawing.Point(680, 78);
             this.btnSearchFile.Name = "btnSearchFile";
             this.btnSearchFile.Size = new System.Drawing.Size(172, 35);
             this.btnSearchFile.TabIndex = 18;
@@ -72,7 +72,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(659, 223);
+            this.btnOK.Location = new System.Drawing.Point(692, 223);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(138, 38);
             this.btnOK.TabIndex = 16;
@@ -90,7 +90,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 45);
+            this.label1.Location = new System.Drawing.Point(39, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 16);
             this.label1.TabIndex = 0;
@@ -113,7 +113,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(552, 42);
+            this.label8.Location = new System.Drawing.Point(552, 45);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 16);
             this.label8.TabIndex = 7;

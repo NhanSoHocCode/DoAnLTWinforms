@@ -80,10 +80,9 @@
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtSearchBook);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1720, 155);
+            this.panel1.Size = new System.Drawing.Size(1257, 155);
             this.panel1.TabIndex = 4;
             // 
             // flowLayoutPanel1
@@ -92,7 +91,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnAddBook);
             this.flowLayoutPanel1.Controls.Add(this.btnDel);
             this.flowLayoutPanel1.Controls.Add(this.btnEdit);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(347, 21);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(197, 38);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(827, 59);
             this.flowLayoutPanel1.TabIndex = 10;
@@ -114,7 +113,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(446, 101);
+            this.label1.Location = new System.Drawing.Point(330, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 9;
@@ -123,7 +122,7 @@
             // txtSearchBook
             // 
             this.txtSearchBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchBook.Location = new System.Drawing.Point(561, 96);
+            this.txtSearchBook.Location = new System.Drawing.Point(427, 109);
             this.txtSearchBook.Name = "txtSearchBook";
             this.txtSearchBook.Size = new System.Drawing.Size(441, 22);
             this.txtSearchBook.TabIndex = 8;
@@ -132,17 +131,16 @@
             // flowLayoutPanelMain
             // 
             this.flowLayoutPanelMain.AutoScroll = true;
-            this.flowLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelMain.Location = new System.Drawing.Point(0, 155);
             this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
-            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1720, 825);
+            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1257, 825);
             this.flowLayoutPanelMain.TabIndex = 0;
             // 
             // GUI_QuanLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1720, 980);
+            this.ClientSize = new System.Drawing.Size(1257, 980);
             this.Controls.Add(this.flowLayoutPanelMain);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
