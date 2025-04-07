@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.txtOTP = new System.Windows.Forms.TextBox();
-            this.btnclose = new System.Windows.Forms.Button();
             this.lbtimer = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbNameMail = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnOK = new Guna.UI2.WinForms.Guna2Button();
+            this.txtOTP = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-5, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 46);
+            this.label1.Size = new System.Drawing.Size(282, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đặt Lại Mật Khẩu";
             // 
@@ -67,43 +67,6 @@
             this.label2.Size = new System.Drawing.Size(259, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã Xác Minh Đã Được Gửi Đến Địa Chỉ Email";
-            // 
-            // btnOK
-            // 
-            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(49)))), ((int)(((byte)(218)))));
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F);
-            this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(3, 202);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(256, 42);
-            this.btnOK.TabIndex = 4;
-            this.btnOK.Text = "Xác Minh";
-            this.btnOK.UseVisualStyleBackColor = false;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // txtOTP
-            // 
-            this.txtOTP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtOTP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtOTP.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F);
-            this.txtOTP.Location = new System.Drawing.Point(138, 125);
-            this.txtOTP.Name = "txtOTP";
-            this.txtOTP.Size = new System.Drawing.Size(134, 30);
-            this.txtOTP.TabIndex = 5;
-            // 
-            // btnclose
-            // 
-            this.btnclose.BackColor = System.Drawing.Color.White;
-            this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclose.Location = new System.Drawing.Point(264, 0);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(35, 35);
-            this.btnclose.TabIndex = 6;
-            this.btnclose.Text = "X";
-            this.btnclose.UseVisualStyleBackColor = false;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // lbtimer
             // 
@@ -134,17 +97,56 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnOK);
+            this.panel1.Controls.Add(this.txtOTP);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lbNameMail);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lbtimer);
-            this.panel1.Controls.Add(this.txtOTP);
-            this.panel1.Controls.Add(this.btnOK);
             this.panel1.Location = new System.Drawing.Point(3, 39);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(314, 305);
             this.panel1.TabIndex = 9;
+            // 
+            // btnOK
+            // 
+            this.btnOK.Animated = true;
+            this.btnOK.AutoRoundedCorners = true;
+            this.btnOK.BorderRadius = 17;
+            this.btnOK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Location = new System.Drawing.Point(9, 199);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(268, 37);
+            this.btnOK.TabIndex = 17;
+            this.btnOK.Text = "Đăng Nhập";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // txtOTP
+            // 
+            this.txtOTP.BorderRadius = 15;
+            this.txtOTP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtOTP.DefaultText = "";
+            this.txtOTP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtOTP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtOTP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOTP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOTP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOTP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtOTP.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtOTP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOTP.Location = new System.Drawing.Point(121, 126);
+            this.txtOTP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtOTP.Name = "txtOTP";
+            this.txtOTP.PlaceholderText = "Nhập OTP";
+            this.txtOTP.SelectedText = "";
+            this.txtOTP.Size = new System.Drawing.Size(156, 33);
+            this.txtOTP.TabIndex = 16;
             // 
             // label3
             // 
@@ -162,11 +164,22 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.panel2.Controls.Add(this.btnclose);
-            this.panel2.Location = new System.Drawing.Point(0, 1);
+            this.panel2.Controls.Add(this.guna2ControlBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(326, 35);
+            this.panel2.Size = new System.Drawing.Size(300, 35);
             this.panel2.TabIndex = 11;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(265, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(35, 35);
+            this.guna2ControlBox1.TabIndex = 0;
             // 
             // GUI_NhapOTPDoiMatKhau
             // 
@@ -192,14 +205,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.TextBox txtOTP;
-        private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.Label lbtimer;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lbNameMail;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtOTP;
+        private Guna.UI2.WinForms.Guna2Button btnOK;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

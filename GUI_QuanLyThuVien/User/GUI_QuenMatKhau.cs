@@ -35,6 +35,26 @@ namespace GUI_QuanLyThuVien
 
         private void btnSearchTK_Click(object sender, EventArgs e)
         {
+            
+            //  làm lại cái messageBox sao cho đẹp hơn !!!!
+        }
+
+       
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnSeachTK_Click(object sender, EventArgs e)
+        {
             int OTP = 0;
             if (bll_taikhoan.MailHopLe(txtEmail.Text))
             {
@@ -45,41 +65,9 @@ namespace GUI_QuanLyThuVien
                 nhapOTP.Show();
             }
             else MessageBox.Show("Email không hợp lệ, vui lòng nhập lại email chính xác.");
-            //  làm lại cái messageBox sao cho đẹp hơn !!!!
         }
 
-        private void txtEmail_Enter(object sender, EventArgs e)
-        {
-            if (txtEmail.Text == "Email Address")
-            {
-                txtEmail.Text = "";
-                txtEmail.ForeColor = Color.Black; // Đổi màu chữ thành trắng
-            }
-        }
-
-        private void txtEmail_Leave(object sender, EventArgs e)
-        {
-            if (txtEmail.Text == "")
-            {
-                txtEmail.Text = "Email Address";
-                txtEmail.ForeColor = Color.Black; // Màu placeholder
-            }
-        }
-
-        private void btnclose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            base.OnPaint(e);
-            Graphics g = e.Graphics;
-            Pen pen = new Pen(Color.Gray, 2);
-            g.DrawLine(pen, 6, 146, 220, 146);
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
             Close();
         }

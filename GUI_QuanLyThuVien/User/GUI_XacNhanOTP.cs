@@ -35,23 +35,7 @@ namespace GUI_QuanLyThuVien.User
         }
        
 
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            if (txtOTP.Text == OTP.ToString())
-            {
-                GUI_DangKyDG dangKyDG = new GUI_DangKyDG();
-                dangKyDG.mail = mail;
-                dangKyDG.Show();
-            }
-            else if (txtOTP.Text == "Nhập Mã OTP")
-            {
-                MessageBox.Show("Vui Lòng Nhập OTP", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //MessageBox.Show("Vui Lòng Nhập Lại OTP");
-            }
-            else MessageBox.Show("OTP Không Đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            
-        }
+        
 
         private void GUI_XacNhanOTP_Load(object sender, EventArgs e)
         {
@@ -84,30 +68,26 @@ namespace GUI_QuanLyThuVien.User
             Close();
         }
 
-        private void txtOTP_Leave(object sender, EventArgs e)
-        {
-            if (txtOTP.Text == "")
-            {
-                txtOTP.Text = "Nhập Mã OTP";
-                txtOTP.ForeColor = Color.Gray; // Màu placeholder
-            }
-        }
+        
 
-        private void txtOTP_Enter(object sender, EventArgs e)
-        {
-            if (txtOTP.Text == "Nhập Mã OTP")
-            {
-                txtOTP.Text = "";
-                txtOTP.ForeColor = Color.Gray; // Đổi màu chữ thành trắng
-            }
-        }
+        
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btnNext_Click(object sender, EventArgs e)
         {
-            base.OnPaint(e);
-            Graphics g = e.Graphics;
-            Pen pen = new Pen(Color.Gray, 2);
-            g.DrawLine(pen, 5, 60, 240, 60);
+            if (txtOTP.Text == OTP.ToString())
+            {
+                GUI_DangKyDG dangKyDG = new GUI_DangKyDG();
+                dangKyDG.mail = mail;
+                dangKyDG.Show();
+            }
+            else if (txtOTP.Text == "Nhập Mã OTP")
+            {
+                MessageBox.Show("Vui Lòng Nhập OTP", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Vui Lòng Nhập Lại OTP");
+            }
+            else MessageBox.Show("OTP Không Đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
         }
     }
 }

@@ -56,12 +56,6 @@ namespace GUI_QuanLyThuVien.User
             }
         }
 
-
-        private void btnclose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void btnOK_Click(object sender, EventArgs e)
         {
             if (txtOTP.Text == OTP.ToString())
@@ -71,10 +65,13 @@ namespace GUI_QuanLyThuVien.User
             else if (txtOTP.Text == "")
             {
                 MessageBox.Show("Vui Lòng Nhập OTP", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else
+            }
+            else
             {
                 MessageBox.Show("OTP Không Đúng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        
     }
 }

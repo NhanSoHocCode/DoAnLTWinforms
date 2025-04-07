@@ -33,12 +33,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnclose = new System.Windows.Forms.Button();
-            this.txtOTP = new System.Windows.Forms.TextBox();
-            this.btnNext = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbtimer = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
+            this.txtOTP = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -50,8 +50,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.guna2ControlBox1);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.btnclose);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
@@ -60,34 +60,6 @@
             resources.ApplyResources(this.label4, "label4");
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.label4.Name = "label4";
-            // 
-            // btnclose
-            // 
-            this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.btnclose, "btnclose");
-            this.btnclose.Name = "btnclose";
-            this.btnclose.UseVisualStyleBackColor = false;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
-            // 
-            // txtOTP
-            // 
-            this.txtOTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.txtOTP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtOTP, "txtOTP");
-            this.txtOTP.ForeColor = System.Drawing.Color.Gray;
-            this.txtOTP.Name = "txtOTP";
-            this.txtOTP.Enter += new System.EventHandler(this.txtOTP_Enter);
-            this.txtOTP.Leave += new System.EventHandler(this.txtOTP_Leave);
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btnNext, "btnNext");
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Name = "btnNext";
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // label1
             // 
@@ -104,21 +76,57 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.txtOTP);
+            this.panel1.Controls.Add(this.btnNext);
             this.panel1.Controls.Add(this.lbtimer);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnNext);
-            this.panel1.Controls.Add(this.txtOTP);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Animated = true;
+            this.btnNext.AutoRoundedCorners = true;
+            this.btnNext.BorderRadius = 22;
+            this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btnNext, "btnNext");
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // txtOTP
+            // 
+            this.txtOTP.BorderRadius = 15;
+            this.txtOTP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtOTP.DefaultText = "";
+            this.txtOTP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtOTP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtOTP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOTP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOTP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.txtOTP, "txtOTP");
+            this.txtOTP.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtOTP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOTP.Name = "txtOTP";
+            this.txtOTP.PlaceholderText = "Nhập OTP";
+            this.txtOTP.SelectedText = "";
+            // 
+            // guna2ControlBox1
+            // 
+            resources.ApplyResources(this.guna2ControlBox1, "guna2ControlBox1");
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
             // 
             // GUI_XacNhanOTP
             // 
-            this.AcceptButton = this.btnNext;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.xac_nhan_emailll_4x;
-            this.CancelButton = this.btnNext;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -139,11 +147,11 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnclose;
-        private System.Windows.Forms.TextBox txtOTP;
-        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbtimer;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button btnNext;
+        private Guna.UI2.WinForms.Guna2TextBox txtOTP;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

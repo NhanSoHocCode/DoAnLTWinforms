@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.btnAct = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAct = new Guna.UI2.WinForms.Guna2Button();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnclose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.buttonClose = new System.Windows.Forms.Button();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -53,49 +53,57 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Vui Lòng Nhập Địa Chỉ Email \r\n      Để Bắt Đầu Đăng Ký";
             // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.Location = new System.Drawing.Point(75, 96);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(265, 32);
-            this.txtEmail.TabIndex = 4;
-            this.txtEmail.Text = "Email Address";
-            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
-            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
-            // 
-            // btnAct
-            // 
-            this.btnAct.BackColor = System.Drawing.Color.Transparent;
-            this.btnAct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAct.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAct.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAct.ForeColor = System.Drawing.Color.White;
-            this.btnAct.Location = new System.Drawing.Point(104, 134);
-            this.btnAct.Name = "btnAct";
-            this.btnAct.Size = new System.Drawing.Size(210, 55);
-            this.btnAct.TabIndex = 5;
-            this.btnAct.Text = "Xác nhận";
-            this.btnAct.UseVisualStyleBackColor = false;
-            this.btnAct.Click += new System.EventHandler(this.btnAct_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnAct);
+            this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btnAct);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Location = new System.Drawing.Point(2, 204);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(381, 224);
             this.panel1.TabIndex = 7;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnAct
+            // 
+            this.btnAct.Animated = true;
+            this.btnAct.AutoRoundedCorners = true;
+            this.btnAct.BorderRadius = 25;
+            this.btnAct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAct.ForeColor = System.Drawing.Color.White;
+            this.btnAct.Location = new System.Drawing.Point(24, 147);
+            this.btnAct.Name = "btnAct";
+            this.btnAct.Size = new System.Drawing.Size(335, 52);
+            this.btnAct.TabIndex = 16;
+            this.btnAct.Text = "Đăng Nhập";
+            this.btnAct.Click += new System.EventHandler(this.btnAct_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderRadius = 15;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Location = new System.Drawing.Point(75, 95);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "Email Address";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(284, 33);
+            this.txtEmail.TabIndex = 15;
             // 
             // pictureBox1
             // 
@@ -132,14 +140,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.panel2.Controls.Add(this.buttonClose);
+            this.panel2.Controls.Add(this.guna2ControlBox1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.btnclose);
-            this.panel2.Location = new System.Drawing.Point(-1, 0);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(491, 35);
+            this.panel2.Size = new System.Drawing.Size(373, 35);
             this.panel2.TabIndex = 8;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label4
             // 
@@ -152,16 +160,15 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Xác Nhận Mail Đăng Ký";
             // 
-            // buttonClose
+            // guna2ControlBox1
             // 
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(343, 0);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(35, 35);
-            this.buttonClose.TabIndex = 8;
-            this.buttonClose.Text = "X";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(338, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(35, 35);
+            this.guna2ControlBox1.TabIndex = 8;
             // 
             // GUI_XacNhapMailDangKy
             // 
@@ -169,7 +176,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.xac_nhan_emailll_4x;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CancelButton = this.btnAct;
             this.ClientSize = new System.Drawing.Size(373, 430);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -190,14 +196,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Button btnAct;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button buttonClose;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2Button btnAct;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

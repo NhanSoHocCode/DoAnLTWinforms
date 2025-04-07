@@ -46,7 +46,8 @@ namespace GUI_QuanLyThuVien.User
             {
                 MessageBox.Show("Email đã được sử dụng! \nVui lòng nhập lại mail mới");
                 txtEmail.Text = "";
-            } else if (txtEmail.Text == "")
+            }
+            else if (txtEmail.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập mail");
             }
@@ -66,40 +67,6 @@ namespace GUI_QuanLyThuVien.User
                     xacNhanOTP.Show();
                 }
             }
-
-        }
-
-        private void txtEmail_Leave(object sender, EventArgs e)
-        {
-            if (txtEmail.Text == "")
-            {
-                txtEmail.Text = "Email Address";
-                txtEmail.ForeColor = Color.Black; // Màu placeholder
-            }
-        }
-
-        private void txtEmail_Enter(object sender, EventArgs e)
-        {
-            if (txtEmail.Text == "Email Address")
-            {
-                txtEmail.Text = "";
-                txtEmail.ForeColor = Color.Black; // Đổi màu chữ thành trắng
-            }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
