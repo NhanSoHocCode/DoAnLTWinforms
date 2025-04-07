@@ -216,6 +216,34 @@ namespace GUI_QuanLyThuVien
             }
         }
 
-        
+        private bool isPasswordVisible = false;
+        private void txtpw_IconRightClick(object sender, EventArgs e)
+        {
+
+            if (isPasswordVisible)
+            {
+                txtpw.UseSystemPasswordChar = true;
+                isPasswordVisible = false;
+            }
+            else
+            {
+                txtpw.UseSystemPasswordChar = false;
+                isPasswordVisible = true;
+            }
+        }
+        private bool isPasswordConfim = false;
+        private void txtXacNhanpw_IconRightClick(object sender, EventArgs e)
+        {
+            if (isPasswordConfim)
+            {
+                txtXacNhanpw.UseSystemPasswordChar = true;
+                isPasswordConfim = false;
+            }
+            else
+            {
+                txtXacNhanpw.UseSystemPasswordChar = false;
+                isPasswordConfim = true;
+            }
+        }
     }
 }

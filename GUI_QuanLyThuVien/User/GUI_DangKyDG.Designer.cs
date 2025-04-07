@@ -152,6 +152,7 @@
             this.txtXacNhanpw.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtXacNhanpw.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.password_icon;
             this.txtXacNhanpw.IconRight = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
+            this.txtXacNhanpw.IconRightSize = new System.Drawing.Size(30, 30);
             this.txtXacNhanpw.Location = new System.Drawing.Point(3, 254);
             this.txtXacNhanpw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtXacNhanpw.Name = "txtXacNhanpw";
@@ -159,6 +160,8 @@
             this.txtXacNhanpw.SelectedText = "";
             this.txtXacNhanpw.Size = new System.Drawing.Size(318, 33);
             this.txtXacNhanpw.TabIndex = 31;
+            this.txtXacNhanpw.UseSystemPasswordChar = true;
+            this.txtXacNhanpw.IconRightClick += new System.EventHandler(this.txtXacNhanpw_IconRightClick);
             this.txtXacNhanpw.TextChanged += new System.EventHandler(this.txtXacNhanpw_TextChanged_1);
             // 
             // txtpw
@@ -176,6 +179,7 @@
             this.txtpw.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpw.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.password_icon;
             this.txtpw.IconRight = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
+            this.txtpw.IconRightSize = new System.Drawing.Size(30, 30);
             this.txtpw.Location = new System.Drawing.Point(3, 213);
             this.txtpw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtpw.Name = "txtpw";
@@ -183,6 +187,8 @@
             this.txtpw.SelectedText = "";
             this.txtpw.Size = new System.Drawing.Size(318, 33);
             this.txtpw.TabIndex = 30;
+            this.txtpw.UseSystemPasswordChar = true;
+            this.txtpw.IconRightClick += new System.EventHandler(this.txtpw_IconRightClick);
             this.txtpw.TextChanged += new System.EventHandler(this.txtpw_TextChanged_1);
             // 
             // txtUser
@@ -211,7 +217,7 @@
             // 
             this.pictureBox8.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.user;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(96, 0);
+            this.pictureBox8.Location = new System.Drawing.Point(88, 15);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(150, 150);
             this.pictureBox8.TabIndex = 28;
@@ -227,7 +233,7 @@
             this.panel5.Controls.Add(this.dtpNgaySinh);
             this.panel5.Controls.Add(this.txtName);
             this.panel5.Controls.Add(this.pictureBox17);
-            this.panel5.Location = new System.Drawing.Point(12, 369);
+            this.panel5.Location = new System.Drawing.Point(12, 352);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(338, 201);
             this.panel5.TabIndex = 25;
@@ -320,9 +326,9 @@
             this.btnSignIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSignIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn.ForeColor = System.Drawing.Color.White;
-            this.btnSignIn.Location = new System.Drawing.Point(30, 576);
+            this.btnSignIn.Location = new System.Drawing.Point(26, 560);
             this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Size = new System.Drawing.Size(315, 39);
+            this.btnSignIn.Size = new System.Drawing.Size(318, 39);
             this.btnSignIn.TabIndex = 35;
             this.btnSignIn.Text = "Đăng Kí";
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);

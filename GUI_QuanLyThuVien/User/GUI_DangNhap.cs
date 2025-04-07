@@ -14,6 +14,7 @@ using GUI_QuanLyThuVien.User;
 using GUI_QuanLyThuVien.Administration;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using Guna.UI2.WinForms;
 
 namespace GUI_QuanLyThuVien
 {
@@ -131,6 +132,20 @@ namespace GUI_QuanLyThuVien
         {
             GUI_XacNhapMailDangKy xacNhapMailDangKy = new GUI_XacNhapMailDangKy();
             xacNhapMailDangKy.Show();
+        }
+        private bool isPasswordVisible = false;
+        private void txtPw_IconRightClick(object sender, EventArgs e)
+        {
+            if (isPasswordVisible)
+            {
+                txtPw.UseSystemPasswordChar = true;
+                isPasswordVisible = false;
+            }
+            else
+            {
+                txtPw.UseSystemPasswordChar = false;
+                isPasswordVisible = true;
+            }
         }
     }
 }

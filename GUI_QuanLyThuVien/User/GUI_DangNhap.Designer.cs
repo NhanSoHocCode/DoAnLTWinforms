@@ -37,9 +37,9 @@
             this.txtPw = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnLogIn = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignIn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -124,6 +124,7 @@
             this.txtPw.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPw.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.password_icon;
             this.txtPw.IconRight = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
+            this.txtPw.IconRightSize = new System.Drawing.Size(30, 30);
             this.txtPw.Location = new System.Drawing.Point(3, 292);
             this.txtPw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPw.Name = "txtPw";
@@ -131,6 +132,8 @@
             this.txtPw.SelectedText = "";
             this.txtPw.Size = new System.Drawing.Size(318, 33);
             this.txtPw.TabIndex = 15;
+            this.txtPw.UseSystemPasswordChar = true;
+            this.txtPw.IconRightClick += new System.EventHandler(this.txtPw_IconRightClick);
             // 
             // txtName
             // 
@@ -163,6 +166,16 @@
             this.panel3.Size = new System.Drawing.Size(370, 35);
             this.panel3.TabIndex = 14;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(335, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(35, 35);
+            this.guna2ControlBox1.TabIndex = 2;
             // 
             // btnLogIn
             // 
@@ -200,16 +213,6 @@
             this.btnSignIn.TabIndex = 16;
             this.btnSignIn.Text = "Đăng Kí Tài Khoản Mới";
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(335, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(35, 35);
-            this.guna2ControlBox1.TabIndex = 2;
             // 
             // GUI_DangNhap
             // 

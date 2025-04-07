@@ -60,7 +60,7 @@
             this.dtg1.Size = new System.Drawing.Size(1702, 767);
             this.dtg1.TabIndex = 0;
             this.dtg1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellClick);
-            this.dtg1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellContentClick);
+            //this.dtg1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellContentClick);
             // 
             // panel1
             // 
@@ -76,7 +76,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1257, 166);
             this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtSearchPhieu
             // 
@@ -99,6 +99,7 @@
             this.txtSearchPhieu.SelectedText = "";
             this.txtSearchPhieu.Size = new System.Drawing.Size(745, 39);
             this.txtSearchPhieu.TabIndex = 13;
+            this.txtSearchPhieu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchPhieu_KeyDown);
             // 
             // btnListCanhCaoQuaHan
             // 

@@ -37,15 +37,7 @@ namespace GUI_QuanLyThuVien.Administration
             Function = "Delete";
         }
 
-        private void txtSearchPhieu_KeyDown(object sender, KeyEventArgs e)
-        {
-            dtg1.ClearSelection();
-            DTO_PhieuMuon pm = new DTO_PhieuMuon();
-            pm.sMaPhieuMuon = int.TryParse(txtSearchPhieu.Text, out int maPhieu) ? maPhieu : 0;
-            pm.sTenDocGia = txtSearchPhieu.Text;
-            dtg1.ClearSelection();
-            dtg1.DataSource = bll_quanlyphieumuon.TimKiemPhieuMuon(pm);
-        }
+        
 
         private void GUI_QuanLyPhieuMuon_Load_1(object sender, EventArgs e)
         {
@@ -103,24 +95,16 @@ namespace GUI_QuanLyThuVien.Administration
             dtg1.DataSource = bll_quanlyphieumuon.ListCanhCaoQuaHan();
         }
 
-        private void dtg1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void txtSearchPhieu_KeyDown(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSearchPhieu_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            dtg1.ClearSelection();
+            DTO_PhieuMuon pm = new DTO_PhieuMuon();
+            pm.sMaPhieuMuon = int.TryParse(txtSearchPhieu.Text, out int maPhieu) ? maPhieu : 0;
+            pm.sTenDocGia = txtSearchPhieu.Text;
+            dtg1.ClearSelection();
+            dtg1.DataSource = bll_quanlyphieumuon.TimKiemPhieuMuon(pm);
         }
     }
 }
