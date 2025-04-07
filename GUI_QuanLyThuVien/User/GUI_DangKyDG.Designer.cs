@@ -57,7 +57,7 @@
             // 
             this.dtpNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(50, 59);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(39, 59);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(152, 27);
             this.dtpNgaySinh.TabIndex = 18;
@@ -252,7 +252,7 @@
             this.txtDiaChi.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.marker;
-            this.txtDiaChi.Location = new System.Drawing.Point(14, 151);
+            this.txtDiaChi.Location = new System.Drawing.Point(3, 134);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PlaceholderText = "Địa Chỉ";
@@ -274,7 +274,7 @@
             this.txtSdt.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtSdt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSdt.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.phone_call;
-            this.txtSdt.Location = new System.Drawing.Point(14, 98);
+            this.txtSdt.Location = new System.Drawing.Point(3, 93);
             this.txtSdt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.PlaceholderText = "Số Điện Thoại";
@@ -296,7 +296,7 @@
             this.txtName.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.user1;
-            this.txtName.Location = new System.Drawing.Point(14, 12);
+            this.txtName.Location = new System.Drawing.Point(3, 16);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "Họ Và Tên";
@@ -309,7 +309,7 @@
             this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox17.BackgroundImage")));
             this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox17.Location = new System.Drawing.Point(14, 56);
+            this.pictureBox17.Location = new System.Drawing.Point(3, 56);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(30, 30);
             this.pictureBox17.TabIndex = 21;

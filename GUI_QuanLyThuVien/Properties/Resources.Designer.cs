@@ -173,6 +173,16 @@ namespace GUI_QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap id_badge {
+            get {
+                object obj = ResourceManager.GetObject("id-badge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lammoi {
             get {
                 object obj = ResourceManager.GetObject("lammoi", resourceCulture);
@@ -276,6 +286,16 @@ namespace GUI_QuanLyThuVien.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_shield {
+            get {
+                object obj = ResourceManager.GetObject("user-shield", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

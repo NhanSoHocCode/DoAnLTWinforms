@@ -24,7 +24,7 @@ namespace GUI_QuanLyThuVien.Administration
         private void GUI_EditPhieuMuon_Load(object sender, EventArgs e)
         {
             lbMaDG.Text = pm.sTenDocGia.ToString();
-            lbmaPM.Text = pm.sMaPhieuMuon.ToString();
+            guna2HtmlLabel1.Text = pm.sMaPhieuMuon.ToString();
             dtp1.Value = pm.sNgayMuon;
             dtp2.Value = pm.sNgayTra;
             cbbTT.Text = pm.sTrangThai;
@@ -32,6 +32,30 @@ namespace GUI_QuanLyThuVien.Administration
         }
 
         private void btnOK_Click(object sender, EventArgs e)
+        {
+            pm.sNgayMuon = dtp1.Value;
+            pm.sNgayTra = dtp2.Value;
+            pm.sTrangThai = cbbTT.Text;
+            MessageBox.Show(bll_QuanLyPhieuMuon.ChinhSuaPhieuMuon(pm));
+            Close();
+        }
+
+        private void lbmaPM_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOK1_Click(object sender, EventArgs e)
         {
             pm.sNgayMuon = dtp1.Value;
             pm.sNgayTra = dtp2.Value;

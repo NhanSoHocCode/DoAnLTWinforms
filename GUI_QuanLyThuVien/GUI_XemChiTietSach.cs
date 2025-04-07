@@ -23,5 +23,10 @@ namespace GUI_QuanLyThuVien
             sach.sMaSach = MaSach;
             BienToanCuc.BookList.Add(sach); 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

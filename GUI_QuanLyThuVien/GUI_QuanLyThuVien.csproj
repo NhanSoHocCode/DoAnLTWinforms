@@ -359,5 +359,11 @@
   <ItemGroup>
     <None Include="Resources\calendar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-badge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-shield.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
