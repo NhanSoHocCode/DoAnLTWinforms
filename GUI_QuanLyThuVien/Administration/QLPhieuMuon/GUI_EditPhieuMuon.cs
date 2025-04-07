@@ -24,7 +24,7 @@ namespace GUI_QuanLyThuVien.Administration
         private void GUI_EditPhieuMuon_Load(object sender, EventArgs e)
         {
             lbMaDG.Text = pm.sTenDocGia.ToString();
-            guna2HtmlLabel1.Text = pm.sMaPhieuMuon.ToString();
+            label1.Text = pm.sMaPhieuMuon.ToString();
             dtp1.Value = pm.sNgayMuon;
             dtp2.Value = pm.sNgayTra;
             cbbTT.Text = pm.sTrangThai;
@@ -62,6 +62,11 @@ namespace GUI_QuanLyThuVien.Administration
             pm.sTrangThai = cbbTT.Text;
             MessageBox.Show(bll_QuanLyPhieuMuon.ChinhSuaPhieuMuon(pm));
             Close();
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

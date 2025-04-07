@@ -32,10 +32,10 @@
             this.dtg1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearchPhieu = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnListCanhCaoQuaHan = new System.Windows.Forms.Button();
-            this.btnRefesh = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnListCanhCaoQuaHan = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -60,23 +60,21 @@
             this.dtg1.Size = new System.Drawing.Size(1702, 767);
             this.dtg1.TabIndex = 0;
             this.dtg1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellClick);
-            //this.dtg1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg1_CellContentClick);
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.txtSearchPhieu);
             this.panel1.Controls.Add(this.btnListCanhCaoQuaHan);
-            this.panel1.Controls.Add(this.btnRefesh);
             this.panel1.Controls.Add(this.btnDel);
             this.panel1.Controls.Add(this.btnEdit);
+            this.panel1.Controls.Add(this.btnRefesh);
+            this.panel1.Controls.Add(this.txtSearchPhieu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1257, 166);
             this.panel1.TabIndex = 6;
-            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtSearchPhieu
             // 
@@ -101,55 +99,81 @@
             this.txtSearchPhieu.TabIndex = 13;
             this.txtSearchPhieu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchPhieu_KeyDown);
             // 
-            // btnListCanhCaoQuaHan
-            // 
-            this.btnListCanhCaoQuaHan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnListCanhCaoQuaHan.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
-            this.btnListCanhCaoQuaHan.Location = new System.Drawing.Point(1033, 50);
-            this.btnListCanhCaoQuaHan.Name = "btnListCanhCaoQuaHan";
-            this.btnListCanhCaoQuaHan.Size = new System.Drawing.Size(167, 47);
-            this.btnListCanhCaoQuaHan.TabIndex = 11;
-            this.btnListCanhCaoQuaHan.Text = "Danh sách cảnh cáo ";
-            this.btnListCanhCaoQuaHan.UseVisualStyleBackColor = true;
-            this.btnListCanhCaoQuaHan.Click += new System.EventHandler(this.btnListCanhCaoQuaHan_Click);
-            // 
             // btnRefesh
             // 
-            this.btnRefesh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRefesh.Animated = true;
+            this.btnRefesh.AutoRoundedCorners = true;
             this.btnRefesh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefesh.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
+            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnRefesh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRefesh.ForeColor = System.Drawing.Color.White;
             this.btnRefesh.Location = new System.Drawing.Point(12, 50);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(166, 47);
-            this.btnRefesh.TabIndex = 4;
+            this.btnRefesh.Size = new System.Drawing.Size(166, 45);
+            this.btnRefesh.TabIndex = 1;
             this.btnRefesh.Text = "Refesh";
-            this.btnRefesh.UseVisualStyleBackColor = false;
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
-            // 
-            // btnDel
-            // 
-            this.btnDel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDel.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
-            this.btnDel.Location = new System.Drawing.Point(719, 50);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(169, 47);
-            this.btnDel.TabIndex = 3;
-            this.btnDel.Text = "Xóa phiếu ";
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            this.btnRefesh.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEdit.Animated = true;
+            this.btnEdit.AutoRoundedCorners = true;
             this.btnEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
-            this.btnEdit.Location = new System.Drawing.Point(365, 50);
+            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(369, 50);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(169, 47);
-            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Size = new System.Drawing.Size(169, 45);
+            this.btnEdit.TabIndex = 14;
             this.btnEdit.Text = "Sửa phiếu";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.Animated = true;
+            this.btnDel.AutoRoundedCorners = true;
+            this.btnDel.BackColor = System.Drawing.Color.Transparent;
+            this.btnDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnDel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDel.ForeColor = System.Drawing.Color.White;
+            this.btnDel.Location = new System.Drawing.Point(718, 50);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(169, 45);
+            this.btnDel.TabIndex = 15;
+            this.btnDel.Text = "Xoá phiếu";
+            this.btnDel.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // btnListCanhCaoQuaHan
+            // 
+            this.btnListCanhCaoQuaHan.Animated = true;
+            this.btnListCanhCaoQuaHan.AutoRoundedCorners = true;
+            this.btnListCanhCaoQuaHan.BackColor = System.Drawing.Color.Transparent;
+            this.btnListCanhCaoQuaHan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnListCanhCaoQuaHan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnListCanhCaoQuaHan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnListCanhCaoQuaHan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnListCanhCaoQuaHan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnListCanhCaoQuaHan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnListCanhCaoQuaHan.ForeColor = System.Drawing.Color.White;
+            this.btnListCanhCaoQuaHan.Location = new System.Drawing.Point(1031, 50);
+            this.btnListCanhCaoQuaHan.Name = "btnListCanhCaoQuaHan";
+            this.btnListCanhCaoQuaHan.Size = new System.Drawing.Size(167, 45);
+            this.btnListCanhCaoQuaHan.TabIndex = 16;
+            this.btnListCanhCaoQuaHan.Text = "Danh sách cảnh báo";
+            this.btnListCanhCaoQuaHan.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // GUI_QuanLyPhieuMuon
             // 
@@ -171,13 +195,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnRefesh;
-        private System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dtg1;
-        private System.Windows.Forms.Button btnListCanhCaoQuaHan;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchPhieu;
+        private Guna.UI2.WinForms.Guna2Button btnListCanhCaoQuaHan;
+        private Guna.UI2.WinForms.Guna2Button btnDel;
+        private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnRefesh;
     }
 }

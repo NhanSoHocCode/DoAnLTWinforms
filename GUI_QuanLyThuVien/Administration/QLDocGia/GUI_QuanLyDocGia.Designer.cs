@@ -30,8 +30,8 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,24 +49,13 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 90);
             this.panel1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.button1.Location = new System.Drawing.Point(32, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 78);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Xem danh sách ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtSearch
             // 
@@ -89,6 +78,24 @@
             this.txtSearch.Size = new System.Drawing.Size(523, 34);
             this.txtSearch.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.Animated = true;
+            this.button1.AutoRoundedCorners = true;
+            this.button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(48, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 57);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Xem danh sách";
+            this.button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // GUI_QuanLyDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -107,8 +114,8 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Button button1;
     }
 }

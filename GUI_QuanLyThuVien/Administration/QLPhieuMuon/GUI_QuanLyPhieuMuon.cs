@@ -106,5 +106,27 @@ namespace GUI_QuanLyThuVien.Administration
             dtg1.ClearSelection();
             dtg1.DataSource = bll_quanlyphieumuon.TimKiemPhieuMuon(pm);
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            dtg1.ClearSelection();
+            dtg1.DataSource = bll_quanlyphieumuon.viewListPM();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Function = "Edit";
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            Function = "Delete";
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            dtg1.ClearSelection();
+            dtg1.DataSource = bll_quanlyphieumuon.ListCanhCaoQuaHan();
+        }
     }
 }

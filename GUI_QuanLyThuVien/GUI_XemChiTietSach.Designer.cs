@@ -76,15 +76,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(190, 45);
+            this.label5.Location = new System.Drawing.Point(82, 271);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "label5";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // btnMuonSach
             // 
-            this.btnMuonSach.Location = new System.Drawing.Point(117, 287);
+            this.btnMuonSach.Location = new System.Drawing.Point(115, 355);
             this.btnMuonSach.Name = "btnMuonSach";
             this.btnMuonSach.Size = new System.Drawing.Size(75, 23);
             this.btnMuonSach.TabIndex = 5;
