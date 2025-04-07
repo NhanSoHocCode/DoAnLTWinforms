@@ -26,8 +26,6 @@ namespace GUI_QuanLyThuVien
         {
             InitializeComponent();
             this.BackColor = Color.FromArgb(210, 218, 255);
-            txtName.BackColor = Color.FromArgb(210, 218, 255);
-            txtPw.BackColor = Color.FromArgb(210, 218, 255);
             this.FormBorderStyle = FormBorderStyle.None;
 
             ////ssssss
@@ -50,7 +48,46 @@ namespace GUI_QuanLyThuVien
             SendMessage(Handle, 0xA1, 0x2, 0); // Gửi lệnh di chuyển cửa sổ
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        
+
+        
+
+        private void GUI_DangNhap_Load(object sender, EventArgs e)
+        {
+
+            
+        }
+
+
+
+        
+
+        
+
+        
+
+        
+
+        private void linkForGetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            GUI_QuenMatKhau quenMK = new GUI_QuenMatKhau();
+            quenMK.Show();
+        }
+
+        
+        
+
+        //private void btnClose_Click(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
             taikhoan.sTenTK = txtName.Text;
             taikhoan.sMatKhau = txtPw.Text;
@@ -75,7 +112,8 @@ namespace GUI_QuanLyThuVien
                 homeManager.username = taikhoan.sTenTK;
                 // lam tu day de lay time 
                 homeManager.Show();
-            } else if(taikhoan.sMaQuyen == 1)
+            }
+            else if (taikhoan.sMaQuyen == 1)
             {
                 GUI_Home home = new GUI_Home();
                 home.Show();
@@ -85,106 +123,14 @@ namespace GUI_QuanLyThuVien
                 GUI_Home home = new GUI_Home();
                 home.Show();
             }
-
-
-
         }
-
-        //private void btnQuenMK_Click(object sender, EventArgs e)
-        //{
-        //    GUI_QuenMatKhau quenMK = new GUI_QuenMatKhau();
-        //    quenMK.Show();
-        //}
 
         
 
-        private void btnCreateTKnew_Click(object sender, EventArgs e)
+        private void btnSignIn_Click(object sender, EventArgs e)
         {
             GUI_XacNhapMailDangKy xacNhapMailDangKy = new GUI_XacNhapMailDangKy();
             xacNhapMailDangKy.Show();
-        }
-
-        private void GUI_DangNhap_Load(object sender, EventArgs e)
-        {
-
-            
-        }
-
-
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtName_Leave_1(object sender, EventArgs e)
-        {
-            if (txtName.Text == "")
-            {
-                txtName.Text = "Username";
-                txtName.ForeColor = Color.Gray; // Màu placeholder
-            }
-        }
-
-        private void txtName_Enter(object sender, EventArgs e)
-        {
-            if (txtName.Text == "Username")
-            {
-                txtName.Text = "";
-                txtName.ForeColor = Color.Gray; // Đổi màu chữ thành trắng
-            }
-        }
-
-        private void txtPw_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtPw.Text))
-            {
-                txtPw.Text = "Password";
-                txtPw.ForeColor = Color.Gray;
-                txtPw.UseSystemPasswordChar = false; // Hiện placeholder
-            }
-        }
-
-        private void txtPw_Enter(object sender, EventArgs e)
-        {
-            if (txtPw.Text == "Password")
-            {
-                txtPw.Text = "";
-                txtPw.ForeColor = Color.Black; // Trả lại màu chữ bình thường
-                txtPw.UseSystemPasswordChar = true; // Ẩn mật khẩu
-            }
-        }
-
-        private void linkForGetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            GUI_QuenMatKhau quenMK = new GUI_QuenMatKhau();
-            quenMK.Show();
-        }
-
-        private void picShow_Click(object sender, EventArgs e)
-        {
-            txtPw.UseSystemPasswordChar = !txtPw.UseSystemPasswordChar;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-        
-            base.OnPaint(e);
-            Graphics g = e.Graphics;
-            Pen pen = new Pen(Color.Gray, 2);
-            g.DrawLine(pen, 1, 203, 250, 203);
-            g.DrawLine(pen, 1, 260, 250, 260);
-       
-    }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
