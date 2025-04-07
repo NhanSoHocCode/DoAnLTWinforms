@@ -29,119 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_DangKyDG));
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtSdt = new System.Windows.Forms.TextBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtpw = new System.Windows.Forms.TextBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
-            this.btnDangKy = new System.Windows.Forms.Button();
-            this.txtXacNhanpw = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.picShowConfirm = new System.Windows.Forms.PictureBox();
-            this.picShow = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbInfoRePass = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lbInFo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picShowConfirm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtXacNhanpw = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtpw = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSdt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.btnSignIn = new Guna.UI2.WinForms.Guna2Button();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtUser
-            // 
-            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtUser.Location = new System.Drawing.Point(65, 170);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(198, 23);
-            this.txtUser.TabIndex = 10;
-            this.txtUser.Text = "Username";
-            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
-            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
-            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
-            // 
-            // txtSdt
-            // 
-            this.txtSdt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSdt.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtSdt.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtSdt.Location = new System.Drawing.Point(65, 115);
-            this.txtSdt.Name = "txtSdt";
-            this.txtSdt.Size = new System.Drawing.Size(252, 23);
-            this.txtSdt.TabIndex = 13;
-            this.txtSdt.Text = "Số Điện Thoại";
-            this.txtSdt.Enter += new System.EventHandler(this.txtSdt_Enter);
-            this.txtSdt.Leave += new System.EventHandler(this.txtSdt_Leave);
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtDiaChi.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtDiaChi.Location = new System.Drawing.Point(66, 160);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(252, 23);
-            this.txtDiaChi.TabIndex = 14;
-            this.txtDiaChi.Text = "Địa Chỉ";
-            this.txtDiaChi.Enter += new System.EventHandler(this.txtDiaChi_Enter);
-            this.txtDiaChi.Leave += new System.EventHandler(this.txtDiaChi_Leave);
-            // 
-            // txtName
-            // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtName.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtName.Location = new System.Drawing.Point(66, 29);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(252, 23);
-            this.txtName.TabIndex = 15;
-            this.txtName.Text = "Họ Và Tên";
-            this.txtName.Enter += new System.EventHandler(this.txtName_Enter);
-            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
-            // 
-            // txtpw
-            // 
-            this.txtpw.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpw.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtpw.ForeColor = System.Drawing.Color.Gray;
-            this.txtpw.Location = new System.Drawing.Point(66, 209);
-            this.txtpw.Name = "txtpw";
-            this.txtpw.Size = new System.Drawing.Size(199, 23);
-            this.txtpw.TabIndex = 17;
-            this.txtpw.Text = "Password";
-            this.txtpw.TextChanged += new System.EventHandler(this.txtpw_TextChanged);
-            this.txtpw.Enter += new System.EventHandler(this.txtpw_Enter);
-            this.txtpw.Leave += new System.EventHandler(this.txtpw_Leave);
             // 
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(65, 73);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(50, 59);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(152, 27);
             this.dtpNgaySinh.TabIndex = 18;
@@ -155,199 +71,11 @@
             this.cbGioiTinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cbGioiTinh.Location = new System.Drawing.Point(223, 72);
+            this.cbGioiTinh.Location = new System.Drawing.Point(219, 58);
             this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(94, 28);
+            this.cbGioiTinh.Size = new System.Drawing.Size(113, 28);
             this.cbGioiTinh.TabIndex = 19;
             this.cbGioiTinh.Text = "Giới Tính";
-            // 
-            // btnDangKy
-            // 
-            this.btnDangKy.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangKy.ForeColor = System.Drawing.Color.White;
-            this.btnDangKy.Location = new System.Drawing.Point(46, 559);
-            this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(292, 37);
-            this.btnDangKy.TabIndex = 20;
-            this.btnDangKy.Text = "Đăng Ký";
-            this.btnDangKy.UseVisualStyleBackColor = false;
-            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
-            // 
-            // txtXacNhanpw
-            // 
-            this.txtXacNhanpw.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtXacNhanpw.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtXacNhanpw.ForeColor = System.Drawing.Color.Gray;
-            this.txtXacNhanpw.Location = new System.Drawing.Point(66, 246);
-            this.txtXacNhanpw.Name = "txtXacNhanpw";
-            this.txtXacNhanpw.Size = new System.Drawing.Size(200, 23);
-            this.txtXacNhanpw.TabIndex = 22;
-            this.txtXacNhanpw.Text = "Confirm password";
-            this.txtXacNhanpw.TextChanged += new System.EventHandler(this.txtXacNhanpw_TextChanged);
-            this.txtXacNhanpw.Enter += new System.EventHandler(this.txtXacNhanpw_Enter);
-            this.txtXacNhanpw.Leave += new System.EventHandler(this.txtXacNhanpw_Leave);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pictureBox9);
-            this.panel1.Controls.Add(this.picShowConfirm);
-            this.panel1.Controls.Add(this.picShow);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.txtXacNhanpw);
-            this.panel1.Controls.Add(this.txtUser);
-            this.panel1.Controls.Add(this.txtpw);
-            this.panel1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(17, 41);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(321, 305);
-            this.panel1.TabIndex = 23;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.user;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.Location = new System.Drawing.Point(96, 0);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox9.TabIndex = 28;
-            this.pictureBox9.TabStop = false;
-            // 
-            // picShowConfirm
-            // 
-            this.picShowConfirm.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
-            this.picShowConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picShowConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picShowConfirm.Location = new System.Drawing.Point(296, 245);
-            this.picShowConfirm.Name = "picShowConfirm";
-            this.picShowConfirm.Size = new System.Drawing.Size(25, 25);
-            this.picShowConfirm.TabIndex = 27;
-            this.picShowConfirm.TabStop = false;
-            this.picShowConfirm.Click += new System.EventHandler(this.picShowConfirm_Click);
-            // 
-            // picShow
-            // 
-            this.picShow.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
-            this.picShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picShow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picShow.Location = new System.Drawing.Point(296, 206);
-            this.picShow.Name = "picShow";
-            this.picShow.Size = new System.Drawing.Size(25, 25);
-            this.picShow.TabIndex = 24;
-            this.picShow.TabStop = false;
-            this.picShow.Click += new System.EventHandler(this.picShow_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::GUI_QuanLyThuVien.Properties.Resources.password_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(29, 239);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 26;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::GUI_QuanLyThuVien.Properties.Resources.password_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(29, 203);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GUI_QuanLyThuVien.Properties.Resources.username;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 161);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lbInfoRePass
-            // 
-            this.lbInfoRePass.AutoSize = true;
-            this.lbInfoRePass.ForeColor = System.Drawing.Color.Red;
-            this.lbInfoRePass.Location = new System.Drawing.Point(636, 330);
-            this.lbInfoRePass.Name = "lbInfoRePass";
-            this.lbInfoRePass.Size = new System.Drawing.Size(175, 16);
-            this.lbInfoRePass.TabIndex = 23;
-            this.lbInfoRePass.Text = "Mật Khẩu Không Trùng Khớp";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.pictureBox7);
-            this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.cbGioiTinh);
-            this.panel2.Controls.Add(this.txtName);
-            this.panel2.Controls.Add(this.dtpNgaySinh);
-            this.panel2.Controls.Add(this.txtDiaChi);
-            this.panel2.Controls.Add(this.txtSdt);
-            this.panel2.Location = new System.Drawing.Point(17, 352);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 201);
-            this.panel2.TabIndex = 24;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(30, 155);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox7.TabIndex = 23;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(30, 109);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.TabIndex = 22;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(29, 70);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.TabIndex = 21;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.user;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(29, 17);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.TabIndex = 20;
-            this.pictureBox4.TabStop = false;
             // 
             // button1
             // 
@@ -382,18 +110,222 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(370, 35);
             this.panel3.TabIndex = 27;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnClose
             // 
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Location = new System.Drawing.Point(335, -2);
+            this.btnClose.Location = new System.Drawing.Point(335, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(35, 35);
             this.btnClose.TabIndex = 27;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Controls.Add(this.txtXacNhanpw);
+            this.panel4.Controls.Add(this.txtpw);
+            this.panel4.Controls.Add(this.txtUser);
+            this.panel4.Controls.Add(this.pictureBox8);
+            this.panel4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(12, 41);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(338, 305);
+            this.panel4.TabIndex = 29;
+            // 
+            // txtXacNhanpw
+            // 
+            this.txtXacNhanpw.BorderRadius = 15;
+            this.txtXacNhanpw.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtXacNhanpw.DefaultText = "";
+            this.txtXacNhanpw.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtXacNhanpw.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtXacNhanpw.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtXacNhanpw.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtXacNhanpw.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtXacNhanpw.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtXacNhanpw.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtXacNhanpw.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtXacNhanpw.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.password_icon;
+            this.txtXacNhanpw.IconRight = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
+            this.txtXacNhanpw.Location = new System.Drawing.Point(3, 254);
+            this.txtXacNhanpw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtXacNhanpw.Name = "txtXacNhanpw";
+            this.txtXacNhanpw.PlaceholderText = "Confirm password";
+            this.txtXacNhanpw.SelectedText = "";
+            this.txtXacNhanpw.Size = new System.Drawing.Size(318, 33);
+            this.txtXacNhanpw.TabIndex = 31;
+            this.txtXacNhanpw.TextChanged += new System.EventHandler(this.txtXacNhanpw_TextChanged_1);
+            // 
+            // txtpw
+            // 
+            this.txtpw.BorderRadius = 15;
+            this.txtpw.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtpw.DefaultText = "";
+            this.txtpw.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtpw.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtpw.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpw.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpw.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpw.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtpw.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtpw.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpw.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.password_icon;
+            this.txtpw.IconRight = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
+            this.txtpw.Location = new System.Drawing.Point(3, 213);
+            this.txtpw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtpw.Name = "txtpw";
+            this.txtpw.PlaceholderText = "Password";
+            this.txtpw.SelectedText = "";
+            this.txtpw.Size = new System.Drawing.Size(318, 33);
+            this.txtpw.TabIndex = 30;
+            this.txtpw.TextChanged += new System.EventHandler(this.txtpw_TextChanged_1);
+            // 
+            // txtUser
+            // 
+            this.txtUser.BorderRadius = 15;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.DefaultText = "";
+            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtUser.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.username;
+            this.txtUser.Location = new System.Drawing.Point(3, 172);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.PlaceholderText = "Username";
+            this.txtUser.SelectedText = "";
+            this.txtUser.Size = new System.Drawing.Size(318, 33);
+            this.txtUser.TabIndex = 29;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.user;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox8.Location = new System.Drawing.Point(96, 0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox8.TabIndex = 28;
+            this.pictureBox8.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Controls.Add(this.txtDiaChi);
+            this.panel5.Controls.Add(this.txtSdt);
+            this.panel5.Controls.Add(this.cbGioiTinh);
+            this.panel5.Controls.Add(this.dtpNgaySinh);
+            this.panel5.Controls.Add(this.txtName);
+            this.panel5.Controls.Add(this.pictureBox17);
+            this.panel5.Location = new System.Drawing.Point(12, 369);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(338, 201);
+            this.panel5.TabIndex = 25;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.BorderRadius = 15;
+            this.txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDiaChi.DefaultText = "";
+            this.txtDiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDiaChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtDiaChi.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDiaChi.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.marker;
+            this.txtDiaChi.Location = new System.Drawing.Point(14, 151);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.PlaceholderText = "Địa Chỉ";
+            this.txtDiaChi.SelectedText = "";
+            this.txtDiaChi.Size = new System.Drawing.Size(318, 33);
+            this.txtDiaChi.TabIndex = 34;
+            // 
+            // txtSdt
+            // 
+            this.txtSdt.BorderRadius = 15;
+            this.txtSdt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSdt.DefaultText = "";
+            this.txtSdt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSdt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSdt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSdt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSdt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSdt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtSdt.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtSdt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSdt.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.phone_call;
+            this.txtSdt.Location = new System.Drawing.Point(14, 98);
+            this.txtSdt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSdt.Name = "txtSdt";
+            this.txtSdt.PlaceholderText = "Số Điện Thoại";
+            this.txtSdt.SelectedText = "";
+            this.txtSdt.Size = new System.Drawing.Size(318, 33);
+            this.txtSdt.TabIndex = 33;
+            // 
+            // txtName
+            // 
+            this.txtName.BorderRadius = 15;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.DefaultText = "";
+            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtName.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.user1;
+            this.txtName.Location = new System.Drawing.Point(14, 12);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtName.Name = "txtName";
+            this.txtName.PlaceholderText = "Họ Và Tên";
+            this.txtName.SelectedText = "";
+            this.txtName.Size = new System.Drawing.Size(318, 33);
+            this.txtName.TabIndex = 32;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox17.BackgroundImage")));
+            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox17.Location = new System.Drawing.Point(14, 56);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox17.TabIndex = 21;
+            this.pictureBox17.TabStop = false;
+            // 
+            // btnSignIn
+            // 
+            this.btnSignIn.Animated = true;
+            this.btnSignIn.AutoRoundedCorners = true;
+            this.btnSignIn.BorderRadius = 18;
+            this.btnSignIn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignIn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignIn.ForeColor = System.Drawing.Color.White;
+            this.btnSignIn.Location = new System.Drawing.Point(30, 576);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.Size = new System.Drawing.Size(315, 39);
+            this.btnSignIn.TabIndex = 35;
+            this.btnSignIn.Text = "Đăng Kí";
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // GUI_DangKyDG
             // 
@@ -402,65 +334,44 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(370, 611);
+            this.Controls.Add(this.btnSignIn);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnDangKy);
-            this.Controls.Add(this.lbInfoRePass);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_DangKyDG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_DangKyDG";
             this.Load += new System.EventHandler(this.GUI_DangKyDG_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picShowConfirm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picShow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.TextBox txtSdt;
-        private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtpw;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.ComboBox cbGioiTinh;
-        private System.Windows.Forms.Button btnDangKy;
-        private System.Windows.Forms.TextBox txtXacNhanpw;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbInFo;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbInfoRePass;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox picShowConfirm;
-        private System.Windows.Forms.PictureBox picShow;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private Guna.UI2.WinForms.Guna2TextBox txtXacNhanpw;
+        private Guna.UI2.WinForms.Guna2TextBox txtpw;
+        private Guna.UI2.WinForms.Guna2TextBox txtUser;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
+        private Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
+        private Guna.UI2.WinForms.Guna2TextBox txtSdt;
         private System.Windows.Forms.Button btnClose;
+        private Guna.UI2.WinForms.Guna2Button btnSignIn;
     }
 }

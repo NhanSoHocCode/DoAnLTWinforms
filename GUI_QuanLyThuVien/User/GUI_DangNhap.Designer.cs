@@ -48,7 +48,7 @@
             // lbName
             // 
             this.lbName.AutoSize = true;
-            this.lbName.Location = new System.Drawing.Point(16, 195);
+            this.lbName.Location = new System.Drawing.Point(12, 208);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(102, 16);
             this.lbName.TabIndex = 2;
@@ -57,7 +57,7 @@
             // btnpw
             // 
             this.btnpw.AutoSize = true;
-            this.btnpw.Location = new System.Drawing.Point(16, 259);
+            this.btnpw.Location = new System.Drawing.Point(12, 272);
             this.btnpw.Name = "btnpw";
             this.btnpw.Size = new System.Drawing.Size(62, 16);
             this.btnpw.TabIndex = 3;
@@ -124,7 +124,7 @@
             this.txtPw.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPw.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.password_icon;
             this.txtPw.IconRight = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
-            this.txtPw.Location = new System.Drawing.Point(7, 279);
+            this.txtPw.Location = new System.Drawing.Point(3, 292);
             this.txtPw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPw.Name = "txtPw";
             this.txtPw.PlaceholderText = "Password";
@@ -146,7 +146,7 @@
             this.txtName.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.username;
-            this.txtName.Location = new System.Drawing.Point(7, 215);
+            this.txtName.Location = new System.Drawing.Point(3, 228);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "Username";
