@@ -37,6 +37,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearchBook = new System.Windows.Forms.TextBox();
             this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,12 +79,15 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtUser);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtSearchBook);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1257, 155);
+            this.panel1.Size = new System.Drawing.Size(1659, 155);
             this.panel1.TabIndex = 4;
             // 
             // flowLayoutPanel1
@@ -91,11 +96,10 @@
             this.flowLayoutPanel1.Controls.Add(this.btnAddBook);
             this.flowLayoutPanel1.Controls.Add(this.btnDel);
             this.flowLayoutPanel1.Controls.Add(this.btnEdit);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(197, 38);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(245, 32);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(827, 59);
             this.flowLayoutPanel1.TabIndex = 10;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // btnRefesh
             // 
@@ -114,7 +118,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(330, 115);
+            this.label1.Location = new System.Drawing.Point(49, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 9;
@@ -123,28 +127,59 @@
             // txtSearchBook
             // 
             this.txtSearchBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchBook.Location = new System.Drawing.Point(427, 109);
+            this.txtSearchBook.Location = new System.Drawing.Point(108, 103);
             this.txtSearchBook.Name = "txtSearchBook";
-            this.txtSearchBook.Size = new System.Drawing.Size(441, 22);
+            this.txtSearchBook.Size = new System.Drawing.Size(208, 22);
             this.txtSearchBook.TabIndex = 8;
             this.txtSearchBook.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchBook_KeyPress);
             // 
             // flowLayoutPanelMain
             // 
             this.flowLayoutPanelMain.AutoScroll = true;
+            this.flowLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelMain.Location = new System.Drawing.Point(0, 155);
             this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
-            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1257, 825);
+            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1659, 638);
             this.flowLayoutPanelMain.TabIndex = 0;
-            this.flowLayoutPanelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelMain_Paint);
+            // 
+            // txtUser
+            // 
+            this.txtUser.BorderRadius = 15;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.DefaultText = "";
+            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtUser.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.Location = new System.Drawing.Point(423, 103);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.PlaceholderText = "Search";
+            this.txtUser.SelectedText = "";
+            this.txtUser.Size = new System.Drawing.Size(318, 33);
+            this.txtUser.TabIndex = 30;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(434, 140);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(296, 16);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "TẠO CÁI SEARCH MỚI VÀO ĐÂY NHA NHÂN ƠI";
             // 
             // GUI_QuanLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 980);
+            this.ClientSize = new System.Drawing.Size(1659, 793);
             this.Controls.Add(this.flowLayoutPanelMain);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_QuanLySach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -167,5 +202,7 @@
         private System.Windows.Forms.TextBox txtSearchBook;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMain;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2TextBox txtUser;
     }
 }

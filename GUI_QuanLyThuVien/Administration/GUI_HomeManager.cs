@@ -73,6 +73,8 @@ namespace GUI_QuanLyThuVien.Administration
             pl.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+
+
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -87,6 +89,11 @@ namespace GUI_QuanLyThuVien.Administration
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void panelSach_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

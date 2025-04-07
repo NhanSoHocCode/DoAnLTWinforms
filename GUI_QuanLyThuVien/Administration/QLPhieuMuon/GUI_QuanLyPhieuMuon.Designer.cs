@@ -84,7 +84,7 @@
             this.txtSearchPhieu.AutoRoundedCorners = true;
             this.txtSearchPhieu.BackColor = System.Drawing.Color.Transparent;
             this.txtSearchPhieu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchPhieu.DefaultText = "Lưu ý: Search theo mã PM và tên độc giả";
+            this.txtSearchPhieu.DefaultText = "";
             this.txtSearchPhieu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSearchPhieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSearchPhieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -95,7 +95,7 @@
             this.txtSearchPhieu.Location = new System.Drawing.Point(269, 110);
             this.txtSearchPhieu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearchPhieu.Name = "txtSearchPhieu";
-            this.txtSearchPhieu.PlaceholderText = "";
+            this.txtSearchPhieu.PlaceholderText = "Lưu ý: Search theo mã PM và tên độc giả";
             this.txtSearchPhieu.SelectedText = "";
             this.txtSearchPhieu.Size = new System.Drawing.Size(745, 39);
             this.txtSearchPhieu.TabIndex = 13;

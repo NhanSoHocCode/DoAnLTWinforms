@@ -55,7 +55,7 @@ namespace GUI_QuanLyThuVien
         {
             // Tạo Panel chứa sách
             Panel bookPanel = new Panel();
-            bookPanel.Size = new Size(250, 350);
+            bookPanel.Size = new Size(225, 350);
             bookPanel.BorderStyle = BorderStyle.FixedSingle;
 
             // Thêm ảnh sách
@@ -63,7 +63,7 @@ namespace GUI_QuanLyThuVien
             pictureBox.Image = Image.FromFile(imagePath);
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox.Size = new Size(120, 150);
-            pictureBox.Location = new Point(65, 10);
+            pictureBox.Location = new Point(40, 10);
 
             // Lưu kích thước gốc của ảnh
             Size originalSize = pictureBox.Size;
@@ -73,7 +73,7 @@ namespace GUI_QuanLyThuVien
             pictureBox.MouseEnter += (sender, e) =>
             {
                 pictureBox.Size = new Size(140, 170);
-                pictureBox.Location = new Point(55, 0);
+                pictureBox.Location = new Point(30, 0);
                 pictureBox.BringToFront();
             };
 
@@ -93,13 +93,19 @@ namespace GUI_QuanLyThuVien
             Label lblLibrarianID = new Label { Text = "Mã thủ thư: " + librarianID, Location = new Point(10, 285), AutoSize = true };
 
             // Thêm nút "Thêm vào giỏ hàng"
-            Button btnAddToCart = new Button();
-            btnAddToCart.Text = "Thêm vào giỏ hàng";
-            btnAddToCart.Size = new Size(120, 30);
-            btnAddToCart.Location = new Point(65, 310);
+            Button btnEdit = new Button();
+            btnEdit.Text = "Sửa";
+            btnEdit.Size = new Size(80, 30);
+            btnEdit.Location = new Point(20, 310);
+
+            Button btnDelete = new Button();
+            btnDelete.Text = "Xóa";
+            btnDelete.Size = new Size(80, 30);
+            btnDelete.Location = new Point(100, 310);
 
             // Sự kiện khi nhấn nút (hiện nội dung nút lên MessageBox)
-            btnAddToCart.Click += (sender, e) => MessageBox.Show("Đã thêm " + title + " vào giỏ hàng!", "Thông báo");
+            btnEdit.Click += (sender, e) => MessageBox.Show("Đã Sửa " + title + " Thành Công!", "Thông báo");
+            btnDelete.Click += (sender, e) => MessageBox.Show("Đã Xóa " + title + " Thành Công!", "Thông báo");
 
             // Thêm các control vào panel sách
             bookPanel.Controls.Add(pictureBox);
@@ -110,7 +116,8 @@ namespace GUI_QuanLyThuVien
             bookPanel.Controls.Add(lblPrice);
             bookPanel.Controls.Add(lblCategory);
             bookPanel.Controls.Add(lblLibrarianID);
-            bookPanel.Controls.Add(btnAddToCart);
+            bookPanel.Controls.Add(btnEdit);
+            bookPanel.Controls.Add(btnDelete);
 
             // Thêm vào FlowLayoutPanel chính
             flowLayoutPanelMain.Controls.Add(bookPanel);
@@ -123,6 +130,7 @@ namespace GUI_QuanLyThuVien
         }
         private void GUI_QuanLySach_Load(object sender, EventArgs e)
         {
+            
             flowLayoutPanelMain.Controls.Clear();
             DataTable dt = new DataTable();
             dt = bll.XemDanhSachToanBoSach();
@@ -171,15 +179,12 @@ namespace GUI_QuanLyThuVien
 
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
+        //private void txtSearchBook_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void flowLayoutPanelMain_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
 
         //private void btnRefesh_Click(object sender, EventArgs e)
