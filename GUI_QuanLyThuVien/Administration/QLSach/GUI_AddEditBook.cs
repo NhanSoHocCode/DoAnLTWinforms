@@ -106,5 +106,84 @@ namespace GUI_QuanLyThuVien.Administration
                 MessageBox.Show(bll_quanlysach.SuaSach(sach1));   //  xet xem du lieu da oke chua trong BLL
             }
         }
+
+        private void txtSource_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTenSach_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTheLoai_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchFile1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                fileNameLong = openFileDialog1.FileName;
+                fileNameShort = Path.GetFileName(openFileDialog1.FileName);
+                txtSource.Text = fileNameShort;
+                sach1.sSourceImange = fileNameShort;
+                ChacgeImage = true;
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn file.");
+            }
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            //SaveImageToFolder(fileNameLong);
+            if (Add)  // neu true thi ta them moi
+            {
+                sach1.sTacGia = txtTacGia.Text;
+                sach1.sNhaXuatBan = txtNhaXB.Text;
+                sach1.sDonGia = txtDonGia.Text;
+                sach1.sMaThuThu = txtMaThuThu.Text;
+                sach1.sTenSach = txtTenSach.Text;
+                sach1.sSoLuong = (int)nrudSL.Value;
+                sach1.sTheLoai = txtTheLoai.Text;
+                sach1.sSourceImange = txtSource.Text;
+                MessageBox.Show(bll_quanlysach.ThemSachMoi(sach1));
+            }
+            else  // ngc lai ta edit thoi 
+            {
+                if (ChacgeImage)
+                {
+                    SaveImageToFolder(fileNameLong);
+                }
+                sach1.sTacGia = txtTacGia.Text;
+                sach1.sNhaXuatBan = txtNhaXB.Text;
+                sach1.sDonGia = txtDonGia.Text;
+                sach1.sMaThuThu = txtMaThuThu.Text;
+                sach1.sTenSach = txtTenSach.Text;
+                sach1.sSoLuong = (int)nrudSL.Value;
+                sach1.sTheLoai = txtTheLoai.Text;
+                sach1.sSourceImange = txtSource.Text;
+                MessageBox.Show(bll_quanlysach.SuaSach(sach1));   //  xet xem du lieu da oke chua trong BLL
+            }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2NumericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nrudSL_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

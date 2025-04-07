@@ -48,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.btnaddtt);
             this.panel1.Controls.Add(this.btnListTT);
             this.panel1.Controls.Add(this.txtSearch);
@@ -61,10 +62,12 @@
             // 
             this.btnaddtt.Animated = true;
             this.btnaddtt.AutoRoundedCorners = true;
+            this.btnaddtt.BackColor = System.Drawing.Color.Transparent;
             this.btnaddtt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnaddtt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnaddtt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnaddtt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnaddtt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             this.btnaddtt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnaddtt.ForeColor = System.Drawing.Color.White;
             this.btnaddtt.Image = global::GUI_QuanLyThuVien.Properties.Resources.them;
@@ -80,10 +83,12 @@
             // 
             this.btnListTT.Animated = true;
             this.btnListTT.AutoRoundedCorners = true;
+            this.btnListTT.BackColor = System.Drawing.Color.Transparent;
             this.btnListTT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnListTT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnListTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnListTT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnListTT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             this.btnListTT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnListTT.ForeColor = System.Drawing.Color.White;
             this.btnListTT.Image = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
@@ -100,7 +105,7 @@
             this.txtSearch.AutoRoundedCorners = true;
             this.txtSearch.BackColor = System.Drawing.Color.Transparent;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
+            this.txtSearch.DefaultText = "Search";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -110,7 +115,7 @@
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeftSize = new System.Drawing.Size(35, 25);
             this.txtSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtSearch.Location = new System.Drawing.Point(260, 56);
+            this.txtSearch.Location = new System.Drawing.Point(269, 56);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Search";

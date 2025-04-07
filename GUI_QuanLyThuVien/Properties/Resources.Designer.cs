@@ -113,6 +113,16 @@ namespace GUI_QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap camera_viewfinder {
+            get {
+                object obj = ResourceManager.GetObject("camera-viewfinder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cc {
             get {
                 object obj = ResourceManager.GetObject("cc", resourceCulture);
@@ -203,6 +213,16 @@ namespace GUI_QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap money_bill_wave {
+            get {
+                object obj = ResourceManager.GetObject("money-bill-wave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap password_icon {
             get {
                 object obj = ResourceManager.GetObject("password_icon", resourceCulture);
@@ -253,9 +273,29 @@ namespace GUI_QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sách {
+            get {
+                object obj = ResourceManager.GetObject("sách", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap thaydoiquydinh {
             get {
                 object obj = ResourceManager.GetObject("thaydoiquydinh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thể_loại {
+            get {
+                object obj = ResourceManager.GetObject("thể loại", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

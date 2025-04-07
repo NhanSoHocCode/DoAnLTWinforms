@@ -365,5 +365,17 @@
   <ItemGroup>
     <None Include="Resources\user-shield.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-bill-wave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thể loại.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sách.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera-viewfinder.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
