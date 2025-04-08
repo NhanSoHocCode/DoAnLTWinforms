@@ -46,10 +46,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbAnhThe = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -220,6 +220,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(32, 215);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 16);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Username";
+            // 
             // btnDel
             // 
             this.btnDel.Location = new System.Drawing.Point(159, 609);
@@ -243,15 +252,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 215);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 16);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Username";
             // 
             // GUI_ControlChiTietDocGia
             // 

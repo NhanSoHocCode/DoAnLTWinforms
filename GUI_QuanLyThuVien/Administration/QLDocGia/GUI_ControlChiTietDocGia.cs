@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_QuanLyThuVien;
 using BLL_QuanLyThuVien;
+using System.Threading;
+using System.Diagnostics;
 namespace GUI_QuanLyThuVien.Administration.QLDocGia
 {
     public partial class GUI_ControlChiTietDocGia : Form
@@ -47,7 +49,7 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
                 fileNameLong = openFileDialog1.FileName;
                 fileNameShort = Path.GetFileName(openFileDialog1.FileName);
                 lbAnhThe.Text = fileNameShort;
-                person.sSourceImage = fileNameShort;
+              
                 ChangeImage = true;
             }
             else
@@ -55,30 +57,70 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
                 MessageBox.Show("Bạn chưa chọn file.");
             }
         }
-        public void SaveImageToFolder(string sourcePath)  // nhan dang dang chinh sua cho doi tuong nao 
+
+
+        // Lưu ảnh vào thư mục tương ứng (DocGia/ThuThu)
+        public void SaveImageToFolder(string sourceImagePath)
         {
+            if (string.IsNullOrWhiteSpace(sourceImagePath) || !File.Exists(sourceImagePath))
+            {
+                throw new ArgumentException("Đường dẫn ảnh nguồn không hợp lệ hoặc file không tồn tại");
+            }
 
             try
             {
-                string destinationFolder = "D:\\K25_Project_LTWinform\\DoAn\\images\\ThuThu\\";
-                if (DocGia == true)
-                {
-                    destinationFolder = "D:\\K25_Project_LTWinform\\DoAn\\images\\DocGia\\";
-                }
-                if (!Directory.Exists(destinationFolder))
-                {
-                    Directory.CreateDirectory(destinationFolder);
-                }
+                // Xác định thư mục đích
+                string destinationFolder = DocGia
+                    ? @"D:\K25_Project_LTWinform\DoAn\images\DocGia"
+                    : @"D:\K25_Project_LTWinform\DoAn\images\ThuThu";
 
-                string fileName = Path.GetFileName(sourcePath);
+                // Tạo thư mục nếu chưa tồn tại
+                Directory.CreateDirectory(destinationFolder);
+
+                // Sao chép file (ghi đè nếu đã tồn tại)
+                string fileName = Path.GetFileName(sourceImagePath);
                 string destinationPath = Path.Combine(destinationFolder, fileName);
-                File.Copy(sourcePath, destinationPath, true);
+                File.Copy(sourceImagePath, destinationPath, overwrite: true);
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception($"Lỗi khi lưu ảnh: {ex.Message}", ex);
             }
         }
+
+        // Xóa ảnh từ thư mục
+        public void DelImageFromFolder(string imageFileName)
+        {
+            if (string.IsNullOrWhiteSpace(imageFileName))
+            {
+                throw new ArgumentException("Tên file không hợp lệ");
+            }
+
+            try
+            {
+                // Xác định thư mục
+                string targetFolder = DocGia
+                    ? @"D:\K25_Project_LTWinform\DoAn\images\DocGia"
+                    : @"D:\K25_Project_LTWinform\DoAn\images\ThuThu";
+
+                string filePath = Path.Combine(targetFolder, imageFileName);
+
+                // Thực hiện xóa
+                if (File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                }
+                else
+                {
+                    throw new FileNotFoundException($"File ảnh không tồn tại: {filePath}");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi xóa ảnh: {ex.Message}", ex);
+            }
+        }
+        
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -89,8 +131,10 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
             person.sNgaySinh = DateTime.Parse(lbNgaySinh.Text);
             if (ChangeImage == true)
             {
-                person.sSourceImage = lbAnhThe.Text;
+                
                 SaveImageToFolder(fileNameLong);
+                DelImageFromFolder(person.sSourceImage);
+                person.sSourceImage = lbAnhThe.Text;
             }
             if (DocGia == true)
             {

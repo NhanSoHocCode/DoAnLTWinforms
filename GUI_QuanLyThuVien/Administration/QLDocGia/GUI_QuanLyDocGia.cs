@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,7 +73,7 @@ namespace GUI_QuanLyThuVien.Administration
             dt = bll_QuanLyDocGia.SearchDocGia(txtSearch.Text);
             LoadListDG(dt);
         }
-
+    
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             LoadListDocGia();
