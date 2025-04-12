@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -35,6 +36,20 @@ namespace GUI_QuanLyThuVien
             txtSdt.BackColor = Color.FromArgb(210, 218, 255);
             txtName.BackColor = Color.FromArgb(210, 218, 255);
             txtpw.BackColor = Color.FromArgb(210, 218, 255);
+            BoTronForm();
+        }
+        private void BoTronForm()
+        {
+            int borderRadius = 10; // Độ cong của viền
+
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(0, 0, borderRadius, borderRadius, 180, 90);
+            path.AddArc(this.Width - borderRadius, 0, borderRadius, borderRadius, 270, 90);
+            path.AddArc(this.Width - borderRadius, this.Height - borderRadius, borderRadius, borderRadius, 0, 90);
+            path.AddArc(0, this.Height - borderRadius, borderRadius, borderRadius, 90, 90);
+            path.CloseAllFigures();
+
+            this.Region = new Region(path);
         }
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
