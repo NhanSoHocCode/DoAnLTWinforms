@@ -33,13 +33,17 @@ namespace BLL_QuanLyThuVien
             }
             return dal_QuanLySach.TimKiemSach(book);
         }
-        public string XoaSach(DTO_Sach book) // tra ve thong{
+        public string XoaSach(string ma) 
         {
-            return dal_QuanLySach.XoaSach(book);
+            return dal_QuanLySach.XoaSach(int.Parse(ma));
         }
         public string SuaSach(DTO_Sach book)
         {
             return dal_QuanLySach.SuaSach(book);
+        }
+        public DataTable ListMaThuThu()
+        {
+            return dal_QuanLySach.ListMaThuThu();
         }
     }
 }

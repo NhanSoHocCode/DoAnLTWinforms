@@ -30,11 +30,17 @@ namespace GUI_QuanLyThuVien.Administration
         {
             txtTacGia.Text = sach1.sTacGia;
             txtNhaXB.Text = sach1.sNhaXuatBan;
-            txtDonGia.Text = sach1.sDonGia;
-            txtMaThuThu.Text = sach1.sMaThuThu;
+            txtTheLoai.Text = sach1.sDonGia;
+            //txtMaThuThu.Text = sach1.sMaThuThu;
+            DataTable dt = new DataTable();
+            dt = bll_quanlysach.ListMaThuThu();
+            foreach (DataRow dr in dt.Rows)
+            {
+                txtMaThuThu.Items.Add(dr["maThuThu"].ToString());
+            }
             txtTenSach.Text = sach1.sTenSach;
             nrudSL.Value = sach1.sSoLuong;
-            txtTheLoai.Text = sach1.sTheLoai;
+            txtDonGia.Text = sach1.sTheLoai;
             txtSource.Text = sach1.sSourceImange;
         }
         Boolean ChacgeImage = false;
@@ -76,7 +82,7 @@ namespace GUI_QuanLyThuVien.Administration
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            //SaveImageToFolder(fileNameLong);
+            SaveImageToFolder(fileNameLong);
             if (Add)  // neu true thi ta them moi
             {
                 sach1.sTacGia = txtTacGia.Text;
@@ -140,9 +146,9 @@ namespace GUI_QuanLyThuVien.Administration
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            //SaveImageToFolder(fileNameLong);
             if (Add)  // neu true thi ta them moi
             {
+                SaveImageToFolder(fileNameLong);
                 sach1.sTacGia = txtTacGia.Text;
                 sach1.sNhaXuatBan = txtNhaXB.Text;
                 sach1.sDonGia = txtDonGia.Text;

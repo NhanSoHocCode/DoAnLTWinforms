@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO_QuanLyThuVien;
+using static Guna.UI2.Native.WinApi;
 
 namespace DAL_QuanLyThuVien
 {
@@ -93,7 +94,7 @@ namespace DAL_QuanLyThuVien
                 return null;
             }
         }
-        public String XoaSach(DTO_Sach book) // chi xoa theo ma sach 
+        public String XoaSach(int ma) // chi xoa theo ma sach 
         {
             SqlConnection conn = SqlConnectionData.Connect();
             conn.Open();
@@ -101,7 +102,7 @@ namespace DAL_QuanLyThuVien
             {
                 SqlCommand cmd = new SqlCommand("proc_deletebook", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@masach", int.Parse(book.sMaSach));
+                cmd.Parameters.AddWithValue("@masach", ma);
                 cmd.ExecuteNonQuery();
                 conn.Close();  // nho dong ket noi
                 return "Xóa thành công";
@@ -136,6 +137,27 @@ namespace DAL_QuanLyThuVien
             catch (FormatException ex)
             {
                 return $"Error: {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataTable ListMaThuThu()
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_listMaThuThu", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                conn.Close();
+                return dt;
             }
             catch (Exception ex)
             {

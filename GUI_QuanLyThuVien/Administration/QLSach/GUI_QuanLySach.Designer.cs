@@ -32,13 +32,10 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnRefesh = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSearchBook = new System.Windows.Forms.TextBox();
             this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -79,16 +76,36 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtUser);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtSearchBook);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1659, 155);
             this.panel1.TabIndex = 4;
+            // 
+            // txtUser
+            // 
+            this.txtUser.BorderRadius = 15;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.DefaultText = "";
+            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.txtUser.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.Location = new System.Drawing.Point(423, 103);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.PasswordChar = '\0';
+            this.txtUser.PlaceholderText = "Search";
+            this.txtUser.SelectedText = "";
+            this.txtUser.Size = new System.Drawing.Size(318, 33);
+            this.txtUser.TabIndex = 30;
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // flowLayoutPanel1
             // 
@@ -114,25 +131,6 @@
             this.btnRefesh.UseVisualStyleBackColor = true;
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Search ";
-            // 
-            // txtSearchBook
-            // 
-            this.txtSearchBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearchBook.Location = new System.Drawing.Point(108, 103);
-            this.txtSearchBook.Name = "txtSearchBook";
-            this.txtSearchBook.Size = new System.Drawing.Size(208, 22);
-            this.txtSearchBook.TabIndex = 8;
-            this.txtSearchBook.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchBook_KeyPress);
-            // 
             // flowLayoutPanelMain
             // 
             this.flowLayoutPanelMain.AutoScroll = true;
@@ -141,36 +139,6 @@
             this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
             this.flowLayoutPanelMain.Size = new System.Drawing.Size(1659, 638);
             this.flowLayoutPanelMain.TabIndex = 0;
-            // 
-            // txtUser
-            // 
-            this.txtUser.BorderRadius = 15;
-            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUser.DefaultText = "";
-            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.txtUser.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUser.Location = new System.Drawing.Point(423, 103);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.PlaceholderText = "Search";
-            this.txtUser.SelectedText = "";
-            this.txtUser.Size = new System.Drawing.Size(318, 33);
-            this.txtUser.TabIndex = 30;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(434, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(296, 16);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "TẠO CÁI SEARCH MỚI VÀO ĐÂY NHA NHÂN ƠI";
             // 
             // GUI_QuanLySach
             // 
@@ -186,7 +154,6 @@
             this.Text = "GUI_QuanLySach";
             this.Load += new System.EventHandler(this.GUI_QuanLySach_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -198,11 +165,8 @@
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRefesh;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSearchBook;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMain;
-        private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtUser;
     }
 }

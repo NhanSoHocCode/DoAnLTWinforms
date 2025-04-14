@@ -104,8 +104,14 @@ namespace GUI_QuanLyThuVien
             btnDelete.Location = new Point(100, 310);
 
             // Sự kiện khi nhấn nút (hiện nội dung nút lên MessageBox)
-            btnEdit.Click += (sender, e) => MessageBox.Show("Đã Sửa " + title + " Thành Công!", "Thông báo");
-            btnDelete.Click += (sender, e) => MessageBox.Show("Đã Xóa " + title + " Thành Công!", "Thông báo");
+            btnEdit.Click += (sender, e) => {
+                GUI_AddEditBook form = new GUI_AddEditBook();
+                form.Add = false;
+                form.Show();
+            };
+            btnDelete.Click += (sender, e) => {
+                bll.XoaSach(bookID);
+            };
 
             // Thêm các control vào panel sách
             bookPanel.Controls.Add(pictureBox);
@@ -130,7 +136,7 @@ namespace GUI_QuanLyThuVien
         }
         private void GUI_QuanLySach_Load(object sender, EventArgs e)
         {
-            
+
             flowLayoutPanelMain.Controls.Clear();
             DataTable dt = new DataTable();
             dt = bll.XemDanhSachToanBoSach();
@@ -153,14 +159,13 @@ namespace GUI_QuanLyThuVien
 
         private void btnRefesh_Click(object sender, EventArgs e)
         {
-            GUI_QuanLySach_Load(sender,e);
+            GUI_QuanLySach_Load(sender, e);
         }
-
-        private void txtSearchBook_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
         {
             flowLayoutPanelMain.Controls.Clear();
             DataTable dt = new DataTable();
-            dt = bll.TimKiemSach(txtSearchBook.Text);
+            dt = bll.TimKiemSach(txtUser.Text);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
 
@@ -176,83 +181,86 @@ namespace GUI_QuanLyThuVien
                 img.Split(' ');
                 AddBookToPanel(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT);
             }
-
         }
-
-        //private void txtSearchBook_TextChanged(object sender, EventArgs e)
-        //{
-
-        //}
-
-
-
-
-        //private void btnRefesh_Click(object sender, EventArgs e)
-        //{
-        //    dtg1.ClearSelection();
-        //    dtg1.DataSource = bll.XemDanhSachToanBoSach();
-        //}
-
-        //private void txtSearchBook_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    DTO_Sach dTO_Sach = new DTO_Sach();
-        //    dTO_Sach.sTenSach = txtSearchBook.Text;
-        //    dtg1.ClearSelection();
-        //    dtg1.DataSource = bll.TimKiemSach(dTO_Sach);
-        //}
-
-        //private void dtg1_CellClick_1(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (dtg1 == null || bll == null || Function == null)
-        //    {
-        //        MessageBox.Show("Required components are not initialized.");
-        //        return;
-        //    }
-
-        //    if (Function == "Delete")
-        //    {
-        //        if (e.RowIndex >= 0) // Ensure not clicking on column header
-        //        {
-        //            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa dòng này?",
-        //                                                  "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-        //            if (result == DialogResult.Yes)
-        //            {
-        //                DataGridViewRow row = dtg1.Rows[e.RowIndex];
-        //                string maSach = row.Cells[0].Value?.ToString();
-        //                if (maSach != null)
-        //                {
-        //                    DTO_Sach sach = new DTO_Sach();
-        //                    sach.sMaSach = maSach;
-        //                    dtg1.Rows.RemoveAt(e.RowIndex);
-        //                    MessageBox.Show(bll.XoaSach(sach));        // Xoa sach trong database   
-        //                }
-        //            }
-        //        }
-        //    }
-        //    else if (Function == "Edit")
-        //    {
-
-        //        DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn edit dòng này?",
-        //                                              "Xác nhận edit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-        //        if (result == DialogResult.Yes)
-        //        {
-        //            DataGridViewRow row = dtg1.Rows[e.RowIndex];
-        //            DTO_Sach sach = new DTO_Sach();
-        //            sach.sMaSach = dtg1.Rows[e.RowIndex].Cells[0].Value?.ToString();
-        //            sach.sTacGia = dtg1.Rows[e.RowIndex].Cells[1].Value?.ToString();
-        //            sach.sTenSach = dtg1.Rows[e.RowIndex].Cells[2].Value?.ToString();
-        //            sach.sNhaXuatBan = dtg1.Rows[e.RowIndex].Cells[3].Value?.ToString();
-        //            sach.sDonGia = dtg1.Rows[e.RowIndex].Cells[4].Value?.ToString();
-        //            sach.sSoLuong = int.Parse(dtg1.Rows[e.RowIndex].Cells[5].Value?.ToString());
-        //            sach.sTheLoai = dtg1.Rows[e.RowIndex].Cells[6].Value?.ToString();
-        //            sach.sMaThuThu = dtg1.Rows[e.RowIndex].Cells[7].Value?.ToString();
-        //            sach.sSourceImange = dtg1.Rows[e.RowIndex].Cells[8].Value?.ToString();
-        //            GUI_AddEditBook form = new GUI_AddEditBook();
-        //            form.sach1 = sach;
-        //            form.Add = false;
-        //            form.Show();
-        //        }
-        //    }
-        //}
     }
+
+
+
+
+    //private void txtSearchBook_TextChanged(object sender, EventArgs e)
+    //{
+
+    //}
+
+
+
+
+    //private void btnRefesh_Click(object sender, EventArgs e)
+    //{
+    //    dtg1.ClearSelection();
+    //    dtg1.DataSource = bll.XemDanhSachToanBoSach();
+    //}
+
+    //private void txtSearchBook_KeyDown(object sender, KeyEventArgs e)
+    //{
+    //    DTO_Sach dTO_Sach = new DTO_Sach();
+    //    dTO_Sach.sTenSach = txtSearchBook.Text;
+    //    dtg1.ClearSelection();
+    //    dtg1.DataSource = bll.TimKiemSach(dTO_Sach);
+    //}
+
+    //private void dtg1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+    //{
+    //    if (dtg1 == null || bll == null || Function == null)
+    //    {
+    //        MessageBox.Show("Required components are not initialized.");
+    //        return;
+    //    }
+
+    //    if (Function == "Delete")
+    //    {
+    //        if (e.RowIndex >= 0) // Ensure not clicking on column header
+    //        {
+    //            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa dòng này?",
+    //                                                  "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+    //            if (result == DialogResult.Yes)
+    //            {
+    //                DataGridViewRow row = dtg1.Rows[e.RowIndex];
+    //                string maSach = row.Cells[0].Value?.ToString();
+    //                if (maSach != null)
+    //                {
+    //                    DTO_Sach sach = new DTO_Sach();
+    //                    sach.sMaSach = maSach;
+    //                    dtg1.Rows.RemoveAt(e.RowIndex);
+    //                    MessageBox.Show(bll.XoaSach(sach));        // Xoa sach trong database   
+    //                }
+    //            }
+    //        }
+    //    }
+    //    else if (Function == "Edit")
+    //    {
+
+    //        DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn edit dòng này?",
+    //                                              "Xác nhận edit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+    //        if (result == DialogResult.Yes)
+    //        {
+    //            DataGridViewRow row = dtg1.Rows[e.RowIndex];
+    //            DTO_Sach sach = new DTO_Sach();
+    //            sach.sMaSach = dtg1.Rows[e.RowIndex].Cells[0].Value?.ToString();
+    //            sach.sTacGia = dtg1.Rows[e.RowIndex].Cells[1].Value?.ToString();
+    //            sach.sTenSach = dtg1.Rows[e.RowIndex].Cells[2].Value?.ToString();
+    //            sach.sNhaXuatBan = dtg1.Rows[e.RowIndex].Cells[3].Value?.ToString();
+    //            sach.sDonGia = dtg1.Rows[e.RowIndex].Cells[4].Value?.ToString();
+    //            sach.sSoLuong = int.Parse(dtg1.Rows[e.RowIndex].Cells[5].Value?.ToString());
+    //            sach.sTheLoai = dtg1.Rows[e.RowIndex].Cells[6].Value?.ToString();
+    //            sach.sMaThuThu = dtg1.Rows[e.RowIndex].Cells[7].Value?.ToString();
+    //            sach.sSourceImange = dtg1.Rows[e.RowIndex].Cells[8].Value?.ToString();
+    //            GUI_AddEditBook form = new GUI_AddEditBook();
+    //            form.sach1 = sach;
+    //            form.Add = false;
+    //            form.Show();
+    //        }
+    //    }
+    //}
 }
+
