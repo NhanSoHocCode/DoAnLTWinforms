@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -143,6 +144,7 @@
             this.txtOTP.Location = new System.Drawing.Point(121, 126);
             this.txtOTP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOTP.Name = "txtOTP";
+            this.txtOTP.PasswordChar = '\0';
             this.txtOTP.PlaceholderText = "Nhập OTP";
             this.txtOTP.SelectedText = "";
             this.txtOTP.Size = new System.Drawing.Size(156, 33);
@@ -181,6 +183,11 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(35, 35);
             this.guna2ControlBox1.TabIndex = 0;
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // GUI_NhapOTPDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,5 +221,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtOTP;
         private Guna.UI2.WinForms.Guna2Button btnOK;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

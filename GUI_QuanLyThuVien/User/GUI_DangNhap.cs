@@ -15,6 +15,7 @@ using GUI_QuanLyThuVien.Administration;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using Guna.UI2.WinForms;
+using System.Drawing.Drawing2D;
 
 namespace GUI_QuanLyThuVien
 {
@@ -26,67 +27,28 @@ namespace GUI_QuanLyThuVien
         public GUI_DangNhap()
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(210, 218, 255);
-            this.FormBorderStyle = FormBorderStyle.None;
-
-            ////ssssss
-            ///
-            panel3.Dock = DockStyle.Top;
-            panel3.BackColor = Color.FromArgb(238, 241, 255);
-
-            this.Controls.Add(panel3);
-            panel3.MouseDown += PanelTitleBar_MouseDown;
-
+            guna2DragControl1.TargetControl = panel3;
+            BoTronForm();
         }
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-
-        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        private void BoTronForm()
         {
-            ReleaseCapture();
-            SendMessage(Handle, 0xA1, 0x2, 0); // Gửi lệnh di chuyển cửa sổ
+            int borderRadius = 10; // Độ cong của viền
+
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(0, 0, borderRadius, borderRadius, 180, 90);
+            path.AddArc(this.Width - borderRadius, 0, borderRadius, borderRadius, 270, 90);
+            path.AddArc(this.Width - borderRadius, this.Height - borderRadius, borderRadius, borderRadius, 0, 90);
+            path.AddArc(0, this.Height - borderRadius, borderRadius, borderRadius, 90, 90);
+            path.CloseAllFigures();
+
+            this.Region = new Region(path);
         }
-
-        
-
-        
-
-        private void GUI_DangNhap_Load(object sender, EventArgs e)
-        {
-
-            
-        }
-
-
-
-        
-
-        
-
-        
-
-        
-
         private void linkForGetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             GUI_QuenMatKhau quenMK = new GUI_QuenMatKhau();
             quenMK.Show();
         }
 
-        
-        
-
-        //private void btnClose_Click(object sender, EventArgs e)
-        //{
-        //    this.Close();
-        //}
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -125,9 +87,6 @@ namespace GUI_QuanLyThuVien
                 home.Show();
             }
         }
-
-        
-
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             GUI_XacNhapMailDangKy xacNhapMailDangKy = new GUI_XacNhapMailDangKy();

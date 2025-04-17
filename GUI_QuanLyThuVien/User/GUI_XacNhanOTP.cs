@@ -1,4 +1,5 @@
 ﻿using BLL_QuanLyThuVien;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,17 +23,9 @@ namespace GUI_QuanLyThuVien.User
         public GUI_XacNhanOTP()
         {
             InitializeComponent();
-            panel2.MouseDown += PanelTitleBar_MouseDown;
+            guna2DragControl1.TargetControl = panel2;
         }
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(Handle, 0xA1, 0x2, 0); // Gửi lệnh di chuyển cửa sổ
-        }
+        
        
 
         

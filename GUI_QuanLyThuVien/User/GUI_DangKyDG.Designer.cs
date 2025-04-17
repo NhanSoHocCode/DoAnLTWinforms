@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_DangKyDG));
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lbInFo = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtXacNhanpw = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtpw = new Guna.UI2.WinForms.Guna2TextBox();
@@ -46,11 +45,18 @@
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.btnSignIn = new Guna.UI2.WinForms.Guna2Button();
-            this.panel3.SuspendLayout();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpNgaySinh
@@ -93,48 +99,25 @@
             this.lbInFo.AutoSize = true;
             this.lbInFo.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInFo.ForeColor = System.Drawing.Color.Gray;
-            this.lbInFo.Location = new System.Drawing.Point(3, 8);
+            this.lbInFo.Location = new System.Drawing.Point(11, 8);
             this.lbInFo.Name = "lbInFo";
             this.lbInFo.Size = new System.Drawing.Size(238, 17);
             this.lbInFo.TabIndex = 26;
             this.lbInFo.Text = "Đăng Kí Với Tư Cách abc@gmail,com";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Controls.Add(this.btnClose);
-            this.panel3.Controls.Add(this.lbInFo);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(370, 35);
-            this.panel3.TabIndex = 27;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Location = new System.Drawing.Point(335, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(35, 35);
-            this.btnClose.TabIndex = 27;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Controls.Add(this.txtXacNhanpw);
+            this.panel4.Controls.Add(this.lbInFo);
             this.panel4.Controls.Add(this.txtpw);
             this.panel4.Controls.Add(this.txtUser);
             this.panel4.Controls.Add(this.pictureBox8);
             this.panel4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(12, 41);
+            this.panel4.Location = new System.Drawing.Point(12, 36);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(338, 305);
+            this.panel4.Size = new System.Drawing.Size(338, 310);
             this.panel4.TabIndex = 29;
             // 
             // txtXacNhanpw
@@ -153,9 +136,10 @@
             this.txtXacNhanpw.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.password_icon;
             this.txtXacNhanpw.IconRight = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
             this.txtXacNhanpw.IconRightSize = new System.Drawing.Size(30, 30);
-            this.txtXacNhanpw.Location = new System.Drawing.Point(3, 254);
+            this.txtXacNhanpw.Location = new System.Drawing.Point(3, 269);
             this.txtXacNhanpw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtXacNhanpw.Name = "txtXacNhanpw";
+            this.txtXacNhanpw.PasswordChar = '●';
             this.txtXacNhanpw.PlaceholderText = "Confirm password";
             this.txtXacNhanpw.SelectedText = "";
             this.txtXacNhanpw.Size = new System.Drawing.Size(318, 33);
@@ -180,9 +164,10 @@
             this.txtpw.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.password_icon;
             this.txtpw.IconRight = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
             this.txtpw.IconRightSize = new System.Drawing.Size(30, 30);
-            this.txtpw.Location = new System.Drawing.Point(3, 213);
+            this.txtpw.Location = new System.Drawing.Point(3, 228);
             this.txtpw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtpw.Name = "txtpw";
+            this.txtpw.PasswordChar = '●';
             this.txtpw.PlaceholderText = "Password";
             this.txtpw.SelectedText = "";
             this.txtpw.Size = new System.Drawing.Size(318, 33);
@@ -205,9 +190,10 @@
             this.txtUser.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUser.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.username;
-            this.txtUser.Location = new System.Drawing.Point(3, 172);
+            this.txtUser.Location = new System.Drawing.Point(3, 187);
             this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUser.Name = "txtUser";
+            this.txtUser.PasswordChar = '\0';
             this.txtUser.PlaceholderText = "Username";
             this.txtUser.SelectedText = "";
             this.txtUser.Size = new System.Drawing.Size(318, 33);
@@ -217,7 +203,7 @@
             // 
             this.pictureBox8.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.user;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(88, 15);
+            this.pictureBox8.Location = new System.Drawing.Point(88, 30);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(150, 150);
             this.pictureBox8.TabIndex = 28;
@@ -255,6 +241,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(3, 134);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "Địa Chỉ";
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.Size = new System.Drawing.Size(318, 33);
@@ -277,6 +264,7 @@
             this.txtSdt.Location = new System.Drawing.Point(3, 93);
             this.txtSdt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSdt.Name = "txtSdt";
+            this.txtSdt.PasswordChar = '\0';
             this.txtSdt.PlaceholderText = "Số Điện Thoại";
             this.txtSdt.SelectedText = "";
             this.txtSdt.Size = new System.Drawing.Size(318, 33);
@@ -299,6 +287,7 @@
             this.txtName.Location = new System.Drawing.Point(3, 16);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
+            this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Họ Và Tên";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(318, 33);
@@ -333,6 +322,62 @@
             this.btnSignIn.Text = "Đăng Kí";
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(370, 30);
+            this.guna2Panel1.TabIndex = 36;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.library;
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2PictureBox1.Image = global::GUI_QuanLyThuVien.Properties.Resources.library;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.guna2PictureBox1.TabIndex = 33;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(32, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 28);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Đăng Ký";
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(340, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(30, 30);
+            this.guna2ControlBox1.TabIndex = 0;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // guna2DragControl2
+            // 
+            this.guna2DragControl2.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl2.UseTransparentDrag = true;
+            // 
             // GUI_DangKyDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -340,10 +385,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(218)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(370, 611);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -351,12 +396,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_DangKyDG";
             this.Load += new System.EventHandler(this.GUI_DangKyDG_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -366,7 +413,6 @@
         private System.Windows.Forms.ComboBox cbGioiTinh;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbInFo;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel5;
@@ -377,7 +423,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
         private Guna.UI2.WinForms.Guna2TextBox txtSdt;
-        private System.Windows.Forms.Button btnClose;
         private Guna.UI2.WinForms.Guna2Button btnSignIn;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnclose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
@@ -37,6 +38,7 @@
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSeachTK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +81,7 @@
             this.txtEmail.Location = new System.Drawing.Point(6, 99);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "Email Address";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(318, 33);
@@ -134,6 +137,7 @@
             this.txtName.Location = new System.Drawing.Point(15, 99);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
+            this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Username";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(318, 33);
@@ -150,9 +154,9 @@
             this.btnSeachTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSeachTK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeachTK.ForeColor = System.Drawing.Color.White;
-            this.btnSeachTK.Location = new System.Drawing.Point(18, 189);
+            this.btnSeachTK.Location = new System.Drawing.Point(12, 189);
             this.btnSeachTK.Name = "btnSeachTK";
-            this.btnSeachTK.Size = new System.Drawing.Size(301, 37);
+            this.btnSeachTK.Size = new System.Drawing.Size(324, 37);
             this.btnSeachTK.TabIndex = 33;
             this.btnSeachTK.Text = "Đăng Nhập";
             this.btnSeachTK.Click += new System.EventHandler(this.btnSeachTK_Click);
@@ -169,12 +173,17 @@
             this.guna2Button1.FillColor = System.Drawing.Color.White;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(18, 232);
+            this.guna2Button1.Location = new System.Drawing.Point(12, 232);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(301, 37);
+            this.guna2Button1.Size = new System.Drawing.Size(324, 37);
             this.guna2Button1.TabIndex = 34;
             this.guna2Button1.Text = "Cancel";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // GUI_QuenMatKhau
             // 
@@ -207,5 +216,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2Button btnSeachTK;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

@@ -42,7 +42,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 90);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 360);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1641, 656);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // panel1
@@ -55,7 +55,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 90);
+            this.panel1.Size = new System.Drawing.Size(1641, 90);
             this.panel1.TabIndex = 3;
             // 
             // btnaddtt
@@ -63,6 +63,7 @@
             this.btnaddtt.Animated = true;
             this.btnaddtt.AutoRoundedCorners = true;
             this.btnaddtt.BackColor = System.Drawing.Color.Transparent;
+            this.btnaddtt.BorderRadius = 17;
             this.btnaddtt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnaddtt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnaddtt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -84,6 +85,7 @@
             this.btnListTT.Animated = true;
             this.btnListTT.AutoRoundedCorners = true;
             this.btnListTT.BackColor = System.Drawing.Color.Transparent;
+            this.btnListTT.BorderRadius = 17;
             this.btnListTT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnListTT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnListTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -104,6 +106,7 @@
             this.txtSearch.Animated = true;
             this.txtSearch.AutoRoundedCorners = true;
             this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderRadius = 12;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "Search";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -118,6 +121,7 @@
             this.txtSearch.Location = new System.Drawing.Point(269, 56);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Search";
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(273, 27);
@@ -127,9 +131,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1641, 746);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_QuanLyThuThu";
             this.Text = "QuanLyThuThu";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -1,5 +1,6 @@
 ﻿using BLL_QuanLyThuVien;
 using DTO_QuanLyThuVien;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,20 +23,10 @@ namespace GUI_QuanLyThuVien
         public string mail;
         public GUI_DangKyDG()
         {
-            //panel3.Dock = DockStyle.Top;
-            //this.BackColor = Color.FromArgb(210, 218, 255);
 
             InitializeComponent();
-            panel3.Dock = DockStyle.Top;
-            panel3.BackColor = Color.Transparent; // Làm trong suốt
 
-            this.Controls.Add(panel3);
-            panel3.BackColor = Color.FromArgb(238, 241, 255);
-            panel3.MouseDown += PanelTitleBar_MouseDown;
-            txtDiaChi.BackColor = Color.FromArgb(210, 218, 255);
-            txtSdt.BackColor = Color.FromArgb(210, 218, 255);
-            txtName.BackColor = Color.FromArgb(210, 218, 255);
-            txtpw.BackColor = Color.FromArgb(210, 218, 255);
+            guna2DragControl1.TargetControl = guna2Panel1;
             BoTronForm();
         }
         private void BoTronForm()
@@ -51,16 +42,7 @@ namespace GUI_QuanLyThuVien
 
             this.Region = new Region(path);
         }
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-
-        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(Handle, 0xA1, 0x2, 0); // Gửi lệnh di chuyển cửa sổ
-        }
+        
 
        
 
@@ -87,82 +69,8 @@ namespace GUI_QuanLyThuVien
             }
             else txtXacNhanpw.ForeColor = Color.Black;
         }
-        private void txtpw_TextChanged(object sender, EventArgs e)
-        {
-            if (txtXacNhanpw.Text != "Confirm password")
-            {
-                if (txtpw.Text != txtXacNhanpw.Text)
-                {
-                    txtXacNhanpw.ForeColor = Color.Red;
-                }
-                else txtXacNhanpw.ForeColor = Color.Black;
-            }
-        }
-
-
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            base.OnPaint(e);
-            Graphics g = e.Graphics;
-            Pen pen = new Pen(Color.Gray, 2);
-            g.DrawLine(pen, 20, 45, 250, 45);
-            g.DrawLine(pen, 20, 115, 250, 115);
-            g.DrawLine(pen, 20, 150, 250, 150);
-        }
 
         
-        
-
-       
-
-        
-
-        private void txtName_Enter(object sender, EventArgs e)
-        {
-             if (txtName.Text == "Họ Và Tên")
-            {
-                txtName.Text = "";
-                txtName.ForeColor = Color.Gray;
-            }
-        }
-
-        private void txtName_Leave(object sender, EventArgs e)
-        {
-            if (txtName.Text == "")
-            {
-                txtName.Text = "Họ Và Tên";
-                txtName.ForeColor = Color.Gray; // Màu placeholder
-            }
-        }
-
-        
-
-        
-
-        
-
-        private void txtXacNhanpw_Enter(object sender, EventArgs e)
-        {
-            if (txtXacNhanpw.Text == "Confirm password")
-            {
-                txtXacNhanpw.Text = "";
-                txtXacNhanpw.ForeColor = Color.Black; // Trả lại màu chữ bình thường
-                txtXacNhanpw.UseSystemPasswordChar = true; // Ẩn mật khẩu
-            }
-
-        }
-
-        private void txtXacNhanpw_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtXacNhanpw.Text))
-            {
-                txtXacNhanpw.Text = "Confirm password";
-                txtXacNhanpw.ForeColor = Color.Gray;
-                txtXacNhanpw.UseSystemPasswordChar = false; // Hiện placeholder
-            }
-
-        }
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
@@ -260,5 +168,7 @@ namespace GUI_QuanLyThuVien
                 isPasswordConfim = true;
             }
         }
+
+        
     }
 }

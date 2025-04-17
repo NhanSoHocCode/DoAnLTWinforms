@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMaThuThu = new Guna.UI2.WinForms.Guna2ComboBox();
             this.nrudSL = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnOK = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearchFile = new Guna.UI2.WinForms.Guna2Button();
@@ -46,7 +47,6 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtMaThuThu = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nrudSL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
@@ -82,6 +82,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(465, 398);
             this.panel1.TabIndex = 17;
+            // 
+            // txtMaThuThu
+            // 
+            this.txtMaThuThu.BackColor = System.Drawing.Color.Transparent;
+            this.txtMaThuThu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaThuThu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtMaThuThu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtMaThuThu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaThuThu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaThuThu.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtMaThuThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.txtMaThuThu.ItemHeight = 30;
+            this.txtMaThuThu.Location = new System.Drawing.Point(134, 168);
+            this.txtMaThuThu.Name = "txtMaThuThu";
+            this.txtMaThuThu.Size = new System.Drawing.Size(155, 36);
+            this.txtMaThuThu.TabIndex = 36;
             // 
             // nrudSL
             // 
@@ -144,7 +160,7 @@
             this.txtSource.BackColor = System.Drawing.Color.Transparent;
             this.txtSource.BorderRadius = 15;
             this.txtSource.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSource.DefaultText = "Source Image";
+            this.txtSource.DefaultText = "";
             this.txtSource.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSource.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSource.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -157,7 +173,7 @@
             this.txtSource.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSource.Name = "txtSource";
             this.txtSource.PasswordChar = '\0';
-            this.txtSource.PlaceholderText = "";
+            this.txtSource.PlaceholderText = "Source Image";
             this.txtSource.SelectedText = "";
             this.txtSource.Size = new System.Drawing.Size(212, 33);
             this.txtSource.TabIndex = 32;
@@ -169,7 +185,7 @@
             this.txtTheLoai.BackColor = System.Drawing.Color.Transparent;
             this.txtTheLoai.BorderRadius = 15;
             this.txtTheLoai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTheLoai.DefaultText = "Thể loại";
+            this.txtTheLoai.DefaultText = "";
             this.txtTheLoai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTheLoai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTheLoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -181,7 +197,7 @@
             this.txtTheLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTheLoai.Name = "txtTheLoai";
             this.txtTheLoai.PasswordChar = '\0';
-            this.txtTheLoai.PlaceholderText = "";
+            this.txtTheLoai.PlaceholderText = "Thể loại";
             this.txtTheLoai.SelectedText = "";
             this.txtTheLoai.Size = new System.Drawing.Size(297, 33);
             this.txtTheLoai.TabIndex = 31;
@@ -193,7 +209,7 @@
             this.txtDonGia.BackColor = System.Drawing.Color.Transparent;
             this.txtDonGia.BorderRadius = 15;
             this.txtDonGia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDonGia.DefaultText = "Đơn giá";
+            this.txtDonGia.DefaultText = "";
             this.txtDonGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtDonGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtDonGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -205,7 +221,7 @@
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.PasswordChar = '\0';
-            this.txtDonGia.PlaceholderText = "";
+            this.txtDonGia.PlaceholderText = "Đơn giá";
             this.txtDonGia.SelectedText = "";
             this.txtDonGia.Size = new System.Drawing.Size(272, 33);
             this.txtDonGia.TabIndex = 30;
@@ -218,7 +234,7 @@
             this.txtNhaXB.BackColor = System.Drawing.Color.Transparent;
             this.txtNhaXB.BorderRadius = 15;
             this.txtNhaXB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNhaXB.DefaultText = "Nhà xuất bản";
+            this.txtNhaXB.DefaultText = "";
             this.txtNhaXB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtNhaXB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtNhaXB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -230,7 +246,7 @@
             this.txtNhaXB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNhaXB.Name = "txtNhaXB";
             this.txtNhaXB.PasswordChar = '\0';
-            this.txtNhaXB.PlaceholderText = "";
+            this.txtNhaXB.PlaceholderText = "Nhà xuất bản";
             this.txtNhaXB.SelectedText = "";
             this.txtNhaXB.Size = new System.Drawing.Size(300, 33);
             this.txtNhaXB.TabIndex = 28;
@@ -242,7 +258,7 @@
             this.txtTacGia.BackColor = System.Drawing.Color.Transparent;
             this.txtTacGia.BorderRadius = 15;
             this.txtTacGia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTacGia.DefaultText = "Tác giả";
+            this.txtTacGia.DefaultText = "";
             this.txtTacGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTacGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTacGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -254,7 +270,7 @@
             this.txtTacGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTacGia.Name = "txtTacGia";
             this.txtTacGia.PasswordChar = '\0';
-            this.txtTacGia.PlaceholderText = "";
+            this.txtTacGia.PlaceholderText = "Tác giả";
             this.txtTacGia.SelectedText = "";
             this.txtTacGia.Size = new System.Drawing.Size(300, 33);
             this.txtTacGia.TabIndex = 27;
@@ -266,7 +282,7 @@
             this.txtTenSach.BackColor = System.Drawing.Color.Transparent;
             this.txtTenSach.BorderRadius = 15;
             this.txtTenSach.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenSach.DefaultText = "Tên sách";
+            this.txtTenSach.DefaultText = "";
             this.txtTenSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTenSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTenSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -278,7 +294,7 @@
             this.txtTenSach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.PasswordChar = '\0';
-            this.txtTenSach.PlaceholderText = "";
+            this.txtTenSach.PlaceholderText = "Tên sách";
             this.txtTenSach.SelectedText = "";
             this.txtTenSach.Size = new System.Drawing.Size(297, 33);
             this.txtTenSach.TabIndex = 26;
@@ -365,29 +381,13 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // txtMaThuThu
-            // 
-            this.txtMaThuThu.BackColor = System.Drawing.Color.Transparent;
-            this.txtMaThuThu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaThuThu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtMaThuThu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtMaThuThu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaThuThu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaThuThu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMaThuThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.txtMaThuThu.ItemHeight = 30;
-            this.txtMaThuThu.Location = new System.Drawing.Point(134, 168);
-            this.txtMaThuThu.Name = "txtMaThuThu";
-            this.txtMaThuThu.Size = new System.Drawing.Size(155, 36);
-            this.txtMaThuThu.TabIndex = 36;
-            // 
             // GUI_AddEditBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 430);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_AddEditBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_AddEditBook";

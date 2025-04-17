@@ -12,6 +12,7 @@ using System.Xml.Linq;
 using BLL_QuanLyThuVien.APIs;
 using GUI_QuanLyThuVien.User;
 using System.Runtime.InteropServices;
+using Guna.UI2.WinForms;
 namespace GUI_QuanLyThuVien
 {
     public partial class GUI_QuenMatKhau : Form
@@ -19,36 +20,13 @@ namespace GUI_QuanLyThuVien
         public GUI_QuenMatKhau()
         {
             InitializeComponent();
-            panel2.MouseDown += PanelTitleBar_MouseDown;
+            guna2DragControl1.TargetControl = panel2;
+
         }
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(Handle, 0xA1, 0x2, 0); // Gửi lệnh di chuyển cửa sổ
-        }
+
         BLL_TaiKhoan bll_taikhoan = new BLL_TaiKhoan();
         API_XacThucMail api= new API_XacThucMail();
-
-        private void btnSearchTK_Click(object sender, EventArgs e)
-        {
-            
-            //  làm lại cái messageBox sao cho đẹp hơn !!!!
-        }
-
-       
-
         private void btnclose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        
-
-        private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -66,10 +44,11 @@ namespace GUI_QuanLyThuVien
             }
             else MessageBox.Show("Email không hợp lệ, vui lòng nhập lại email chính xác.");
         }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        
     }
 }

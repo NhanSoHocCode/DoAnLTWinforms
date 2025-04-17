@@ -32,13 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_XacNhanOTP));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbtimer = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.txtOTP = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnNext = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +55,13 @@
             this.panel2.Controls.Add(this.label4);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
+            // 
+            // guna2ControlBox1
+            // 
+            resources.ApplyResources(this.guna2ControlBox1, "guna2ControlBox1");
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
             // 
             // label4
             // 
@@ -82,21 +90,6 @@
             this.panel1.Controls.Add(this.label1);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btnNext
-            // 
-            this.btnNext.Animated = true;
-            this.btnNext.AutoRoundedCorners = true;
-            this.btnNext.BorderRadius = 22;
-            this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            resources.ApplyResources(this.btnNext, "btnNext");
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // txtOTP
             // 
@@ -112,15 +105,28 @@
             this.txtOTP.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtOTP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOTP.Name = "txtOTP";
+            this.txtOTP.PasswordChar = '\0';
             this.txtOTP.PlaceholderText = "Nhập OTP";
             this.txtOTP.SelectedText = "";
             // 
-            // guna2ControlBox1
+            // btnNext
             // 
-            resources.ApplyResources(this.guna2ControlBox1, "guna2ControlBox1");
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.btnNext.Animated = true;
+            this.btnNext.AutoRoundedCorners = true;
+            this.btnNext.BorderRadius = 22;
+            this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            resources.ApplyResources(this.btnNext, "btnNext");
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // GUI_XacNhanOTP
             // 
@@ -153,5 +159,6 @@
         private Guna.UI2.WinForms.Guna2Button btnNext;
         private Guna.UI2.WinForms.Guna2TextBox txtOTP;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
