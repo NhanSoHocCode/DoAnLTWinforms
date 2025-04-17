@@ -35,12 +35,8 @@ namespace GUI_QuanLyThuVien.Administration
             lbnameRole.Text = "Quản trị viên master";
             string a = bll.LayAnhThe(username);
             string path = a.Contains(":") ? a : Path.Combine(@"D:\K25_Project_LTWinform\DoAn\images\", a);
-            //pictureBoxAdm.Image = Image.FromFile(path);
+            
             guna2CirclePictureBoxAdm.Image = Image.FromFile(path);
-            //guna2CirclePictureBoxAdm.SizeMode = PictureBoxSizeMode.StretchImage;
-            //guna2CirclePictureBoxAdm.ShadowDecoration.Mode = ShadowMode.Circle;
-            //guna2CirclePictureBoxAdm.BorderThickness = 2;
-            //guna2CirclePictureBoxAdm.BorderColor = Color.DeepSkyBlue;
             GUI_QuanLySach formSach = new GUI_QuanLySach();
             OpenChildForm(formSach, panelSach,currentFormChild);
             currentFormChild = formSach;
@@ -76,24 +72,18 @@ namespace GUI_QuanLyThuVien.Administration
 
 
         }
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        //private void btnClose_Click(object sender, EventArgs e)
+        //{
+        //    Close();
+        //}
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
+       
 
-        }
+        //private void buttonClose_Click(object sender, EventArgs e)
+        //{
+        //    Close();
+        //}
 
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void panelSach_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

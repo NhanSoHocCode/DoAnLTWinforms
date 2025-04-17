@@ -81,7 +81,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1659, 155);
+            this.panel1.Size = new System.Drawing.Size(1321, 155);
             this.panel1.TabIndex = 4;
             // 
             // txtUser
@@ -137,14 +137,14 @@
             this.flowLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelMain.Location = new System.Drawing.Point(0, 155);
             this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
-            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1659, 638);
+            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1321, 636);
             this.flowLayoutPanelMain.TabIndex = 0;
             // 
             // GUI_QuanLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1659, 793);
+            this.ClientSize = new System.Drawing.Size(1321, 791);
             this.Controls.Add(this.flowLayoutPanelMain);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;

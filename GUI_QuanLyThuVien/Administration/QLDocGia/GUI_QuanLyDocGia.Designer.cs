@@ -39,9 +39,9 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 96);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 249);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1089, 542);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1321, 542);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -54,7 +54,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1089, 90);
+            this.panel1.Size = new System.Drawing.Size(1321, 90);
             this.panel1.TabIndex = 1;
             // 
             // button1
@@ -103,9 +103,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 638);
+            this.ClientSize = new System.Drawing.Size(1321, 791);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_QuanLyDocGia";
             this.Text = "GUI_QuanLyDocGia";
             this.Load += new System.EventHandler(this.GUI_QuanLyDocGia_Load);
