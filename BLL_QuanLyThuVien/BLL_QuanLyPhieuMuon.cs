@@ -39,5 +39,9 @@ namespace BLL_QuanLyThuVien
         {
             return dllPhieuMuon.ListCanhCaoQuaHan();
         }
+        public DataTable XemChiTietPhieuMuon(int maPM)
+        {
+            return dllPhieuMuon.XemChiTietPhieuMuon((int)maPM);
+        }
     }
 }

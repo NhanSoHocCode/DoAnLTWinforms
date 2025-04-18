@@ -23,12 +23,11 @@ namespace GUI_QuanLyThuVien.Administration
 
         private void GUI_EditPhieuMuon_Load(object sender, EventArgs e)
         {
-            lbMaDG.Text = pm.sTenDocGia.ToString();
+            lbMaDG.Text = pm.sTenDocGia;
             label1.Text = pm.sMaPhieuMuon.ToString();
             dtp1.Value = pm.sNgayMuon;
             dtp2.Value = pm.sNgayTra;
             cbbTT.Text = pm.sTrangThai;
-            
         }
 
         private void btnOK_Click(object sender, EventArgs e)

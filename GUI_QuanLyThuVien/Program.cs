@@ -23,8 +23,8 @@ namespace GUI_QuanLyThuVien
             //Application.Run(new GUI_QuanLyThuThu());
             //Application.Run(new GUI_DangKyDG());
             //Application.Run(new GUI_DangNhap());
-            Application.Run(new GUI_HomeManager());
-            //Application.Run(new GUI_QuanLySach());
+            Application.Run(new GUI_QuanLyPhieuMuon());
+            //Application.Run(new GUI_Home());
         }
     }
 }
