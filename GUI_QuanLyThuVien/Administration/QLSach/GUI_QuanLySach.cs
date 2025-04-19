@@ -20,17 +20,7 @@ namespace GUI_QuanLyThuVien
         public GUI_QuanLySach()
         {
             InitializeComponent();
-            btnRefesh.Image = new Bitmap(Properties.Resources.lammoi, btnRefesh.ClientSize.Height - 10, btnRefesh.ClientSize.Height - 10);
-            btnRefesh.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnRefesh.AutoSize = true;
-            btnRefesh.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRefesh.TextAlign = ContentAlignment.MiddleCenter;
-
-            btnAddBook.Image = new Bitmap(Properties.Resources.Plus_icon, btnAddBook.ClientSize.Height - 10, btnAddBook.ClientSize.Height - 10);
-            btnAddBook.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnAddBook.AutoSize = true;
-            btnAddBook.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAddBook.TextAlign = ContentAlignment.MiddleCenter;
+           
 
             //btnEdit.Image = new Bitmap(Properties.Resources.thaydoiquydinh, btnEdit.ClientSize.Height - 10, btnEdit.ClientSize.Height - 10);
             //btnEdit.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -201,6 +191,18 @@ namespace GUI_QuanLyThuVien
                 img.Split(' ');
                 AddBookToPanel(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT);
             }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            GUI_AddEditBook form = new GUI_AddEditBook();
+            form.Add = true;
+            form.Show();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            GUI_QuanLySach_Load(sender, e);
         }
     }
 

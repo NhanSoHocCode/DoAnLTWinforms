@@ -36,72 +36,75 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lbSet = new System.Windows.Forms.Label();
             this.lbNgaySinh = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtSdt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbAnhThe = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDel = new Guna.UI2.WinForms.Guna2Button();
+            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSdt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(451, 331);
+            this.label1.Location = new System.Drawing.Point(325, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã độc giả";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbHocten
             // 
             this.lbHocten.AutoSize = true;
-            this.lbHocten.Location = new System.Drawing.Point(555, 396);
+            this.lbHocten.Location = new System.Drawing.Point(451, 130);
             this.lbHocten.Name = "lbHocten";
             this.lbHocten.Size = new System.Drawing.Size(44, 16);
             this.lbHocten.TabIndex = 1;
             this.lbHocten.Text = "label2";
+            this.lbHocten.Click += new System.EventHandler(this.lbHocten_Click);
             // 
             // lbMa
             // 
             this.lbMa.AutoSize = true;
-            this.lbMa.Location = new System.Drawing.Point(555, 331);
+            this.lbMa.Location = new System.Drawing.Point(450, 69);
             this.lbMa.Name = "lbMa";
             this.lbMa.Size = new System.Drawing.Size(44, 16);
             this.lbMa.TabIndex = 2;
             this.lbMa.Text = "label3";
+            this.lbMa.Click += new System.EventHandler(this.lbMa_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(451, 532);
+            this.label4.Location = new System.Drawing.Point(325, 296);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ngày sinh";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(451, 464);
+            this.label5.Location = new System.Drawing.Point(325, 238);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Giới tính";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(451, 396);
+            this.label6.Location = new System.Drawing.Point(325, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 5;
@@ -110,175 +113,230 @@
             // lbSet
             // 
             this.lbSet.AutoSize = true;
-            this.lbSet.Location = new System.Drawing.Point(555, 464);
+            this.lbSet.Location = new System.Drawing.Point(453, 238);
             this.lbSet.Name = "lbSet";
             this.lbSet.Size = new System.Drawing.Size(44, 16);
             this.lbSet.TabIndex = 6;
             this.lbSet.Text = "label7";
+            this.lbSet.Click += new System.EventHandler(this.lbSet_Click);
             // 
             // lbNgaySinh
             // 
             this.lbNgaySinh.AutoSize = true;
-            this.lbNgaySinh.Location = new System.Drawing.Point(555, 532);
+            this.lbNgaySinh.Location = new System.Drawing.Point(453, 296);
             this.lbNgaySinh.Name = "lbNgaySinh";
             this.lbNgaySinh.Size = new System.Drawing.Size(44, 16);
             this.lbNgaySinh.TabIndex = 7;
             this.lbNgaySinh.Text = "label8";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 265);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Email";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 372);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 16);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Địa chỉ";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 319);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 16);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Số điện thoại";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(32, 284);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(235, 22);
-            this.txtEmail.TabIndex = 14;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(32, 235);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(235, 22);
-            this.txtUsername.TabIndex = 15;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(32, 391);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(235, 22);
-            this.txtAddress.TabIndex = 18;
-            // 
-            // txtSdt
-            // 
-            this.txtSdt.Location = new System.Drawing.Point(32, 338);
-            this.txtSdt.Name = "txtSdt";
-            this.txtSdt.Size = new System.Drawing.Size(235, 22);
-            this.txtSdt.TabIndex = 19;
+            this.lbNgaySinh.Click += new System.EventHandler(this.lbNgaySinh_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.txtSdt);
-            this.panel1.Controls.Add(this.lbAnhThe);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtUsername);
+            this.panel1.Controls.Add(this.guna2CirclePictureBox1);
             this.panel1.Controls.Add(this.txtAddress);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.txtSdt);
             this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Location = new System.Drawing.Point(64, 136);
+            this.panel1.Controls.Add(this.txtUsername);
+            this.panel1.Controls.Add(this.btnDel);
+            this.panel1.Controls.Add(this.btnEdit);
+            this.panel1.Controls.Add(this.lbAnhThe);
+            this.panel1.Controls.Add(this.lbNgaySinh);
+            this.panel1.Controls.Add(this.lbSet);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lbMa);
+            this.panel1.Controls.Add(this.lbHocten);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(1, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 427);
+            this.panel1.Size = new System.Drawing.Size(564, 484);
             this.panel1.TabIndex = 20;
             // 
             // lbAnhThe
             // 
             this.lbAnhThe.AutoSize = true;
-            this.lbAnhThe.Location = new System.Drawing.Point(126, 114);
+            this.lbAnhThe.Location = new System.Drawing.Point(135, 106);
             this.lbAnhThe.Name = "lbAnhThe";
             this.lbAnhThe.Size = new System.Drawing.Size(27, 16);
             this.lbAnhThe.TabIndex = 18;
             this.lbAnhThe.Text = "null";
             // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(80, 195);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "chọn từ thư viện ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 215);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 16);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Username";
-            // 
-            // btnDel
-            // 
-            this.btnDel.Location = new System.Drawing.Point(159, 609);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(98, 41);
-            this.btnDel.TabIndex = 22;
-            this.btnDel.Text = "Xóa ";
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(497, 609);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(98, 41);
-            this.btnEdit.TabIndex = 23;
-            this.btnEdit.Text = "Chỉnh sửa";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Animated = true;
+            this.btnEdit.AutoRoundedCorners = true;
+            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(138, 433);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(127, 31);
+            this.btnEdit.TabIndex = 24;
+            this.btnEdit.Text = "Chỉnh Sửa";
+            this.btnEdit.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.Animated = true;
+            this.btnDel.AutoRoundedCorners = true;
+            this.btnDel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnDel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDel.ForeColor = System.Drawing.Color.White;
+            this.btnDel.Location = new System.Drawing.Point(287, 433);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(127, 31);
+            this.btnDel.TabIndex = 25;
+            this.btnDel.Text = "Xoá";
+            this.btnDel.Click += new System.EventHandler(this.guna2Button1_Click_1);
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Animated = true;
+            this.txtUsername.AutoRoundedCorners = true;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.DefaultText = "Username";
+            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.user2;
+            this.txtUsername.Location = new System.Drawing.Point(35, 232);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PlaceholderText = "";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.Size = new System.Drawing.Size(229, 29);
+            this.txtUsername.TabIndex = 26;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Animated = true;
+            this.txtEmail.AutoRoundedCorners = true;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "Email";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.envelope;
+            this.txtEmail.Location = new System.Drawing.Point(36, 283);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(229, 29);
+            this.txtEmail.TabIndex = 27;
+            // 
+            // txtSdt
+            // 
+            this.txtSdt.Animated = true;
+            this.txtSdt.AutoRoundedCorners = true;
+            this.txtSdt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSdt.DefaultText = "Số điện thoại";
+            this.txtSdt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSdt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSdt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSdt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSdt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSdt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSdt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSdt.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.phone_call;
+            this.txtSdt.Location = new System.Drawing.Point(35, 337);
+            this.txtSdt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSdt.Name = "txtSdt";
+            this.txtSdt.PlaceholderText = "";
+            this.txtSdt.SelectedText = "";
+            this.txtSdt.Size = new System.Drawing.Size(229, 29);
+            this.txtSdt.TabIndex = 28;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Animated = true;
+            this.txtAddress.AutoRoundedCorners = true;
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAddress.DefaultText = "Địa chỉ";
+            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAddress.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.marker;
+            this.txtAddress.Location = new System.Drawing.Point(35, 392);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PlaceholderText = "";
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.Size = new System.Drawing.Size(229, 29);
+            this.txtAddress.TabIndex = 29;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(78, 36);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(130, 122);
+            this.guna2CirclePictureBox1.TabIndex = 30;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Animated = true;
+            this.button1.AutoRoundedCorners = true;
+            this.button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::GUI_QuanLyThuVien.Properties.Resources.camera_viewfinder;
+            this.button1.Location = new System.Drawing.Point(69, 176);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 48);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Chọn từ thư viện";
+            this.button1.Click += new System.EventHandler(this.guna2Button1_Click_2);
             // 
             // GUI_ControlChiTietDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources._1;
+            this.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(744, 708);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnDel);
+            this.ClientSize = new System.Drawing.Size(565, 500);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lbNgaySinh);
-            this.Controls.Add(this.lbSet);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lbMa);
-            this.Controls.Add(this.lbHocten);
-            this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "GUI_ControlChiTietDocGia";
             this.Text = "ControlChiTietDocGia";
             this.Load += new System.EventHandler(this.GUI_ControlChiTietDocGia_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -292,19 +350,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbSet;
         private System.Windows.Forms.Label lbNgaySinh;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtSdt;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lbAnhThe;
-        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnDel;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
+        private Guna.UI2.WinForms.Guna2TextBox txtSdt;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2Button button1;
     }
 }

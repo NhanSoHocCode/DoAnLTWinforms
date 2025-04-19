@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtMaThuThu = new Guna.UI2.WinForms.Guna2ComboBox();
             this.nrudSL = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnOK = new Guna.UI2.WinForms.Guna2Button();
@@ -47,7 +48,6 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nrudSL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
@@ -85,6 +85,23 @@
             this.panel1.Size = new System.Drawing.Size(473, 431);
             this.panel1.TabIndex = 17;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(413, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(60, 45);
+            this.guna2Button1.TabIndex = 18;
+            this.guna2Button1.Text = "X";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // txtMaThuThu
             // 
             this.txtMaThuThu.BackColor = System.Drawing.Color.Transparent;
@@ -97,7 +114,7 @@
             this.txtMaThuThu.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtMaThuThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtMaThuThu.ItemHeight = 30;
-            this.txtMaThuThu.Location = new System.Drawing.Point(172, 200);
+            this.txtMaThuThu.Location = new System.Drawing.Point(135, 200);
             this.txtMaThuThu.Name = "txtMaThuThu";
             this.txtMaThuThu.Size = new System.Drawing.Size(77, 36);
             this.txtMaThuThu.TabIndex = 36;
@@ -130,7 +147,7 @@
             this.btnOK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             this.btnOK.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(172, 374);
+            this.btnOK.Location = new System.Drawing.Point(183, 374);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(140, 42);
             this.btnOK.TabIndex = 34;
@@ -149,7 +166,7 @@
             this.btnSearchFile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             this.btnSearchFile.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearchFile.ForeColor = System.Drawing.Color.White;
-            this.btnSearchFile.Location = new System.Drawing.Point(289, 334);
+            this.btnSearchFile.Location = new System.Drawing.Point(279, 334);
             this.btnSearchFile.Name = "btnSearchFile";
             this.btnSearchFile.Size = new System.Drawing.Size(178, 34);
             this.btnSearchFile.TabIndex = 33;
@@ -175,7 +192,6 @@
             this.txtSource.Location = new System.Drawing.Point(49, 334);
             this.txtSource.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSource.Name = "txtSource";
-            this.txtSource.PasswordChar = '\0';
             this.txtSource.PlaceholderText = "Source Image";
             this.txtSource.SelectedText = "";
             this.txtSource.Size = new System.Drawing.Size(212, 33);
@@ -199,7 +215,6 @@
             this.txtTheLoai.Location = new System.Drawing.Point(135, 247);
             this.txtTheLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTheLoai.Name = "txtTheLoai";
-            this.txtTheLoai.PasswordChar = '\0';
             this.txtTheLoai.PlaceholderText = "Thể loại";
             this.txtTheLoai.SelectedText = "";
             this.txtTheLoai.Size = new System.Drawing.Size(297, 33);
@@ -223,7 +238,6 @@
             this.txtDonGia.Location = new System.Drawing.Point(135, 294);
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.PasswordChar = '\0';
             this.txtDonGia.PlaceholderText = "Đơn giá";
             this.txtDonGia.SelectedText = "";
             this.txtDonGia.Size = new System.Drawing.Size(272, 33);
@@ -248,7 +262,6 @@
             this.txtNhaXB.Location = new System.Drawing.Point(135, 153);
             this.txtNhaXB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNhaXB.Name = "txtNhaXB";
-            this.txtNhaXB.PasswordChar = '\0';
             this.txtNhaXB.PlaceholderText = "Nhà xuất bản";
             this.txtNhaXB.SelectedText = "";
             this.txtNhaXB.Size = new System.Drawing.Size(300, 33);
@@ -272,7 +285,6 @@
             this.txtTacGia.Location = new System.Drawing.Point(135, 108);
             this.txtTacGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTacGia.Name = "txtTacGia";
-            this.txtTacGia.PasswordChar = '\0';
             this.txtTacGia.PlaceholderText = "Tác giả";
             this.txtTacGia.SelectedText = "";
             this.txtTacGia.Size = new System.Drawing.Size(300, 33);
@@ -296,7 +308,6 @@
             this.txtTenSach.Location = new System.Drawing.Point(135, 61);
             this.txtTenSach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenSach.Name = "txtTenSach";
-            this.txtTenSach.PasswordChar = '\0';
             this.txtTenSach.PlaceholderText = "Tên sách";
             this.txtTenSach.SelectedText = "";
             this.txtTenSach.Size = new System.Drawing.Size(297, 33);
@@ -306,7 +317,7 @@
             // 
             this.guna2PictureBox7.Image = global::GUI_QuanLyThuVien.Properties.Resources.lammoi;
             this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(296, 196);
+            this.guna2PictureBox7.Location = new System.Drawing.Point(269, 195);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
             this.guna2PictureBox7.Size = new System.Drawing.Size(43, 41);
             this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -383,23 +394,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(413, 0);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(60, 45);
-            this.guna2Button1.TabIndex = 18;
-            this.guna2Button1.Text = "X";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // GUI_AddEditBook
             // 

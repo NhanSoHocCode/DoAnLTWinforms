@@ -165,5 +165,117 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
         {
 
         }
+
+        private void lbNgaySinh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbMa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbHocten_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbSet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSdt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            person.sDiaChi = txtAddress.Text;
+            person.sEmail = txtEmail.Text;
+            person.sUsername = txtUsername.Text;
+            person.sSDT = txtSdt.Text;
+            person.sNgaySinh = DateTime.Parse(lbNgaySinh.Text);
+            if (ChangeImage == true)
+            {
+
+                SaveImageToFolder(fileNameLong);
+                DelImageFromFolder(person.sSourceImage);
+                person.sSourceImage = lbAnhThe.Text;
+            }
+            if (DocGia == true)
+            {
+                MessageBox.Show(bll_QuanLyDocGia.EditDocGia(person));
+            }
+            else
+            {
+                MessageBox.Show(bll_QuanLyThuThu.EditThuThu(person));
+            }
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            if (DocGia != true)
+            {
+                MessageBox.Show(bll_QuanLyThuThu.DelThuThu(person.sMa));
+            }
+            else
+            {
+                MessageBox.Show(bll_QuanLyDocGia.DelDocGia(person.sMa));
+            }
+        }
+
+        private void guna2Button1_Click_2(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                fileNameLong = openFileDialog1.FileName;
+                fileNameShort = Path.GetFileName(openFileDialog1.FileName);
+                lbAnhThe.Text = fileNameShort;
+
+                ChangeImage = true;
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn file.");
+            }
+        }
     }
 }

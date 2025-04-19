@@ -28,27 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddBook = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnRefesh = new System.Windows.Forms.Button();
             this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnRefesh = new System.Windows.Forms.Button();
+            this.btnAddBook = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAddBook
-            // 
-            this.btnAddBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddBook.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.btnAddBook.Location = new System.Drawing.Point(178, 3);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(209, 47);
-            this.btnAddBook.TabIndex = 1;
-            this.btnAddBook.Text = "Thêm sách mới";
-            this.btnAddBook.UseVisualStyleBackColor = true;
-            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // panel1
             // 
@@ -76,7 +64,6 @@
             this.txtUser.Location = new System.Drawing.Point(423, 103);
             this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.PasswordChar = '\0';
             this.txtUser.PlaceholderText = "Search";
             this.txtUser.SelectedText = "";
             this.txtUser.Size = new System.Drawing.Size(378, 33);
@@ -92,6 +79,15 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(614, 59);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
+            // flowLayoutPanelMain
+            // 
+            this.flowLayoutPanelMain.AutoScroll = true;
+            this.flowLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelMain.Location = new System.Drawing.Point(0, 155);
+            this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
+            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1321, 636);
+            this.flowLayoutPanelMain.TabIndex = 0;
+            // 
             // btnRefesh
             // 
             this.btnRefesh.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -105,14 +101,17 @@
             this.btnRefesh.UseVisualStyleBackColor = true;
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
-            // flowLayoutPanelMain
+            // btnAddBook
             // 
-            this.flowLayoutPanelMain.AutoScroll = true;
-            this.flowLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelMain.Location = new System.Drawing.Point(0, 155);
-            this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
-            this.flowLayoutPanelMain.Size = new System.Drawing.Size(1321, 636);
-            this.flowLayoutPanelMain.TabIndex = 0;
+            this.btnAddBook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddBook.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
+            this.btnAddBook.Location = new System.Drawing.Point(178, 3);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(209, 47);
+            this.btnAddBook.TabIndex = 1;
+            this.btnAddBook.Text = "Thêm sách mới";
+            this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // GUI_QuanLySach
             // 
@@ -134,11 +133,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnRefesh;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMain;
         private Guna.UI2.WinForms.Guna2TextBox txtUser;
+        private System.Windows.Forms.Button btnRefesh;
+        private System.Windows.Forms.Button btnAddBook;
     }
 }
