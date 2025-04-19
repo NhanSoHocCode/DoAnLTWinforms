@@ -47,6 +47,7 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nrudSL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
@@ -61,6 +62,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
+            this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.txtMaThuThu);
             this.panel1.Controls.Add(this.nrudSL);
             this.panel1.Controls.Add(this.btnOK);
@@ -78,14 +80,15 @@
             this.panel1.Controls.Add(this.guna2PictureBox3);
             this.panel1.Controls.Add(this.guna2PictureBox2);
             this.panel1.Controls.Add(this.guna2PictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 22);
+            this.panel1.Location = new System.Drawing.Point(12, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(465, 398);
+            this.panel1.Size = new System.Drawing.Size(473, 431);
             this.panel1.TabIndex = 17;
             // 
             // txtMaThuThu
             // 
             this.txtMaThuThu.BackColor = System.Drawing.Color.Transparent;
+            this.txtMaThuThu.BorderRadius = 15;
             this.txtMaThuThu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMaThuThu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.txtMaThuThu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -94,9 +97,9 @@
             this.txtMaThuThu.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtMaThuThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtMaThuThu.ItemHeight = 30;
-            this.txtMaThuThu.Location = new System.Drawing.Point(134, 168);
+            this.txtMaThuThu.Location = new System.Drawing.Point(172, 200);
             this.txtMaThuThu.Name = "txtMaThuThu";
-            this.txtMaThuThu.Size = new System.Drawing.Size(155, 36);
+            this.txtMaThuThu.Size = new System.Drawing.Size(77, 36);
             this.txtMaThuThu.TabIndex = 36;
             // 
             // nrudSL
@@ -106,7 +109,7 @@
             this.nrudSL.BorderRadius = 15;
             this.nrudSL.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nrudSL.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nrudSL.Location = new System.Drawing.Point(345, 174);
+            this.nrudSL.Location = new System.Drawing.Point(346, 203);
             this.nrudSL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nrudSL.Name = "nrudSL";
             this.nrudSL.Size = new System.Drawing.Size(86, 33);
@@ -127,11 +130,11 @@
             this.btnOK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             this.btnOK.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(171, 345);
+            this.btnOK.Location = new System.Drawing.Point(172, 374);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(140, 42);
             this.btnOK.TabIndex = 34;
-            this.btnOK.Text = "OKE";
+            this.btnOK.Text = "Xác nhận";
             this.btnOK.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // btnSearchFile
@@ -146,9 +149,9 @@
             this.btnSearchFile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             this.btnSearchFile.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearchFile.ForeColor = System.Drawing.Color.White;
-            this.btnSearchFile.Location = new System.Drawing.Point(302, 305);
+            this.btnSearchFile.Location = new System.Drawing.Point(289, 334);
             this.btnSearchFile.Name = "btnSearchFile";
-            this.btnSearchFile.Size = new System.Drawing.Size(160, 34);
+            this.btnSearchFile.Size = new System.Drawing.Size(178, 34);
             this.btnSearchFile.TabIndex = 33;
             this.btnSearchFile.Text = "Chọn từ Desktop";
             this.btnSearchFile.Click += new System.EventHandler(this.btnSearchFile1_Click);
@@ -169,7 +172,7 @@
             this.txtSource.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSource.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSource.IconLeft = global::GUI_QuanLyThuVien.Properties.Resources.camera_viewfinder;
-            this.txtSource.Location = new System.Drawing.Point(48, 305);
+            this.txtSource.Location = new System.Drawing.Point(49, 334);
             this.txtSource.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSource.Name = "txtSource";
             this.txtSource.PasswordChar = '\0';
@@ -193,7 +196,7 @@
             this.txtTheLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTheLoai.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTheLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTheLoai.Location = new System.Drawing.Point(134, 218);
+            this.txtTheLoai.Location = new System.Drawing.Point(135, 247);
             this.txtTheLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTheLoai.Name = "txtTheLoai";
             this.txtTheLoai.PasswordChar = '\0';
@@ -217,7 +220,7 @@
             this.txtDonGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDonGia.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDonGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDonGia.Location = new System.Drawing.Point(134, 265);
+            this.txtDonGia.Location = new System.Drawing.Point(135, 294);
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.PasswordChar = '\0';
@@ -242,7 +245,7 @@
             this.txtNhaXB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNhaXB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNhaXB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNhaXB.Location = new System.Drawing.Point(134, 124);
+            this.txtNhaXB.Location = new System.Drawing.Point(135, 153);
             this.txtNhaXB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNhaXB.Name = "txtNhaXB";
             this.txtNhaXB.PasswordChar = '\0';
@@ -266,7 +269,7 @@
             this.txtTacGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTacGia.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTacGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTacGia.Location = new System.Drawing.Point(134, 79);
+            this.txtTacGia.Location = new System.Drawing.Point(135, 108);
             this.txtTacGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTacGia.Name = "txtTacGia";
             this.txtTacGia.PasswordChar = '\0';
@@ -290,7 +293,7 @@
             this.txtTenSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenSach.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenSach.Location = new System.Drawing.Point(134, 32);
+            this.txtTenSach.Location = new System.Drawing.Point(135, 61);
             this.txtTenSach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.PasswordChar = '\0';
@@ -303,7 +306,7 @@
             // 
             this.guna2PictureBox7.Image = global::GUI_QuanLyThuVien.Properties.Resources.lammoi;
             this.guna2PictureBox7.ImageRotate = 0F;
-            this.guna2PictureBox7.Location = new System.Drawing.Point(295, 167);
+            this.guna2PictureBox7.Location = new System.Drawing.Point(296, 196);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
             this.guna2PictureBox7.Size = new System.Drawing.Size(43, 41);
             this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -314,7 +317,7 @@
             // 
             this.guna2PictureBox6.Image = global::GUI_QuanLyThuVien.Properties.Resources.money_bill_wave;
             this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(48, 257);
+            this.guna2PictureBox6.Location = new System.Drawing.Point(49, 286);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
             this.guna2PictureBox6.Size = new System.Drawing.Size(43, 41);
             this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -325,7 +328,7 @@
             // 
             this.guna2PictureBox5.Image = global::GUI_QuanLyThuVien.Properties.Resources.thể_loại;
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(48, 210);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(49, 239);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(43, 41);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -336,7 +339,7 @@
             // 
             this.guna2PictureBox4.Image = global::GUI_QuanLyThuVien.Properties.Resources.user_shield;
             this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(48, 163);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(49, 192);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.Size = new System.Drawing.Size(43, 41);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -348,7 +351,7 @@
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = global::GUI_QuanLyThuVien.Properties.Resources.user1;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(48, 71);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(49, 100);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(43, 41);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -359,7 +362,7 @@
             // 
             this.guna2PictureBox2.Image = global::GUI_QuanLyThuVien.Properties.Resources.user2;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(48, 116);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(49, 145);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(43, 41);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -370,7 +373,7 @@
             // 
             this.guna2PictureBox1.Image = global::GUI_QuanLyThuVien.Properties.Resources.sách;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(48, 24);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(49, 53);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(43, 41);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -381,11 +384,28 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(413, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(60, 45);
+            this.guna2Button1.TabIndex = 18;
+            this.guna2Button1.Text = "X";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // GUI_AddEditBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 430);
+            this.ClientSize = new System.Drawing.Size(491, 455);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_AddEditBook";
@@ -426,5 +446,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSearchFile;
         private Guna.UI2.WinForms.Guna2NumericUpDown nrudSL;
         private Guna.UI2.WinForms.Guna2ComboBox txtMaThuThu;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

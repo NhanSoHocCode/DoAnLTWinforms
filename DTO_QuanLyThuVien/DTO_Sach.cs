@@ -8,14 +8,14 @@ namespace DTO_QuanLyThuVien
 {
     public class DTO_Sach
     {
-        public string sMaSach { get; set; }
+        public int sMaSach { get; set; }
         public string sTenSach { get; set; }
         public string sTacGia { get; set; }
         public string sTheLoai { get; set; }
         public string sNhaXuatBan { get; set; }
         public int sSoLuong { get; set; }
-        public string sDonGia { get; set; } 
-        public string sMaThuThu { get; set; }   
+        public decimal sDonGia { get; set; } 
+        public int sMaThuThu { get; set; }   
         public string sSourceImange { get; set; }
     }
 }

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.btnAddBook = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -51,28 +49,6 @@
             this.btnAddBook.Text = "Thêm sách mới";
             this.btnAddBook.UseVisualStyleBackColor = true;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.btnEdit.Location = new System.Drawing.Point(609, 3);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(210, 47);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Sửa ";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnDel
-            // 
-            this.btnDel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDel.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.btnDel.Location = new System.Drawing.Point(393, 3);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(210, 47);
-            this.btnDel.TabIndex = 3;
-            this.btnDel.Text = "Xóa sách";
-            this.btnDel.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -103,7 +79,7 @@
             this.txtUser.PasswordChar = '\0';
             this.txtUser.PlaceholderText = "Search";
             this.txtUser.SelectedText = "";
-            this.txtUser.Size = new System.Drawing.Size(318, 33);
+            this.txtUser.Size = new System.Drawing.Size(378, 33);
             this.txtUser.TabIndex = 30;
             this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
@@ -111,11 +87,9 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnRefesh);
             this.flowLayoutPanel1.Controls.Add(this.btnAddBook);
-            this.flowLayoutPanel1.Controls.Add(this.btnDel);
-            this.flowLayoutPanel1.Controls.Add(this.btnEdit);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(245, 32);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 23);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(827, 59);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(614, 59);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // btnRefesh
@@ -161,8 +135,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnAddBook;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRefesh;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

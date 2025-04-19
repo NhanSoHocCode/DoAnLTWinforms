@@ -20,7 +20,7 @@ namespace GUI_QuanLyThuVien
         private void btnMuonSach_Click(object sender, EventArgs e)
         {
             DTO_Sach sach = new DTO_Sach();
-            sach.sMaSach = MaSach;
+            sach.sMaSach = int.Parse(MaSach);
             BienToanCuc.BookList.Add(sach); 
         }
 

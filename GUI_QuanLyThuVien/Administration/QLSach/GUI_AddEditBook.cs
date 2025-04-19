@@ -1,5 +1,6 @@
 ﻿using BLL_QuanLyThuVien;
 using DTO_QuanLyThuVien;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,18 +31,18 @@ namespace GUI_QuanLyThuVien.Administration
         {
             txtTacGia.Text = sach1.sTacGia;
             txtNhaXB.Text = sach1.sNhaXuatBan;
-            txtTheLoai.Text = sach1.sDonGia;
-            //txtMaThuThu.Text = sach1.sMaThuThu;
+            txtDonGia.Text = sach1.sDonGia.ToString();
+            txtMaThuThu.Text = sach1.sMaThuThu.ToString();
+            txtTenSach.Text = sach1.sTenSach;
+            nrudSL.Value = (decimal)sach1.sSoLuong;
+            txtTheLoai.Text = sach1.sTheLoai;
+            txtSource.Text = sach1.sSourceImange;
             DataTable dt = new DataTable();
             dt = bll_quanlysach.ListMaThuThu();
             foreach (DataRow dr in dt.Rows)
             {
                 txtMaThuThu.Items.Add(dr["maThuThu"].ToString());
             }
-            txtTenSach.Text = sach1.sTenSach;
-            nrudSL.Value = sach1.sSoLuong;
-            txtDonGia.Text = sach1.sTheLoai;
-            txtSource.Text = sach1.sSourceImange;
         }
         Boolean ChacgeImage = false;
         private void btnSearchFile_Click(object sender, EventArgs e)
@@ -77,39 +78,6 @@ namespace GUI_QuanLyThuVien.Administration
             catch (Exception ex)
             {
                 throw ex;
-            }
-        }
-
-        private void btnOK_Click(object sender, EventArgs e)
-        {
-            SaveImageToFolder(fileNameLong);
-            if (Add)  // neu true thi ta them moi
-            {
-                sach1.sTacGia = txtTacGia.Text;
-                sach1.sNhaXuatBan = txtNhaXB.Text;
-                sach1.sDonGia = txtDonGia.Text;
-                sach1.sMaThuThu = txtMaThuThu.Text;
-                sach1.sTenSach = txtTenSach.Text;
-                sach1.sSoLuong = (int)nrudSL.Value;
-                sach1.sTheLoai = txtTheLoai.Text;
-                sach1.sSourceImange = txtSource.Text;
-                MessageBox.Show(bll_quanlysach.ThemSachMoi(sach1));
-            }
-            else  // ngc lai ta edit thoi 
-            {
-                if (ChacgeImage)
-                {
-                    SaveImageToFolder(fileNameLong);
-                }
-                sach1.sTacGia = txtTacGia.Text;
-                sach1.sNhaXuatBan = txtNhaXB.Text;
-                sach1.sDonGia = txtDonGia.Text;
-                sach1.sMaThuThu = txtMaThuThu.Text;
-                sach1.sTenSach = txtTenSach.Text;
-                sach1.sSoLuong = (int)nrudSL.Value;
-                sach1.sTheLoai = txtTheLoai.Text;
-                sach1.sSourceImange = txtSource.Text;
-                MessageBox.Show(bll_quanlysach.SuaSach(sach1));   //  xet xem du lieu da oke chua trong BLL
             }
         }
 
@@ -151,8 +119,8 @@ namespace GUI_QuanLyThuVien.Administration
                 SaveImageToFolder(fileNameLong);
                 sach1.sTacGia = txtTacGia.Text;
                 sach1.sNhaXuatBan = txtNhaXB.Text;
-                sach1.sDonGia = txtDonGia.Text;
-                sach1.sMaThuThu = txtMaThuThu.Text;
+                sach1.sDonGia = decimal.Parse(txtDonGia.Text);
+                sach1.sMaThuThu = int.Parse(txtMaThuThu.Text);
                 sach1.sTenSach = txtTenSach.Text;
                 sach1.sSoLuong = (int)nrudSL.Value;
                 sach1.sTheLoai = txtTheLoai.Text;
@@ -167,8 +135,8 @@ namespace GUI_QuanLyThuVien.Administration
                 }
                 sach1.sTacGia = txtTacGia.Text;
                 sach1.sNhaXuatBan = txtNhaXB.Text;
-                sach1.sDonGia = txtDonGia.Text;
-                sach1.sMaThuThu = txtMaThuThu.Text;
+                sach1.sDonGia = decimal.Parse(txtDonGia.Text);
+                sach1.sMaThuThu = 2;
                 sach1.sTenSach = txtTenSach.Text;
                 sach1.sSoLuong = (int)nrudSL.Value;
                 sach1.sTheLoai = txtTheLoai.Text;
@@ -190,6 +158,11 @@ namespace GUI_QuanLyThuVien.Administration
         private void nrudSL_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

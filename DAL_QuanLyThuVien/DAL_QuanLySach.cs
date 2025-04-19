@@ -28,11 +28,11 @@ namespace DAL_QuanLyThuVien
                 SqlCommand cmd = new SqlCommand(strSql, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@tacgia", book.sTacGia);
-                cmd.Parameters.AddWithValue("@dongia", decimal.Parse(book.sDonGia));
+                cmd.Parameters.AddWithValue("@dongia", book.sDonGia);
                 cmd.Parameters.AddWithValue("@soluong", book.sSoLuong);
                 cmd.Parameters.AddWithValue("@theloai", book.sTheLoai);
                 cmd.Parameters.AddWithValue("@tensach", book.sTenSach);
-                cmd.Parameters.AddWithValue("@mathuthu", int.Parse(book.sMaThuThu));
+                cmd.Parameters.AddWithValue("@mathuthu", book.sMaThuThu);
                 cmd.Parameters.AddWithValue("@source_image", book.sSourceImange);
                 cmd.Parameters.AddWithValue("@nhaxb", book.sNhaXuatBan);
                 cmd.ExecuteNonQuery();
@@ -56,7 +56,7 @@ namespace DAL_QuanLyThuVien
                 {
                     SqlCommand cmd = new SqlCommand(strSql, conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@masach", int.Parse(book.sMaSach));
+                    cmd.Parameters.AddWithValue("@masach", book.sMaSach);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable(); 
                     da.Fill(dt);
@@ -121,23 +121,23 @@ namespace DAL_QuanLyThuVien
             {
                 SqlCommand cmd = new SqlCommand("proc_updatebook", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@masach",int.Parse(book.sMaSach));
+                cmd.Parameters.AddWithValue("@masach", book.sMaSach);
                 cmd.Parameters.AddWithValue("@tacgia", book.sTacGia);
-                cmd.Parameters.AddWithValue("@dongia", decimal.Parse(book.sDonGia));
+                cmd.Parameters.AddWithValue("@dongia", book.sDonGia);
                 cmd.Parameters.AddWithValue("@soluong", book.sSoLuong);
                 cmd.Parameters.AddWithValue("@theloai", book.sTheLoai);
                 cmd.Parameters.AddWithValue("@tensach", book.sTenSach);
-                cmd.Parameters.AddWithValue("@mathuthu", int.Parse(book.sMaThuThu));
+                cmd.Parameters.AddWithValue("@mathuthu", book.sMaThuThu);
                 cmd.Parameters.AddWithValue("@source_image", book.sSourceImange);
                 cmd.Parameters.AddWithValue("@nhaxb", book.sNhaXuatBan);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 return "Edit thành công";
             }
-            catch (FormatException ex)
-            {
-                return $"Error: {ex.Message}";
-            }
+            //catch (FormatException ex)
+            //{
+            //    return $"Error: {ex.Message}";
+            //}
             catch (Exception ex)
             {
                 throw ex;

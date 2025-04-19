@@ -26,7 +26,7 @@ namespace BLL_QuanLyThuVien
             DTO_Sach book = new DTO_Sach();
             if (int.TryParse(search, out int ma))
             {
-                book.sMaSach = search;
+                book.sMaSach = ma;
             } else
             {
                 book.sTenSach = search;

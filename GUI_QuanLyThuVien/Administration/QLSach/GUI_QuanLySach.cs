@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_QuanLyThuVien;
@@ -30,18 +32,18 @@ namespace GUI_QuanLyThuVien
             btnAddBook.ImageAlign = ContentAlignment.MiddleLeft;
             btnAddBook.TextAlign = ContentAlignment.MiddleCenter;
 
-            btnEdit.Image = new Bitmap(Properties.Resources.thaydoiquydinh, btnEdit.ClientSize.Height - 10, btnEdit.ClientSize.Height - 10);
-            btnEdit.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnEdit.AutoSize = true;
-            btnEdit.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEdit.TextAlign = ContentAlignment.MiddleCenter;
+            //btnEdit.Image = new Bitmap(Properties.Resources.thaydoiquydinh, btnEdit.ClientSize.Height - 10, btnEdit.ClientSize.Height - 10);
+            //btnEdit.TextImageRelation = TextImageRelation.ImageBeforeText;
+            //btnEdit.AutoSize = true;
+            //btnEdit.ImageAlign = ContentAlignment.MiddleLeft;
+            //btnEdit.TextAlign = ContentAlignment.MiddleCenter;
 
 
-            btnDel.Image = new Bitmap(Properties.Resources.close_icon, btnDel.ClientSize.Height - 10, btnDel.ClientSize.Height - 10);
-            btnDel.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnDel.AutoSize = true;
-            btnDel.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDel.TextAlign = ContentAlignment.MiddleCenter;
+            //btnDel.Image = new Bitmap(Properties.Resources.close_icon, btnDel.ClientSize.Height - 10, btnDel.ClientSize.Height - 10);
+            //btnDel.TextImageRelation = TextImageRelation.ImageBeforeText;
+            //btnDel.AutoSize = true;
+            //btnDel.ImageAlign = ContentAlignment.MiddleLeft;
+            //btnDel.TextAlign = ContentAlignment.MiddleCenter;
         }
         BLL_QuanLySach bll = new BLL_QuanLySach();
         public String Function = "";
@@ -53,10 +55,18 @@ namespace GUI_QuanLyThuVien
         //}
         private void AddBookToPanel(string imagePath, string bookID, string title, string author, string publisher, string price, string category, string librarianID)
         {
+            DTO_Sach sach = new DTO_Sach();
+            sach.sSourceImange = Path.GetFileName(imagePath);
+            sach.sMaSach = int.Parse(bookID);
+            sach.sTenSach = title;
+            sach.sTacGia = author;
+            sach.sNhaXuatBan = publisher;
+            sach.sDonGia = decimal.Parse(price);
+            sach.sTheLoai = category;
+            sach.sMaThuThu = int.Parse(librarianID);
             // Tạo Panel chứa sách
             Panel bookPanel = new Panel();
             bookPanel.Size = new Size(225, 350);
-            bookPanel.BorderStyle = BorderStyle.FixedSingle;
 
             // Thêm ảnh sách
             PictureBox pictureBox = new PictureBox();
@@ -92,7 +102,6 @@ namespace GUI_QuanLyThuVien
             Label lblCategory = new Label { Text = "Thể loại: " + category, Location = new Point(10, 265), AutoSize = true };
             Label lblLibrarianID = new Label { Text = "Mã thủ thư: " + librarianID, Location = new Point(10, 285), AutoSize = true };
 
-            // Thêm nút "Thêm vào giỏ hàng"
             Button btnEdit = new Button();
             btnEdit.Text = "Sửa";
             btnEdit.Size = new Size(80, 30);
@@ -107,10 +116,20 @@ namespace GUI_QuanLyThuVien
             btnEdit.Click += (sender, e) => {
                 GUI_AddEditBook form = new GUI_AddEditBook();
                 form.Add = false;
+                form.sach1 = sach;
                 form.Show();
             };
             btnDelete.Click += (sender, e) => {
-                bll.XoaSach(bookID);
+                DialogResult result = MessageBox.Show(
+                    "Bạn có chắc chắn muốn xóa sách này?",
+                    "Xác nhận xóa",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question  
+                );
+                if (result == DialogResult.Yes)
+                { 
+                    bll.XoaSach(bookID);
+                }
             };
 
             // Thêm các control vào panel sách
@@ -140,6 +159,7 @@ namespace GUI_QuanLyThuVien
             flowLayoutPanelMain.Controls.Clear();
             DataTable dt = new DataTable();
             dt = bll.XemDanhSachToanBoSach();
+            
             for (int i = 0; i < dt.Rows.Count; i++)
             {
 
