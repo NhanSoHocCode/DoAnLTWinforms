@@ -20,29 +20,11 @@ namespace GUI_QuanLyThuVien
         public GUI_QuanLySach()
         {
             InitializeComponent();
-           
 
-            //btnEdit.Image = new Bitmap(Properties.Resources.thaydoiquydinh, btnEdit.ClientSize.Height - 10, btnEdit.ClientSize.Height - 10);
-            //btnEdit.TextImageRelation = TextImageRelation.ImageBeforeText;
-            //btnEdit.AutoSize = true;
-            //btnEdit.ImageAlign = ContentAlignment.MiddleLeft;
-            //btnEdit.TextAlign = ContentAlignment.MiddleCenter;
-
-
-            //btnDel.Image = new Bitmap(Properties.Resources.close_icon, btnDel.ClientSize.Height - 10, btnDel.ClientSize.Height - 10);
-            //btnDel.TextImageRelation = TextImageRelation.ImageBeforeText;
-            //btnDel.AutoSize = true;
-            //btnDel.ImageAlign = ContentAlignment.MiddleLeft;
-            //btnDel.TextAlign = ContentAlignment.MiddleCenter;
         }
         BLL_QuanLySach bll = new BLL_QuanLySach();
         public String Function = "";
 
-        //private void GUI_QuanLySach_Load(object sender, EventArgs e)
-        //{
-        //    bll.XemDanhSachToanBoSach();
-        //    dtg1.DataSource = bll.XemDanhSachToanBoSach();
-        //}
         private void AddBookToPanel(string imagePath, string bookID, string title, string author, string publisher, string price, string category, string librarianID)
         {
             DTO_Sach sach = new DTO_Sach();
@@ -83,7 +65,6 @@ namespace GUI_QuanLyThuVien
                 pictureBox.Location = originalLocation;
             };
 
-            // Tạo Label thông tin sách
             Label lblBookID = new Label { Text = "Mã sách: " + bookID, Location = new Point(10, 165), AutoSize = true };
             Label lblTitle = new Label { Text = "Tên sách: " + title, Font = new Font("Arial", 10, FontStyle.Bold), Location = new Point(10, 185), AutoSize = true };
             Label lblAuthor = new Label { Text = "Tác giả: " + author, Location = new Point(10, 205), AutoSize = true };
@@ -102,7 +83,6 @@ namespace GUI_QuanLyThuVien
             btnDelete.Size = new Size(80, 30);
             btnDelete.Location = new Point(100, 310);
 
-            // Sự kiện khi nhấn nút (hiện nội dung nút lên MessageBox)
             btnEdit.Click += (sender, e) => {
                 GUI_AddEditBook form = new GUI_AddEditBook();
                 form.Add = false;
@@ -137,12 +117,7 @@ namespace GUI_QuanLyThuVien
             // Thêm vào FlowLayoutPanel chính
             flowLayoutPanelMain.Controls.Add(bookPanel);
         }
-        private void btnAddBook_Click(object sender, EventArgs e)
-        {
-            GUI_AddEditBook form = new GUI_AddEditBook();
-            form.Add = true;
-            form.Show();
-        }
+        
         private void GUI_QuanLySach_Load(object sender, EventArgs e)
         {
 
@@ -169,7 +144,7 @@ namespace GUI_QuanLyThuVien
 
         private void btnRefesh_Click(object sender, EventArgs e)
         {
-            GUI_QuanLySach_Load(sender, e);
+            
         }
         private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -203,6 +178,18 @@ namespace GUI_QuanLyThuVien
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             GUI_QuanLySach_Load(sender, e);
+        }
+
+        private void btnRefesh_Click_1(object sender, EventArgs e)
+        {
+            GUI_QuanLySach_Load(sender, e);
+        }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+            GUI_AddEditBook form = new GUI_AddEditBook();
+            form.Add = true;
+            form.Show();
         }
     }
 

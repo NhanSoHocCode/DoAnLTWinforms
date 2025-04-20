@@ -30,7 +30,7 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLoadList = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -39,9 +39,9 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 249);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 96);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1321, 542);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1321, 695);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -49,7 +49,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnLoadList);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -57,24 +57,24 @@
             this.panel1.Size = new System.Drawing.Size(1321, 90);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // btnLoadList
             // 
-            this.button1.Animated = true;
-            this.button1.AutoRoundedCorners = true;
-            this.button1.BorderRadius = 27;
-            this.button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(48, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 57);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Xem danh sách";
-            this.button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnLoadList.Animated = true;
+            this.btnLoadList.AutoRoundedCorners = true;
+            this.btnLoadList.BorderRadius = 27;
+            this.btnLoadList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoadList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoadList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoadList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLoadList.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnLoadList.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLoadList.ForeColor = System.Drawing.Color.White;
+            this.btnLoadList.Location = new System.Drawing.Point(48, 23);
+            this.btnLoadList.Name = "btnLoadList";
+            this.btnLoadList.Size = new System.Drawing.Size(130, 57);
+            this.btnLoadList.TabIndex = 5;
+            this.btnLoadList.Text = "Xem danh sách";
+            this.btnLoadList.Click += new System.EventHandler(this.btnLoadList_Click);
             // 
             // txtSearch
             // 
@@ -93,7 +93,6 @@
             this.txtSearch.Location = new System.Drawing.Point(203, 36);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "";
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(523, 34);
@@ -120,6 +119,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2Button button1;
+        private Guna.UI2.WinForms.Guna2Button btnLoadList;
     }
 }

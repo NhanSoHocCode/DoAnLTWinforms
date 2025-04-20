@@ -30,10 +30,10 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnAddBook = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnRefesh = new System.Windows.Forms.Button();
-            this.btnAddBook = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -41,6 +41,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.txtUser);
+            this.panel1.Controls.Add(this.btnAddBook);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -70,14 +71,51 @@
             this.txtUser.TabIndex = 30;
             this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
+            // btnAddBook
+            // 
+            this.btnAddBook.Animated = true;
+            this.btnAddBook.AutoRoundedCorners = true;
+            this.btnAddBook.BorderRadius = 26;
+            this.btnAddBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnAddBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddBook.ForeColor = System.Drawing.Color.White;
+            this.btnAddBook.Location = new System.Drawing.Point(533, 15);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(218, 54);
+            this.btnAddBook.TabIndex = 36;
+            this.btnAddBook.Text = "Thêm sách mới";
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnRefesh);
-            this.flowLayoutPanel1.Controls.Add(this.btnAddBook);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 23);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(234, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(614, 59);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(196, 84);
             this.flowLayoutPanel1.TabIndex = 10;
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.Animated = true;
+            this.btnRefesh.AutoRoundedCorners = true;
+            this.btnRefesh.BorderRadius = 26;
+            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnRefesh.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Location = new System.Drawing.Point(3, 3);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(175, 54);
+            this.btnRefesh.TabIndex = 35;
+            this.btnRefesh.Text = "Refesh";
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click_1);
             // 
             // flowLayoutPanelMain
             // 
@@ -87,31 +125,6 @@
             this.flowLayoutPanelMain.Name = "flowLayoutPanelMain";
             this.flowLayoutPanelMain.Size = new System.Drawing.Size(1321, 636);
             this.flowLayoutPanelMain.TabIndex = 0;
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRefesh.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.close_icon;
-            this.btnRefesh.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefesh.Location = new System.Drawing.Point(3, 3);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(169, 47);
-            this.btnRefesh.TabIndex = 4;
-            this.btnRefesh.Text = "Refesh";
-            this.btnRefesh.UseVisualStyleBackColor = true;
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
-            // 
-            // btnAddBook
-            // 
-            this.btnAddBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddBook.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.btnAddBook.Location = new System.Drawing.Point(178, 3);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(209, 47);
-            this.btnAddBook.TabIndex = 1;
-            this.btnAddBook.Text = "Thêm sách mới";
-            this.btnAddBook.UseVisualStyleBackColor = true;
-            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // GUI_QuanLySach
             // 
@@ -137,7 +150,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMain;
         private Guna.UI2.WinForms.Guna2TextBox txtUser;
-        private System.Windows.Forms.Button btnRefesh;
-        private System.Windows.Forms.Button btnAddBook;
+        private Guna.UI2.WinForms.Guna2Button btnRefesh;
+        private Guna.UI2.WinForms.Guna2Button btnAddBook;
     }
 }
