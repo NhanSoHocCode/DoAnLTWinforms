@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_QuanLyThuVien", "GUI_Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO_QuanLyThuVien", "DTO_QuanLyThuVien\DTO_QuanLyThuVien.csproj", "{8FBDB4BB-72FA-4FBE-9885-4CFB3308C367}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "..\..\TestGUI\GUI\GUI\GUI.csproj", "{A30B8543-C6BC-4B6C-AD46-8DC39BE8EB04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI\GUI.csproj", "{A30B8543-C6BC-4B6C-AD46-8DC39BE8EB04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
