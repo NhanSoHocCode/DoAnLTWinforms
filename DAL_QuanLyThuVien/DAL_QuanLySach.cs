@@ -164,6 +164,32 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
+        public DataTable ListBookToCart(int maDocGia)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_updatebook", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maDocGia", maDocGia);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                conn.Close();
+                return dt;
+            }
+            //catch (FormatException ex)
+            //{
+            //    return $"Error: {ex.Message}";
+            //}
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
     }
 }

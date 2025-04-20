@@ -45,5 +45,9 @@ namespace BLL_QuanLyThuVien
         {
             return dal_QuanLySach.ListMaThuThu();
         }
+        public DataTable ListBookToCart(int maDocGia)
+        {
+            return dal_QuanLySach.ListBookToCart(maDocGia);
+        }
     }
 }
