@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_QuanLyThuVien", "GUI_Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO_QuanLyThuVien", "DTO_QuanLyThuVien\DTO_QuanLyThuVien.csproj", "{8FBDB4BB-72FA-4FBE-9885-4CFB3308C367}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "..\..\TestGUI\GUI\GUI\GUI.csproj", "{A30B8543-C6BC-4B6C-AD46-8DC39BE8EB04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8FBDB4BB-72FA-4FBE-9885-4CFB3308C367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FBDB4BB-72FA-4FBE-9885-4CFB3308C367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FBDB4BB-72FA-4FBE-9885-4CFB3308C367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A30B8543-C6BC-4B6C-AD46-8DC39BE8EB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A30B8543-C6BC-4B6C-AD46-8DC39BE8EB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A30B8543-C6BC-4B6C-AD46-8DC39BE8EB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A30B8543-C6BC-4B6C-AD46-8DC39BE8EB04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
