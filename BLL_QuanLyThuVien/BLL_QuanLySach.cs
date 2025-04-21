@@ -49,5 +49,13 @@ namespace BLL_QuanLyThuVien
         {
             return dal_QuanLySach.ListBookToCart(maDocGia);
         }
+        public string InsertBookToCart(DTO_Sach book, int maDocGia)
+        {
+            return dal_QuanLySach.InsertBookToCart(book, maDocGia);
+        }
+        public string DelBookToCart(int maSach, int maDocGia)
+        {
+            return dal_QuanLySach.DelBookToCart(maSach, maDocGia);
+        }
     }
 }

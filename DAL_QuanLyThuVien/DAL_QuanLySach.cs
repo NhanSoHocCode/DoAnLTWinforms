@@ -170,11 +170,9 @@ namespace DAL_QuanLyThuVien
             conn.Open();
             try
             {
-                SqlCommand cmd = new SqlCommand("proc_updatebook", conn);
+                SqlCommand cmd = new SqlCommand("proc_LoadCart", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@maDocGia", maDocGia);
-                cmd.ExecuteNonQuery();
-                conn.Close();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
@@ -190,6 +188,53 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
+        public string InsertBookToCart(DTO_Sach book, int maDocGia)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_insertBookToCart", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maSach", book.sMaSach);
+                cmd.Parameters.AddWithValue("@soLuong", book.sSoLuong);
+                cmd.Parameters.AddWithValue("@maDocGia", maDocGia);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Insert thành công";
+            }
+            catch (FormatException ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
+        public string DelBookToCart(int maSach, int maDocGia)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_delBookToCart", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maSach", maSach);
+                cmd.Parameters.AddWithValue("@maDocGia", maDocGia);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Del thành công";
+            }
+            catch (FormatException ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
