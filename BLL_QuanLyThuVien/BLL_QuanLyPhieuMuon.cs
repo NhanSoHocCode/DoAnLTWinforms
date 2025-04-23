@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,14 @@ namespace BLL_QuanLyThuVien
         public DataTable XemChiTietPhieuMuon(int maPM)
         {
             return dllPhieuMuon.XemChiTietPhieuMuon((int)maPM);
+        }
+        public int CreatePMtoDocGia(DTO_PhieuMuon pm)
+        {
+            return dllPhieuMuon.CreatePM(pm);  // them sach nua 
+        }
+        public string DelBookToCartOnDocGia(int maDocGia)
+        {
+            return dllPhieuMuon.DelBookToCartOnDocGia(maDocGia);
         }
     }
 }

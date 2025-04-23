@@ -286,6 +286,10 @@
       <Project>{8fbdb4bb-72fa-4fbe-9885-4cfb3308c367}</Project>
       <Name>DTO_QuanLyThuVien</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GUI\GUI\GUI_Customer.csproj">
+      <Project>{a30b8543-c6bc-4b6c-ad46-8dc39be8eb04}</Project>
+      <Name>GUI_Customer</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />

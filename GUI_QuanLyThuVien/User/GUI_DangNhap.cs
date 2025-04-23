@@ -16,6 +16,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using Guna.UI2.WinForms;
 using System.Drawing.Drawing2D;
+using GUI;
 
 namespace GUI_QuanLyThuVien
 {
@@ -68,7 +69,7 @@ namespace GUI_QuanLyThuVien
                     return;
             }
             taikhoan.sMaQuyen = int.Parse(bll_taikhoan.LayQuyenUser(txtName.Text));
-            if (taikhoan.sMaQuyen == 3)
+            if (taikhoan.sMaQuyen == 3)  // admin 
             {
                 GUI_HomeManager homeManager = new GUI_HomeManager();
                 homeManager.role = taikhoan.sMaQuyen;
@@ -76,12 +77,12 @@ namespace GUI_QuanLyThuVien
                 // lam tu day de lay time 
                 homeManager.Show();
             }
-            else if (taikhoan.sMaQuyen == 1)
+            else if (taikhoan.sMaQuyen == 1)  // doc gia 
             {
-                GUI_Home home = new GUI_Home();
-                home.Show();
+                Form1 formCustomer = new Form1();
+                formCustomer.Show();
             }
-            else
+            else  // thu thu 
             {
                 GUI_Home home = new GUI_Home();
                 home.Show();

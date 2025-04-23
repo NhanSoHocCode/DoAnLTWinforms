@@ -246,5 +246,48 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
+        public int CreatePM(DTO_PhieuMuon pm)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_CreatePMtoDocGia", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maDocGia", pm.sMaDocGia);
+                cmd.Parameters.AddWithValue("@ngayTra", pm.sNgayTra);
+                SqlParameter outputId = new SqlParameter("@maPhieuMuon", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(outputId);
+                cmd.ExecuteNonQuery();
+                int maPhieuMuonMoi = (int)outputId.Value;
+                conn.Close();
+                return maPhieuMuonMoi;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public string DelBookToCartOnDocGia(int maDocGia)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_DelBookCartOnDocGia", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maDocGia", maDocGia);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Xoas thành công";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
