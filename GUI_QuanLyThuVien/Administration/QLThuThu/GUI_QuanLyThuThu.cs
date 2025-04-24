@@ -38,7 +38,7 @@ namespace GUI_QuanLyThuVien.Administration
 
                 string gioiTinh = dt.Rows[i]["gioiTinh"].ToString();
 
-                AddBookToPanel(imagePath, IDDocGia, name, email, phone, diaChi, fullName, DOB, gioiTinh);
+                AddThuThuToPanel(imagePath, IDDocGia, name, email, phone, diaChi, fullName, DOB, gioiTinh);
 
             }
         }
@@ -86,43 +86,109 @@ private void Form1_Load(object sender, EventArgs e)
             GUI_AddThuThu addTT = new GUI_AddThuThu();
             addTT.Show();
         }
-        private void AddBookToPanel(string imagePath, string IDDocGia, string name, string email, string phone, string diaChi, string fullName, string DOB, string gioiTinh)
+        private void AddThuThuToPanel(string imagePath, string IDDocGia, string name, string email, string phone, string diaChi, string fullName, string DOB, string gioiTinh)
         {
 
-            Panel bookPanel = new Panel();
-            bookPanel.Size = new Size(225, 350);
+            var sataPanel = new SATAUiFramework.SATAPanel();
+            sataPanel.Size = new Size(350, 150);
+            sataPanel.BackColor = Color.RosyBrown;
+            sataPanel.BackColor2 = Color.RosyBrown;
+            sataPanel.Margin = new Padding(10);
+            sataPanel.BorderRadius = new SATAUiFramework.BorderRadius()
+            {
+                TopLeft = 15,
+                TopRight = 15,
+                BottomLeft = 15,
+                BottomRight = 15
+            };
 
-            // Thêm ảnh sách
-            PictureBox pictureBox = new PictureBox();
-            pictureBox.Image = Image.FromFile(imagePath);
-            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox.Size = new Size(120, 150);
-            pictureBox.Location = new Point(30, 20);
+            // Hình đại diện
+            PictureBox avatar = new PictureBox();
+            avatar.Image = Image.FromFile(imagePath);
+            avatar.SizeMode = PictureBoxSizeMode.StretchImage;
+            avatar.Size = new Size(100, 130);
+            avatar.Location = new Point(10, 10);
+            sataPanel.Controls.Add(avatar);
 
+            int left = 120; // khoảng cách trái cho các label
 
+            // Label: Họ tên
+            Label lblName = new Label();
+            lblName.Text = "Họ tên: " + fullName;
+            lblName.ForeColor = Color.White;
+            lblName.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblName.BackColor = Color.Transparent;
+            lblName.Location = new Point(left, 10);
+            lblName.Size = new Size(220, 20);
+            sataPanel.Controls.Add(lblName);
 
+            // Email
+            Label lblEmail = new Label();
+            lblEmail.Text = "Email: " + email;
+            lblEmail.ForeColor = Color.White;
+            lblEmail.Font = new Font("Segoe UI", 9);
+            lblEmail.BackColor = Color.Transparent;
+            lblEmail.Location = new Point(left, 35);
+            lblEmail.Size = new Size(220, 20);
+            sataPanel.Controls.Add(lblEmail);
 
-            Label lbid = new Label { Text = "Mã Thủ Thư: " + IDDocGia, Location = new Point(10, 2), AutoSize = true };
+            // Số điện thoại
+            Label lblPhone = new Label();
+            lblPhone.Text = "SĐT: " + phone;
+            lblPhone.ForeColor = Color.White;
+            lblPhone.Font = new Font("Segoe UI", 9);
+            lblPhone.BackColor = Color.Transparent;
+            lblPhone.Location = new Point(left, 55);
+            lblPhone.Size = new Size(220, 20);
+            sataPanel.Controls.Add(lblPhone);
 
-            Label lbuserName = new Label { Text = "Tên Thủ Thư: " + name, Location = new Point(10, 185), AutoSize = true };
-            Label lbFullName = new Label { Text = "Họ Và Tên: " + fullName, Location = new Point(10, 205), AutoSize = true };
-            Label lblEmail = new Label { Text = "Email: " + email, Location = new Point(10, 225), AutoSize = true };
-            Label lblSDT = new Label { Text = "SĐT: " + phone, Location = new Point(10, 245), AutoSize = true };
-            Label lbLocation = new Label { Text = "Địa Chỉ: " + diaChi, Location = new Point(10, 265), AutoSize = true };
-            Label lbDOB = new Label { Text = "Ngày Sinh: " + DOB, Location = new Point(10, 285), AutoSize = true };
+            // Địa chỉ
+            Label lblAddress = new Label();
+            lblAddress.Text = "Địa chỉ: " + diaChi;
+            lblAddress.ForeColor = Color.White;
+            lblAddress.Font = new Font("Segoe UI", 9);
+            lblAddress.BackColor = Color.Transparent;
+            lblAddress.Location = new Point(left, 75);
+            lblAddress.Size = new Size(220, 20);
+            sataPanel.Controls.Add(lblAddress);
 
-            // Thêm các control vào panel sách
-            bookPanel.Controls.Add(pictureBox);
-            bookPanel.Controls.Add(lbid);
-            bookPanel.Controls.Add(lbuserName);
-            bookPanel.Controls.Add(lbFullName);
-            bookPanel.Controls.Add(lblEmail);
-            bookPanel.Controls.Add(lblSDT);
-            bookPanel.Controls.Add(lbLocation);
-            bookPanel.Controls.Add(lbDOB);
+            Label lblDocGia = new Label();
+            lblDocGia.Text = "Mã độc giả: " + IDDocGia;
+            lblDocGia.ForeColor = Color.White;
+            lblDocGia.Font = new Font("Segoe UI", 9);
+            lblDocGia.BackColor = Color.Transparent;
+            lblDocGia.Location = new Point(left, 115);
+            sataPanel.Controls.Add(lblDocGia);
 
-            // Thêm vào FlowLayoutPanel chính
-            flowLayoutPanel1.Controls.Add(bookPanel);
+            // Ngày sinh & Giới tính
+            Label lblDOBGender = new Label();
+            lblDOBGender.Text = $"Ngày sinh: {DOB}   |   Giới tính: {gioiTinh}";
+            lblDOBGender.ForeColor = Color.WhiteSmoke;
+            lblDOBGender.Font = new Font("Segoe UI", 9, FontStyle.Italic);
+            lblDOBGender.BackColor = Color.Transparent;
+            lblDOBGender.Location = new Point(left, 95);
+            lblDOBGender.Size = new Size(230, 20);
+            sataPanel.Controls.Add(lblDOBGender);
+
+            // Nút chi tiết
+            Button btnDetail = new Button();
+            btnDetail.Text = "Thêm Thủ Thư";
+            btnDetail.ForeColor = Color.FromArgb(0, 255, 128);
+            btnDetail.FlatStyle = FlatStyle.Flat;
+            btnDetail.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 128);
+            btnDetail.FlatAppearance.BorderSize = 1;
+            btnDetail.Size = new Size(100, 30);
+            btnDetail.Location = new Point(230, 115);
+            sataPanel.Controls.Add(btnDetail);
+
+            // Gán sự kiện cho nút (nếu muốn)
+            btnDetail.Click += (s, e) =>
+            {
+
+            };
+
+            // Thêm vào flowLayoutPanel
+            flowLayoutPanel1.Controls.Add(sataPanel);
         }
     }
 }

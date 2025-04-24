@@ -27,7 +27,6 @@ namespace GUI
         public Form1()
         {   
             InitializeComponent();
-            //login();
             Form1_Load();
         }
         private Form currentFormChild;
@@ -66,7 +65,7 @@ namespace GUI
             Acc.Address = "Huy";
         }
         private void PaneMain_Paint(object sender, PaintEventArgs e)
-        {
+        {   
            
         }
         private void label1_Click(object sender, EventArgs e)
