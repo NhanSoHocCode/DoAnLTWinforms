@@ -25,7 +25,7 @@ namespace GUI_QuanLyThuVien
         BLL_QuanLySach bll = new BLL_QuanLySach();
         public String Function = "";
 
-        private void AddBookToPanel(string imagePath, string bookID, string title, string author, string publisher, string price, string category, string librarianID)
+        private void AddBookToPanel0(string imagePath, string bookID, string title, string author, string publisher, string price, string category, string librarianID)
         {
             DTO_Sach sach = new DTO_Sach();
             sach.sSourceImange = Path.GetFileName(imagePath);
@@ -138,15 +138,25 @@ namespace GUI_QuanLyThuVien
                 string MTT = dt.Rows[i]["Mã Thủ Thư"].ToString();
                 string img = "D:\\K25_Project_LTWinform\\DoAn\\images\\" + dt.Rows[i]["Source Image"].ToString();
                 img.Split(' ');
-                AddBookToPanel1(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT);
+                AddBookToPanel(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT);
             }
         }
-        private void AddBookToPanel1(string imagePath, string bookID, string title, string author, string publisher, string price, string category, string librarianID)
+        private void AddBookToPanel(string imagePath, string bookID, string title, string author, string publisher, string price, string category, string librarianID)
         {
+            DTO_Sach sach = new DTO_Sach();
+            sach.sSourceImange = Path.GetFileName(imagePath);
+            sach.sMaSach = int.Parse(bookID);
+            sach.sTenSach = title;
+            sach.sTacGia = author;
+            sach.sNhaXuatBan = publisher;
+            sach.sDonGia = decimal.Parse(price);
+            sach.sTheLoai = category;
+            sach.sMaThuThu = int.Parse(librarianID);
             // Tạo SATAPanel cho sách
             var sataPanel = new SATAUiFramework.SATAPanel();
             sataPanel.Size = new Size(225, 350);
             sataPanel.BackColor = Color.RosyBrown;
+            sataPanel.BackColor2 = Color.RosyBrown;
             sataPanel.Margin = new Padding(10);
             sataPanel.BorderRadius = new SATAUiFramework.BorderRadius()
             {
@@ -160,22 +170,46 @@ namespace GUI_QuanLyThuVien
             PictureBox picBook = new PictureBox();
             picBook.Image = Image.FromFile(imagePath);
             picBook.SizeMode = PictureBoxSizeMode.StretchImage;
-            picBook.Size = new Size(190, 140);
-            picBook.Location = new Point(17, 10);
+            picBook.Size = new Size(120,150);
+            picBook.Location = new Point(50, 10);
             sataPanel.Controls.Add(picBook);
+
+            Size originalSize = picBook.Size;
+            Point originalLocation = picBook.Location;
+            picBook.MouseEnter += (sender, e) =>
+            {
+                picBook.Size = new Size(140, 170);
+                picBook.Location = new Point(50, 0);
+                picBook.BringToFront();
+            };
+
+            picBook.MouseLeave += (sender, e) =>
+            {
+                picBook.Size = originalSize;
+                picBook.Location = originalLocation;
+            };
 
             int left = 15;
             int top = 160;
             int labelWidth = 195;
             int labelHeight = 20;
+            // Mã Sách 
+            Label lbidbook = new Label();
+            lbidbook.Text = "Mã Sách: " + bookID;
+            lbidbook.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            lbidbook.ForeColor = Color.Black;
+            lbidbook.BackColor = Color.Transparent;
+            lbidbook.Location = new Point(left, top);
+            lbidbook.Size = new Size(labelWidth, labelHeight);
+            sataPanel.Controls.Add(lbidbook);
 
             // Tiêu đề sách
             Label lblTitle = new Label();
-            lblTitle.Text = "Tên: " + title;
+            lblTitle.Text = "Tên Sách: " + title;
             lblTitle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-            lblTitle.ForeColor = Color.White;
+            lblTitle.ForeColor = Color.DarkBlue;
             lblTitle.BackColor = Color.Transparent;
-            lblTitle.Location = new Point(left, top);
+            lblTitle.Location = new Point(left, top += 20);
             lblTitle.Size = new Size(labelWidth, labelHeight);
             sataPanel.Controls.Add(lblTitle);
 
@@ -183,9 +217,9 @@ namespace GUI_QuanLyThuVien
             Label lblAuthor = new Label();
             lblAuthor.Text = "Tác giả: " + author;
             lblAuthor.Font = new Font("Segoe UI", 9);
-            lblAuthor.ForeColor = Color.White;
+            lblAuthor.ForeColor = Color.Red;
             lblAuthor.BackColor = Color.Transparent;
-            lblAuthor.Location = new Point(left, top += 22);
+            lblAuthor.Location = new Point(left, top += 20);
             lblAuthor.Size = new Size(labelWidth, labelHeight);
             sataPanel.Controls.Add(lblAuthor);
 
@@ -195,7 +229,7 @@ namespace GUI_QuanLyThuVien
             lblPublisher.Font = new Font("Segoe UI", 9);
             lblPublisher.ForeColor = Color.White;
             lblPublisher.BackColor = Color.Transparent;
-            lblPublisher.Location = new Point(left, top += 22);
+            lblPublisher.Location = new Point(left, top += 20);
             lblPublisher.Size = new Size(labelWidth, labelHeight);
             sataPanel.Controls.Add(lblPublisher);
 
@@ -203,9 +237,10 @@ namespace GUI_QuanLyThuVien
             Label lblPrice = new Label();
             lblPrice.Text = "Giá: " + price;
             lblPrice.Font = new Font("Segoe UI", 9);
-            lblPrice.ForeColor = Color.White;
+
+            lblPrice.ForeColor = Color.Green;
             lblPrice.BackColor = Color.Transparent;
-            lblPrice.Location = new Point(left, top += 22);
+            lblPrice.Location = new Point(left, top += 20);
             lblPrice.Size = new Size(labelWidth, labelHeight);
             sataPanel.Controls.Add(lblPrice);
 
@@ -213,19 +248,19 @@ namespace GUI_QuanLyThuVien
             Label lblCategory = new Label();
             lblCategory.Text = "Thể loại: " + category;
             lblCategory.Font = new Font("Segoe UI", 9);
-            lblCategory.ForeColor = Color.White;
+            lblCategory.ForeColor = Color.Black;
             lblCategory.BackColor = Color.Transparent;
-            lblCategory.Location = new Point(left, top += 22);
+            lblCategory.Location = new Point(left, top += 20);
             lblCategory.Size = new Size(labelWidth, labelHeight);
             sataPanel.Controls.Add(lblCategory);
 
             // Thủ thư
             Label lblLibrarian = new Label();
             lblLibrarian.Text = "Thủ thư: " + librarianID;
-            lblLibrarian.Font = new Font("Segoe UI", 9, FontStyle.Italic);
-            lblLibrarian.ForeColor = Color.WhiteSmoke;
+            lblLibrarian.Font = new Font("Segoe UI", 9);
+            lblLibrarian.ForeColor = Color.BlueViolet;
             lblLibrarian.BackColor = Color.Transparent;
-            lblLibrarian.Location = new Point(left, top += 22);
+            lblLibrarian.Location = new Point(left, top += 20);
             lblLibrarian.Size = new Size(labelWidth, labelHeight);
             sataPanel.Controls.Add(lblLibrarian);
 
@@ -254,9 +289,23 @@ namespace GUI_QuanLyThuVien
             // Gắn sự kiện (để trống cho bạn tự xử lý sau)
             btnEdit.Click += (s, e) =>
             {
+                GUI_AddEditBook form = new GUI_AddEditBook();
+                form.Add = false;
+                form.sach1 = sach;
+                form.Show();
             };
             btnDelete.Click += (s, e) =>
             {
+                DialogResult result = MessageBox.Show(
+                    "Bạn có chắc chắn muốn xóa sách này?",
+                    "Xác nhận xóa",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+                if (result == DialogResult.Yes)
+                {
+                    bll.XoaSach(bookID);
+                }
             };
 
             // Thêm vào giao diện
