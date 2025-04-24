@@ -61,37 +61,58 @@ namespace GUI.UserControl
             //ProductImage có thể thay bằng source_image
             try
             {
-                DataTable dt = bll_quanlysach.XemDanhSachToanBoSach();
-                foreach (DataRow dr in dt.Rows)
+
+                DataTable dt = new DataTable();
+                if (Key == "Search")
                 {
-                    if (Key == "All")
+                    dt = bll_quanlysach.TimKiemSach(textBox1.Text);
+                    foreach (DataRow dr in dt.Rows)
                     {
-                        string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\" + dr["Source Image"].ToString();
+                        string path = "d:\\k25_project_ltwinform\\doan\\images\\" + dr["source_image"].ToString();
                         products.Add(new ProductInfo
                         {
-                            Name = dr["Tên Sách"].ToString(),
-                            Price = decimal.Parse(dr["Đơn Giá"].ToString()),
+                            Name = dr["tensach"].ToString(),
+                            Price = decimal.Parse(dr["dongia"].ToString()),
                             ProductImage = Image.FromFile(path),
-                            MaSach = int.Parse(dr["Mã Sách"].ToString())
+                            MaSach = int.Parse(dr["masach"].ToString())
                         });
                     }
-                    else if (dr["Thể Loại"].ToString() == Key)
+                }
+                else
+                {
+                    dt = bll_quanlysach.XemDanhSachToanBoSach();
+                    foreach (DataRow dr in dt.Rows)
                     {
-                        string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\" + dr["Source Image"].ToString();
-                        products.Add(new ProductInfo
+                        if (Key == "All")
                         {
-                            Name = dr["Tên Sách"].ToString(),
-                            Price = decimal.Parse(dr["Đơn Giá"].ToString()),
-                            ProductImage = Image.FromFile(path),
-                            MaSach = int.Parse(dr["Mã Sách"].ToString())
-                        });
-                    }
-                    if (Sort)
-                    {
-                        products = products.OrderBy(p => p.Price).ToList();  // sap xep gia tang dan (mac dinh)
-                    } else
-                    {
-                        products = products.OrderByDescending(p => p.Price).ToList();  // sap xep gia giam dan (button giam) 
+                            string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\" + dr["Source Image"].ToString();
+                            products.Add(new ProductInfo
+                            {
+                                Name = dr["Tên Sách"].ToString(),
+                                Price = decimal.Parse(dr["Đơn Giá"].ToString()),
+                                ProductImage = Image.FromFile(path),
+                                MaSach = int.Parse(dr["Mã Sách"].ToString())
+                            });
+                        }
+                        else if (dr["Thể Loại"].ToString() == Key)
+                        {
+                            string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\" + dr["Source Image"].ToString();
+                            products.Add(new ProductInfo
+                            {
+                                Name = dr["Tên Sách"].ToString(),
+                                Price = decimal.Parse(dr["Đơn Giá"].ToString()),
+                                ProductImage = Image.FromFile(path),
+                                MaSach = int.Parse(dr["Mã Sách"].ToString())
+                            });
+                        }
+                        if (Sort)
+                        {
+                            products = products.OrderBy(p => p.Price).ToList();  // sap xep gia tang dan (mac dinh)
+                        }
+                        else
+                        {
+                            products = products.OrderByDescending(p => p.Price).ToList();  // sap xep gia giam dan (button giam) 
+                        }
                     }
                 }
             }
@@ -104,9 +125,8 @@ namespace GUI.UserControl
                 products.Add(new ProductInfo { Name = "Lỗi Load 1", Price = 0, ProductImage = defaultImage });
                 products.Add(new ProductInfo { Name = "Lỗi Load 2", Price = 0, ProductImage = defaultImage });
             }
-
-
             return products;
+
         }
         private void UserMenu_Load_1(object sender, EventArgs e)
         {
@@ -340,14 +360,6 @@ namespace GUI.UserControl
 
         }
 
-
-        private void sataTextBox1__TextChanged(object sender, EventArgs e)
-        {
-            QueueRy = "";
-            Load_all();
-
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             parentForm.Close();
@@ -370,6 +382,39 @@ namespace GUI.UserControl
         private void sataButton1_Click(object sender, EventArgs e)
         {
             parentForm.giohang(person);
+        }
+
+        private void sataTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                Key = "All";
+                Load_all();
+            }
+            else
+            {
+                Key = "Search";
+                Load_all();
+            }
+        }
+
+        private void sataTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                Key = "All";
+                Load_all();
+            }
+            else
+            {
+                Key = "Search";
+                Load_all();
+            }
         }
     }
 }

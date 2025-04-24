@@ -127,7 +127,7 @@
             this.sataTextBox1.PlaceholderText = "Search...";
             this.sataTextBox1.Size = new System.Drawing.Size(250, 36);
             this.sataTextBox1.TabIndex = 3;
-            this.sataTextBox1.Text = "sataTextBox1";
+            this.sataTextBox1.Text = "null";
             this.sataTextBox1.Texts = "";
             this.sataTextBox1.UnderlinedStyle = false;
             this.sataTextBox1._TextChanged += new System.EventHandler(this.sataTextBox1__TextChanged);

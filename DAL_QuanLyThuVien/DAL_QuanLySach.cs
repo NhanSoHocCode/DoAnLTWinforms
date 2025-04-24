@@ -45,55 +45,42 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
-        public DataTable TimKiemSach(DTO_Sach book)   // co tim kiem ten sach gan dung , ex: nhap ten sach la "Yeu" thi ket qua la "Tinh Yeu"
+        public DataTable TimKiemSach(DTO_Sach book)
         {
-            if (book.sMaSach != null)
+            if (book.sMaSach != -1)
             {
-                String strSql = "proc_searchbookbymasach";
-                SqlConnection conn = SqlConnectionData.Connect();
-                conn.Open();
-                try
-                {
-                    SqlCommand cmd = new SqlCommand(strSql, conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@masach", book.sMaSach);
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable(); 
-                    da.Fill(dt);
-                    conn.Close();  // nho dong ket noi
-                    return dt;
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                return ExecuteStoredProc("proc_searchbookbymasach", "@masach", book.sMaSach);
             }
-            if (book.sTenSach != null)
+            else if (!string.IsNullOrEmpty(book.sTenSach))
             {
-                String strSql = "proc_searchbookbytensachGanDung";
-                SqlConnection conn = SqlConnectionData.Connect();
-                conn.Open();
-                try
-                {
-                    SqlCommand cmd = new SqlCommand(strSql, conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@tensach", book.sTenSach);
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    conn.Close();  // nho dong ket noi
-                    return dt;   // theo thu tu truong trong database 
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                return ExecuteStoredProc("proc_searchbookbytensachGanDung", "@tensach", book.sTenSach);
             }
             else
             {
                 return null;
             }
         }
+
+        // Hàm phụ dùng chung để gọi stored procedure
+        private DataTable ExecuteStoredProc(string procName, string paramName, object value)
+        {
+            using (SqlConnection conn = SqlConnectionData.Connect())
+            {
+                using (SqlCommand cmd = new SqlCommand(procName, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue(paramName, value);
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
+
         public String XoaSach(int ma) // chi xoa theo ma sach 
         {
             SqlConnection conn = SqlConnectionData.Connect();

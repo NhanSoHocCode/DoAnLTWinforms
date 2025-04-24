@@ -47,6 +47,7 @@
             this.sataButton1 = new FrameworkTest.SATAButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -55,6 +56,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btndecrea);
             this.panel1.Controls.Add(this.btnIncrea);
@@ -130,10 +132,11 @@
             this.sataTextBox1.PlaceholderText = "Search...";
             this.sataTextBox1.Size = new System.Drawing.Size(250, 36);
             this.sataTextBox1.TabIndex = 3;
-            this.sataTextBox1.Text = "sataTextBox1";
+            this.sataTextBox1.Text = "IT";
             this.sataTextBox1.Texts = "";
             this.sataTextBox1.UnderlinedStyle = false;
-            this.sataTextBox1._TextChanged += new System.EventHandler(this.sataTextBox1__TextChanged);
+            this.sataTextBox1.TextChanged += new System.EventHandler(this.sataTextBox1_TextChanged);
+            this.sataTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sataTextBox1_KeyPress);
             // 
             // label1
             // 
@@ -406,6 +409,14 @@
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(900, 36);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // UserMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -451,5 +462,6 @@
         private FrameworkTest.SATAButton sataButton1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

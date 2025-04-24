@@ -21,18 +21,26 @@ namespace BLL_QuanLyThuVien
         {
             return dal_QuanLySach.ThemSach(book);
         }
-        public DataTable TimKiemSach(string search)   // tim kiem theo 2 chuc nang : tim theo ma sach, ten sach
+        public DataTable TimKiemSach(string search)
         {
-            DTO_Sach book = new DTO_Sach();
+            DTO_Sach dieuKienTimKiem = new DTO_Sach();
+            search = search.Trim();
+            if (string.IsNullOrEmpty(search))
+            {
+                return new DataTable(); 
+            }
             if (int.TryParse(search, out int ma))
             {
-                book.sMaSach = ma;
-            } else
-            {
-                book.sTenSach = search;
+                dieuKienTimKiem.sMaSach = ma;
             }
-            return dal_QuanLySach.TimKiemSach(book);
+            else 
+            {
+                dieuKienTimKiem.sMaSach = -1;
+                dieuKienTimKiem.sTenSach = search;
+            }
+            return dal_QuanLySach.TimKiemSach(dieuKienTimKiem);
         }
+
         public string XoaSach(string ma) 
         {
             return dal_QuanLySach.XoaSach(int.Parse(ma));
