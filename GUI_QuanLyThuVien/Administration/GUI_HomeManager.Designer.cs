@@ -94,6 +94,7 @@
             // 
             // tabPageSach
             // 
+            this.tabPageSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.tabPageSach.Controls.Add(this.panelSach);
             this.tabPageSach.Location = new System.Drawing.Point(184, 4);
             this.tabPageSach.Name = "tabPageSach";
@@ -101,7 +102,6 @@
             this.tabPageSach.Size = new System.Drawing.Size(1665, 799);
             this.tabPageSach.TabIndex = 0;
             this.tabPageSach.Text = "Sách";
-            this.tabPageSach.UseVisualStyleBackColor = true;
             // 
             // panelSach
             // 

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using BLL_QuanLyThuVien;
 using DTO_QuanLyThuVien;
 using GUI_QuanLyThuVien.Administration;
+using Sunny.UI;
 
 namespace GUI_QuanLyThuVien
 {
@@ -155,8 +156,8 @@ namespace GUI_QuanLyThuVien
             // Tạo SATAPanel cho sách
             var sataPanel = new SATAUiFramework.SATAPanel();
             sataPanel.Size = new Size(225, 350);
-            sataPanel.BackColor = Color.RosyBrown;
-            sataPanel.BackColor2 = Color.RosyBrown;
+            sataPanel.BackColor = Color.FromArgb(30,32,41);
+            sataPanel.BackColor2 = Color.FromArgb(30,32,41);
             sataPanel.Margin = new Padding(10);
             sataPanel.BorderRadius = new SATAUiFramework.BorderRadius()
             {
@@ -197,7 +198,7 @@ namespace GUI_QuanLyThuVien
             Label lbidbook = new Label();
             lbidbook.Text = "Mã Sách: " + bookID;
             lbidbook.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-            lbidbook.ForeColor = Color.Black;
+            lbidbook.ForeColor = Color.Yellow;
             lbidbook.BackColor = Color.Transparent;
             lbidbook.Location = new Point(left, top);
             lbidbook.Size = new Size(labelWidth, labelHeight);
@@ -265,25 +266,21 @@ namespace GUI_QuanLyThuVien
             sataPanel.Controls.Add(lblLibrarian);
 
             // Nút sửa
-            Button btnEdit = new Button();
+            var btnEdit = new UIButton();
             btnEdit.Text = "Sửa";
             btnEdit.Size = new Size(80, 30);
             btnEdit.Location = new Point(20, 305);
-            btnEdit.FlatStyle = FlatStyle.Flat;
-            btnEdit.FlatAppearance.BorderSize = 1;
-            btnEdit.FlatAppearance.BorderColor = Color.White;
             btnEdit.ForeColor = Color.White;
+            btnEdit.Radius = 20;
             sataPanel.Controls.Add(btnEdit);
 
-            // Nút xóa
-            Button btnDelete = new Button();
+            // UIButton "Xóa"
+            var btnDelete = new UIButton();
             btnDelete.Text = "Xóa";
             btnDelete.Size = new Size(80, 30);
             btnDelete.Location = new Point(120, 305);
-            btnDelete.FlatStyle = FlatStyle.Flat;
-            btnDelete.FlatAppearance.BorderSize = 1;
-            btnDelete.FlatAppearance.BorderColor = Color.White;
             btnDelete.ForeColor = Color.White;
+            btnDelete.Radius = 20;
             sataPanel.Controls.Add(btnDelete);
 
             // Gắn sự kiện (để trống cho bạn tự xử lý sau)
