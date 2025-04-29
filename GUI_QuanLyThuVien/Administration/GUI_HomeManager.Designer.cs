@@ -48,6 +48,7 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.sataEllipseControl1 = new SATAUiFramework.Controls.SATAEllipseControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.guna2TabControlMain.SuspendLayout();
             this.tabPageSach.SuspendLayout();
             this.tabPagePhieu.SuspendLayout();
@@ -67,6 +68,7 @@
             this.guna2TabControlMain.Controls.Add(this.tabPageDocGia);
             this.guna2TabControlMain.Controls.Add(this.tabPageThuThu);
             this.guna2TabControlMain.Controls.Add(this.tabAdmin);
+            this.guna2TabControlMain.Controls.Add(this.tabPage1);
             this.guna2TabControlMain.ItemSize = new System.Drawing.Size(180, 40);
             this.guna2TabControlMain.Location = new System.Drawing.Point(0, 45);
             this.guna2TabControlMain.Name = "guna2TabControlMain";
@@ -263,6 +265,16 @@
             this.sataEllipseControl1.CornerRadius = 35;
             this.sataEllipseControl1.TargetControl = this;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(184, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1665, 799);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "Kiểm tra đăng nhập";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // GUI_HomeManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -310,5 +322,6 @@
         private System.Windows.Forms.Label lbnameRole;
         private System.Windows.Forms.Label lbname;
         private SATAUiFramework.Controls.SATAEllipseControl sataEllipseControl1;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }

@@ -13,19 +13,15 @@ using System.Windows.Forms.VisualStyles;
 using System.Xml.Linq;
 using System.Threading;
 using DTO_QuanLyThuVien;
+using System.Web.UI.WebControls;
 namespace GUI
 {
     public partial class Form1 : Form
     {
-        Account Acc = new Account();
+        public DTO_Person person = new DTO_Person();
 
-        public void login()
-        {
-            Login form = new Login();
-            DialogResult result = form.ShowDialog();
-        }
         public Form1()
-        {   
+        {
             InitializeComponent();
             Form1_Load();
         }
@@ -45,28 +41,14 @@ namespace GUI
             childForm.BringToFront();
             childForm.Show();
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
         public void Form1_Load()
         {
-            UserControl.UserMenu form = new UserControl.UserMenu(this, "Công Nghệ");
+            UserControl.UserMenu form = new UserControl.UserMenu(this, "Công Nghệ", person);
             OpenChildForm(form);
-            getAccountData();
-        }
-        private void getAccountData()
-        {
-            Acc.Name = "Huy";
-            Acc.Birth = "Huy";
-            Acc.Gioitinh = "Huy";
-            Acc.Pass = "Huy";
-            Acc.User = "Huy";
-            Acc.Address = "Huy";
         }
         private void PaneMain_Paint(object sender, PaintEventArgs e)
-        {   
-           
+        {
+
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -78,30 +60,30 @@ namespace GUI
         }
         private void btnTech_Click(object sender, EventArgs e)
         {
-            UserControl.UserMenu form = new UserControl.UserMenu(this, "Công Nghệ");
+            UserControl.UserMenu form = new UserControl.UserMenu(this, "Công Nghệ", person);
             OpenChildForm(form);
         }
         private void btnLife_Click(object sender, EventArgs e)
         {
-            UserControl.UserMenu form = new UserControl.UserMenu(this, "Đời Sống");
+            UserControl.UserMenu form = new UserControl.UserMenu(this, "Đời Sống", person);
             OpenChildForm(form);
         }
         private void btnAnimal_Click(object sender, EventArgs e)
         {
-            UserControl.UserMenu form = new UserControl.UserMenu(this, "Động Vật");
+            UserControl.UserMenu form = new UserControl.UserMenu(this, "Động Vật", person);
             OpenChildForm(form);
         }
         private void btnLove_Click(object sender, EventArgs e)
         {
-            UserControl.UserMenu form = new UserControl.UserMenu(this, "Tình Yêu");
+            UserControl.UserMenu form = new UserControl.UserMenu(this, "Tình Yêu", person);
             OpenChildForm(form);
         }
         private void btnother_Click(object sender, EventArgs e)
         {
-            UserControl.UserMenu form = new UserControl.UserMenu(this, "All");
+            UserControl.UserMenu form = new UserControl.UserMenu(this, "All", person);
             OpenChildForm(form);
         }
-         
+
         public void giohang(DTO_Person person)
         {
             UserControl.UserStore form = new UserControl.UserStore(this, "GioHang");
@@ -110,7 +92,7 @@ namespace GUI
         }
         private void sataButton6_Click(object sender, EventArgs e)
         {
-            UserControl.UserSetting form = new UserControl.UserSetting(this, Acc);
+            UserControl.UserSetting form = new UserControl.UserSetting(this, person);
             OpenChildForm(form);
         }
 

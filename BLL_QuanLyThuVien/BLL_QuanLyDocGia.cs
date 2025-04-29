@@ -38,5 +38,22 @@ namespace BLL_QuanLyThuVien
             int code = int.Parse(ma);
             return dal_QuanLyPerson.DelPerson(code, "proc_deldocgia");
         }
+        public DataTable GetDgFromUsername(string username)
+        {
+            return dal_QuanLyPerson.GetDGFromUsername(username);
+        }
+        public string UpdateDocGia(DTO_Person person, string usernameCu)
+        {
+            // kiem tra gia tri dau vao truoc khi them 
+            if (string.IsNullOrEmpty(person.sHoTen) || string.IsNullOrEmpty(person.sDiaChi) || string.IsNullOrEmpty(person.sSDT)
+                || string.IsNullOrEmpty(person.sUsername) || string.IsNullOrEmpty(person.sPassword))
+            {
+                return "Vui lòng nhập đầy đủ thông tin!";
+            }
+            else
+            {
+                return dal_QuanLyPerson.UpdateDocGia(person, usernameCu);
+            }
+        }
     }
 }

@@ -14,10 +14,9 @@ using System.Windows.Forms.VisualStyles;
 using BLL_QuanLyThuVien;
 using DTO_QuanLyThuVien;
 using System.IO;
-
 namespace GUI.UserControl
 {
-    
+
     public partial class UserMenu : Form
     {
         private Form1 parentForm;
@@ -25,33 +24,21 @@ namespace GUI.UserControl
         string QueueRy = "";
         Boolean Sort = true;
 
-        DTO_Person person = new DTO_Person  // demo thoi 
-        {
-            sHoTen = "Nguyễn Văn An",
-            sNgaySinh = new DateTime(1995, 10, 15),
-            sGioiTinh = true,
-            sDiaChi = "123 Đường Láng, Quận Đống Đa, Hà Nội",
-            sEmail = "nguyenvanan@gmail.com",
-            sSDT = "0987654321",
-            sChucVu = "Nhân viên",
-            sUsername = "nguyenvanan",
-            sMa = "1",
-            sPassword = "Abc123!@#", 
-            sSourceImage = "profile_an.jpg" 
-        };
+        DTO_Person person = new DTO_Person();
         BLL_QuanLySach bll_quanlysach = new BLL_QuanLySach();
-        public UserMenu(Form1 form1, string Infor)
+        public UserMenu(Form1 form1, string Infor, DTO_Person person)
         {
             Key = Infor;
             InitializeComponent();
             panel3.AutoScroll = true;
             this.parentForm = form1;
+            this.person = person;
         }
         public class ProductInfo
         {
             public string Name { get; set; }
             public decimal Price { get; set; }
-            public Image ProductImage { get; set; } 
+            public Image ProductImage { get; set; }
             public int MaSach { get; set; }
             public int Soluong { get; set; }
         }
@@ -131,10 +118,11 @@ namespace GUI.UserControl
         }
         private void UserMenu_Load_1(object sender, EventArgs e)
         {
-            if(Key == "All")
+            if (Key == "All")
             {
                 label1.Text = "Tất Cả";
-            } else
+            }
+            else
             {
                 label1.Text = Key;
             }
@@ -385,10 +373,6 @@ namespace GUI.UserControl
             parentForm.giohang(person);
         }
 
-        private void sataTextBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -403,19 +387,18 @@ namespace GUI.UserControl
                 Load_all();
             }
         }
-
-        private void sataTextBox1_TextChanged(object sender, EventArgs e)
+        private void sataTextBox1__TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
-            {
-                Key = "All";
-                Load_all();
-            }
-            else
-            {
-                Key = "Search";
-                Load_all();
-            }
+            //if (sataTextBox1.Text == "")
+            //{
+            //    Key = "All";
+            //    Load_all();
+            //}
+            //else
+            //{
+            //    Key = "Search";
+            //    Load_all();
+            //}
         }
     }
 }

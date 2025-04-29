@@ -29,20 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserSetting));
-            SATAUiFramework.BorderRadius borderRadius1 = new SATAUiFramework.BorderRadius();
+            SATAUiFramework.BorderRadius borderRadius2 = new SATAUiFramework.BorderRadius();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbMaDocGia = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnLanLogin = new FrameworkTest.SATAButton();
+            this.pictbSourceImage = new System.Windows.Forms.PictureBox();
             this.sataButton1 = new FrameworkTest.SATAButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.pane = new System.Windows.Forms.Panel();
+            this.datepBirth = new Sunny.UI.UIDatePicker();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtSdt = new Sunny.UI.UITextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtEmail = new Sunny.UI.UITextBox();
+            this.txtAnhThe = new Sunny.UI.UITextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.sataPanel1 = new SATAUiFramework.SATAPanel();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,30 +56,43 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtAddress = new Sunny.UI.UITextBox();
             this.txtGioitinh = new Sunny.UI.UITextBox();
-            this.txtBirth = new Sunny.UI.UITextBox();
             this.txtPass = new Sunny.UI.UITextBox();
             this.txtUser = new Sunny.UI.UITextBox();
             this.txtName = new Sunny.UI.UITextBox();
+            this.btnSearchFile = new FrameworkTest.SATAButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictbSourceImage)).BeginInit();
             this.pane.SuspendLayout();
             this.sataPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbMaDocGia);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label15);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1363, 96);
             this.panel1.TabIndex = 0;
+            // 
+            // lbMaDocGia
+            // 
+            this.lbMaDocGia.AutoSize = true;
+            this.lbMaDocGia.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.lbMaDocGia.ForeColor = System.Drawing.Color.White;
+            this.lbMaDocGia.Location = new System.Drawing.Point(348, 38);
+            this.lbMaDocGia.Name = "lbMaDocGia";
+            this.lbMaDocGia.Size = new System.Drawing.Size(144, 26);
+            this.lbMaDocGia.TabIndex = 18;
+            this.lbMaDocGia.Text = "Mã Độc Giả ";
             // 
             // pictureBox2
             // 
@@ -98,14 +117,21 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Setting";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(161, 38);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(181, 26);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Code Customer";
+            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnLanLogin);
+            this.panel2.Controls.Add(this.pictbSourceImage);
             this.panel2.Controls.Add(this.sataButton1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1077, 96);
@@ -113,74 +139,57 @@
             this.panel2.Size = new System.Drawing.Size(286, 801);
             this.panel2.TabIndex = 1;
             // 
-            // label12
+            // btnLanLogin
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(29, 293);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 26);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "User";
+            this.btnLanLogin.ButtonText = "Check Loin";
+            this.btnLanLogin.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.btnLanLogin.CheckedForeColor = System.Drawing.Color.White;
+            this.btnLanLogin.CheckedImageTint = System.Drawing.Color.White;
+            this.btnLanLogin.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.btnLanLogin.CustomDialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLanLogin.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLanLogin.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.btnLanLogin.HoverForeColor = System.Drawing.Color.White;
+            this.btnLanLogin.HoverImage = null;
+            this.btnLanLogin.HoverImageTint = System.Drawing.Color.White;
+            this.btnLanLogin.HoverOutline = System.Drawing.Color.Empty;
+            this.btnLanLogin.Image = null;
+            this.btnLanLogin.ImageAutoCenter = false;
+            this.btnLanLogin.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btnLanLogin.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnLanLogin.ImageTint = System.Drawing.Color.White;
+            this.btnLanLogin.IsToggleButton = false;
+            this.btnLanLogin.IsToggled = false;
+            this.btnLanLogin.Location = new System.Drawing.Point(6, 229);
+            this.btnLanLogin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLanLogin.Name = "btnLanLogin";
+            this.btnLanLogin.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.btnLanLogin.NormalForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLanLogin.NormalOutline = System.Drawing.Color.Empty;
+            this.btnLanLogin.OutlineThickness = 2F;
+            this.btnLanLogin.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.btnLanLogin.PressedForeColor = System.Drawing.Color.White;
+            this.btnLanLogin.PressedImageTint = System.Drawing.Color.White;
+            this.btnLanLogin.PressedOutline = System.Drawing.Color.Empty;
+            this.btnLanLogin.Rounding = new System.Windows.Forms.Padding(5);
+            this.btnLanLogin.Size = new System.Drawing.Size(246, 62);
+            this.btnLanLogin.TabIndex = 16;
+            this.btnLanLogin.TextAutoCenter = false;
+            this.btnLanLogin.TextOffset = new System.Drawing.Point(15, 0);
             // 
-            // label11
+            // pictbSourceImage
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(29, 241);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(223, 26);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Lần đăng nhập cuối";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(29, 102);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(231, 26);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "14.000.000.000 VNDC";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(202, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(29, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 26);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Số dư:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(29, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 26);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Hello Lâm Huy";
+            this.pictbSourceImage.Image = ((System.Drawing.Image)(resources.GetObject("pictbSourceImage.Image")));
+            this.pictbSourceImage.Location = new System.Drawing.Point(82, 10);
+            this.pictbSourceImage.Name = "pictbSourceImage";
+            this.pictbSourceImage.Size = new System.Drawing.Size(120, 118);
+            this.pictbSourceImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictbSourceImage.TabIndex = 14;
+            this.pictbSourceImage.TabStop = false;
             // 
             // sataButton1
             // 
-            this.sataButton1.ButtonText = "Giỏ Hàng";
+            this.sataButton1.ButtonText = "Store";
             this.sataButton1.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.sataButton1.CheckedForeColor = System.Drawing.Color.White;
             this.sataButton1.CheckedImageTint = System.Drawing.Color.White;
@@ -199,7 +208,7 @@
             this.sataButton1.ImageTint = System.Drawing.Color.White;
             this.sataButton1.IsToggleButton = false;
             this.sataButton1.IsToggled = false;
-            this.sataButton1.Location = new System.Drawing.Point(14, 169);
+            this.sataButton1.Location = new System.Drawing.Point(6, 152);
             this.sataButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sataButton1.Name = "sataButton1";
             this.sataButton1.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
@@ -215,20 +224,26 @@
             this.sataButton1.TabIndex = 7;
             this.sataButton1.TextAutoCenter = false;
             this.sataButton1.TextOffset = new System.Drawing.Point(15, 0);
-            this.sataButton1.Click += new System.EventHandler(this.sataButton1_Click);
             // 
             // pane
             // 
+            this.pane.Controls.Add(this.btnSearchFile);
+            this.pane.Controls.Add(this.datepBirth);
+            this.pane.Controls.Add(this.label16);
+            this.pane.Controls.Add(this.txtSdt);
+            this.pane.Controls.Add(this.label14);
+            this.pane.Controls.Add(this.txtEmail);
+            this.pane.Controls.Add(this.txtAnhThe);
+            this.pane.Controls.Add(this.label5);
+            this.pane.Controls.Add(this.label13);
             this.pane.Controls.Add(this.sataPanel1);
             this.pane.Controls.Add(this.label9);
             this.pane.Controls.Add(this.label10);
             this.pane.Controls.Add(this.label7);
             this.pane.Controls.Add(this.label8);
             this.pane.Controls.Add(this.label6);
-            this.pane.Controls.Add(this.label5);
             this.pane.Controls.Add(this.txtAddress);
             this.pane.Controls.Add(this.txtGioitinh);
-            this.pane.Controls.Add(this.txtBirth);
             this.pane.Controls.Add(this.txtPass);
             this.pane.Controls.Add(this.txtUser);
             this.pane.Controls.Add(this.txtName);
@@ -238,15 +253,160 @@
             this.pane.Size = new System.Drawing.Size(1077, 801);
             this.pane.TabIndex = 3;
             // 
+            // datepBirth
+            // 
+            this.datepBirth.FillColor = System.Drawing.Color.White;
+            this.datepBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.datepBirth.Location = new System.Drawing.Point(183, 99);
+            this.datepBirth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.datepBirth.MaxLength = 10;
+            this.datepBirth.MinimumSize = new System.Drawing.Size(63, 0);
+            this.datepBirth.Name = "datepBirth";
+            this.datepBirth.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.datepBirth.Size = new System.Drawing.Size(150, 29);
+            this.datepBirth.SymbolDropDown = 61555;
+            this.datepBirth.SymbolNormal = 61555;
+            this.datepBirth.SymbolSize = 24;
+            this.datepBirth.TabIndex = 19;
+            this.datepBirth.Text = "2025-04-28";
+            this.datepBirth.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.datepBirth.Value = new System.DateTime(2025, 4, 28, 20, 13, 43, 919);
+            this.datepBirth.Watermark = "";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(462, 274);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 26);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Email";
+            // 
+            // txtSdt
+            // 
+            this.txtSdt.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtSdt.ButtonStyleInherited = false;
+            this.txtSdt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSdt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtSdt.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtSdt.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtSdt.FillReadOnlyColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtSdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtSdt.ForeColor = System.Drawing.Color.White;
+            this.txtSdt.Location = new System.Drawing.Point(183, 152);
+            this.txtSdt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSdt.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtSdt.Name = "txtSdt";
+            this.txtSdt.Padding = new System.Windows.Forms.Padding(5);
+            this.txtSdt.Radius = 20;
+            this.txtSdt.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtSdt.ShowText = false;
+            this.txtSdt.Size = new System.Drawing.Size(278, 55);
+            this.txtSdt.TabIndex = 5;
+            this.txtSdt.Text = "txtSdt";
+            this.txtSdt.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtSdt.Watermark = "";
+            this.txtSdt.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtSdt.WatermarkColor = System.Drawing.Color.Silver;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(22, 169);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(78, 26);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "Phone";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtEmail.ButtonStyleInherited = false;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtEmail.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtEmail.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtEmail.FillReadOnlyColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.Location = new System.Drawing.Point(617, 258);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(5);
+            this.txtEmail.Radius = 20;
+            this.txtEmail.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtEmail.ShowText = false;
+            this.txtEmail.Size = new System.Drawing.Size(416, 55);
+            this.txtEmail.TabIndex = 6;
+            this.txtEmail.Text = "Password";
+            this.txtEmail.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtEmail.Watermark = "";
+            this.txtEmail.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtEmail.WatermarkColor = System.Drawing.Color.Silver;
+            // 
+            // txtAnhThe
+            // 
+            this.txtAnhThe.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtAnhThe.ButtonStyleInherited = false;
+            this.txtAnhThe.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAnhThe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtAnhThe.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtAnhThe.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtAnhThe.FillReadOnlyColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtAnhThe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtAnhThe.ForeColor = System.Drawing.Color.White;
+            this.txtAnhThe.Location = new System.Drawing.Point(629, 140);
+            this.txtAnhThe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAnhThe.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtAnhThe.Name = "txtAnhThe";
+            this.txtAnhThe.Padding = new System.Windows.Forms.Padding(5);
+            this.txtAnhThe.Radius = 20;
+            this.txtAnhThe.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.txtAnhThe.ShowText = false;
+            this.txtAnhThe.Size = new System.Drawing.Size(448, 55);
+            this.txtAnhThe.TabIndex = 5;
+            this.txtAnhThe.Text = "Password";
+            this.txtAnhThe.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtAnhThe.Watermark = "";
+            this.txtAnhThe.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtAnhThe.WatermarkColor = System.Drawing.Color.Silver;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(27, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 26);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Name";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(468, 162);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(95, 26);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Ảnh Thẻ";
+            // 
             // sataPanel1
             // 
             this.sataPanel1.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.sataPanel1.BorderColor = System.Drawing.Color.Black;
-            borderRadius1.BottomLeft = 20;
-            borderRadius1.BottomRight = 20;
-            borderRadius1.TopLeft = 20;
-            borderRadius1.TopRight = 20;
-            this.sataPanel1.BorderRadius = borderRadius1;
+            borderRadius2.BottomLeft = 20;
+            borderRadius2.BottomRight = 20;
+            borderRadius2.TopLeft = 20;
+            borderRadius2.TopRight = 20;
+            this.sataPanel1.BorderRadius = borderRadius2;
             this.sataPanel1.BorderThickness = 0;
             this.sataPanel1.Controls.Add(this.uiButton1);
             this.sataPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -275,46 +435,47 @@
             this.uiButton1.TabIndex = 13;
             this.uiButton1.Text = "Cập Nhập";
             this.uiButton1.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click_1);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(22, 363);
+            this.label9.Location = new System.Drawing.Point(22, 305);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 26);
+            this.label9.Size = new System.Drawing.Size(99, 26);
             this.label9.TabIndex = 12;
-            this.label9.Text = "Địa chỉ";
+            this.label9.Text = "Address";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(22, 297);
+            this.label10.Location = new System.Drawing.Point(22, 241);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 26);
+            this.label10.Size = new System.Drawing.Size(44, 26);
             this.label10.TabIndex = 11;
-            this.label10.Text = "Giới tính";
+            this.label10.Text = "Set";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(22, 233);
+            this.label7.Location = new System.Drawing.Point(22, 102);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 26);
+            this.label7.Size = new System.Drawing.Size(100, 26);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Ngày Sinh";
+            this.label7.Text = "Birthday";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(22, 167);
+            this.label8.Location = new System.Drawing.Point(474, 90);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 26);
             this.label8.TabIndex = 9;
@@ -325,22 +486,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(22, 99);
+            this.label6.Location = new System.Drawing.Point(474, 22);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 26);
             this.label6.TabIndex = 8;
             this.label6.Text = "User";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(22, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 26);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Họ Và Tên";
             // 
             // txtAddress
             // 
@@ -353,7 +503,7 @@
             this.txtAddress.FillReadOnlyColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAddress.ForeColor = System.Drawing.Color.White;
-            this.txtAddress.Location = new System.Drawing.Point(177, 347);
+            this.txtAddress.Location = new System.Drawing.Point(175, 287);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddress.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtAddress.Name = "txtAddress";
@@ -361,7 +511,7 @@
             this.txtAddress.Radius = 20;
             this.txtAddress.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.txtAddress.ShowText = false;
-            this.txtAddress.Size = new System.Drawing.Size(448, 55);
+            this.txtAddress.Size = new System.Drawing.Size(199, 55);
             this.txtAddress.TabIndex = 4;
             this.txtAddress.Text = "Địa Chỉ";
             this.txtAddress.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -380,7 +530,7 @@
             this.txtGioitinh.FillReadOnlyColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.txtGioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtGioitinh.ForeColor = System.Drawing.Color.White;
-            this.txtGioitinh.Location = new System.Drawing.Point(177, 282);
+            this.txtGioitinh.Location = new System.Drawing.Point(175, 222);
             this.txtGioitinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGioitinh.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtGioitinh.Name = "txtGioitinh";
@@ -388,40 +538,13 @@
             this.txtGioitinh.Radius = 20;
             this.txtGioitinh.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.txtGioitinh.ShowText = false;
-            this.txtGioitinh.Size = new System.Drawing.Size(448, 55);
+            this.txtGioitinh.Size = new System.Drawing.Size(181, 55);
             this.txtGioitinh.TabIndex = 4;
             this.txtGioitinh.Text = "giới tính";
             this.txtGioitinh.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtGioitinh.Watermark = "";
             this.txtGioitinh.WatermarkActiveColor = System.Drawing.Color.Silver;
             this.txtGioitinh.WatermarkColor = System.Drawing.Color.Silver;
-            // 
-            // txtBirth
-            // 
-            this.txtBirth.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtBirth.ButtonStyleInherited = false;
-            this.txtBirth.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBirth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtBirth.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtBirth.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtBirth.FillReadOnlyColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtBirth.ForeColor = System.Drawing.Color.White;
-            this.txtBirth.Location = new System.Drawing.Point(177, 217);
-            this.txtBirth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBirth.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtBirth.Name = "txtBirth";
-            this.txtBirth.Padding = new System.Windows.Forms.Padding(5);
-            this.txtBirth.Radius = 20;
-            this.txtBirth.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtBirth.ShowText = false;
-            this.txtBirth.Size = new System.Drawing.Size(448, 55);
-            this.txtBirth.TabIndex = 4;
-            this.txtBirth.Text = "27/03/2005";
-            this.txtBirth.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtBirth.Watermark = "";
-            this.txtBirth.WatermarkActiveColor = System.Drawing.Color.Silver;
-            this.txtBirth.WatermarkColor = System.Drawing.Color.Silver;
             // 
             // txtPass
             // 
@@ -434,7 +557,7 @@
             this.txtPass.FillReadOnlyColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPass.ForeColor = System.Drawing.Color.White;
-            this.txtPass.Location = new System.Drawing.Point(177, 152);
+            this.txtPass.Location = new System.Drawing.Point(629, 75);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPass.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPass.Name = "txtPass";
@@ -461,7 +584,7 @@
             this.txtUser.FillReadOnlyColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtUser.ForeColor = System.Drawing.Color.White;
-            this.txtUser.Location = new System.Drawing.Point(177, 87);
+            this.txtUser.Location = new System.Drawing.Point(629, 10);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUser.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtUser.Name = "txtUser";
@@ -488,7 +611,7 @@
             this.txtName.FillReadOnlyColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtName.ForeColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(177, 22);
+            this.txtName.Location = new System.Drawing.Point(176, 10);
             this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtName.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtName.Name = "txtName";
@@ -496,13 +619,56 @@
             this.txtName.Radius = 20;
             this.txtName.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.txtName.ShowText = false;
-            this.txtName.Size = new System.Drawing.Size(448, 55);
+            this.txtName.Size = new System.Drawing.Size(338, 55);
             this.txtName.TabIndex = 0;
             this.txtName.Text = "Tên";
             this.txtName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtName.Watermark = "";
             this.txtName.WatermarkActiveColor = System.Drawing.Color.Silver;
             this.txtName.WatermarkColor = System.Drawing.Color.Silver;
+            // 
+            // btnSearchFile
+            // 
+            this.btnSearchFile.ButtonText = "Search to destop";
+            this.btnSearchFile.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.btnSearchFile.CheckedForeColor = System.Drawing.Color.White;
+            this.btnSearchFile.CheckedImageTint = System.Drawing.Color.White;
+            this.btnSearchFile.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.btnSearchFile.CustomDialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSearchFile.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchFile.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.btnSearchFile.HoverForeColor = System.Drawing.Color.White;
+            this.btnSearchFile.HoverImage = null;
+            this.btnSearchFile.HoverImageTint = System.Drawing.Color.White;
+            this.btnSearchFile.HoverOutline = System.Drawing.Color.Empty;
+            this.btnSearchFile.Image = null;
+            this.btnSearchFile.ImageAutoCenter = false;
+            this.btnSearchFile.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btnSearchFile.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnSearchFile.ImageTint = System.Drawing.Color.White;
+            this.btnSearchFile.IsToggleButton = false;
+            this.btnSearchFile.IsToggled = false;
+            this.btnSearchFile.Location = new System.Drawing.Point(672, 208);
+            this.btnSearchFile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSearchFile.Name = "btnSearchFile";
+            this.btnSearchFile.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.btnSearchFile.NormalForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSearchFile.NormalOutline = System.Drawing.Color.Empty;
+            this.btnSearchFile.OutlineThickness = 2F;
+            this.btnSearchFile.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.btnSearchFile.PressedForeColor = System.Drawing.Color.White;
+            this.btnSearchFile.PressedImageTint = System.Drawing.Color.White;
+            this.btnSearchFile.PressedOutline = System.Drawing.Color.Empty;
+            this.btnSearchFile.Rounding = new System.Windows.Forms.Padding(5);
+            this.btnSearchFile.Size = new System.Drawing.Size(179, 39);
+            this.btnSearchFile.TabIndex = 17;
+            this.btnSearchFile.TextAutoCenter = false;
+            this.btnSearchFile.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnSearchFile.Click += new System.EventHandler(this.btnSearchFile_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // UserSetting
             // 
@@ -523,8 +689,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictbSourceImage)).EndInit();
             this.pane.ResumeLayout(false);
             this.pane.PerformLayout();
             this.sataPanel1.ResumeLayout(false);
@@ -539,11 +704,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Panel pane;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictbSourceImage;
         private FrameworkTest.SATAButton sataButton1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Sunny.UI.UITextBox txtName;
         private System.Windows.Forms.Label label9;
@@ -554,12 +716,21 @@
         private System.Windows.Forms.Label label5;
         private Sunny.UI.UITextBox txtAddress;
         private Sunny.UI.UITextBox txtGioitinh;
-        private Sunny.UI.UITextBox txtBirth;
         private Sunny.UI.UITextBox txtPass;
         private Sunny.UI.UITextBox txtUser;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private SATAUiFramework.SATAPanel sataPanel1;
         private Sunny.UI.UIButton uiButton1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private Sunny.UI.UITextBox txtAnhThe;
+        private Sunny.UI.UITextBox txtEmail;
+        private System.Windows.Forms.Label lbMaDocGia;
+        private Sunny.UI.UITextBox txtSdt;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private FrameworkTest.SATAButton btnLanLogin;
+        private Sunny.UI.UIDatePicker datepBirth;
+        private FrameworkTest.SATAButton btnSearchFile;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

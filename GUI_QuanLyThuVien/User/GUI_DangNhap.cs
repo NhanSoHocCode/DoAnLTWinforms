@@ -79,13 +79,32 @@ namespace GUI_QuanLyThuVien
             }
             else if (taikhoan.sMaQuyen == 1)  // doc gia 
             {
+                DTO_Person person = new DTO_Person();
+                BLL_QuanLyDocGia bllqldg = new BLL_QuanLyDocGia();
+                DataTable dt = bllqldg.GetDgFromUsername(taikhoan.sTenTK);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    person.sMa = dr["maDocGia"].ToString();
+                    person.sHoTen = dr["hoTen"].ToString();
+                    person.sGioiTinh = Boolean.Parse(dr["gioiTinh"].ToString());
+                    person.sSDT = dr["soDienThoai"].ToString();
+                    person.sEmail = dr["email"].ToString();
+                    person.sDiaChi = dr["diaChi"].ToString();
+                    person.sSourceImage = dr["anhThe"].ToString();
+                    person.sUsername = dr["username"].ToString();
+                    person.sPassword = dr["password"].ToString();
+                    person.sNgaySinh = DateTime.Parse(dr["ngaySinh"].ToString());
+                }
                 Form1 formCustomer = new Form1();
+                formCustomer.person = person;
                 formCustomer.Show();
             }
             else  // thu thu 
             {
-                GUI_Home home = new GUI_Home();
-                home.Show();
+                GUI_HomeManager homeManager = new GUI_HomeManager();
+                homeManager.role = taikhoan.sMaQuyen;
+                homeManager.username = taikhoan.sTenTK;
+                homeManager.Show();
             }
         }
         private void btnSignIn_Click(object sender, EventArgs e)
