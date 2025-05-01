@@ -39,11 +39,11 @@ namespace GUI.UserControl
             usernameCu = person.sUsername;
             txtName.Text = person.sHoTen;
             datepBirth.Value = person.sNgaySinh;
-            txtGioitinh.Text = person.sGioiTinh ? "Nam" : "Nữ";
+            cbbSet.Text = person.sGioiTinh ? "Nam" : "Nữ";
             txtPass.Text = person.sPassword;
             txtUser.Text = person.sUsername;
             txtAddress.Text = person.sDiaChi;
-            txtAnhThe.Text = person.sSourceImage;  // them thuoc tinh thay doi anh the 
+            txtAnhThe.Text = person.sSourceImage;  
             string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\DocGia\\" + person.sSourceImage;
             pictbSourceImage.Image = Image.FromFile(path);
             txtSdt.Text = person.sSDT;
@@ -59,7 +59,19 @@ namespace GUI.UserControl
             person.sSDT = txtSdt.Text;
             person.sEmail = txtEmail.Text;
             person.sNgaySinh = datepBirth.Value;
-            //person.sNgaySinh = txtBirth.Text;
+            person.sGioiTinh = cbbSet.Text == "Nam" ? true : false;
+            if (ChangeImage == true)
+            {
+                SaveImageToFolder(fileNameLong);
+                string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\DocGia\\" + txtAnhThe.Text;
+                string path1 = "D:\\K25_Project_LTWinform\\DoAn\\images\\DocGia\\" + person.sSourceImage;
+                pictbSourceImage.Image?.Dispose();
+                pictbSourceImage.Image = null;
+                File.Delete(path1);
+                pictbSourceImage.Image = Image.FromFile(path);
+                person.sSourceImage = txtAnhThe.Text;
+            }
+
             MessageBox.Show(
                 bllquanlydocgia.UpdateDocGia(person, usernameCu),
                 "Thông báo!",
@@ -94,38 +106,7 @@ namespace GUI.UserControl
             {
                 throw new Exception($"Lỗi khi lưu ảnh: {ex.Message}", ex);
             }
-        }
-
-        // Xóa ảnh từ thư mục
-        public void DelImageFromFolder(string imageFileName)
-        {
-            if (string.IsNullOrWhiteSpace(imageFileName))
-            {
-                throw new ArgumentException("Tên file không hợp lệ");
-            }
-
-            try
-            {
-                // Xác định thư mục
-                string targetFolder = @"D:\K25_Project_LTWinform\DoAn\images\DocGia";
-
-                string filePath = Path.Combine(targetFolder, imageFileName);
-
-                // Thực hiện xóa
-                if (File.Exists(filePath))
-                {
-                    File.Delete(filePath);
-                }
-                else
-                {
-                    throw new FileNotFoundException($"File ảnh không tồn tại: {filePath}");
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Lỗi khi xóa ảnh: {ex.Message}", ex);
-            }
-        }
+        } 
         private void btnSearchFile_Click(object sender, EventArgs e)
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -133,13 +114,17 @@ namespace GUI.UserControl
                 fileNameLong = saveFileDialog1.FileName;
                 fileNameShort = Path.GetFileName(saveFileDialog1.FileName);
                 txtAnhThe.Text = fileNameShort;
-
                 ChangeImage = true;
             }
             else
             {
                 MessageBox.Show("Bạn chưa chọn file.");
             }
+        }
+
+        private void pictbSourceImage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

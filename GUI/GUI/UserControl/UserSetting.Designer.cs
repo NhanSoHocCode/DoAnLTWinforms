@@ -28,19 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            SATAUiFramework.BorderRadius borderRadius1 = new SATAUiFramework.BorderRadius();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserSetting));
-            SATAUiFramework.BorderRadius borderRadius2 = new SATAUiFramework.BorderRadius();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbMaDocGia = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLanLogin = new FrameworkTest.SATAButton();
-            this.pictbSourceImage = new System.Windows.Forms.PictureBox();
-            this.sataButton1 = new FrameworkTest.SATAButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.pane = new System.Windows.Forms.Panel();
+            this.btnSearchFile = new FrameworkTest.SATAButton();
             this.datepBirth = new Sunny.UI.UIDatePicker();
             this.label16 = new System.Windows.Forms.Label();
             this.txtSdt = new Sunny.UI.UITextBox();
@@ -57,18 +55,20 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAddress = new Sunny.UI.UITextBox();
-            this.txtGioitinh = new Sunny.UI.UITextBox();
             this.txtPass = new Sunny.UI.UITextBox();
             this.txtUser = new Sunny.UI.UITextBox();
             this.txtName = new Sunny.UI.UITextBox();
-            this.btnSearchFile = new FrameworkTest.SATAButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.cbbSet = new Sunny.UI.UIComboBox();
+            this.pictbSourceImage = new System.Windows.Forms.PictureBox();
+            this.sataButton1 = new FrameworkTest.SATAButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictbSourceImage)).BeginInit();
             this.pane.SuspendLayout();
             this.sataPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictbSourceImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,18 +93,6 @@
             this.lbMaDocGia.Size = new System.Drawing.Size(144, 26);
             this.lbMaDocGia.TabIndex = 18;
             this.lbMaDocGia.Text = "Mã Độc Giả ";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1282, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(81, 96);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label1
             // 
@@ -134,9 +122,9 @@
             this.panel2.Controls.Add(this.pictbSourceImage);
             this.panel2.Controls.Add(this.sataButton1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1077, 96);
+            this.panel2.Location = new System.Drawing.Point(1123, 96);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(286, 801);
+            this.panel2.Size = new System.Drawing.Size(240, 801);
             this.panel2.TabIndex = 1;
             // 
             // btnLanLogin
@@ -153,7 +141,7 @@
             this.btnLanLogin.HoverImage = null;
             this.btnLanLogin.HoverImageTint = System.Drawing.Color.White;
             this.btnLanLogin.HoverOutline = System.Drawing.Color.Empty;
-            this.btnLanLogin.Image = null;
+            this.btnLanLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLanLogin.Image")));
             this.btnLanLogin.ImageAutoCenter = false;
             this.btnLanLogin.ImageExpand = new System.Drawing.Point(0, 0);
             this.btnLanLogin.ImageOffset = new System.Drawing.Point(15, 0);
@@ -172,61 +160,14 @@
             this.btnLanLogin.PressedImageTint = System.Drawing.Color.White;
             this.btnLanLogin.PressedOutline = System.Drawing.Color.Empty;
             this.btnLanLogin.Rounding = new System.Windows.Forms.Padding(5);
-            this.btnLanLogin.Size = new System.Drawing.Size(246, 62);
+            this.btnLanLogin.Size = new System.Drawing.Size(228, 62);
             this.btnLanLogin.TabIndex = 16;
             this.btnLanLogin.TextAutoCenter = false;
             this.btnLanLogin.TextOffset = new System.Drawing.Point(15, 0);
             // 
-            // pictbSourceImage
-            // 
-            this.pictbSourceImage.Image = ((System.Drawing.Image)(resources.GetObject("pictbSourceImage.Image")));
-            this.pictbSourceImage.Location = new System.Drawing.Point(82, 10);
-            this.pictbSourceImage.Name = "pictbSourceImage";
-            this.pictbSourceImage.Size = new System.Drawing.Size(120, 118);
-            this.pictbSourceImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictbSourceImage.TabIndex = 14;
-            this.pictbSourceImage.TabStop = false;
-            // 
-            // sataButton1
-            // 
-            this.sataButton1.ButtonText = "Store";
-            this.sataButton1.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.sataButton1.CheckedForeColor = System.Drawing.Color.White;
-            this.sataButton1.CheckedImageTint = System.Drawing.Color.White;
-            this.sataButton1.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.sataButton1.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.sataButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sataButton1.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.sataButton1.HoverForeColor = System.Drawing.Color.White;
-            this.sataButton1.HoverImage = null;
-            this.sataButton1.HoverImageTint = System.Drawing.Color.White;
-            this.sataButton1.HoverOutline = System.Drawing.Color.Empty;
-            this.sataButton1.Image = null;
-            this.sataButton1.ImageAutoCenter = false;
-            this.sataButton1.ImageExpand = new System.Drawing.Point(0, 0);
-            this.sataButton1.ImageOffset = new System.Drawing.Point(15, 0);
-            this.sataButton1.ImageTint = System.Drawing.Color.White;
-            this.sataButton1.IsToggleButton = false;
-            this.sataButton1.IsToggled = false;
-            this.sataButton1.Location = new System.Drawing.Point(6, 152);
-            this.sataButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.sataButton1.Name = "sataButton1";
-            this.sataButton1.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.sataButton1.NormalForeColor = System.Drawing.Color.WhiteSmoke;
-            this.sataButton1.NormalOutline = System.Drawing.Color.Empty;
-            this.sataButton1.OutlineThickness = 2F;
-            this.sataButton1.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.sataButton1.PressedForeColor = System.Drawing.Color.White;
-            this.sataButton1.PressedImageTint = System.Drawing.Color.White;
-            this.sataButton1.PressedOutline = System.Drawing.Color.Empty;
-            this.sataButton1.Rounding = new System.Windows.Forms.Padding(5);
-            this.sataButton1.Size = new System.Drawing.Size(246, 62);
-            this.sataButton1.TabIndex = 7;
-            this.sataButton1.TextAutoCenter = false;
-            this.sataButton1.TextOffset = new System.Drawing.Point(15, 0);
-            // 
             // pane
             // 
+            this.pane.Controls.Add(this.cbbSet);
             this.pane.Controls.Add(this.btnSearchFile);
             this.pane.Controls.Add(this.datepBirth);
             this.pane.Controls.Add(this.label16);
@@ -243,15 +184,53 @@
             this.pane.Controls.Add(this.label8);
             this.pane.Controls.Add(this.label6);
             this.pane.Controls.Add(this.txtAddress);
-            this.pane.Controls.Add(this.txtGioitinh);
             this.pane.Controls.Add(this.txtPass);
             this.pane.Controls.Add(this.txtUser);
             this.pane.Controls.Add(this.txtName);
             this.pane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pane.Location = new System.Drawing.Point(0, 96);
             this.pane.Name = "pane";
-            this.pane.Size = new System.Drawing.Size(1077, 801);
+            this.pane.Size = new System.Drawing.Size(1123, 801);
             this.pane.TabIndex = 3;
+            // 
+            // btnSearchFile
+            // 
+            this.btnSearchFile.ButtonText = "Search to destop";
+            this.btnSearchFile.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.btnSearchFile.CheckedForeColor = System.Drawing.Color.White;
+            this.btnSearchFile.CheckedImageTint = System.Drawing.Color.White;
+            this.btnSearchFile.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.btnSearchFile.CustomDialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSearchFile.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchFile.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.btnSearchFile.HoverForeColor = System.Drawing.Color.White;
+            this.btnSearchFile.HoverImage = null;
+            this.btnSearchFile.HoverImageTint = System.Drawing.Color.White;
+            this.btnSearchFile.HoverOutline = System.Drawing.Color.Empty;
+            this.btnSearchFile.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchFile.Image")));
+            this.btnSearchFile.ImageAutoCenter = false;
+            this.btnSearchFile.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btnSearchFile.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnSearchFile.ImageTint = System.Drawing.Color.White;
+            this.btnSearchFile.IsToggleButton = false;
+            this.btnSearchFile.IsToggled = false;
+            this.btnSearchFile.Location = new System.Drawing.Point(629, 206);
+            this.btnSearchFile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSearchFile.Name = "btnSearchFile";
+            this.btnSearchFile.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.btnSearchFile.NormalForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSearchFile.NormalOutline = System.Drawing.Color.Empty;
+            this.btnSearchFile.OutlineThickness = 2F;
+            this.btnSearchFile.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.btnSearchFile.PressedForeColor = System.Drawing.Color.White;
+            this.btnSearchFile.PressedImageTint = System.Drawing.Color.White;
+            this.btnSearchFile.PressedOutline = System.Drawing.Color.Empty;
+            this.btnSearchFile.Rounding = new System.Windows.Forms.Padding(5);
+            this.btnSearchFile.Size = new System.Drawing.Size(233, 39);
+            this.btnSearchFile.TabIndex = 17;
+            this.btnSearchFile.TextAutoCenter = false;
+            this.btnSearchFile.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnSearchFile.Click += new System.EventHandler(this.btnSearchFile_Click);
             // 
             // datepBirth
             // 
@@ -402,17 +381,17 @@
             // 
             this.sataPanel1.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.sataPanel1.BorderColor = System.Drawing.Color.Black;
-            borderRadius2.BottomLeft = 20;
-            borderRadius2.BottomRight = 20;
-            borderRadius2.TopLeft = 20;
-            borderRadius2.TopRight = 20;
-            this.sataPanel1.BorderRadius = borderRadius2;
+            borderRadius1.BottomLeft = 20;
+            borderRadius1.BottomRight = 20;
+            borderRadius1.TopLeft = 20;
+            borderRadius1.TopRight = 20;
+            this.sataPanel1.BorderRadius = borderRadius1;
             this.sataPanel1.BorderThickness = 0;
             this.sataPanel1.Controls.Add(this.uiButton1);
             this.sataPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.sataPanel1.Location = new System.Drawing.Point(0, 676);
             this.sataPanel1.Name = "sataPanel1";
-            this.sataPanel1.Size = new System.Drawing.Size(1077, 125);
+            this.sataPanel1.Size = new System.Drawing.Size(1123, 125);
             this.sataPanel1.TabIndex = 14;
             // 
             // uiButton1
@@ -519,33 +498,6 @@
             this.txtAddress.WatermarkActiveColor = System.Drawing.Color.Silver;
             this.txtAddress.WatermarkColor = System.Drawing.Color.Silver;
             // 
-            // txtGioitinh
-            // 
-            this.txtGioitinh.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtGioitinh.ButtonStyleInherited = false;
-            this.txtGioitinh.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGioitinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtGioitinh.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtGioitinh.FillDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtGioitinh.FillReadOnlyColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtGioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtGioitinh.ForeColor = System.Drawing.Color.White;
-            this.txtGioitinh.Location = new System.Drawing.Point(175, 222);
-            this.txtGioitinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtGioitinh.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtGioitinh.Name = "txtGioitinh";
-            this.txtGioitinh.Padding = new System.Windows.Forms.Padding(5);
-            this.txtGioitinh.Radius = 20;
-            this.txtGioitinh.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.txtGioitinh.ShowText = false;
-            this.txtGioitinh.Size = new System.Drawing.Size(181, 55);
-            this.txtGioitinh.TabIndex = 4;
-            this.txtGioitinh.Text = "giới tính";
-            this.txtGioitinh.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtGioitinh.Watermark = "";
-            this.txtGioitinh.WatermarkActiveColor = System.Drawing.Color.Silver;
-            this.txtGioitinh.WatermarkColor = System.Drawing.Color.Silver;
-            // 
             // txtPass
             // 
             this.txtPass.ButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
@@ -627,48 +579,93 @@
             this.txtName.WatermarkActiveColor = System.Drawing.Color.Silver;
             this.txtName.WatermarkColor = System.Drawing.Color.Silver;
             // 
-            // btnSearchFile
-            // 
-            this.btnSearchFile.ButtonText = "Search to destop";
-            this.btnSearchFile.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.btnSearchFile.CheckedForeColor = System.Drawing.Color.White;
-            this.btnSearchFile.CheckedImageTint = System.Drawing.Color.White;
-            this.btnSearchFile.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.btnSearchFile.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSearchFile.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchFile.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.btnSearchFile.HoverForeColor = System.Drawing.Color.White;
-            this.btnSearchFile.HoverImage = null;
-            this.btnSearchFile.HoverImageTint = System.Drawing.Color.White;
-            this.btnSearchFile.HoverOutline = System.Drawing.Color.Empty;
-            this.btnSearchFile.Image = null;
-            this.btnSearchFile.ImageAutoCenter = false;
-            this.btnSearchFile.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btnSearchFile.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnSearchFile.ImageTint = System.Drawing.Color.White;
-            this.btnSearchFile.IsToggleButton = false;
-            this.btnSearchFile.IsToggled = false;
-            this.btnSearchFile.Location = new System.Drawing.Point(672, 208);
-            this.btnSearchFile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnSearchFile.Name = "btnSearchFile";
-            this.btnSearchFile.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.btnSearchFile.NormalForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSearchFile.NormalOutline = System.Drawing.Color.Empty;
-            this.btnSearchFile.OutlineThickness = 2F;
-            this.btnSearchFile.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.btnSearchFile.PressedForeColor = System.Drawing.Color.White;
-            this.btnSearchFile.PressedImageTint = System.Drawing.Color.White;
-            this.btnSearchFile.PressedOutline = System.Drawing.Color.Empty;
-            this.btnSearchFile.Rounding = new System.Windows.Forms.Padding(5);
-            this.btnSearchFile.Size = new System.Drawing.Size(179, 39);
-            this.btnSearchFile.TabIndex = 17;
-            this.btnSearchFile.TextAutoCenter = false;
-            this.btnSearchFile.TextOffset = new System.Drawing.Point(15, 0);
-            this.btnSearchFile.Click += new System.EventHandler(this.btnSearchFile_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // cbbSet
+            // 
+            this.cbbSet.DataSource = null;
+            this.cbbSet.FillColor = System.Drawing.Color.White;
+            this.cbbSet.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.cbbSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cbbSet.ItemHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.cbbSet.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbbSet.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.cbbSet.Location = new System.Drawing.Point(183, 241);
+            this.cbbSet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbbSet.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbbSet.Name = "cbbSet";
+            this.cbbSet.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbbSet.Size = new System.Drawing.Size(150, 29);
+            this.cbbSet.SymbolSize = 24;
+            this.cbbSet.TabIndex = 20;
+            this.cbbSet.Text = "uiComboBox1";
+            this.cbbSet.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbbSet.Watermark = "";
+            // 
+            // pictbSourceImage
+            // 
+            this.pictbSourceImage.Image = ((System.Drawing.Image)(resources.GetObject("pictbSourceImage.Image")));
+            this.pictbSourceImage.Location = new System.Drawing.Point(68, 22);
+            this.pictbSourceImage.Name = "pictbSourceImage";
+            this.pictbSourceImage.Size = new System.Drawing.Size(120, 118);
+            this.pictbSourceImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictbSourceImage.TabIndex = 14;
+            this.pictbSourceImage.TabStop = false;
+            this.pictbSourceImage.Click += new System.EventHandler(this.pictbSourceImage_Click);
+            // 
+            // sataButton1
+            // 
+            this.sataButton1.ButtonText = "Store";
+            this.sataButton1.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.sataButton1.CheckedForeColor = System.Drawing.Color.White;
+            this.sataButton1.CheckedImageTint = System.Drawing.Color.White;
+            this.sataButton1.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.sataButton1.CustomDialogResult = System.Windows.Forms.DialogResult.None;
+            this.sataButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sataButton1.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.sataButton1.HoverForeColor = System.Drawing.Color.White;
+            this.sataButton1.HoverImage = null;
+            this.sataButton1.HoverImageTint = System.Drawing.Color.White;
+            this.sataButton1.HoverOutline = System.Drawing.Color.Empty;
+            this.sataButton1.Image = global::GUI.Properties.Resources.report;
+            this.sataButton1.ImageAutoCenter = false;
+            this.sataButton1.ImageExpand = new System.Drawing.Point(0, 0);
+            this.sataButton1.ImageOffset = new System.Drawing.Point(15, 0);
+            this.sataButton1.ImageTint = System.Drawing.Color.White;
+            this.sataButton1.IsToggleButton = false;
+            this.sataButton1.IsToggled = false;
+            this.sataButton1.Location = new System.Drawing.Point(6, 152);
+            this.sataButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.sataButton1.Name = "sataButton1";
+            this.sataButton1.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.sataButton1.NormalForeColor = System.Drawing.Color.WhiteSmoke;
+            this.sataButton1.NormalOutline = System.Drawing.Color.Empty;
+            this.sataButton1.OutlineThickness = 2F;
+            this.sataButton1.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.sataButton1.PressedForeColor = System.Drawing.Color.White;
+            this.sataButton1.PressedImageTint = System.Drawing.Color.White;
+            this.sataButton1.PressedOutline = System.Drawing.Color.Empty;
+            this.sataButton1.Rounding = new System.Windows.Forms.Padding(5);
+            this.sataButton1.Size = new System.Drawing.Size(242, 62);
+            this.sataButton1.TabIndex = 7;
+            this.sataButton1.TextAutoCenter = false;
+            this.sataButton1.TextOffset = new System.Drawing.Point(15, 0);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1282, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(81, 96);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // UserSetting
             // 
@@ -687,12 +684,12 @@
             this.Load += new System.EventHandler(this.UserSetting_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictbSourceImage)).EndInit();
             this.pane.ResumeLayout(false);
             this.pane.PerformLayout();
             this.sataPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictbSourceImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -715,7 +712,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private Sunny.UI.UITextBox txtAddress;
-        private Sunny.UI.UITextBox txtGioitinh;
         private Sunny.UI.UITextBox txtPass;
         private Sunny.UI.UITextBox txtUser;
         private SATAUiFramework.SATAPanel sataPanel1;
@@ -732,5 +728,6 @@
         private Sunny.UI.UIDatePicker datepBirth;
         private FrameworkTest.SATAButton btnSearchFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Sunny.UI.UIComboBox cbbSet;
     }
 }

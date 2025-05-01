@@ -149,7 +149,7 @@ namespace GUI.UserControl
                 pictureBox.TabIndex = 0;
                 pictureBox.TabStop = false;
 
-                //// --- Tạo Label Tên sản phẩm ---
+                // --- Tạo Label Tên sản phẩm ---
                 //var labelName = new Label();
                 //labelName.AutoSize = true; // Tự động điều chỉnh kích thước label theo text
                 //labelName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

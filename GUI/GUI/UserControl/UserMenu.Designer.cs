@@ -37,21 +37,16 @@
             this.sataTextBox1 = new SATATextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.sataButton5 = new FrameworkTest.SATAButton();
             this.sataButton4 = new FrameworkTest.SATAButton();
             this.sataButton3 = new FrameworkTest.SATAButton();
-            this.sataButton2 = new FrameworkTest.SATAButton();
             this.sataButton1 = new FrameworkTest.SATAButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -157,14 +152,10 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.sataButton5);
             this.panel2.Controls.Add(this.sataButton4);
             this.panel2.Controls.Add(this.sataButton3);
-            this.panel2.Controls.Add(this.sataButton2);
             this.panel2.Controls.Add(this.sataButton1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1065, 110);
@@ -172,44 +163,12 @@
             this.panel2.Size = new System.Drawing.Size(298, 787);
             this.panel2.TabIndex = 1;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(29, 102);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(231, 26);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "16.000.000.000 VNDC";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(202, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(29, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 26);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Số dư:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(29, 22);
+            this.label2.Location = new System.Drawing.Point(55, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 26);
             this.label2.TabIndex = 12;
@@ -274,7 +233,7 @@
             this.sataButton4.ImageTint = System.Drawing.Color.White;
             this.sataButton4.IsToggleButton = false;
             this.sataButton4.IsToggled = false;
-            this.sataButton4.Location = new System.Drawing.Point(12, 321);
+            this.sataButton4.Location = new System.Drawing.Point(12, 258);
             this.sataButton4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sataButton4.Name = "sataButton4";
             this.sataButton4.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
@@ -328,44 +287,6 @@
             this.sataButton3.TabIndex = 9;
             this.sataButton3.TextAutoCenter = false;
             this.sataButton3.TextOffset = new System.Drawing.Point(15, 0);
-            // 
-            // sataButton2
-            // 
-            this.sataButton2.ButtonText = "Chức năng khác";
-            this.sataButton2.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.sataButton2.CheckedForeColor = System.Drawing.Color.White;
-            this.sataButton2.CheckedImageTint = System.Drawing.Color.White;
-            this.sataButton2.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.sataButton2.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.sataButton2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sataButton2.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.sataButton2.HoverForeColor = System.Drawing.Color.White;
-            this.sataButton2.HoverImage = null;
-            this.sataButton2.HoverImageTint = System.Drawing.Color.White;
-            this.sataButton2.HoverOutline = System.Drawing.Color.Empty;
-            this.sataButton2.Image = ((System.Drawing.Image)(resources.GetObject("sataButton2.Image")));
-            this.sataButton2.ImageAutoCenter = false;
-            this.sataButton2.ImageExpand = new System.Drawing.Point(0, 0);
-            this.sataButton2.ImageOffset = new System.Drawing.Point(15, 0);
-            this.sataButton2.ImageTint = System.Drawing.Color.White;
-            this.sataButton2.IsToggleButton = false;
-            this.sataButton2.IsToggled = false;
-            this.sataButton2.Location = new System.Drawing.Point(12, 247);
-            this.sataButton2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.sataButton2.Name = "sataButton2";
-            this.sataButton2.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.sataButton2.NormalForeColor = System.Drawing.Color.WhiteSmoke;
-            this.sataButton2.NormalOutline = System.Drawing.Color.Empty;
-            this.sataButton2.OutlineThickness = 2F;
-            this.sataButton2.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.sataButton2.PressedForeColor = System.Drawing.Color.White;
-            this.sataButton2.PressedImageTint = System.Drawing.Color.White;
-            this.sataButton2.PressedOutline = System.Drawing.Color.Empty;
-            this.sataButton2.Rounding = new System.Windows.Forms.Padding(5);
-            this.sataButton2.Size = new System.Drawing.Size(253, 62);
-            this.sataButton2.TabIndex = 8;
-            this.sataButton2.TextAutoCenter = false;
-            this.sataButton2.TextOffset = new System.Drawing.Point(15, 0);
             // 
             // sataButton1
             // 
@@ -435,7 +356,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -450,15 +370,11 @@
         private Sunny.UI.UIButton btndecrea;
         private Sunny.UI.UIButton btnIncrea;
         private SATATextBox sataTextBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private FrameworkTest.SATAButton sataButton5;
         private FrameworkTest.SATAButton sataButton4;
         private FrameworkTest.SATAButton sataButton3;
-        private FrameworkTest.SATAButton sataButton2;
         private FrameworkTest.SATAButton sataButton1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBox1;
     }
