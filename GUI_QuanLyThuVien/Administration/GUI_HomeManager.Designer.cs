@@ -43,12 +43,13 @@
             this.guna2CirclePictureBoxAdm = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lbnameRole = new System.Windows.Forms.Label();
             this.lbname = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.sataEllipseControl1 = new SATAUiFramework.Controls.SATAEllipseControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.guna2TabControlMain.SuspendLayout();
             this.tabPageSach.SuspendLayout();
             this.tabPagePhieu.SuspendLayout();
@@ -67,6 +68,7 @@
             this.guna2TabControlMain.Controls.Add(this.tabPagePhieu);
             this.guna2TabControlMain.Controls.Add(this.tabPageDocGia);
             this.guna2TabControlMain.Controls.Add(this.tabPageThuThu);
+            this.guna2TabControlMain.Controls.Add(this.tabPage2);
             this.guna2TabControlMain.Controls.Add(this.tabAdmin);
             this.guna2TabControlMain.Controls.Add(this.tabPage1);
             this.guna2TabControlMain.ItemSize = new System.Drawing.Size(180, 40);
@@ -103,7 +105,7 @@
             this.tabPageSach.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageSach.Size = new System.Drawing.Size(1665, 799);
             this.tabPageSach.TabIndex = 0;
-            this.tabPageSach.Text = "Sách";
+            this.tabPageSach.Text = "Quản Lý Sách";
             // 
             // panelSach
             // 
@@ -121,7 +123,7 @@
             this.tabPagePhieu.Padding = new System.Windows.Forms.Padding(3);
             this.tabPagePhieu.Size = new System.Drawing.Size(1665, 799);
             this.tabPagePhieu.TabIndex = 1;
-            this.tabPagePhieu.Text = "Phiếu Mượn";
+            this.tabPagePhieu.Text = "Quản Lý Phiếu Mượn";
             this.tabPagePhieu.UseVisualStyleBackColor = true;
             // 
             // panelPhieuMuon
@@ -140,7 +142,7 @@
             this.tabPageDocGia.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageDocGia.Size = new System.Drawing.Size(1665, 799);
             this.tabPageDocGia.TabIndex = 2;
-            this.tabPageDocGia.Text = "Độc Giả";
+            this.tabPageDocGia.Text = "Quản Lý Độc Giả";
             this.tabPageDocGia.UseVisualStyleBackColor = true;
             // 
             // panelDocGia
@@ -159,7 +161,7 @@
             this.tabPageThuThu.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageThuThu.Size = new System.Drawing.Size(1665, 799);
             this.tabPageThuThu.TabIndex = 3;
-            this.tabPageThuThu.Text = "Thủ Thư";
+            this.tabPageThuThu.Text = "Quản Lý Thủ Thư";
             this.tabPageThuThu.UseVisualStyleBackColor = true;
             // 
             // panelThuThu
@@ -220,6 +222,16 @@
             this.lbname.TabIndex = 1;
             this.lbname.Text = "admin";
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(184, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1665, 799);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "Kiểm tra đăng nhập";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.RosyBrown;
@@ -265,15 +277,14 @@
             this.sataEllipseControl1.CornerRadius = 35;
             this.sataEllipseControl1.TargetControl = this;
             // 
-            // tabPage1
+            // tabPage2
             // 
-            this.tabPage1.Location = new System.Drawing.Point(184, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1665, 799);
-            this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "Kiểm tra đăng nhập";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage2.Location = new System.Drawing.Point(184, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(1665, 799);
+            this.tabPage2.TabIndex = 6;
+            this.tabPage2.Text = "Quản lý Tài khoản";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // GUI_HomeManager
             // 
@@ -323,5 +334,6 @@
         private System.Windows.Forms.Label lbname;
         private SATAUiFramework.Controls.SATAEllipseControl sataEllipseControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }

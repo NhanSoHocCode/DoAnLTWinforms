@@ -7,6 +7,7 @@ using DTO_QuanLyThuVien;
 using DAL_QuanLyThuVien;
 using System.Net.Mail;
 using System.Net;
+using System.Data;
 
 namespace BLL_QuanLyThuVien
 {
@@ -49,6 +50,11 @@ namespace BLL_QuanLyThuVien
         public string LuuThoiGianLogin(string username, DateTime time)
         {
             return dal_taikhoan.LuuThoiGianDangNhap(username, time);
+        }
+        public DataTable LayThoiGianLogin(string username)
+        {
+            return null;
+            //return dal_taikhoan.LayThoiGianDangNhap(username);
         }
     }
 }
