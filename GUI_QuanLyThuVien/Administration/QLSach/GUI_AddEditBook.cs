@@ -34,7 +34,8 @@ namespace GUI_QuanLyThuVien.Administration
             txtDonGia.Text = sach1.sDonGia.ToString();
             txtMaThuThu.Text = sach1.sMaThuThu.ToString();
             txtTenSach.Text = sach1.sTenSach;
-            nrudSL.Value = (decimal)sach1.sSoLuong;
+            npdSoLuong.Value = sach1.sSoLuong;
+            MessageBox.Show(sach1.sSoLuong.ToString());
             txtTheLoai.Text = sach1.sTheLoai;
             txtSource.Text = sach1.sSourceImange;
             DataTable dt = new DataTable();
@@ -122,7 +123,7 @@ namespace GUI_QuanLyThuVien.Administration
                 sach1.sDonGia = decimal.Parse(txtDonGia.Text);
                 sach1.sMaThuThu = int.Parse(txtMaThuThu.Text);
                 sach1.sTenSach = txtTenSach.Text;
-                sach1.sSoLuong = (int)nrudSL.Value;
+                sach1.sSoLuong = (int)npdSoLuong.Value;
                 sach1.sTheLoai = txtTheLoai.Text;
                 sach1.sSourceImange = txtSource.Text;
                 MessageBox.Show(bll_quanlysach.ThemSachMoi(sach1));
@@ -138,7 +139,7 @@ namespace GUI_QuanLyThuVien.Administration
                 sach1.sDonGia = decimal.Parse(txtDonGia.Text);
                 sach1.sMaThuThu = 2;
                 sach1.sTenSach = txtTenSach.Text;
-                sach1.sSoLuong = (int)nrudSL.Value;
+                sach1.sSoLuong = (int)npdSoLuong.Value;
                 sach1.sTheLoai = txtTheLoai.Text;
                 sach1.sSourceImange = txtSource.Text;
                 MessageBox.Show(bll_quanlysach.SuaSach(sach1));   //  xet xem du lieu da oke chua trong BLL

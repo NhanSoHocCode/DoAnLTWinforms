@@ -81,7 +81,6 @@
             this.txtEmail.Location = new System.Drawing.Point(6, 99);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "Email Address";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(318, 33);
@@ -137,7 +136,6 @@
             this.txtName.Location = new System.Drawing.Point(15, 99);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Username";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(318, 33);
@@ -158,7 +156,7 @@
             this.btnSeachTK.Name = "btnSeachTK";
             this.btnSeachTK.Size = new System.Drawing.Size(324, 37);
             this.btnSeachTK.TabIndex = 33;
-            this.btnSeachTK.Text = "Đăng Nhập";
+            this.btnSeachTK.Text = "Xác Nhận";
             this.btnSeachTK.Click += new System.EventHandler(this.btnSeachTK_Click);
             // 
             // guna2Button1

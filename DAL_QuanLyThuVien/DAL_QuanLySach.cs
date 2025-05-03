@@ -174,6 +174,25 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
+        public DataTable GetTheLoaiSach()
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_getTheLoaiSach", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                conn.Close();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public string InsertBookToCart(DTO_Sach book, int maDocGia)
         {
             SqlConnection conn = SqlConnectionData.Connect();

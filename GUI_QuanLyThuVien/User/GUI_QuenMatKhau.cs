@@ -36,13 +36,13 @@ namespace GUI_QuanLyThuVien
             int OTP = 0;
             if (bll_taikhoan.MailHopLe(txtEmail.Text))
             {
-                OTP = api.SendMailPassWord(txtEmail.Text);
+                OTP = api.SendMailPassWord(txtEmail.Text, true);
                 GUI_NhapOTPDoiMatKhau nhapOTP = new GUI_NhapOTPDoiMatKhau();
                 nhapOTP.mail = txtEmail.Text;
                 nhapOTP.OTP = OTP;
                 nhapOTP.Show();
             }
-            else MessageBox.Show("Email không hợp lệ, vui lòng nhập lại email chính xác.");
+            else MessageBox.Show("Email không hợp lệ\nVui lòng nhập lại email chính xác!");
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {

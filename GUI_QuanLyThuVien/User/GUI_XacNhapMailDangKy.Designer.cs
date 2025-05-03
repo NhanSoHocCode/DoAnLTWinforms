@@ -36,8 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnclose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -146,8 +146,18 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(373, 35);
+            this.panel2.Size = new System.Drawing.Size(380, 35);
             this.panel2.TabIndex = 8;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(345, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(35, 35);
+            this.guna2ControlBox1.TabIndex = 8;
             // 
             // label4
             // 
@@ -160,23 +170,13 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Xác Nhận Mail Đăng Ký";
             // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(338, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(35, 35);
-            this.guna2ControlBox1.TabIndex = 8;
-            // 
             // GUI_XacNhapMailDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.xac_nhan_emailll_4x;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(373, 430);
+            this.ClientSize = new System.Drawing.Size(380, 426);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;

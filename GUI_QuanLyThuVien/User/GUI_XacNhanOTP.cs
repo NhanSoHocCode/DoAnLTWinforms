@@ -17,6 +17,7 @@ namespace GUI_QuanLyThuVien.User
     public partial class GUI_XacNhanOTP : Form
     {
         BLL_TaiKhoan bll_taikhoan = new BLL_TaiKhoan();
+
         public string mail;
         public int OTP;
         public int countdown;

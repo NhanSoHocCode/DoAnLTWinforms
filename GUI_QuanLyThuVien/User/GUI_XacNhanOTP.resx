@@ -139,7 +139,7 @@
     <value>guna2ControlBox1</value>
   </data>
   <data name="&gt;&gt;guna2ControlBox1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ControlBox, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2ControlBox, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2ControlBox1.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -286,7 +286,7 @@
     <value>txtOTP</value>
   </data>
   <data name="&gt;&gt;txtOTP.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtOTP.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -307,13 +307,13 @@
     <value>17</value>
   </data>
   <data name="btnNext.Text" xml:space="preserve">
-    <value>Đăng Nhập</value>
+    <value>Xác Nhận</value>
   </data>
   <data name="&gt;&gt;btnNext.Name" xml:space="preserve">
     <value>btnNext</value>
   </data>
   <data name="&gt;&gt;btnNext.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;btnNext.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -373,7 +373,7 @@
     <value>guna2DragControl1</value>
   </data>
   <data name="&gt;&gt;guna2DragControl1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DragControl, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2DragControl, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>GUI_XacNhanOTP</value>

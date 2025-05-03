@@ -105,7 +105,6 @@
             this.txtOTP.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtOTP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOTP.Name = "txtOTP";
-            this.txtOTP.PasswordChar = '\0';
             this.txtOTP.PlaceholderText = "Nhập OTP";
             this.txtOTP.SelectedText = "";
             // 

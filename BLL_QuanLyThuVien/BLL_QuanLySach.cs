@@ -65,5 +65,9 @@ namespace BLL_QuanLyThuVien
         {
             return dal_QuanLySach.DelBookToCart(maSach, maDocGia);
         }
+        public DataTable GetTheLoaiSach()
+        {
+            return dal_QuanLySach.GetTheLoaiSach();
+        }
     }
 }

@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtMaThuThu = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.nrudSL = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnOK = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearchFile = new Guna.UI2.WinForms.Guna2Button();
             this.txtSource = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,8 +47,8 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.npdSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nrudSL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
@@ -57,14 +56,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npdSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
+            this.panel1.Controls.Add(this.npdSoLuong);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.txtMaThuThu);
-            this.panel1.Controls.Add(this.nrudSL);
             this.panel1.Controls.Add(this.btnOK);
             this.panel1.Controls.Add(this.btnSearchFile);
             this.panel1.Controls.Add(this.txtSource);
@@ -118,22 +118,6 @@
             this.txtMaThuThu.Name = "txtMaThuThu";
             this.txtMaThuThu.Size = new System.Drawing.Size(77, 36);
             this.txtMaThuThu.TabIndex = 36;
-            // 
-            // nrudSL
-            // 
-            this.nrudSL.AutoRoundedCorners = true;
-            this.nrudSL.BackColor = System.Drawing.Color.Transparent;
-            this.nrudSL.BorderRadius = 15;
-            this.nrudSL.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nrudSL.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nrudSL.Location = new System.Drawing.Point(346, 203);
-            this.nrudSL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.nrudSL.Name = "nrudSL";
-            this.nrudSL.Size = new System.Drawing.Size(86, 33);
-            this.nrudSL.TabIndex = 35;
-            this.nrudSL.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.nrudSL.UseTransparentBackground = true;
-            this.nrudSL.ValueChanged += new System.EventHandler(this.guna2NumericUpDown1_ValueChanged);
             // 
             // btnOK
             // 
@@ -395,6 +379,19 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // npdSoLuong
+            // 
+            this.npdSoLuong.BackColor = System.Drawing.Color.Transparent;
+            this.npdSoLuong.BorderRadius = 20;
+            this.npdSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.npdSoLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.npdSoLuong.Location = new System.Drawing.Point(343, 192);
+            this.npdSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.npdSoLuong.Name = "npdSoLuong";
+            this.npdSoLuong.Size = new System.Drawing.Size(92, 41);
+            this.npdSoLuong.TabIndex = 37;
+            this.npdSoLuong.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            // 
             // GUI_AddEditBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -408,7 +405,6 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.GUI_AddEditBook_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nrudSL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
@@ -416,6 +412,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npdSoLuong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -438,8 +435,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTenSach;
         private Guna.UI2.WinForms.Guna2Button btnOK;
         private Guna.UI2.WinForms.Guna2Button btnSearchFile;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nrudSL;
         private Guna.UI2.WinForms.Guna2ComboBox txtMaThuThu;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown npdSoLuong;
     }
 }

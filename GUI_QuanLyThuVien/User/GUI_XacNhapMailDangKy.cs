@@ -21,6 +21,7 @@ namespace GUI_QuanLyThuVien.User
         public API_XacThucMail api = new API_XacThucMail();
         public GUI_XacNhapMailDangKy()
         {
+            InitializeComponent();
         }
         
         private void btnclose_Click(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace GUI_QuanLyThuVien.User
             else  // them truong hop nhap mail khong hop le neu kh co duoi @gmail.com
                   // va them chuc nang trong qua trinh nhap hien do neu mail kh hop le !!!!
             {
-                int OTP = api.SendMailPassWord(txtEmail.Text);
+                int OTP = api.SendMailPassWord(txtEmail.Text, false);
                 if (OTP == 0)
                 {
                     MessageBox.Show("Email không tồn tại hoặc không hợp lệ!");

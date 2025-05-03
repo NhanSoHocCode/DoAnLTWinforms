@@ -125,7 +125,7 @@
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(268, 37);
             this.btnOK.TabIndex = 17;
-            this.btnOK.Text = "Đăng Nhập";
+            this.btnOK.Text = "Xác Nhận";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // txtOTP
@@ -144,7 +144,6 @@
             this.txtOTP.Location = new System.Drawing.Point(121, 126);
             this.txtOTP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOTP.Name = "txtOTP";
-            this.txtOTP.PasswordChar = '\0';
             this.txtOTP.PlaceholderText = "Nhập OTP";
             this.txtOTP.SelectedText = "";
             this.txtOTP.Size = new System.Drawing.Size(156, 33);

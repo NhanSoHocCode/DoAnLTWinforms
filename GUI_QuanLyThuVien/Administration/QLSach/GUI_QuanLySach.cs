@@ -26,7 +26,7 @@ namespace GUI_QuanLyThuVien
         BLL_QuanLySach bll = new BLL_QuanLySach();
         public String Function = "";
 
-        private void AddBookToPanel0(string imagePath, string bookID, string title, string author, string publisher, string price, string category, string librarianID)
+        private void AddBookToPanel0(string imagePath, string bookID, string title, string author, string publisher, string price, string category, string librarianID, int SoLuong)
         {
             DTO_Sach sach = new DTO_Sach();
             sach.sSourceImange = Path.GetFileName(imagePath);
@@ -37,6 +37,7 @@ namespace GUI_QuanLyThuVien
             sach.sDonGia = decimal.Parse(price);
             sach.sTheLoai = category;
             sach.sMaThuThu = int.Parse(librarianID);
+            sach.sSoLuong = SoLuong;
             // Tạo Panel chứa sách
             Panel bookPanel = new Panel();
             bookPanel.Size = new Size(225, 350);
@@ -122,6 +123,12 @@ namespace GUI_QuanLyThuVien
         private void GUI_QuanLySach_Load(object sender, EventArgs e)
         {
 
+            DataTable dtTL = new DataTable();
+            dtTL = bll.GetTheLoaiSach();
+            foreach (DataRow dr in dtTL.Rows)
+            {
+                cbbChooseTheLoai.Items.Add(dr["theLoai"].ToString());
+            }
             flowLayoutPanelMain.Controls.Clear();
             DataTable dt = new DataTable();
             dt = bll.XemDanhSachToanBoSach();
@@ -139,10 +146,10 @@ namespace GUI_QuanLyThuVien
                 string MTT = dt.Rows[i]["Mã Thủ Thư"].ToString();
                 string img = "D:\\K25_Project_LTWinform\\DoAn\\images\\" + dt.Rows[i]["Source Image"].ToString();
                 img.Split(' ');
-                AddBookToPanel(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT);
+                AddBookToPanel(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT, int.Parse(soLuong));
             }
         }
-        private void AddBookToPanel(string imagePath, string bookID, string title, string author, string publisher, string price, string category, string librarianID)
+        private void AddBookToPanel(string imagePath, string bookID, string title, string author, string publisher, string price, string category, string librarianID, int soLuong)
         {
             DTO_Sach sach = new DTO_Sach();
             sach.sSourceImange = Path.GetFileName(imagePath);
@@ -153,6 +160,7 @@ namespace GUI_QuanLyThuVien
             sach.sDonGia = decimal.Parse(price);
             sach.sTheLoai = category;
             sach.sMaThuThu = int.Parse(librarianID);
+            sach.sSoLuong = soLuong;
             // Tạo SATAPanel cho sách
             var sataPanel = new SATAUiFramework.SATAPanel();
             sataPanel.Size = new Size(225, 350);
@@ -331,7 +339,7 @@ namespace GUI_QuanLyThuVien
                 string MTT = dt.Rows[i]["maThuThu"].ToString();
                 string img = "D:\\K25_Project_LTWinform\\DoAn\\images\\" + dt.Rows[i]["source_image"].ToString();
                 img.Split(' ');
-                AddBookToPanel(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT);
+                AddBookToPanel(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT, int.Parse(soLuong));
             }
         }
 
@@ -357,6 +365,30 @@ namespace GUI_QuanLyThuVien
             GUI_AddEditBook form = new GUI_AddEditBook();
             form.Add = true;
             form.Show();
+        }
+
+        private void cbbChooseTheLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanelMain.Controls.Clear();
+            DataTable dt = new DataTable();
+            dt = bll.XemDanhSachToanBoSach();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string theLoai = dt.Rows[i]["Thể Loại"].ToString();
+                if (theLoai == cbbChooseTheLoai.Text)
+                {
+                    string maSach = dt.Rows[i]["Mã Sách"].ToString();
+                    string tacGia = dt.Rows[i]["Tác Giả"].ToString();
+                    string tenSach = dt.Rows[i]["Tên Sách"].ToString();
+                    string NXB = dt.Rows[i]["Nhà Xuất Bản"].ToString();
+                    string donGia = dt.Rows[i]["Đơn Giá"].ToString();
+                    string soLuong = dt.Rows[i]["Số Lượng"].ToString();
+                    string MTT = dt.Rows[i]["Mã Thủ Thư"].ToString();
+                    string img = "D:\\K25_Project_LTWinform\\DoAn\\images\\" + dt.Rows[i]["Source Image"].ToString();
+                    img.Split(' ');
+                    AddBookToPanel(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT, int.Parse(soLuong));
+                }
+            }
         }
     }
 
