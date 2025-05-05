@@ -25,18 +25,23 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
         public DTO_Person person;
         public BLL_QuanLyThuThu bll_QuanLyThuThu = new BLL_QuanLyThuThu();
         public BLL_QuanLyDocGia bll_QuanLyDocGia = new BLL_QuanLyDocGia();
+        string anhtheold = "";
+        string usernameold = "";
 
         private void GUI_ControlChiTietDocGia_Load(object sender, EventArgs e)  // mượn tạm của đọc giả 
         {
+            txtPassword.Text = person.sPassword;
             txtAddress.Text = person.sDiaChi;
             txtEmail.Text = person.sEmail;
             txtUsername.Text = person.sUsername;
+            usernameold = person.sUsername;
             txtSdt.Text = person.sSDT;
             lbHocten.Text = person.sHoTen;
             lbMa.Text = person.sMa;
             lbNgaySinh.Text = person.sNgaySinh.ToString();
             lbSet.Text = person.sGioiTinh == true ? "Nam" : "Nữ";
-            lbAnhThe.Text = person.sSourceImage;
+            anhtheold = person.sSourceImage;
+            ptbAnhThe.Image = Image.FromFile(person.sSourceImage);
         }
         public string fileNameLong;
         public string fileNameShort;
@@ -48,7 +53,7 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
             {
                 fileNameLong = openFileDialog1.FileName;
                 fileNameShort = Path.GetFileName(openFileDialog1.FileName);
-                lbAnhThe.Text = fileNameShort;
+                anhtheold = fileNameShort;
               
                 ChangeImage = true;
             }
@@ -88,167 +93,48 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
             }
         }
 
-        // Xóa ảnh từ thư mục
-        public void DelImageFromFolder(string imageFileName)
-        {
-            if (string.IsNullOrWhiteSpace(imageFileName))
-            {
-                throw new ArgumentException("Tên file không hợp lệ");
-            }
-
-            try
-            {
-                // Xác định thư mục
-                string targetFolder = DocGia
-                    ? @"D:\K25_Project_LTWinform\DoAn\images\DocGia"
-                    : @"D:\K25_Project_LTWinform\DoAn\images\ThuThu";
-
-                string filePath = Path.Combine(targetFolder, imageFileName);
-
-                // Thực hiện xóa
-                if (File.Exists(filePath))
-                {
-                    File.Delete(filePath);
-                }
-                else
-                {
-                    throw new FileNotFoundException($"File ảnh không tồn tại: {filePath}");
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Lỗi khi xóa ảnh: {ex.Message}", ex);
-            }
-        }
         
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            person.sDiaChi = txtAddress.Text;
-            person.sEmail = txtEmail.Text;
-            person.sUsername = txtUsername.Text;
-            person.sSDT = txtSdt.Text;
-            person.sNgaySinh = DateTime.Parse(lbNgaySinh.Text);
-            if (ChangeImage == true)
-            {
-                
-                SaveImageToFolder(fileNameLong);
-                DelImageFromFolder(person.sSourceImage);
-                person.sSourceImage = lbAnhThe.Text;
-            }
-            if (DocGia == true)
-            {
-                MessageBox.Show(bll_QuanLyDocGia.EditDocGia(person));  
-            } else
-            {
-                MessageBox.Show(bll_QuanLyThuThu.EditThuThu(person));
-            }
+            
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
+
             if (DocGia != true)
             {
-                MessageBox.Show(bll_QuanLyThuThu.DelThuThu(person.sMa));
-            } else
-            {
-                MessageBox.Show(bll_QuanLyDocGia.DelDocGia(person.sMa));
-            }
-        }
+                DialogResult result = MessageBox.Show(
+                    $"Bạn có chắc chắn muốn xóa độc giả {person.sHoTen}?",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbNgaySinh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbMa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbHocten_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbSet_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSdt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddress_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            person.sDiaChi = txtAddress.Text;
-            person.sEmail = txtEmail.Text;
-            person.sUsername = txtUsername.Text;
-            person.sSDT = txtSdt.Text;
-            person.sNgaySinh = DateTime.Parse(lbNgaySinh.Text);
-            if (ChangeImage == true)
-            {
-
-                SaveImageToFolder(fileNameLong);
-                DelImageFromFolder(person.sSourceImage);
-                person.sSourceImage = lbAnhThe.Text;
-            }
-            if (DocGia == true)
-            {
-                MessageBox.Show(bll_QuanLyDocGia.EditDocGia(person));
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show(bll_QuanLyThuThu.DelThuThu(person.sMa));
+                }
             }
             else
             {
-                MessageBox.Show(bll_QuanLyThuThu.EditThuThu(person));
+                DialogResult result = MessageBox.Show(
+                    $"Bạn có chắc chắn muốn xóa thủ thư {person.sHoTen}?",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show(bll_QuanLyDocGia.DelDocGia(person.sMa));
+                }
             }
+
         }
+
+
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
@@ -268,13 +154,42 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
             {
                 fileNameLong = openFileDialog1.FileName;
                 fileNameShort = Path.GetFileName(openFileDialog1.FileName);
-                lbAnhThe.Text = fileNameShort;
-
+                anhtheold = fileNameShort;
+                ptbAnhThe.Image = Image.FromFile(fileNameLong);
                 ChangeImage = true;
             }
             else
             {
                 MessageBox.Show("Bạn chưa chọn file.");
+            }
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            person.sDiaChi = txtAddress.Text;
+            person.sEmail = txtEmail.Text;
+            person.sUsername = txtUsername.Text;
+            person.sSDT = txtSdt.Text;
+            person.sNgaySinh = DateTime.Parse(lbNgaySinh.Text);
+            person.sHoTen = lbHocten.Text;
+            person.sGioiTinh = lbSet.Text == "Nam" ? true : false;
+            person.sPassword = txtPassword.Text;
+            if (ChangeImage == true)
+            {
+                SaveImageToFolder(fileNameLong);
+                //string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\DocGia\\" + anhtheold;
+                //ptbAnhThe.Image?.Dispose();
+                //ptbAnhThe.Image = null;
+                //File.Delete(person.sSourceImage);
+                person.sSourceImage = anhtheold;
+            }
+            if (DocGia == true)
+            {
+                MessageBox.Show(bll_QuanLyDocGia.UpdateDocGia(person, usernameold));
+            }
+            else
+            {
+                MessageBox.Show(bll_QuanLyThuThu.EditThuThu(person));
             }
         }
     }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_QuanLyThuVien;
 using DTO_QuanLyThuVien;
+using GUI_QuanLyThuVien.Administration.QLDocGia;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 namespace GUI_QuanLyThuVien.Administration
 {
@@ -25,8 +26,9 @@ namespace GUI_QuanLyThuVien.Administration
             flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                
-                string imagePath = "D:\\K25_Project_LTWinform\\DoAn\\images\\DocGia\\" + dt.Rows[i]["anhthe"].ToString();
+
+                string imagePath = "D:\\K25_Project_LTWinform\\DoAn\\images\\DocGia\\" + dt.Rows[i]["anhThe"].ToString();
+        
                 string IDDocGia = dt.Rows[i]["maDocGia"].ToString();
                 string name = dt.Rows [i]["username"].ToString();
                 string email = dt.Rows[i]["email"].ToString();
@@ -35,13 +37,12 @@ namespace GUI_QuanLyThuVien.Administration
                 string fullName = dt.Rows[i]["hoTen"].ToString();
                 string DOB = Convert.ToDateTime(dt.Rows[i]["ngaySinh"]).ToString("dd/MM/yyyy");
                 string gioiTinh = "Nữ";
+                string password = dt.Rows[i]["password"].ToString();
                 if (dt.Rows[i]["gioiTinh"].ToString() == "True")
                 {
                     gioiTinh = "Nam";
                 }
-
-                AddDocGiaToPanel(imagePath, IDDocGia, name, email, phone, diaChi, fullName, DOB, gioiTinh);
-
+                AddDocGiaToPanel(imagePath, IDDocGia, name, email, phone, diaChi, fullName, DOB, gioiTinh, password);
             }
         }
 
@@ -60,23 +61,12 @@ namespace GUI_QuanLyThuVien.Administration
         private void button1_Click(object sender, EventArgs e)
         {
             LoadListDocGia();
-        }
-
-       
-
-        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            DataTable dt = new DataTable();
-            dt = bll_QuanLyDocGia.SearchDocGia(txtSearch.Text);
-            LoadListDG(dt);
-        }
-    
-        
-        private void AddDocGiaToPanel(string imagePath, string IDDocGia, string name, string email, string phone, string diaChi, string fullName, string DOB, string gioiTinh)
+        }     
+        private void AddDocGiaToPanel(string imagePath, string IDDocGia, string name, string email, string phone, string diaChi, string fullName, string DOB, string gioiTinh, string password)
         {
 
             var sataPanel = new SATAUiFramework.SATAPanel();
-            sataPanel.Size = new Size(350, 150);
+            sataPanel.Size = new Size(350, 170);
             sataPanel.BackColor = Color.RosyBrown;
             sataPanel.BackColor2 = Color.RosyBrown;
             sataPanel.Margin = new Padding(10);
@@ -96,7 +86,7 @@ namespace GUI_QuanLyThuVien.Administration
             avatar.Location = new Point(10, 10);
             sataPanel.Controls.Add(avatar);
 
-            int left = 120; // khoảng cách trái cho các label
+            int left = 120;
 
             // Label: Họ tên
             Label lblName = new Label();
@@ -118,7 +108,7 @@ namespace GUI_QuanLyThuVien.Administration
             lblEmail.Size = new Size(220, 20);
             sataPanel.Controls.Add(lblEmail);
 
-            // Số điện thoại
+            // SĐT
             Label lblPhone = new Label();
             lblPhone.Text = "SĐT: " + phone;
             lblPhone.ForeColor = Color.White;
@@ -138,14 +128,6 @@ namespace GUI_QuanLyThuVien.Administration
             lblAddress.Size = new Size(220, 20);
             sataPanel.Controls.Add(lblAddress);
 
-            Label lblDocGia = new Label();
-            lblDocGia.Text = "Mã độc giả: " + IDDocGia;
-            lblDocGia.ForeColor = Color.White;
-            lblDocGia.Font = new Font("Segoe UI", 9);
-            lblDocGia.BackColor = Color.Transparent;
-            lblDocGia.Location = new Point(left, 115);
-            sataPanel.Controls.Add(lblDocGia);
-
             // Ngày sinh & Giới tính
             Label lblDOBGender = new Label();
             lblDOBGender.Text = $"Ngày sinh: {DOB}   |   Giới tính: {gioiTinh}";
@@ -156,30 +138,93 @@ namespace GUI_QuanLyThuVien.Administration
             lblDOBGender.Size = new Size(230, 20);
             sataPanel.Controls.Add(lblDOBGender);
 
-            // Nút chi tiết
+            // Mã độc giả
+            Label lblDocGia = new Label();
+            lblDocGia.Text = "Mã độc giả: " + IDDocGia;
+            lblDocGia.ForeColor = Color.White;
+            lblDocGia.Font = new Font("Segoe UI", 9);
+            lblDocGia.BackColor = Color.Transparent;
+            lblDocGia.Location = new Point(left, 115);
+            lblDocGia.Size = new Size(150, 20);
+            sataPanel.Controls.Add(lblDocGia);
+
+            // Nút Sửa
             Button btnDetail = new Button();
             btnDetail.Text = "Sửa";
-            btnDetail.ForeColor = Color.FromArgb(0, 255, 128);
+            btnDetail.ForeColor = Color.White;
+            btnDetail.BackColor = Color.Teal;
             btnDetail.FlatStyle = FlatStyle.Flat;
-            btnDetail.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 128);
-            btnDetail.FlatAppearance.BorderSize = 1;
-            btnDetail.Size = new Size(80, 30);
-            btnDetail.Location = new Point(260, 115);
+            btnDetail.FlatAppearance.BorderSize = 0;
+            btnDetail.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            btnDetail.Cursor = Cursors.Hand;
+            btnDetail.Size = new Size(60, 25);
+            btnDetail.Location = new Point(190, 140);
             sataPanel.Controls.Add(btnDetail);
 
-            // Gán sự kiện cho nút (nếu muốn)
-            btnDetail.Click += (s, e) =>
-            {
+         
+            // Nút Xóa
+            Button btnXoa = new Button();
+            btnXoa.Text = "Xóa";
+            btnXoa.ForeColor = Color.White;
+            btnXoa.BackColor = Color.Teal;
+            btnXoa.FlatStyle = FlatStyle.Flat;
+            btnXoa.FlatAppearance.BorderSize = 0;
+            btnXoa.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            btnXoa.Cursor = Cursors.Hand;
+            btnXoa.Size = new Size(60, 25);
+            btnXoa.Location = new Point(260, 140); 
+            sataPanel.Controls.Add(btnXoa);
 
+            btnDetail.Click += (sender, e) =>
+            {
+                GUI_ControlChiTietDocGia controlChiTietDocGia = new GUI_ControlChiTietDocGia();
+                controlChiTietDocGia.person = new DTO_Person()
+                {
+                    sMa = IDDocGia,
+                    sHoTen = fullName,
+                    sGioiTinh = gioiTinh == "Nam" ? true : false,
+                    sSDT = phone,
+                    sEmail = email,
+                    sDiaChi = diaChi,
+                    sUsername = name,
+                    sSourceImage = imagePath,
+                    sNgaySinh = DateTime.Parse(DOB),
+                    sPassword = password
+                };
+                controlChiTietDocGia.DocGia = true;
+                controlChiTietDocGia.Add = false;
+                controlChiTietDocGia.ShowDialog();
+            };
+            btnXoa.Click += (sender, e) =>
+            {
+                DialogResult result = MessageBox.Show(
+                    $"Bạn có chắc muốn xóa độc giả '{fullName}'?",
+                    "Xác nhận xóa",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show(bll_QuanLyDocGia.DelDocGia(IDDocGia));
+                    flowLayoutPanel1.Controls.Remove(sataPanel);
+                }
             };
 
-            // Thêm vào flowLayoutPanel
+
+            // Thêm panel vào flow layout
             flowLayoutPanel1.Controls.Add(sataPanel);
+
         }
 
         private void btnLoadList_Click(object sender, EventArgs e)
         {
             LoadListDocGia();
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            DataTable dt = bll_QuanLyDocGia.SearchDocGia(txtSearch.Text);
+            LoadListDG(dt);
         }
     }
 }

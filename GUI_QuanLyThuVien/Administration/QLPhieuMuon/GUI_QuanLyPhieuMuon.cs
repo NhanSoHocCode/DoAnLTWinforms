@@ -132,7 +132,7 @@ namespace GUI_QuanLyThuVien.Administration
                     pm.sTenDocGia = guna2DGV1.Rows[e.RowIndex].Cells[4].Value?.ToString();
                     GUI_EditPhieuMuon form = new GUI_EditPhieuMuon();
                     form.pm = pm;
-                    form.Show();
+                    form.ShowDialog();
                 }
             }
             else if (Function == "Details")
@@ -146,8 +146,14 @@ namespace GUI_QuanLyThuVien.Administration
                 pm.sTenDocGia = guna2DGV1.Rows[e.RowIndex].Cells[4].Value?.ToString();
                 GUI_XemChiTietPM form = new GUI_XemChiTietPM();
                 form.pm = pm;
-                form.Show();
+                form.ShowDialog();
             }
+        }
+
+        private void guna2Button2_Click_1(object sender, EventArgs e)
+        {
+            GUI_AddPhieuMuon form = new GUI_AddPhieuMuon();
+            form.ShowDialog();
         }
     }
 }

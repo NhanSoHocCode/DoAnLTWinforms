@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\QLPhieuMuon\GUI_AddPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\QLPhieuMuon\GUI_AddPhieuMuon.Designer.cs">
+      <DependentUpon>GUI_AddPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administration\QLPhieuMuon\GUI_XemChiTietPM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </Compile>
     <EmbeddedResource Include="Administration\QLDocGia\GUI_ControlChiTietDocGia.resx">
       <DependentUpon>GUI_ControlChiTietDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\QLPhieuMuon\GUI_AddPhieuMuon.resx">
+      <DependentUpon>GUI_AddPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\QLPhieuMuon\GUI_XemChiTietPM.resx">
       <DependentUpon>GUI_XemChiTietPM.cs</DependentUpon>

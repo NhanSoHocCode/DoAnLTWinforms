@@ -49,8 +49,8 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.btnLoadList);
             this.panel1.Controls.Add(this.txtSearch);
+            this.panel1.Controls.Add(this.btnLoadList);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -61,7 +61,7 @@
             // 
             this.btnLoadList.Animated = true;
             this.btnLoadList.AutoRoundedCorners = true;
-            this.btnLoadList.BorderRadius = 27;
+            this.btnLoadList.BorderRadius = 23;
             this.btnLoadList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLoadList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLoadList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -71,7 +71,7 @@
             this.btnLoadList.ForeColor = System.Drawing.Color.White;
             this.btnLoadList.Location = new System.Drawing.Point(48, 23);
             this.btnLoadList.Name = "btnLoadList";
-            this.btnLoadList.Size = new System.Drawing.Size(130, 57);
+            this.btnLoadList.Size = new System.Drawing.Size(130, 48);
             this.btnLoadList.TabIndex = 5;
             this.btnLoadList.Text = "Xem danh sách";
             this.btnLoadList.Click += new System.EventHandler(this.btnLoadList_Click);
@@ -80,9 +80,10 @@
             // 
             this.txtSearch.Animated = true;
             this.txtSearch.AutoRoundedCorners = true;
-            this.txtSearch.BorderRadius = 16;
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderRadius = 18;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "Search";
+            this.txtSearch.DefaultText = "";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -90,13 +91,14 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(203, 36);
+            this.txtSearch.Location = new System.Drawing.Point(216, 25);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "";
+            this.txtSearch.PlaceholderText = "Search theo mã và tên độc giả ";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(523, 34);
-            this.txtSearch.TabIndex = 4;
+            this.txtSearch.Size = new System.Drawing.Size(299, 39);
+            this.txtSearch.TabIndex = 14;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // GUI_QuanLyDocGia
             // 
@@ -118,7 +120,7 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Button btnLoadList;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
     }
 }
