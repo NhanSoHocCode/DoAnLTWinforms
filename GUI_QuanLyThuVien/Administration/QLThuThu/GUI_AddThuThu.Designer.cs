@@ -38,11 +38,8 @@
             this.txtXacNhanpw = new System.Windows.Forms.TextBox();
             this.txtpw = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbanhthe = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnAddTT = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSearchFile = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -50,13 +47,17 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lbanhthe = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.picShowConfirm = new System.Windows.Forms.PictureBox();
             this.picShow = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSearchFile = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddTT = new Guna.UI2.WinForms.Guna2Button();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
@@ -167,6 +168,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.btnAddTT);
             this.panel1.Controls.Add(this.btnSearchFile);
             this.panel1.Controls.Add(this.guna2PictureBox6);
@@ -193,57 +195,49 @@
             this.panel1.Controls.Add(this.txtXacNhanpw);
             this.panel1.Controls.Add(this.txtUser);
             this.panel1.Controls.Add(this.txtpw);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(3, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(615, 459);
+            this.panel1.Size = new System.Drawing.Size(620, 463);
             this.panel1.TabIndex = 30;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // lbanhthe
+            // btnAddTT
             // 
-            this.lbanhthe.AutoSize = true;
-            this.lbanhthe.Location = new System.Drawing.Point(206, 19);
-            this.lbanhthe.Name = "lbanhthe";
-            this.lbanhthe.Size = new System.Drawing.Size(35, 20);
-            this.lbanhthe.TabIndex = 33;
-            this.lbanhthe.Text = "null";
+            this.btnAddTT.Animated = true;
+            this.btnAddTT.AutoRoundedCorners = true;
+            this.btnAddTT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddTT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddTT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddTT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnAddTT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddTT.ForeColor = System.Drawing.Color.White;
+            this.btnAddTT.Location = new System.Drawing.Point(216, 409);
+            this.btnAddTT.Name = "btnAddTT";
+            this.btnAddTT.Size = new System.Drawing.Size(180, 45);
+            this.btnAddTT.TabIndex = 43;
+            this.btnAddTT.Text = "Add";
+            this.btnAddTT.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // txtEmail
+            // btnSearchFile
             // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtEmail.Location = new System.Drawing.Point(366, 253);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(205, 23);
-            this.txtEmail.TabIndex = 30;
-            this.txtEmail.Text = "Email";
-            // 
-            // txtUser
-            // 
-            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtUser.Location = new System.Drawing.Point(373, 60);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(198, 23);
-            this.txtUser.TabIndex = 10;
-            this.txtUser.Text = "Username";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 20);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Ảnh thẻ ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.btnSearchFile.Animated = true;
+            this.btnSearchFile.AutoRoundedCorners = true;
+            this.btnSearchFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearchFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearchFile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnSearchFile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearchFile.ForeColor = System.Drawing.Color.White;
+            this.btnSearchFile.Location = new System.Drawing.Point(61, 188);
+            this.btnSearchFile.Name = "btnSearchFile";
+            this.btnSearchFile.Size = new System.Drawing.Size(180, 45);
+            this.btnSearchFile.TabIndex = 42;
+            this.btnSearchFile.Text = "Chọn từ thư viện";
+            this.btnSearchFile.Click += new System.EventHandler(this.btnSearchFile1_Click);
             // 
             // guna2PictureBox6
             // 
@@ -322,6 +316,36 @@
             this.guna2CirclePictureBox1.TabIndex = 35;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // lbanhthe
+            // 
+            this.lbanhthe.AutoSize = true;
+            this.lbanhthe.Location = new System.Drawing.Point(206, 19);
+            this.lbanhthe.Name = "lbanhthe";
+            this.lbanhthe.Size = new System.Drawing.Size(35, 20);
+            this.lbanhthe.TabIndex = 33;
+            this.lbanhthe.Text = "null";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(57, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 20);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Ảnh thẻ ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtEmail.Location = new System.Drawing.Point(366, 253);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(205, 23);
+            this.txtEmail.TabIndex = 30;
+            this.txtEmail.Text = "Email";
+            // 
             // picShowConfirm
             // 
             this.picShowConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picShowConfirm.BackgroundImage")));
@@ -377,50 +401,48 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // btnSearchFile
+            // txtUser
             // 
-            this.btnSearchFile.Animated = true;
-            this.btnSearchFile.AutoRoundedCorners = true;
-            this.btnSearchFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearchFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearchFile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.btnSearchFile.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearchFile.ForeColor = System.Drawing.Color.White;
-            this.btnSearchFile.Location = new System.Drawing.Point(61, 188);
-            this.btnSearchFile.Name = "btnSearchFile";
-            this.btnSearchFile.Size = new System.Drawing.Size(180, 45);
-            this.btnSearchFile.TabIndex = 42;
-            this.btnSearchFile.Text = "Chọn từ thư viện";
-            this.btnSearchFile.Click += new System.EventHandler(this.btnSearchFile1_Click);
+            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtUser.Location = new System.Drawing.Point(373, 60);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(198, 23);
+            this.txtUser.TabIndex = 10;
+            this.txtUser.Text = "Username";
             // 
-            // btnAddTT
+            // openFileDialog1
             // 
-            this.btnAddTT.Animated = true;
-            this.btnAddTT.AutoRoundedCorners = true;
-            this.btnAddTT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddTT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddTT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddTT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.btnAddTT.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddTT.ForeColor = System.Drawing.Color.White;
-            this.btnAddTT.Location = new System.Drawing.Point(216, 409);
-            this.btnAddTT.Name = "btnAddTT";
-            this.btnAddTT.Size = new System.Drawing.Size(180, 45);
-            this.btnAddTT.TabIndex = 43;
-            this.btnAddTT.Text = "Add";
-            this.btnAddTT.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(557, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(60, 45);
+            this.guna2Button1.TabIndex = 44;
+            this.guna2Button1.Text = "X";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
             // 
             // GUI_AddThuThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 463);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI_AddThuThu";
-            this.Text = "GUI_AddThuThu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
@@ -468,5 +490,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Button btnSearchFile;
         private Guna.UI2.WinForms.Guna2Button btnAddTT;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

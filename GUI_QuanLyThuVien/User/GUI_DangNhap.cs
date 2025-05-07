@@ -71,7 +71,7 @@ namespace GUI_QuanLyThuVien
             taikhoan.sMaQuyen = int.Parse(bll_taikhoan.LayQuyenUser(txtName.Text));
             if (taikhoan.sMaQuyen == 3)  // admin 
             {
-                GUI_HomeManager homeManager = new GUI_HomeManager();
+                GUI_HomeManager homeManager = new GUI_HomeManager(3);
                 homeManager.role = taikhoan.sMaQuyen;
                 homeManager.username = taikhoan.sTenTK;
                 // lam tu day de lay time 
@@ -101,7 +101,7 @@ namespace GUI_QuanLyThuVien
             }
             else  // thu thu 
             {
-                GUI_HomeManager homeManager = new GUI_HomeManager();
+                GUI_HomeManager homeManager = new GUI_HomeManager(2);
                 homeManager.role = taikhoan.sMaQuyen;
                 homeManager.username = taikhoan.sTenTK;
                 homeManager.Show();

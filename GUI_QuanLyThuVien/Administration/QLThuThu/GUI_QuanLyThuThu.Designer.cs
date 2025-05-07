@@ -49,9 +49,9 @@
             // 
             this.panel1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.btnaddtt);
             this.panel1.Controls.Add(this.btnListTT);
-            this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -63,7 +63,7 @@
             this.btnaddtt.Animated = true;
             this.btnaddtt.AutoRoundedCorners = true;
             this.btnaddtt.BackColor = System.Drawing.Color.Transparent;
-            this.btnaddtt.BorderRadius = 17;
+            this.btnaddtt.BorderRadius = 21;
             this.btnaddtt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnaddtt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnaddtt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -73,9 +73,9 @@
             this.btnaddtt.ForeColor = System.Drawing.Color.White;
             this.btnaddtt.Image = global::GUI_QuanLyThuVien.Properties.Resources.them;
             this.btnaddtt.ImageSize = new System.Drawing.Size(35, 20);
-            this.btnaddtt.Location = new System.Drawing.Point(453, 12);
+            this.btnaddtt.Location = new System.Drawing.Point(1004, 25);
             this.btnaddtt.Name = "btnaddtt";
-            this.btnaddtt.Size = new System.Drawing.Size(160, 37);
+            this.btnaddtt.Size = new System.Drawing.Size(179, 44);
             this.btnaddtt.TabIndex = 7;
             this.btnaddtt.Text = "Thêm thủ thư";
             this.btnaddtt.Click += new System.EventHandler(this.btnaddtt_Click_1);
@@ -85,7 +85,7 @@
             this.btnListTT.Animated = true;
             this.btnListTT.AutoRoundedCorners = true;
             this.btnListTT.BackColor = System.Drawing.Color.Transparent;
-            this.btnListTT.BorderRadius = 17;
+            this.btnListTT.BorderRadius = 21;
             this.btnListTT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnListTT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnListTT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -94,9 +94,9 @@
             this.btnListTT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnListTT.ForeColor = System.Drawing.Color.White;
             this.btnListTT.Image = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
-            this.btnListTT.Location = new System.Drawing.Point(196, 12);
+            this.btnListTT.Location = new System.Drawing.Point(53, 20);
             this.btnListTT.Name = "btnListTT";
-            this.btnListTT.Size = new System.Drawing.Size(163, 37);
+            this.btnListTT.Size = new System.Drawing.Size(163, 44);
             this.btnListTT.TabIndex = 6;
             this.btnListTT.Text = "Xem danh sách";
             this.btnListTT.Click += new System.EventHandler(this.btnListTT_Click_1);
@@ -106,9 +106,9 @@
             this.txtSearch.Animated = true;
             this.txtSearch.AutoRoundedCorners = true;
             this.txtSearch.BackColor = System.Drawing.Color.Transparent;
-            this.txtSearch.BorderRadius = 12;
+            this.txtSearch.BorderRadius = 18;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "Search";
+            this.txtSearch.DefaultText = "";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -116,16 +116,13 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.IconLeftSize = new System.Drawing.Size(35, 25);
-            this.txtSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtSearch.Location = new System.Drawing.Point(269, 56);
+            this.txtSearch.Location = new System.Drawing.Point(270, 25);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Search";
+            this.txtSearch.PlaceholderText = "Search theo mã và tên thủ thư ";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(273, 27);
-            this.txtSearch.TabIndex = 5;
+            this.txtSearch.Size = new System.Drawing.Size(299, 39);
+            this.txtSearch.TabIndex = 15;
             // 
             // GUI_QuanLyThuThu
             // 
@@ -147,8 +144,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Button btnaddtt;
         private Guna.UI2.WinForms.Guna2Button btnListTT;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
     }
 }

@@ -51,7 +51,6 @@ namespace GUI_QuanLyThuVien.Administration
         {
             DataTable dt = bll_QuanLyDocGia.ViewDocGia();
             LoadListDG(dt);
-
         } 
 
         private void GUI_QuanLyDocGia_Load(object sender, EventArgs e)
@@ -228,7 +227,13 @@ namespace GUI_QuanLyThuVien.Administration
             LoadListDG(dt);
         }
 
-        private void btnAddDocGia_Click(object sender, EventArgs e)
+        private void btnLoadList_Click_1(object sender, EventArgs e)
+        {
+            DataTable dt = bll_QuanLyDocGia.ViewDocGia();
+            LoadListDG(dt);
+        }
+
+        private void btnAddDocGia_Click_1(object sender, EventArgs e)
         {
             GUI_DangKyDG addDocGia = new GUI_DangKyDG();
             addDocGia.ShowDialog();

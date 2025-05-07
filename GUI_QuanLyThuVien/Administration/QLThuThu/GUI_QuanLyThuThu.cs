@@ -34,16 +34,15 @@ namespace GUI_QuanLyThuVien.Administration
                 string phone = dt.Rows[i]["soDienThoai"].ToString();
                 string diaChi = dt.Rows[i]["diaChi"].ToString();
                 string fullName = dt.Rows[i]["tenThuTHu"].ToString();
+                string password = dt.Rows[i]["password"].ToString();
                 string DOB = Convert.ToDateTime(dt.Rows[i]["ngaySinh"]).ToString("dd/MM/yyyy");
+                
 
                 string gioiTinh = dt.Rows[i]["gioiTinh"].ToString();
 
-                AddThuThuToPanel(imagePath, IDDocGia, name, email, phone, diaChi, fullName, DOB, gioiTinh);
-
+                AddThuThuToPanel(imagePath, IDDocGia, name, email, phone, diaChi, fullName, DOB, gioiTinh, password);
             }
         }
-            
-
 private void Form1_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
@@ -86,11 +85,11 @@ private void Form1_Load(object sender, EventArgs e)
             GUI_AddThuThu addTT = new GUI_AddThuThu();
             addTT.Show();
         }
-        private void AddThuThuToPanel(string imagePath, string IDDocGia, string name, string email, string phone, string diaChi, string fullName, string DOB, string gioiTinh)
+        private void AddThuThuToPanel(string imagePath, string IDDocGia, string name, string email, string phone, string diaChi, string fullName, string DOB, string gioiTinh, string password)
         {
 
             var sataPanel = new SATAUiFramework.SATAPanel();
-            sataPanel.Size = new Size(350, 150);
+            sataPanel.Size = new Size(350, 170);
             sataPanel.BackColor = Color.RosyBrown;
             sataPanel.BackColor2 = Color.RosyBrown;
             sataPanel.Margin = new Padding(10);
@@ -170,23 +169,67 @@ private void Form1_Load(object sender, EventArgs e)
             lblDOBGender.Size = new Size(230, 20);
             sataPanel.Controls.Add(lblDOBGender);
 
-            // Nút chi tiết
+            // Nút Sửa
             Button btnDetail = new Button();
-            btnDetail.Text = "Thêm Thủ Thư";
-            btnDetail.ForeColor = Color.FromArgb(0, 255, 128);
+            btnDetail.Text = "Sửa";
+            btnDetail.ForeColor = Color.White;
+            btnDetail.BackColor = Color.Teal;
             btnDetail.FlatStyle = FlatStyle.Flat;
-            btnDetail.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 128);
-            btnDetail.FlatAppearance.BorderSize = 1;
-            btnDetail.Size = new Size(100, 30);
-            btnDetail.Location = new Point(230, 115);
+            btnDetail.FlatAppearance.BorderSize = 0;
+            btnDetail.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            btnDetail.Cursor = Cursors.Hand;
+            btnDetail.Size = new Size(60, 25);
+            btnDetail.Location = new Point(190, 140);
             sataPanel.Controls.Add(btnDetail);
 
-            // Gán sự kiện cho nút (nếu muốn)
-            btnDetail.Click += (s, e) =>
+
+            // Nút Xóa
+            Button btnXoa = new Button();
+            btnXoa.Text = "Xóa";
+            btnXoa.ForeColor = Color.White;
+            btnXoa.BackColor = Color.Teal;
+            btnXoa.FlatStyle = FlatStyle.Flat;
+            btnXoa.FlatAppearance.BorderSize = 0;
+            btnXoa.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            btnXoa.Cursor = Cursors.Hand;
+            btnXoa.Size = new Size(60, 25);
+            btnXoa.Location = new Point(260, 140);
+            sataPanel.Controls.Add(btnXoa);
+
+            btnDetail.Click += (sender, e) =>
             {
-
+                GUI_ControlChiTietDocGia controlChiTietDocGia = new GUI_ControlChiTietDocGia();
+                controlChiTietDocGia.person = new DTO_Person()
+                {
+                    sMa = IDDocGia,
+                    sHoTen = fullName,
+                    sGioiTinh = gioiTinh == "Nam" ? true : false,
+                    sSDT = phone,
+                    sEmail = email,
+                    sDiaChi = diaChi,
+                    sUsername = name,
+                    sSourceImage = imagePath,
+                    sNgaySinh = DateTime.Parse(DOB),
+                    sPassword = password
+                };
+                controlChiTietDocGia.DocGia = false;
+                controlChiTietDocGia.Add = false;
+                controlChiTietDocGia.ShowDialog();
             };
+            btnXoa.Click += (sender, e) =>
+            {
+                DialogResult result = MessageBox.Show(
+                    $"Bạn có chắc muốn xóa thủ thư {fullName}?",
+                    "Xác nhận xóa",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
 
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show(bll_quanlythuthu.DelThuThu(IDDocGia));
+                    flowLayoutPanel1.Controls.Remove(sataPanel);
+                }
+            };
             // Thêm vào flowLayoutPanel
             flowLayoutPanel1.Controls.Add(sataPanel);
         }

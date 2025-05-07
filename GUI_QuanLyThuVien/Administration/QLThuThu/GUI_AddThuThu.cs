@@ -137,5 +137,10 @@ namespace GUI_QuanLyThuVien.Administration.QLThuThu
         {
 
         }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+           this.Close();
+        }
     }
 }

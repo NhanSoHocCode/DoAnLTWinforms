@@ -17,12 +17,14 @@ namespace GUI_QuanLyThuVien.Administration
 {
     public partial class GUI_HomeManager : Form
     {
-        public GUI_HomeManager()
+        public int role;
+        public GUI_HomeManager(int quyen)
         {
+            role = quyen;
             InitializeComponent();
             guna2DragControl1.TargetControl = guna2Panel1;
+
         }
-        public int role = 3;
         public string username = "adm";
         private Form currentFormChild;
         private Form currentFormChild1;
@@ -32,6 +34,7 @@ namespace GUI_QuanLyThuVien.Administration
         {
             BLL_LayAnhThe bll = new BLL_LayAnhThe();
             lbname.Text = username;
+
             lbnameRole.Text = "Quản trị viên master";
             string a = bll.LayAnhThe(username);
             string path = a.Contains(":") ? a : Path.Combine(@"D:\K25_Project_LTWinform\DoAn\images\", a);
@@ -52,9 +55,27 @@ namespace GUI_QuanLyThuVien.Administration
             GUI_QuanLyThuThu formThuThu = new GUI_QuanLyThuThu();
             OpenChildForm(formThuThu, panelThuThu, currentFormChild3);
             currentFormChild = formThuThu;
+            if (role == 2)
+            {
+                HideTabPage1(tabPage1);
+                //HideTabPage1(tabAdmin);
+                HideTabPage1(tabPageThuThu);
+                HideTabPage1(tabPage2);
+            }
         }
-        
-        
+        private void HideTabPage1(TabPage tabPage)
+        {
+            TabPage tabPage1Backup;
+
+            if (guna2TabControlMain.TabPages.Contains(tabPage))
+            {
+                tabPage1Backup = tabPage;
+
+                guna2TabControlMain.TabPages.Remove(tabPage);
+            }
+        }
+
+
         private void OpenChildForm(Form childForm, Panel pl, Form currentFormChild)
         {
             if (currentFormChild != null)
