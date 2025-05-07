@@ -103,7 +103,15 @@ private void Form1_Load(object sender, EventArgs e)
 
             // Hình đại diện
             PictureBox avatar = new PictureBox();
-            avatar.Image = Image.FromFile(imagePath);
+            try
+            {
+                avatar.Image = Image.FromFile(imagePath);
+            }
+            catch (Exception)
+            {
+                // Nếu không tìm thấy ảnh, có thể sử dụng ảnh mặc định hoặc xử lý theo cách khác
+                avatar.Image = Image.FromFile("D:\\K25_Project_LTWinform\\DoAn\\images\\clone.jpg");
+            }
             avatar.SizeMode = PictureBoxSizeMode.StretchImage;
             avatar.Size = new Size(100, 130);
             avatar.Location = new Point(10, 10);

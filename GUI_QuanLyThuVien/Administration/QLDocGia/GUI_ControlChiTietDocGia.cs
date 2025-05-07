@@ -13,6 +13,7 @@ using DTO_QuanLyThuVien;
 using BLL_QuanLyThuVien;
 using System.Threading;
 using System.Diagnostics;
+using Sunny.UI;
 namespace GUI_QuanLyThuVien.Administration.QLDocGia
 {
     public partial class GUI_ControlChiTietDocGia : Form
@@ -30,6 +31,10 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
 
         private void GUI_ControlChiTietDocGia_Load(object sender, EventArgs e)  // mượn tạm của đọc giả 
         {
+            if (DocGia == false)
+            {
+                label1.Text = "Mã thủ thư";
+            }
             txtPassword.Text = person.sPassword;
             txtAddress.Text = person.sDiaChi;
             txtEmail.Text = person.sEmail;
@@ -41,7 +46,16 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
             lbNgaySinh.Text = person.sNgaySinh.ToString();
             lbSet.Text = person.sGioiTinh == true ? "Nam" : "Nữ";
             anhtheold = person.sSourceImage;
-            ptbAnhThe.Image = Image.FromFile(person.sSourceImage);
+            try
+            {
+                ptbAnhThe.Image = Image.FromFile(person.sSourceImage);
+            }
+            catch (Exception)
+            {
+                // Nếu không tìm thấy ảnh, có thể sử dụng ảnh mặc định hoặc xử lý theo cách khác
+                ptbAnhThe.Image = Image.FromFile("D:\\K25_Project_LTWinform\\DoAn\\images\\clone.jpg");
+            }
+            
         }
         public string fileNameLong;
         public string fileNameShort;
