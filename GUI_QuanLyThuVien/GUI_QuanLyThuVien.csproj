@@ -146,6 +146,12 @@
     <Compile Include="Administration\QLSach\GUI_QuanLySach.Designer.cs">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
     </Compile>
+    <Compile Include="User\GUI_DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\GUI_DoiMatKhau.Designer.cs">
+      <DependentUpon>GUI_DoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\GUI_NhapOTPDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\QLSach\GUI_QuanLySach.resx">
       <DependentUpon>GUI_QuanLySach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\GUI_DoiMatKhau.resx">
+      <DependentUpon>GUI_DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\GUI_NhapOTPDoiMatKhau.resx">
       <DependentUpon>GUI_NhapOTPDoiMatKhau.cs</DependentUpon>

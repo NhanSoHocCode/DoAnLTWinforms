@@ -38,7 +38,7 @@
             this.txtXacNhanpw = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtpw = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.ptbAnhThe = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSdt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -51,8 +51,10 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAnhThe)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -109,11 +111,12 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Controls.Add(this.guna2Button1);
             this.panel4.Controls.Add(this.txtXacNhanpw);
             this.panel4.Controls.Add(this.lbInFo);
             this.panel4.Controls.Add(this.txtpw);
             this.panel4.Controls.Add(this.txtUser);
-            this.panel4.Controls.Add(this.pictureBox8);
+            this.panel4.Controls.Add(this.ptbAnhThe);
             this.panel4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(12, 36);
             this.panel4.Name = "panel4";
@@ -193,21 +196,21 @@
             this.txtUser.Location = new System.Drawing.Point(3, 187);
             this.txtUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.PasswordChar = '\0';
             this.txtUser.PlaceholderText = "Username";
             this.txtUser.SelectedText = "";
             this.txtUser.Size = new System.Drawing.Size(318, 33);
             this.txtUser.TabIndex = 29;
             // 
-            // pictureBox8
+            // ptbAnhThe
             // 
-            this.pictureBox8.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.user;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(88, 30);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox8.TabIndex = 28;
-            this.pictureBox8.TabStop = false;
+            this.ptbAnhThe.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.user;
+            this.ptbAnhThe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ptbAnhThe.Location = new System.Drawing.Point(41, 28);
+            this.ptbAnhThe.Name = "ptbAnhThe";
+            this.ptbAnhThe.Size = new System.Drawing.Size(127, 150);
+            this.ptbAnhThe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbAnhThe.TabIndex = 28;
+            this.ptbAnhThe.TabStop = false;
             // 
             // panel5
             // 
@@ -241,7 +244,6 @@
             this.txtDiaChi.Location = new System.Drawing.Point(3, 134);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "Địa Chỉ";
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.Size = new System.Drawing.Size(318, 33);
@@ -264,7 +266,6 @@
             this.txtSdt.Location = new System.Drawing.Point(3, 93);
             this.txtSdt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSdt.Name = "txtSdt";
-            this.txtSdt.PasswordChar = '\0';
             this.txtSdt.PlaceholderText = "Số Điện Thoại";
             this.txtSdt.SelectedText = "";
             this.txtSdt.Size = new System.Drawing.Size(318, 33);
@@ -287,7 +288,6 @@
             this.txtName.Location = new System.Drawing.Point(3, 16);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Họ Và Tên";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(318, 33);
@@ -378,6 +378,28 @@
             this.guna2DragControl2.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl2.UseTransparentDrag = true;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BorderRadius = 29;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(197, 109);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(111, 60);
+            this.guna2Button1.TabIndex = 37;
+            this.guna2Button1.Text = "Chọn ảnh thẻ ";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // GUI_DangKyDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -398,7 +420,7 @@
             this.Load += new System.EventHandler(this.GUI_DangKyDG_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAnhThe)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
@@ -414,7 +436,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbInFo;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox ptbAnhThe;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox17;
         private Guna.UI2.WinForms.Guna2TextBox txtXacNhanpw;
@@ -430,5 +452,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

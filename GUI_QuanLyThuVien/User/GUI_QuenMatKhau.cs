@@ -38,7 +38,7 @@ namespace GUI_QuanLyThuVien
             {
                 OTP = api.SendMailPassWord(txtEmail.Text, true);
                 GUI_NhapOTPDoiMatKhau nhapOTP = new GUI_NhapOTPDoiMatKhau();
-                nhapOTP.mail = txtEmail.Text;
+                nhapOTP.person.sEmail = txtEmail.Text;
                 nhapOTP.OTP = OTP;
                 nhapOTP.Show();
             }

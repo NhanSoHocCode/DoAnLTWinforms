@@ -1,4 +1,5 @@
 ﻿using BLL_QuanLyThuVien;
+using DTO_QuanLyThuVien;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace GUI_QuanLyThuVien.User
         
 
         BLL_TaiKhoan bll_taikhoan = new BLL_TaiKhoan();
-        public string mail;
+        public DTO_Person person = new DTO_Person();
         public int OTP;
         public int countdown;
         private void GUI_NhapOTPDoiMatKhau_Load(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace GUI_QuanLyThuVien.User
             countdown = 120; // Reset thời gian đếm ngược
             timer1.Interval = 1000; // Chạy mỗi giây
             timer1.Start();
-            lbNameMail.Text = mail;
+            lbNameMail.Text = person.sEmail;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -53,7 +54,11 @@ namespace GUI_QuanLyThuVien.User
         {
             if (txtOTP.Text == OTP.ToString())
             {
-                MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GUI_DoiMatKhau doiMatKhau = new GUI_DoiMatKhau();
+                doiMatKhau.email = person.sEmail;
+                doiMatKhau.ShowDialog();
+                this.Close();
             }
             else if (txtOTP.Text == "")
             {
@@ -68,6 +73,51 @@ namespace GUI_QuanLyThuVien.User
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbtimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbNameMail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOTP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

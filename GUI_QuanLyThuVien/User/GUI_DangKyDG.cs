@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -42,10 +43,34 @@ namespace GUI_QuanLyThuVien
 
             this.Region = new Region(path);
         }
-        
 
-       
 
+
+        public void SaveImageToFolder(string sourceImagePath)
+        {
+            if (string.IsNullOrWhiteSpace(sourceImagePath) || !File.Exists(sourceImagePath))
+            {
+                throw new ArgumentException("Đường dẫn ảnh nguồn không hợp lệ hoặc file không tồn tại");
+            }
+
+            try
+            {
+                // Xác định thư mục đích
+                string destinationFolder = @"D:\K25_Project_LTWinform\DoAn\images\DocGia";
+
+                // Tạo thư mục nếu chưa tồn tại
+                Directory.CreateDirectory(destinationFolder);
+
+                // Sao chép file (ghi đè nếu đã tồn tại)
+                string fileName = Path.GetFileName(sourceImagePath);
+                string destinationPath = Path.Combine(destinationFolder, fileName);
+                File.Copy(sourceImagePath, destinationPath, overwrite: true);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi lưu ảnh: {ex.Message}", ex);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
@@ -116,6 +141,7 @@ namespace GUI_QuanLyThuVien
             person.sEmail = mail;
             person.sUsername = txtUser.Text;
             person.sPassword = txtpw.Text;
+            person.sSourceImage = fileNameShort;
             if (txtXacNhanpw.Text == "Confirm password" || txtpw.Text == "Password")
             {
                 MessageBox.Show("Chưa Nhập Mật Khẩu", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -126,8 +152,14 @@ namespace GUI_QuanLyThuVien
                 txtXacNhanpw.ForeColor = Color.Red;
                 MessageBox.Show("Mật Khẩu Không Trùng Khớp", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
+            } else if (ChangeImage == false)
+            {
+                MessageBox.Show("Chưa Chọn Ảnh Thẻ", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
+            SaveImageToFolder(fileNameLong);
             string resutl = bll_dangkydg.ThemTKDocGia(person);
+
             if (resutl == "Tài khoản đã được thêm thành công!")
             {
                 MessageBox.Show("Đăng ký thành công!");
@@ -168,7 +200,25 @@ namespace GUI_QuanLyThuVien
                 isPasswordConfim = true;
             }
         }
-
-        
+        string fileNameLong;
+        string fileNameShort;
+        string anhtheold;
+        bool ChangeImage = false;
+        private void guna2Button1_Click(object sender, EventArgs e) // chọn ảnh thẻ 
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                fileNameLong = openFileDialog1.FileName;
+                fileNameShort = Path.GetFileName(openFileDialog1.FileName);
+                anhtheold = fileNameShort;
+                ptbAnhThe.Image = Image.FromFile(fileNameLong);
+                ChangeImage = true;                
+                ptbAnhThe.Image = Image.FromFile(fileNameLong);
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn file.");
+            }
+        }
     }
 }

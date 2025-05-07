@@ -55,5 +55,17 @@ namespace BLL_QuanLyThuVien
                 return dal_QuanLyPerson.UpdateDocGia(person, usernameCu);
             }
         }
+        public string DoiMatKhau(DTO_Person person)
+        {
+            // kiem tra gia tri dau vao truoc khi them 
+            if (string.IsNullOrEmpty(person.sPassword))
+            {
+                return "Vui lòng nhập đầy đủ thông tin!";
+            }
+            else
+            {
+                return dal_QuanLyPerson.doimatkhau(person);
+            }
+        }
     }
 }

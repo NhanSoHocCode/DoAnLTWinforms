@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO_QuanLyThuVien;
+using Sunny.UI.Win32;
 namespace DAL_QuanLyThuVien
 {
     public class DAL_QuanLyPerson : DBConnect
@@ -200,6 +201,25 @@ namespace DAL_QuanLyThuVien
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+        public string doimatkhau(DTO_Person person)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_doimatkhauDG", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@email", person.sEmail);
+                cmd.Parameters.AddWithValue("@password", person.sPassword);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Đổi mật khẩu thành công!";
+            }
+            catch (Exception ex)
+            {
+                return "Lỗi kết nối: " + ex.Message;
             }
         }
     }

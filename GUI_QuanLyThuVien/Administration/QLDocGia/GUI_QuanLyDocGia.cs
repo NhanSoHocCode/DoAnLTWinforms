@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BLL_QuanLyThuVien;
 using DTO_QuanLyThuVien;
 using GUI_QuanLyThuVien.Administration.QLDocGia;
+using GUI_QuanLyThuVien.User;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 namespace GUI_QuanLyThuVien.Administration
 {
@@ -225,6 +226,12 @@ namespace GUI_QuanLyThuVien.Administration
         {
             DataTable dt = bll_QuanLyDocGia.SearchDocGia(txtSearch.Text);
             LoadListDG(dt);
+        }
+
+        private void btnAddDocGia_Click(object sender, EventArgs e)
+        {
+            GUI_DangKyDG addDocGia = new GUI_DangKyDG();
+            addDocGia.ShowDialog();
         }
     }
 }

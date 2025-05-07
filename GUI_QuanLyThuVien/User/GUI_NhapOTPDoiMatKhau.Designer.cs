@@ -55,6 +55,7 @@
             this.label1.Size = new System.Drawing.Size(282, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đặt Lại Mật Khẩu";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -68,6 +69,7 @@
             this.label2.Size = new System.Drawing.Size(259, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã Xác Minh Đã Được Gửi Đến Địa Chỉ Email";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbtimer
             // 
@@ -79,6 +81,7 @@
             this.lbtimer.Size = new System.Drawing.Size(256, 16);
             this.lbtimer.TabIndex = 7;
             this.lbtimer.Text = "Mã OTP Của Bạn Có Hiệu Lực Trong 120s";
+            this.lbtimer.Click += new System.EventHandler(this.lbtimer_Click);
             // 
             // timer1
             // 
@@ -95,6 +98,7 @@
             this.lbNameMail.Size = new System.Drawing.Size(54, 17);
             this.lbNameMail.TabIndex = 8;
             this.lbNameMail.Text = "Ten mail";
+            this.lbNameMail.Click += new System.EventHandler(this.lbNameMail_Click);
             // 
             // panel1
             // 
@@ -109,6 +113,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(314, 305);
             this.panel1.TabIndex = 9;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnOK
             // 
@@ -148,6 +153,7 @@
             this.txtOTP.SelectedText = "";
             this.txtOTP.Size = new System.Drawing.Size(156, 33);
             this.txtOTP.TabIndex = 16;
+            this.txtOTP.TextChanged += new System.EventHandler(this.txtOTP_TextChanged);
             // 
             // label3
             // 
@@ -161,6 +167,7 @@
             this.label3.Size = new System.Drawing.Size(100, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "Mã OTP Của Bạn";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel2
             // 
@@ -171,6 +178,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(300, 35);
             this.panel2.TabIndex = 11;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
             // 
             // guna2ControlBox1
             // 
@@ -181,6 +189,7 @@
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(35, 35);
             this.guna2ControlBox1.TabIndex = 0;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2DragControl1
             // 

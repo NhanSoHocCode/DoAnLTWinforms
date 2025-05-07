@@ -30,8 +30,9 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLoadList = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddDocGia = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnLoadList = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::GUI_QuanLyThuVien.Properties.Resources.cc;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnAddDocGia);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.btnLoadList);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -57,24 +59,24 @@
             this.panel1.Size = new System.Drawing.Size(1321, 90);
             this.panel1.TabIndex = 1;
             // 
-            // btnLoadList
+            // btnAddDocGia
             // 
-            this.btnLoadList.Animated = true;
-            this.btnLoadList.AutoRoundedCorners = true;
-            this.btnLoadList.BorderRadius = 23;
-            this.btnLoadList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoadList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoadList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoadList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoadList.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.btnLoadList.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLoadList.ForeColor = System.Drawing.Color.White;
-            this.btnLoadList.Location = new System.Drawing.Point(48, 23);
-            this.btnLoadList.Name = "btnLoadList";
-            this.btnLoadList.Size = new System.Drawing.Size(130, 48);
-            this.btnLoadList.TabIndex = 5;
-            this.btnLoadList.Text = "Xem danh sách";
-            this.btnLoadList.Click += new System.EventHandler(this.btnLoadList_Click);
+            this.btnAddDocGia.Animated = true;
+            this.btnAddDocGia.AutoRoundedCorners = true;
+            this.btnAddDocGia.BorderRadius = 23;
+            this.btnAddDocGia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDocGia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDocGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddDocGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddDocGia.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnAddDocGia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddDocGia.ForeColor = System.Drawing.Color.White;
+            this.btnAddDocGia.Location = new System.Drawing.Point(1088, 25);
+            this.btnAddDocGia.Name = "btnAddDocGia";
+            this.btnAddDocGia.Size = new System.Drawing.Size(188, 48);
+            this.btnAddDocGia.TabIndex = 15;
+            this.btnAddDocGia.Text = "Thêm độc giả ";
+            this.btnAddDocGia.Click += new System.EventHandler(this.btnAddDocGia_Click);
             // 
             // txtSearch
             // 
@@ -91,7 +93,7 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(216, 25);
+            this.txtSearch.Location = new System.Drawing.Point(270, 25);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Search theo mã và tên độc giả ";
@@ -99,6 +101,25 @@
             this.txtSearch.Size = new System.Drawing.Size(299, 39);
             this.txtSearch.TabIndex = 14;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
+            // 
+            // btnLoadList
+            // 
+            this.btnLoadList.Animated = true;
+            this.btnLoadList.AutoRoundedCorners = true;
+            this.btnLoadList.BorderRadius = 23;
+            this.btnLoadList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoadList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoadList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoadList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLoadList.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnLoadList.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLoadList.ForeColor = System.Drawing.Color.White;
+            this.btnLoadList.Location = new System.Drawing.Point(48, 23);
+            this.btnLoadList.Name = "btnLoadList";
+            this.btnLoadList.Size = new System.Drawing.Size(173, 48);
+            this.btnLoadList.TabIndex = 5;
+            this.btnLoadList.Text = "Xem danh sách";
+            this.btnLoadList.Click += new System.EventHandler(this.btnLoadList_Click);
             // 
             // GUI_QuanLyDocGia
             // 
@@ -122,5 +143,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnLoadList;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Button btnAddDocGia;
     }
 }
