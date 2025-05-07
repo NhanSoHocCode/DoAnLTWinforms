@@ -12,7 +12,7 @@ namespace BLL_QuanLyThuVien
     public class BLL_QuanLyThuThu
     {
         DAL_QuanLyPerson dal_quanlythuthu = new DAL_QuanLyPerson();
-
+        DAL_TaiKhoanAccess DAL_TaiKhoanAccess = new DAL_TaiKhoanAccess();
 
         public DataTable ListThuThu()
         {
@@ -30,6 +30,23 @@ namespace BLL_QuanLyThuVien
         }
         public string AddThuThu(DTO_Person ps)
         {
+            DAL_TaiKhoanAccess dal_TaiKhoanAccess = new DAL_TaiKhoanAccess();
+            if (string.IsNullOrEmpty(ps.sHoTen) || string.IsNullOrEmpty(ps.sDiaChi) || string.IsNullOrEmpty(ps.sSDT)
+                || string.IsNullOrEmpty(ps.sUsername) || string.IsNullOrEmpty(ps.sPassword))
+            {
+                return "Vui lòng nhập đầy đủ thông tin!";
+            }
+            else
+            {
+                try
+                {
+                    dal_TaiKhoanAccess.ThemTaiKhoan(ps);
+                }
+                catch (Exception ex)
+                {
+                    return ex.Message;
+                }
+            }
             return dal_quanlythuthu.AddThuThu(ps);
         }
         public DataTable SearchThuThu(string search)
@@ -43,7 +60,19 @@ namespace BLL_QuanLyThuVien
                 return dal_quanlythuthu.searchPersonToName("proc_searchthuthubyname", search);
             }
         }
-
+        public string UpdateThuThu(DTO_Person person, string usernameCu)
+        {
+            // kiem tra gia tri dau vao truoc khi them 
+            if (string.IsNullOrEmpty(person.sHoTen) || string.IsNullOrEmpty(person.sDiaChi) || string.IsNullOrEmpty(person.sSDT)
+                || string.IsNullOrEmpty(person.sUsername) || string.IsNullOrEmpty(person.sPassword))
+            {
+                return "Vui lòng nhập đầy đủ thông tin!";
+            }
+            else
+            {
+                return dal_quanlythuthu.UpdateThuThu(person, usernameCu);
+            }
+        }
 
 
     }

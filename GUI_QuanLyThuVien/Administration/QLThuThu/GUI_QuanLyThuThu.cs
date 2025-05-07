@@ -64,14 +64,6 @@ private void Form1_Load(object sender, EventArgs e)
             addTT.Show();
         }
 
-        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
-        {
-            DataTable dt = new DataTable();
-            dt = bll_quanlythuthu.SearchThuThu(txtSearch.Text);
-            flowLayoutPanel1.Controls.Clear();
-            LoadListTT(dt);
-        }
-
         private void btnListTT_Click_1(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
@@ -240,6 +232,14 @@ private void Form1_Load(object sender, EventArgs e)
             };
             // Thêm vào flowLayoutPanel
             flowLayoutPanel1.Controls.Add(sataPanel);
+        }
+
+        private void txtSearch_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = bll_quanlythuthu.SearchThuThu(txtSearch.Text);
+            flowLayoutPanel1.Controls.Clear();
+            LoadListTT(dt);
         }
     }
 }

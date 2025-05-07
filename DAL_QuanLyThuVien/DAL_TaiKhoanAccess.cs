@@ -7,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO_QuanLyThuVien;
 using Microsoft.SqlServer.Server;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using Sunny.UI.Win32;
+using System.Web.UI.WebControls.WebParts;
 
 namespace DAL_QuanLyThuVien
 {
@@ -153,6 +156,28 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
-        
+        public string ThemTaiKhoan(DTO_Person ps)
+        {
+            string strSql = "proc_AddTK";
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(strSql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@username", ps.sUsername);
+                cmd.Parameters.AddWithValue("@password", ps.sPassword);
+                cmd.Parameters.AddWithValue("@role", int.Parse(ps.sChucVu));
+                cmd.Parameters.AddWithValue("@email", ps.sEmail);
+                cmd.Parameters.AddWithValue("@anhThe", ps.sSourceImage);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Add Thanh Cong";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

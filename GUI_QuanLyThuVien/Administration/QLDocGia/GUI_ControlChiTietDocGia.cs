@@ -203,7 +203,7 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
             }
             else
             {
-                MessageBox.Show(bll_QuanLyThuThu.EditThuThu(person));
+                MessageBox.Show(bll_QuanLyThuThu.UpdateThuThu(person, usernameold));
             }
         }
     }

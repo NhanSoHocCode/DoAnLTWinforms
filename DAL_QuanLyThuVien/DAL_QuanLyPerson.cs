@@ -203,6 +203,33 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
+        public string UpdateThuThu(DTO_Person person, string usernameCu)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_updateThuThu", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maThuThu", person.sMa);
+                cmd.Parameters.AddWithValue("@hoTen", person.sHoTen);
+                cmd.Parameters.AddWithValue("@ngaySinh", person.sNgaySinh);
+                cmd.Parameters.AddWithValue("@soDienThoai", person.sSDT);
+                cmd.Parameters.AddWithValue("@diaChi", person.sDiaChi);
+                cmd.Parameters.AddWithValue("@usernameMoi", person.sUsername);
+                cmd.Parameters.AddWithValue("@password", person.sPassword);
+                cmd.Parameters.AddWithValue("@anhThe", person.sSourceImage);
+                cmd.Parameters.AddWithValue("@gioiTinh", person.sGioiTinh);
+                cmd.Parameters.AddWithValue("@usernameCu", usernameCu);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Update thanh cong!";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public string doimatkhau(DTO_Person person)
         {
             SqlConnection conn = SqlConnectionData.Connect();
