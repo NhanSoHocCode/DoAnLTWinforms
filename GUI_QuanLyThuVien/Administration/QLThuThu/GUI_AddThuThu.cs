@@ -72,7 +72,6 @@ namespace GUI_QuanLyThuVien.Administration.QLThuThu
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 fileNameLong = openFileDialog1.FileName;
-                SaveImageToFolder(fileNameLong);
                 fileNameShort = Path.GetFileName(openFileDialog1.FileName);
                 lbanhthe.Text = fileNameShort;
                 ps.sSourceImage = fileNameShort;
@@ -96,11 +95,14 @@ namespace GUI_QuanLyThuVien.Administration.QLThuThu
             ps.sUsername = txtUsername.Text;
             ps.sDiaChi = txtAddress.Text;
             ps.sPassword = txtPassword.Text;
-            ps.sChucVu = "2";
+            ps.sChucVu = "2";  // mat dinh role cho thu thu 
             if (ChangeImage)
             {
+                SaveImageToFolder(fileNameLong);
                 ps.sSourceImage = fileNameShort;
                 MessageBox.Show(bll_quanlythuthu.AddThuThu(ps));
+                ChangeImage = false;
+                this.Close();
             }
             else
             {

@@ -23,6 +23,10 @@ namespace GUI_QuanLyThuVien.Administration
             role = quyen;
             InitializeComponent();
             guna2DragControl1.TargetControl = guna2Panel1;
+            guna2DGV1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            guna2DGV1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            guna2DGV1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells; // hoặc Fill
+
 
         }
         public string username = "adm";
@@ -34,7 +38,7 @@ namespace GUI_QuanLyThuVien.Administration
         {
             BLL_LayAnhThe bll = new BLL_LayAnhThe();
             lbname.Text = username;
-
+            guna2DGV1.DataSource = BLL_TaiKhoan.viewlistTimeLogin();
             lbnameRole.Text = "Quản trị viên master";
             string a = bll.LayAnhThe(username);
             string path = a.Contains(":") ? a : Path.Combine(@"D:\K25_Project_LTWinform\DoAn\images\", a);
@@ -60,7 +64,6 @@ namespace GUI_QuanLyThuVien.Administration
                 HideTabPage1(tabPage1);
                 //HideTabPage1(tabAdmin);
                 HideTabPage1(tabPageThuThu);
-                HideTabPage1(tabPage2);
             }
         }
         private void HideTabPage1(TabPage tabPage)
@@ -93,18 +96,33 @@ namespace GUI_QuanLyThuVien.Administration
 
 
         }
+        BLL_TaiKhoan BLL_TaiKhoan = new BLL_TaiKhoan();
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            guna2DGV1.DataSource = BLL_TaiKhoan.viewlistTimeLogin();
+        }
+
+        private void txtSearchPhieu_KeyDown(object sender, KeyEventArgs e)
+        {
+            guna2DGV1.DataSource = null;
+            guna2DGV1.DataSource = BLL_TaiKhoan.searchTimeLogin(txtSearchPhieu.Text);
+            if (guna2DGV1.Rows.Count == 0)
+            {
+                guna2DGV1.DataSource = BLL_TaiKhoan.viewlistTimeLogin();
+            }
+        }
         //private void btnClose_Click(object sender, EventArgs e)
         //{
         //    Close();
         //}
 
-       
+
 
         //private void buttonClose_Click(object sender, EventArgs e)
         //{
         //    Close();
         //}
 
-        
+
     }
 }

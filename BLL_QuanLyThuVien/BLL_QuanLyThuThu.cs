@@ -26,27 +26,12 @@ namespace BLL_QuanLyThuVien
         }
         public string DelThuThu(string ma)
         {
-            return dal_quanlythuthu.DelPerson(int.Parse(ma), "proc_editthuthu");
+            return dal_quanlythuthu.DelPerson(int.Parse(ma), "proc_delthuthu");
         }
         public string AddThuThu(DTO_Person ps)
         {
-            DAL_TaiKhoanAccess dal_TaiKhoanAccess = new DAL_TaiKhoanAccess();
-            if (string.IsNullOrEmpty(ps.sHoTen) || string.IsNullOrEmpty(ps.sDiaChi) || string.IsNullOrEmpty(ps.sSDT)
-                || string.IsNullOrEmpty(ps.sUsername) || string.IsNullOrEmpty(ps.sPassword))
-            {
-                return "Vui lòng nhập đầy đủ thông tin!";
-            }
-            else
-            {
-                try
-                {
-                    dal_TaiKhoanAccess.ThemTaiKhoan(ps);
-                }
-                catch (Exception ex)
-                {
-                    return ex.Message;
-                }
-            }
+            DAL_TaiKhoanAccess tk = new DAL_TaiKhoanAccess();
+            tk.ThemTaiKhoan(ps);
             return dal_quanlythuthu.AddThuThu(ps);
         }
         public DataTable SearchThuThu(string search)

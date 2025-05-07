@@ -179,5 +179,51 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
+        public DataTable viewlistTimeLogin()
+        {
+            string strSql = "proc_viewlistTimeLogin";
+            DataTable dt = DBConnect.Select(CommandType.StoredProcedure, strSql);
+            return dt;
+        }
+        public DataTable SearchTimeLoginToUsername(string username)
+        {
+            string strSql = "proc_SearchTimeLoginToUsername";
+            DataTable dt = new DataTable();
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(strSql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@username", username);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataTable SearchTimeLoginToMa(int ma)
+        {
+            string strSql = "proc_SearchTimeLoginToMa";
+            DataTable dt = new DataTable();
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(strSql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ma", ma);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

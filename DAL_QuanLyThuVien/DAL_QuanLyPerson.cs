@@ -114,24 +114,13 @@ namespace DAL_QuanLyThuVien
         }
         // chua update phan AddPerson
 
-        public string AddThuThu(DTO_Person dtoPerson)
+        public string AddThuThu(DTO_Person dtoPerson)  // them thu thu chua them tai khoan 
         {
             SqlConnection conn = SqlConnectionData.Connect();
             conn.Open();
-            SqlTransaction transaction = conn.BeginTransaction(); // Bắt đầu transaction
-
             try
             {
-                // Thêm tài khoản
-                SqlCommand command = new SqlCommand("proc_addTKnew", conn, transaction);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@email", dtoPerson.sEmail);
-                command.Parameters.AddWithValue("@username", dtoPerson.sUsername);
-                command.Parameters.AddWithValue("@password", dtoPerson.sPassword);
-                command.ExecuteNonQuery();
-
-                // Thêm thủ thư
-                SqlCommand command1 = new SqlCommand("proc_addThuThu", conn, transaction);
+                SqlCommand command1 = new SqlCommand("proc_addThuThu", conn);
                 command1.CommandType = CommandType.StoredProcedure;
                 command1.Parameters.AddWithValue("@hoten", dtoPerson.sHoTen);
                 command1.Parameters.AddWithValue("@ngaysinh", dtoPerson.sNgaySinh);
@@ -142,19 +131,12 @@ namespace DAL_QuanLyThuVien
                 command1.Parameters.AddWithValue("@username", dtoPerson.sUsername);
                 command1.Parameters.AddWithValue("@anhthe", dtoPerson.sSourceImage);
                 command1.ExecuteNonQuery();
-
-                transaction.Commit(); // Xác nhận lưu dữ liệu
                 conn.Close();
                 return "Thủ thư đã được thêm thành công!";
             }
             catch (Exception ex)
             {
-                transaction.Rollback(); // Hoàn tác nếu có lỗi
                 return "Lỗi kết nối: " + ex.Message;
-            }
-            finally
-            {
-                conn.Close();
             }
         }
         public DataTable GetDGFromUsername(string username)
@@ -184,7 +166,7 @@ namespace DAL_QuanLyThuVien
             {
                 SqlCommand cmd = new SqlCommand("proc_updateDocGia", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@maDocGia", person.sMa);
+                cmd.Parameters.AddWithValue("@maDocGia", int.Parse(person.sMa));
                 cmd.Parameters.AddWithValue("@hoTen", person.sHoTen);
                 cmd.Parameters.AddWithValue("@ngaySinh", person.sNgaySinh);
                 cmd.Parameters.AddWithValue("@soDienThoai", person.sSDT);
@@ -211,7 +193,7 @@ namespace DAL_QuanLyThuVien
             {
                 SqlCommand cmd = new SqlCommand("proc_updateThuThu", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@maThuThu", person.sMa);
+                cmd.Parameters.AddWithValue("@maThuThu", int.Parse(person.sMa));
                 cmd.Parameters.AddWithValue("@hoTen", person.sHoTen);
                 cmd.Parameters.AddWithValue("@ngaySinh", person.sNgaySinh);
                 cmd.Parameters.AddWithValue("@soDienThoai", person.sSDT);

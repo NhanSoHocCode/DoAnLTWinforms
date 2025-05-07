@@ -56,5 +56,20 @@ namespace BLL_QuanLyThuVien
             return null;
             //return dal_taikhoan.LayThoiGianDangNhap(username);
         }
+        public DataTable viewlistTimeLogin()
+        {
+            return dal_taikhoan.viewlistTimeLogin();
+        }
+        public DataTable searchTimeLogin(string search)
+        {
+            if (int.TryParse(search, out int ma))
+            {
+                return dal_taikhoan.SearchTimeLoginToMa(ma);
+            }
+            else
+            {
+                return dal_taikhoan.SearchTimeLoginToUsername(search);
+            }
+        }
     }
 }
