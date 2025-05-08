@@ -250,5 +250,25 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
+        public DataTable SearchThuThuToUsername(string username)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_searchthuthubyusername", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@username", username);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

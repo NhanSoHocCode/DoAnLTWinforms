@@ -74,6 +74,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControl\Account.cs" />
+    <Compile Include="UserControl\GUI_XacNhanNgayMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\GUI_XacNhanNgayMuon.Designer.cs">
+      <DependentUpon>GUI_XacNhanNgayMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\HandleWithDatabase.cs" />
     <Compile Include="UserControl\UserSetting.cs">
       <SubType>Form</SubType>
@@ -106,6 +112,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControl\GUI_XacNhanNgayMuon.resx">
+      <DependentUpon>GUI_XacNhanNgayMuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UserSetting.resx">
       <DependentUpon>UserSetting.cs</DependentUpon>
     </EmbeddedResource>

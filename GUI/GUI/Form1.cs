@@ -96,6 +96,9 @@ namespace GUI
             OpenChildForm(form);
         }
 
-
+        private void sataButton7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

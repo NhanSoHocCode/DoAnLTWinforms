@@ -113,6 +113,7 @@ namespace GUI_QuanLyThuVien.Administration
                         DataGridViewRow row = guna2DGV1.Rows[e.RowIndex];
                         int maphieumuon = int.Parse(row.Cells[0].Value?.ToString());
                         guna2DGV1.Rows.RemoveAt(e.RowIndex);
+                        //da them phan + so luong sach vao .
                         MessageBox.Show(bll_quanlyphieumuon.XoaPhieuMuon(maphieumuon));        // Xoa sach trong database   
                     }
                 }

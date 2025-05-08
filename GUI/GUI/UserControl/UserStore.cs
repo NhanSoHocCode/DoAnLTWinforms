@@ -97,7 +97,7 @@ namespace GUI.UserControl
                 foreach (var product in productList)
                     Sprice += product.Price;
                 CultureInfo cultureInfo = new CultureInfo("vi-VN");
-                labelGiaTien.Text = (Sprice * 26000).ToString("N0", cultureInfo) + " VNDC";
+                //labelGiaTien.Text = (Sprice * 26000).ToString("N0", cultureInfo) + " VNDC";
                 PopulateProductPanel(panlllll, productList);
             }
         }
@@ -288,6 +288,9 @@ namespace GUI.UserControl
                 currentX += cardWidth + horizontalMargin;
             }
             // targetPanel.PerformLayout(); // Có thể cần thiết trong một số trường hợp
+
+
+
         }
         BLL_QuanLyPhieuMuon bllpm = new BLL_QuanLyPhieuMuon();
         private void uiButton1_Click(object sender, EventArgs e)
@@ -303,7 +306,13 @@ namespace GUI.UserControl
                 // Xử lý khi người dùng chọn Yes
                 DTO_PhieuMuon pm = new DTO_PhieuMuon();
                 pm.sMaDocGia = int.Parse(person.sMa);
-                pm.sNgayTra = new DateTime(2025, 4, 24);
+                GUI_XacNhanNgayMuon form = new GUI_XacNhanNgayMuon();
+                form.ShowDialog();
+                pm.sNgayTra = form.ngayTra;
+                if (pm.sNgayTra == null)
+                {
+                    return;
+                }
                 int maPMnew = bllpm.CreatePMtoDocGia(pm);  // tiep tuc luu sach tu ma pm nay 
                 
                 List<ProductInfo> productList = GetSampleProductData(); // Hoặc hàm lấy từ DB                                                        // 2. Hiển thị lên panel3
@@ -364,5 +373,9 @@ namespace GUI.UserControl
 
         }
 
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

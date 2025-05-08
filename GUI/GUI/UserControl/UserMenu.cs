@@ -53,7 +53,7 @@ namespace GUI.UserControl
                 DataTable dt = new DataTable();
                 if (Key == "Search")
                 {
-                    dt = bll_quanlysach.TimKiemSach(textBox1.Text);
+                    dt = bll_quanlysach.TimKiemSach(txtUser.Text);
                     foreach (DataRow dr in dt.Rows)
                     {
                         string path = "d:\\k25_project_ltwinform\\doan\\images\\" + dr["source_image"].ToString();
@@ -374,9 +374,9 @@ namespace GUI.UserControl
         }
 
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
         {
-            if (textBox1.Text == "")
+            if (txtUser.Text == "")
             {
                 Key = "All";
                 Load_all();
@@ -386,19 +386,6 @@ namespace GUI.UserControl
                 Key = "Search";
                 Load_all();
             }
-        }
-        private void sataTextBox1__TextChanged(object sender, EventArgs e)
-        {
-            //if (sataTextBox1.Text == "")
-            //{
-            //    Key = "All";
-            //    Load_all();
-            //}
-            //else
-            //{
-            //    Key = "Search";
-            //    Load_all();
-            //}
         }
     }
 }

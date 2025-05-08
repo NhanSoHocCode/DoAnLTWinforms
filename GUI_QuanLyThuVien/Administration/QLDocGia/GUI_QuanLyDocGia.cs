@@ -243,8 +243,8 @@ namespace GUI_QuanLyThuVien.Administration
 
         private void btnAddDocGia_Click_1(object sender, EventArgs e)
         {
-            GUI_DangKyDG addDocGia = new GUI_DangKyDG();
-            addDocGia.ShowDialog();
+            GUI_XacNhapMailDangKy form = new GUI_XacNhapMailDangKy();
+            form.ShowDialog();
         }
     }
 }

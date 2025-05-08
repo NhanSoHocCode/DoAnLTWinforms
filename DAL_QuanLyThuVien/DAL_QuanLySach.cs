@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using DTO_QuanLyThuVien;
 
@@ -231,6 +232,52 @@ namespace DAL_QuanLyThuVien
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 return "Del thành công";
+            }
+            catch (FormatException ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public string giamSoLuongSach(DTO_Sach book)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_giamsoluongsach", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maSach", book.sMaSach);
+                cmd.Parameters.AddWithValue("@soLuong", book.sSoLuong);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Giảm thành công";
+            }
+            catch (FormatException ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public string tangSoLuongSach(DTO_Sach book)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_tangsoluongsach", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maSach", book.sMaSach);
+                cmd.Parameters.AddWithValue("@soLuong", book.sSoLuong);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Tăng thành công";
             }
             catch (FormatException ex)
             {

@@ -58,6 +58,10 @@ namespace BLL_QuanLyThuVien
                 return dal_quanlythuthu.UpdateThuThu(person, usernameCu);
             }
         }
+        public DataTable SearchThuThuToUsername(string username)
+        {
+            return dal_quanlythuthu.SearchThuThuToUsername(username);
+        }
 
 
     }

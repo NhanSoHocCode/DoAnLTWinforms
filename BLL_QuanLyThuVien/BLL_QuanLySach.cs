@@ -69,5 +69,13 @@ namespace BLL_QuanLyThuVien
         {
             return dal_QuanLySach.GetTheLoaiSach();
         }
+        public string giamSoLuongSach(DTO_Sach book)
+        {
+            return dal_QuanLySach.giamSoLuongSach(book);
+        }
+        public string tangSoLuongSach(DTO_Sach book)
+        {
+            return dal_QuanLySach.tangSoLuongSach(book);
+        }
     }
 }

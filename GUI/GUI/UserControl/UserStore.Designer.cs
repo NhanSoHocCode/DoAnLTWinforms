@@ -33,13 +33,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btndecrea = new Sunny.UI.UIButton();
             this.btnIncrea = new Sunny.UI.UIButton();
-            this.sataTextBox1 = new SATATextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panlllll = new System.Windows.Forms.Panel();
             this.uiButton1 = new Sunny.UI.UIButton();
-            this.labelGiaTien = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -52,7 +49,6 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btndecrea);
             this.panel1.Controls.Add(this.btnIncrea);
-            this.panel1.Controls.Add(this.sataTextBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -106,34 +102,12 @@
             this.btnIncrea.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnIncrea.Click += new System.EventHandler(this.btnIncrea_Click);
             // 
-            // sataTextBox1
-            // 
-            this.sataTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
-            this.sataTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
-            this.sataTextBox1.BorderFocusColor = System.Drawing.Color.Red;
-            this.sataTextBox1.BorderRadius = 18;
-            this.sataTextBox1.BorderSize = 1;
-            this.sataTextBox1.Icon = ((System.Drawing.Image)(resources.GetObject("sataTextBox1.Icon")));
-            this.sataTextBox1.IconSize = new System.Drawing.Size(20, 20);
-            this.sataTextBox1.Location = new System.Drawing.Point(120, 9);
-            this.sataTextBox1.Multiline = false;
-            this.sataTextBox1.Name = "sataTextBox1";
-            this.sataTextBox1.PasswordChar = false;
-            this.sataTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.sataTextBox1.PlaceholderText = "Search...";
-            this.sataTextBox1.Size = new System.Drawing.Size(250, 36);
-            this.sataTextBox1.TabIndex = 3;
-            this.sataTextBox1.Text = "null";
-            this.sataTextBox1.Texts = "";
-            this.sataTextBox1.UnderlinedStyle = false;
-            this.sataTextBox1._TextChanged += new System.EventHandler(this.sataTextBox1__TextChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 26);
             this.label1.TabIndex = 2;
@@ -170,31 +144,6 @@
             this.uiButton1.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
             // 
-            // labelGiaTien
-            // 
-            this.labelGiaTien.AutoSize = true;
-            this.labelGiaTien.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.labelGiaTien.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGiaTien.ForeColor = System.Drawing.Color.Red;
-            this.labelGiaTien.Location = new System.Drawing.Point(0, 698);
-            this.labelGiaTien.Name = "labelGiaTien";
-            this.labelGiaTien.Size = new System.Drawing.Size(214, 23);
-            this.labelGiaTien.TabIndex = 16;
-            this.labelGiaTien.Text = "14.000.000.000 VNDC";
-            this.labelGiaTien.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(0, 672);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(243, 26);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Tổng Phải Thanh Toán:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -208,8 +157,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.labelGiaTien);
             this.panel2.Controls.Add(this.uiButton1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -250,11 +197,8 @@
         private System.Windows.Forms.Panel panlllll;
         private Sunny.UI.UIButton btndecrea;
         private Sunny.UI.UIButton btnIncrea;
-        private SATATextBox sataTextBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Sunny.UI.UIButton uiButton1;
-        private System.Windows.Forms.Label labelGiaTien;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
     }
