@@ -111,6 +111,12 @@ namespace GUI_QuanLyThuVien.Administration
                 guna2DGV1.DataSource = BLL_TaiKhoan.viewlistTimeLogin();
             }
         }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            guna2DGV1.Sort(guna2DGV1.Columns["Thời gian login gần đây"], ListSortDirection.Descending);
+
+        }
         //private void btnClose_Click(object sender, EventArgs e)
         //{
         //    Close();

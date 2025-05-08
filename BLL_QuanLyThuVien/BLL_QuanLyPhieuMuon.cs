@@ -52,5 +52,9 @@ namespace BLL_QuanLyThuVien
         {
             return dllPhieuMuon.DelBookToCartOnDocGia(maDocGia);
         }
+        public string ThemSachVaoPhieuMuonV3(int maDG, int maPM)
+        {
+            return dllPhieuMuon.ThemSachVaoPhieuMuonV3(maPM, maDG);
+        }
     }
 }

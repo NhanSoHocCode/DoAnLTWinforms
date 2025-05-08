@@ -71,5 +71,9 @@ namespace BLL_QuanLyThuVien
                 return dal_taikhoan.SearchTimeLoginToUsername(search);
             }
         }
+        public string SaveTimeLogin(string username)
+        {
+            return dal_taikhoan.SaveTimeLogin(username);
+        }
     }
 }

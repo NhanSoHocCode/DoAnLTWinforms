@@ -289,5 +289,24 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
+        public string ThemSachVaoPhieuMuonV3(int maPM, int maDG)  // THEM THONG TIN PHIEU MUON 
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_ThemSachVaoPhieuMuonV3", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maPM", maPM);
+                cmd.Parameters.AddWithValue("@maDG", maDG);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                return "Thêm thành công";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

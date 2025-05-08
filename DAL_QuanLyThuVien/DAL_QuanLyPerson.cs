@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO_QuanLyThuVien;
 using Sunny.UI.Win32;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace DAL_QuanLyThuVien
 {
     public class DAL_QuanLyPerson : DBConnect
@@ -229,6 +230,24 @@ namespace DAL_QuanLyThuVien
             catch (Exception ex)
             {
                 return "Lỗi kết nối: " + ex.Message;
+            }
+        }
+        public DataTable ListMaDocGia()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("proc_listMaDG", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

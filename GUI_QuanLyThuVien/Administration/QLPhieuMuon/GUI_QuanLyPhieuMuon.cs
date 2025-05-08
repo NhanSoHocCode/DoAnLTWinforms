@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_QuanLyThuVien;
 using DTO_QuanLyThuVien;
+using GUI;
 using GUI_QuanLyThuVien.Administration.QLPhieuMuon;
 
 namespace GUI_QuanLyThuVien.Administration
@@ -152,8 +153,9 @@ namespace GUI_QuanLyThuVien.Administration
 
         private void guna2Button2_Click_1(object sender, EventArgs e)
         {
-            GUI_AddPhieuMuon form = new GUI_AddPhieuMuon();
-            form.ShowDialog();
+            GUI_AddPhieuMuon gUI_AddPhieuMuon = new GUI_AddPhieuMuon();
+            gUI_AddPhieuMuon.ShowDialog();
+
         }
     }
 }

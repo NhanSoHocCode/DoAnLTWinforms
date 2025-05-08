@@ -49,7 +49,7 @@ namespace GUI_QuanLyThuVien
             GUI_QuenMatKhau quenMK = new GUI_QuenMatKhau();
             quenMK.Show();
         }
-
+        BLL_TaiKhoan bll = new BLL_TaiKhoan();
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -69,6 +69,7 @@ namespace GUI_QuanLyThuVien
                     return;
             }
             taikhoan.sMaQuyen = int.Parse(bll_taikhoan.LayQuyenUser(txtName.Text));
+            bll.SaveTimeLogin(taikhoan.sTenTK);  // luu lai thoi gian dang nhap tai Button DangNhap 
             if (taikhoan.sMaQuyen == 3)  // admin 
             {
                 GUI_HomeManager homeManager = new GUI_HomeManager(3);

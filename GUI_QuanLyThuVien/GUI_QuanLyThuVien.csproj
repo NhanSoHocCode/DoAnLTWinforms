@@ -68,6 +68,12 @@
     <Compile Include="Administration\QLPhieuMuon\GUI_AddPhieuMuon.Designer.cs">
       <DependentUpon>GUI_AddPhieuMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administration\QLPhieuMuon\GUI_ShowBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\QLPhieuMuon\GUI_ShowBook.Designer.cs">
+      <DependentUpon>GUI_ShowBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administration\QLPhieuMuon\GUI_XemChiTietPM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\QLPhieuMuon\GUI_AddPhieuMuon.resx">
       <DependentUpon>GUI_AddPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\QLPhieuMuon\GUI_ShowBook.resx">
+      <DependentUpon>GUI_ShowBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\QLPhieuMuon\GUI_XemChiTietPM.resx">
       <DependentUpon>GUI_XemChiTietPM.cs</DependentUpon>

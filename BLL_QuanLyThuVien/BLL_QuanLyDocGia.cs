@@ -67,5 +67,9 @@ namespace BLL_QuanLyThuVien
                 return dal_QuanLyPerson.doimatkhau(person);
             }
         }
+        public DataTable ListMaDocGia()
+        {
+            return dal_QuanLyPerson.ListMaDocGia();
+        }
     }
 }

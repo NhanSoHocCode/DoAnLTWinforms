@@ -225,5 +225,23 @@ namespace DAL_QuanLyThuVien
                 throw ex;
             }
         }
+        public string SaveTimeLogin(string username)
+        {
+            string strSql = "proc_SaveTimeLoginToUsername";
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(strSql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.ExecuteNonQuery();
+                return "Save Time Login";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

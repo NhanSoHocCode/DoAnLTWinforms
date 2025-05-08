@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using GUI_QuanLyThuVien.Administration.QLPhieuMuon;
 
 namespace GUI_QuanLyThuVien
 {
@@ -24,7 +25,7 @@ namespace GUI_QuanLyThuVien
             //Application.Run(new GUI_DangKyDG());
            Application.Run(new GUI_DangNhap());
             //Application.Run(new GUI_HomeManager());
-            //Application.Run(new GUI_DangKyDG());
+            //Application.Run(new GUI_AddPhieuMuon());
         }
     }
 }
