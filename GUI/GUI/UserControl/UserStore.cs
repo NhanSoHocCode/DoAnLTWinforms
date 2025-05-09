@@ -40,7 +40,9 @@ namespace GUI.UserControl
             public decimal Price { get; set; }
             public Image ProductImage { get; set; } 
             public int SoLuong { get; set; }
-            
+            public string TacGia { get; set; }
+            public string TheLoai { get; set; }
+            public string NXB { get; set; }
         }
         // Phần dữ liệu của Database
         private List<ProductInfo> GetSampleProductData()
@@ -59,7 +61,10 @@ namespace GUI.UserControl
                         Price = decimal.Parse(dr["donGia"].ToString()),
                         ProductImage = Image.FromFile(path),
                         SoLuong = int.Parse(dr["soLuong"].ToString()),
-                        MaSach = int.Parse(dr["MaSach"].ToString())
+                        MaSach = int.Parse(dr["MaSach"].ToString()),
+                        NXB = dr["nhaXuatBan"].ToString(),
+                        TheLoai = dr["theLoai"].ToString(),
+                        TacGia = dr["tacGia"].ToString()
                     });
                 }   
             }
@@ -95,6 +100,7 @@ namespace GUI.UserControl
             if (productList.Count > 0)
             {
                 foreach (var product in productList)
+                    //txtQuantity.Text = product.SoLuong.ToString();
                     Sprice += product.Price;
                 CultureInfo cultureInfo = new CultureInfo("vi-VN");
                 //labelGiaTien.Text = (Sprice * 26000).ToString("N0", cultureInfo) + " VNDC";
@@ -149,9 +155,71 @@ namespace GUI.UserControl
                 pictureBox.TabIndex = 0;
                 pictureBox.TabStop = false;
 
+                // ..
+                // --- Tạo nhóm control số lượng thay cho Label ---
+
+                // Tạo Panel container để nhóm các control
+                var quantityPanel = new Panel();
+                quantityPanel.Location = new System.Drawing.Point(60, 186); // Vị trí tương đối trong sataPanel
+                quantityPanel.Size = new System.Drawing.Size(150, 30); // Kích thước tổng
+                quantityPanel.Name = $"quantityPanel_{product.Name.Replace(" ", "_")}";
+
+                // Tạo TextBox hiển thị số lượng
+                var txtQuantity = new TextBox();
+                txtQuantity.Text = product.SoLuong.ToString(); // Lấy số lượng từ dữ liệu
+                txtQuantity.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+                txtQuantity.Size = new System.Drawing.Size(50, 25);
+                txtQuantity.Location = new System.Drawing.Point(35, 0);
+                txtQuantity.TextAlign = HorizontalAlignment.Center;
+                // Tạo nút giảm (-)
+                var btnDecrease = new Button();
+                btnDecrease.Text = "-";
+                btnDecrease.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+                btnDecrease.Size = new System.Drawing.Size(30, 25);
+                btnDecrease.Location = new System.Drawing.Point(0, 0);
+                btnDecrease.Click += (sender, e) => {
+                    int currentValue;
+                    if (int.TryParse(txtQuantity.Text, out currentValue) && currentValue > 1)
+                    {
+                        txtQuantity.Text = (currentValue - 1).ToString();
+                        try
+                        {
+                            product.SoLuong = int.Parse(txtQuantity.Text); // Cập nhật số lượng trong dữ liệu
+                        } 
+                        catch(Exception ex)
+                        {
+                            MessageBox.Show($"Lỗi cập nhật số lượng: {ex.Message}");
+                            return;   // thoat 
+                        }
+                    }
+                };
+
+                
+
+                // Tạo nút tăng (+)
+                var btnIncrease = new Button();
+                btnIncrease.Text = "+";
+                btnIncrease.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+                btnIncrease.Size = new System.Drawing.Size(30, 25);
+                btnIncrease.Location = new System.Drawing.Point(90, 0);
+                btnIncrease.Click += (sender, e) => {
+                    int currentValue;
+                    if (int.TryParse(txtQuantity.Text, out currentValue))
+                    {
+                        txtQuantity.Text = (currentValue + 1).ToString();
+                    }
+                };
+                // Thêm các control vào Panel
+                quantityPanel.Controls.Add(btnDecrease);
+                quantityPanel.Controls.Add(txtQuantity);
+                quantityPanel.Controls.Add(btnIncrease);
+
+                // Thêm Panel vào sataPanel
+                sataPanel.Controls.Add(quantityPanel);
+
                 // --- Tạo Label Tên sản phẩm ---
                 //var labelName = new Label();
-                //labelName.AutoSize = true; // Tự động điều chỉnh kích thước label theo text
+                //labelName.AutoSize = true; // Tự độn    g điều chỉnh kích thước label theo text
                 //labelName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 //labelName.ForeColor = System.Drawing.Color.White; // Cần màu cho label tên (không có trong ảnh, chọn màu trắng)
                 //labelName.Location = new System.Drawing.Point(5, 186); // Vị trí tương đối trong sataPanel
@@ -256,7 +324,7 @@ namespace GUI.UserControl
                     var productData = parentPanel?.Tag as ProductInfo;
                     if (productData != null)
                     {
-                        MessageBox.Show($"Bạn đã nhấn Detail cho: {productData.Name}\nGiá: ${productData.Price:N2}\nSố Lượng: {product.SoLuong}");
+                        MessageBox.Show($"Tên sản phẩm: {productData.Name}\nGiá: ${productData.Price:N2}\nThể loại: {product.TheLoai}\nTác Giả: {product.TacGia}\nNXB:{product.NXB}");
                         // Mở form chi tiết hoặc hiển thị thêm thông tin ở đây
                     }
                 };
@@ -323,7 +391,11 @@ namespace GUI.UserControl
                         DTO_Sach book = new DTO_Sach();
                         book.sMaSach = product.MaSach;
                         book.sSoLuong = product.SoLuong;
-                        bllpm.ThemSachVaoPhieuMuon(book, maPMnew);
+                        if (bllpm.ThemSachVaoPhieuMuon(book, maPMnew) == "Số lượng sách không đủ để mượn.")
+                        {
+                            MessageBox.Show("Số lượng sách không đủ để mượn.");
+                            return;
+                        }
                     }
                     MessageBox.Show("Mượn thành công");
                     bllpm.DelBookToCartOnDocGia(int.Parse(person.sMa));

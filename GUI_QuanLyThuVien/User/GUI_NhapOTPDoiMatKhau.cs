@@ -47,6 +47,7 @@ namespace GUI_QuanLyThuVien.User
                 timer1.Stop();
                 OTP = -1;   // xoa bo OTP cua mail da goi di neu het thoi gian
                 MessageBox.Show("Thời gian đã hết!");
+                this.Close();
             }
         }
 

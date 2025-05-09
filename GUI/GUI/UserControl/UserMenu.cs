@@ -41,6 +41,9 @@ namespace GUI.UserControl
             public Image ProductImage { get; set; }
             public int MaSach { get; set; }
             public int Soluong { get; set; }
+            public string TheLoai { get; set; }
+            public string TacGia { get; set; }
+            public string NXB { get; set; }
         }
         // Phần dữ liệu của Database
         private List<ProductInfo> GetSampleProductData()
@@ -56,13 +59,22 @@ namespace GUI.UserControl
                     dt = bll_quanlysach.TimKiemSach(txtUser.Text);
                     foreach (DataRow dr in dt.Rows)
                     {
+                        if (int.Parse(dr["soluong"].ToString()) <= 0)
+                        {
+                            continue; // bỏ qua nếu số lượng <= 0
+                        }
                         string path = "d:\\k25_project_ltwinform\\doan\\images\\" + dr["source_image"].ToString();
                         products.Add(new ProductInfo
                         {
                             Name = dr["tensach"].ToString(),
                             Price = decimal.Parse(dr["dongia"].ToString()),
                             ProductImage = Image.FromFile(path),
-                            MaSach = int.Parse(dr["masach"].ToString())
+                            MaSach = int.Parse(dr["masach"].ToString()),
+                            Soluong = int.Parse(dr["soluong"].ToString()),
+                            TacGia = dr["tacgia"].ToString(),
+                            TheLoai = dr["theloai"].ToString(),
+                            NXB = dr["nhaxuatban"].ToString()
+
                         });
                     }
                 }
@@ -71,6 +83,9 @@ namespace GUI.UserControl
                     dt = bll_quanlysach.XemDanhSachToanBoSach();
                     foreach (DataRow dr in dt.Rows)
                     {
+                        if(int.Parse(dr["Số Lượng"].ToString()) <= 0){
+                            continue; // bỏ qua nếu số lượng <= 0
+                        }
                         if (Key == "All")
                         {
                             string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\" + dr["Source Image"].ToString();
@@ -79,7 +94,12 @@ namespace GUI.UserControl
                                 Name = dr["Tên Sách"].ToString(),
                                 Price = decimal.Parse(dr["Đơn Giá"].ToString()),
                                 ProductImage = Image.FromFile(path),
-                                MaSach = int.Parse(dr["Mã Sách"].ToString())
+                                MaSach = int.Parse(dr["Mã Sách"].ToString()),
+                                TheLoai = dr["Thể Loại"].ToString(),
+                                TacGia = dr["Tác Giả"].ToString(),
+                                NXB = dr["Nhà Xuất Bản"].ToString(),
+                                Soluong = int.Parse(dr["Số Lượng"].ToString()),
+
                             });
                         }
                         else if (dr["Thể Loại"].ToString() == Key)
@@ -90,7 +110,11 @@ namespace GUI.UserControl
                                 Name = dr["Tên Sách"].ToString(),
                                 Price = decimal.Parse(dr["Đơn Giá"].ToString()),
                                 ProductImage = Image.FromFile(path),
-                                MaSach = int.Parse(dr["Mã Sách"].ToString())
+                                MaSach = int.Parse(dr["Mã Sách"].ToString()),
+                                TheLoai = dr["Thể Loại"].ToString(),
+                                TacGia = dr["Tác Giả"].ToString(),
+                                NXB = dr["Nhà Xuất Bản"].ToString(),
+                                Soluong = int.Parse(dr["Số Lượng"].ToString())
                             });
                         }
                         if (Sort)
@@ -198,13 +222,13 @@ namespace GUI.UserControl
                 // --- Tạo Label Giá tiền ---
                 var labelPrice = new Label();
                 labelPrice.AutoSize = true;
-                labelPrice.Font = new System.Drawing.Font("Century Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                labelPrice.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 labelPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(130)))), ((int)(((byte)(80)))));
                 labelPrice.Location = new System.Drawing.Point(3, 223); // Vị trí tương đối trong sataPanel
                 labelPrice.Name = $"labelPrice_{product.Name.Replace(" ", "_")}";
                 labelPrice.Size = new System.Drawing.Size(79, 34); // Size sẽ tự điều chỉnh
                 labelPrice.TabIndex = 2;
-                labelPrice.Text = $"${product.Price:N2}"; // Lấy giá từ dữ liệu và định dạng
+                labelPrice.Text = $"Số lượng hiện có: {product.Soluong}"; // Lấy giá từ dữ liệu và định dạng
 
                 // --- Tạo UIButton "Buy" ---
                 var uiButtonBuy = new UIButton(); // Giả sử lớp là Sunny.UI.UIButton
@@ -296,7 +320,7 @@ namespace GUI.UserControl
                     var productData = parentPanel?.Tag as ProductInfo;
                     if (productData != null)
                     {
-                        MessageBox.Show($"Bạn đã nhấn Detail cho: {productData.Name}\nGiá: ${productData.Price:N2}");
+                        MessageBox.Show($"Tên sản phẩm: {productData.Name}\nGiá: ${productData.Price:N2}\nSố Lượng: {product.Soluong}\nThể loại: {product.TheLoai}\nTác Giả: {product.TacGia}\nNXB:{product.NXB}");
                         // Mở form chi tiết hoặc hiển thị thêm thông tin ở đây
                     }
                 };

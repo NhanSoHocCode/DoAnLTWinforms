@@ -64,9 +64,13 @@ namespace DAL_QuanLyThuVien
                 cmd.Parameters.AddWithValue("@masach", book.sMaSach);
                 cmd.Parameters.AddWithValue("@maphieumuon", maPhieuMuon);
                 cmd.Parameters.AddWithValue("@soluong", book.sSoLuong);
+                SqlParameter messageParam = new SqlParameter("@message", SqlDbType.NVarChar, 100);
+                messageParam.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(messageParam);
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                return "Them sach vao phieu muon thanh cong";
+                string resultMessage = messageParam.Value.ToString();
+                return resultMessage;
             }
             catch (Exception ex)
             {

@@ -43,7 +43,7 @@ namespace GUI
         }
         public void Form1_Load()
         {
-            UserControl.UserMenu form = new UserControl.UserMenu(this, "Công Nghệ", person);
+            UserControl.UserMenu form = new UserControl.UserMenu(this, "All", person);
             OpenChildForm(form);
         }
         private void PaneMain_Paint(object sender, PaintEventArgs e)
