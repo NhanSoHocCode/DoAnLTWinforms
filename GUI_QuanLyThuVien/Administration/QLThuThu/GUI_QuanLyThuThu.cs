@@ -83,8 +83,8 @@ private void Form1_Load(object sender, EventArgs e)
 
             var sataPanel = new SATAUiFramework.SATAPanel();
             sataPanel.Size = new Size(350, 170);
-            sataPanel.BackColor = Color.RosyBrown;
-            sataPanel.BackColor2 = Color.RosyBrown;
+            sataPanel.BackColor = Color.FromArgb(169, 169, 169);
+            //sataPanel.BackColor2 = Color.RosyBrown;
             sataPanel.Margin = new Padding(10);
             sataPanel.BorderRadius = new SATAUiFramework.BorderRadius()
             {

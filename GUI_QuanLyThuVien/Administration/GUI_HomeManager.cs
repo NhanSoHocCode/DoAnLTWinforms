@@ -300,6 +300,11 @@ namespace GUI_QuanLyThuVien.Administration
             guna2DGV1.Sort(guna2DGV1.Columns["Thời gian login gần đây"], ListSortDirection.Descending);
 
         }
+
+        private void panelSach_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         //private void btnClose_Click(object sender, EventArgs e)
         //{
         //    Close();

@@ -67,8 +67,7 @@ namespace GUI_QuanLyThuVien.Administration
 
             var sataPanel = new SATAUiFramework.SATAPanel();
             sataPanel.Size = new Size(350, 170);
-            sataPanel.BackColor = Color.RosyBrown;
-            sataPanel.BackColor2 = Color.RosyBrown;
+            sataPanel.BackColor = Color.FromArgb(169, 169, 169); 
             sataPanel.Margin = new Padding(10);
             sataPanel.BorderRadius = new SATAUiFramework.BorderRadius()
             {
@@ -92,8 +91,11 @@ namespace GUI_QuanLyThuVien.Administration
             avatar.SizeMode = PictureBoxSizeMode.StretchImage;
             avatar.Size = new Size(100, 130);
             avatar.Location = new Point(10, 10);
+            avatar.Margin = new Padding(10);
             sataPanel.Controls.Add(avatar);
-
+            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+            gp.AddEllipse(0, 0, avatar.Width, avatar.Height);
+            avatar.Region = new Region(gp);
             int left = 120;
 
             // Label: Họ tên
@@ -129,7 +131,7 @@ namespace GUI_QuanLyThuVien.Administration
             // Địa chỉ
             Label lblAddress = new Label();
             lblAddress.Text = "Địa chỉ: " + diaChi;
-            lblAddress.ForeColor = Color.White;
+            lblAddress.ForeColor = Color.Transparent;
             lblAddress.Font = new Font("Segoe UI", 9);
             lblAddress.BackColor = Color.Transparent;
             lblAddress.Location = new Point(left, 75);
@@ -139,7 +141,7 @@ namespace GUI_QuanLyThuVien.Administration
             // Ngày sinh & Giới tính
             Label lblDOBGender = new Label();
             lblDOBGender.Text = $"Ngày sinh: {DOB}   |   Giới tính: {gioiTinh}";
-            lblDOBGender.ForeColor = Color.WhiteSmoke;
+            lblDOBGender.ForeColor = Color.Transparent;
             lblDOBGender.Font = new Font("Segoe UI", 9, FontStyle.Italic);
             lblDOBGender.BackColor = Color.Transparent;
             lblDOBGender.Location = new Point(left, 95);
@@ -149,7 +151,7 @@ namespace GUI_QuanLyThuVien.Administration
             // Mã độc giả
             Label lblDocGia = new Label();
             lblDocGia.Text = "Mã độc giả: " + IDDocGia;
-            lblDocGia.ForeColor = Color.White;
+            lblDocGia.ForeColor = Color.Transparent;
             lblDocGia.Font = new Font("Segoe UI", 9);
             lblDocGia.BackColor = Color.Transparent;
             lblDocGia.Location = new Point(left, 115);
@@ -159,8 +161,8 @@ namespace GUI_QuanLyThuVien.Administration
             // Nút Sửa
             Button btnDetail = new Button();
             btnDetail.Text = "Sửa";
-            btnDetail.ForeColor = Color.White;
-            btnDetail.BackColor = Color.Teal;
+            btnDetail.ForeColor = Color.Transparent;
+            btnDetail.BackColor = Color.FromArgb(50, 50, 50);
             btnDetail.FlatStyle = FlatStyle.Flat;
             btnDetail.FlatAppearance.BorderSize = 0;
             btnDetail.Font = new Font("Segoe UI", 9, FontStyle.Bold);
@@ -173,8 +175,8 @@ namespace GUI_QuanLyThuVien.Administration
             // Nút Xóa
             Button btnXoa = new Button();
             btnXoa.Text = "Xóa";
-            btnXoa.ForeColor = Color.White;
-            btnXoa.BackColor = Color.Teal;
+            btnXoa.ForeColor = Color.Transparent;
+            btnXoa.BackColor = Color.FromArgb(50, 50, 50);
             btnXoa.FlatStyle = FlatStyle.Flat;
             btnXoa.FlatAppearance.BorderSize = 0;
             btnXoa.Font = new Font("Segoe UI", 9, FontStyle.Bold);

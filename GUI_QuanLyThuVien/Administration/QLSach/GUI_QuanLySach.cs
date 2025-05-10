@@ -164,8 +164,8 @@ namespace GUI_QuanLyThuVien
             // Tạo SATAPanel cho sách
             var sataPanel = new SATAUiFramework.SATAPanel();
             sataPanel.Size = new Size(225, 350);
-            sataPanel.BackColor = Color.FromArgb(30,32,41);
-            sataPanel.BackColor2 = Color.FromArgb(30,32,41);
+            sataPanel.BackColor = Color.FromArgb(169, 169, 169);
+            sataPanel.BackColor2 = Color.FromArgb(169, 169, 169);
             sataPanel.Margin = new Padding(10);
             sataPanel.BorderRadius = new SATAUiFramework.BorderRadius()
             {
