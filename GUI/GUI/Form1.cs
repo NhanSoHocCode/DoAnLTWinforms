@@ -90,6 +90,12 @@ namespace GUI
             form.person = person;
             OpenChildForm(form);
         }
+        public void phieumuon(DTO_PhieuMuon pm)
+        {
+            UserControl.UserPhieuMuon form = new UserControl.UserPhieuMuon();
+            form.pm = pm;
+            OpenChildForm(form);
+        }
         private void sataButton6_Click(object sender, EventArgs e)
         {
             UserControl.UserSetting form = new UserControl.UserSetting(this, person);

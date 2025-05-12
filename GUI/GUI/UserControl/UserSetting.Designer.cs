@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SATAUiFramework.BorderRadius borderRadius1 = new SATAUiFramework.BorderRadius();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserSetting));
+            SATAUiFramework.BorderRadius borderRadius3 = new SATAUiFramework.BorderRadius();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbMaDocGia = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnLanLogin = new FrameworkTest.SATAButton();
+            this.pictbSourceImage = new System.Windows.Forms.PictureBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.pane = new System.Windows.Forms.Panel();
+            this.cbbSet = new Sunny.UI.UIComboBox();
             this.btnSearchFile = new FrameworkTest.SATAButton();
             this.datepBirth = new Sunny.UI.UIDatePicker();
             this.label16 = new System.Windows.Forms.Label();
@@ -59,16 +61,12 @@
             this.txtUser = new Sunny.UI.UITextBox();
             this.txtName = new Sunny.UI.UITextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.cbbSet = new Sunny.UI.UIComboBox();
-            this.pictbSourceImage = new System.Windows.Forms.PictureBox();
-            this.sataButton1 = new FrameworkTest.SATAButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictbSourceImage)).BeginInit();
             this.pane.SuspendLayout();
             this.sataPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictbSourceImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,6 +92,18 @@
             this.lbMaDocGia.TabIndex = 18;
             this.lbMaDocGia.Text = "Mã Độc Giả ";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1282, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(81, 96);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -118,52 +128,23 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnLanLogin);
             this.panel2.Controls.Add(this.pictbSourceImage);
-            this.panel2.Controls.Add(this.sataButton1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1123, 96);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 801);
             this.panel2.TabIndex = 1;
             // 
-            // btnLanLogin
+            // pictbSourceImage
             // 
-            this.btnLanLogin.ButtonText = "Check Loin";
-            this.btnLanLogin.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.btnLanLogin.CheckedForeColor = System.Drawing.Color.White;
-            this.btnLanLogin.CheckedImageTint = System.Drawing.Color.White;
-            this.btnLanLogin.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.btnLanLogin.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnLanLogin.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLanLogin.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.btnLanLogin.HoverForeColor = System.Drawing.Color.White;
-            this.btnLanLogin.HoverImage = null;
-            this.btnLanLogin.HoverImageTint = System.Drawing.Color.White;
-            this.btnLanLogin.HoverOutline = System.Drawing.Color.Empty;
-            this.btnLanLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLanLogin.Image")));
-            this.btnLanLogin.ImageAutoCenter = false;
-            this.btnLanLogin.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btnLanLogin.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnLanLogin.ImageTint = System.Drawing.Color.White;
-            this.btnLanLogin.IsToggleButton = false;
-            this.btnLanLogin.IsToggled = false;
-            this.btnLanLogin.Location = new System.Drawing.Point(6, 229);
-            this.btnLanLogin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnLanLogin.Name = "btnLanLogin";
-            this.btnLanLogin.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.btnLanLogin.NormalForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLanLogin.NormalOutline = System.Drawing.Color.Empty;
-            this.btnLanLogin.OutlineThickness = 2F;
-            this.btnLanLogin.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.btnLanLogin.PressedForeColor = System.Drawing.Color.White;
-            this.btnLanLogin.PressedImageTint = System.Drawing.Color.White;
-            this.btnLanLogin.PressedOutline = System.Drawing.Color.Empty;
-            this.btnLanLogin.Rounding = new System.Windows.Forms.Padding(5);
-            this.btnLanLogin.Size = new System.Drawing.Size(228, 62);
-            this.btnLanLogin.TabIndex = 16;
-            this.btnLanLogin.TextAutoCenter = false;
-            this.btnLanLogin.TextOffset = new System.Drawing.Point(15, 0);
+            this.pictbSourceImage.Image = ((System.Drawing.Image)(resources.GetObject("pictbSourceImage.Image")));
+            this.pictbSourceImage.Location = new System.Drawing.Point(68, 22);
+            this.pictbSourceImage.Name = "pictbSourceImage";
+            this.pictbSourceImage.Size = new System.Drawing.Size(120, 118);
+            this.pictbSourceImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictbSourceImage.TabIndex = 14;
+            this.pictbSourceImage.TabStop = false;
+            this.pictbSourceImage.Click += new System.EventHandler(this.pictbSourceImage_Click);
             // 
             // pane
             // 
@@ -193,9 +174,33 @@
             this.pane.Size = new System.Drawing.Size(1123, 801);
             this.pane.TabIndex = 3;
             // 
+            // cbbSet
+            // 
+            this.cbbSet.DataSource = null;
+            this.cbbSet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.cbbSet.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.cbbSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cbbSet.ForeColor = System.Drawing.Color.White;
+            this.cbbSet.ItemHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.cbbSet.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbbSet.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.cbbSet.Location = new System.Drawing.Point(183, 241);
+            this.cbbSet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbbSet.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbbSet.Name = "cbbSet";
+            this.cbbSet.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbbSet.Size = new System.Drawing.Size(150, 29);
+            this.cbbSet.SymbolSize = 24;
+            this.cbbSet.TabIndex = 20;
+            this.cbbSet.Text = "null";
+            this.cbbSet.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbbSet.Watermark = "";
+            // 
             // btnSearchFile
             // 
-            this.btnSearchFile.ButtonText = "Search to destop";
+            this.btnSearchFile.ButtonText = "Chọn ảnh";
             this.btnSearchFile.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.btnSearchFile.CheckedForeColor = System.Drawing.Color.White;
             this.btnSearchFile.CheckedImageTint = System.Drawing.Color.White;
@@ -234,8 +239,10 @@
             // 
             // datepBirth
             // 
-            this.datepBirth.FillColor = System.Drawing.Color.White;
+            this.datepBirth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.datepBirth.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.datepBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.datepBirth.ForeColor = System.Drawing.Color.White;
             this.datepBirth.Location = new System.Drawing.Point(183, 99);
             this.datepBirth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.datepBirth.MaxLength = 10;
@@ -381,11 +388,11 @@
             // 
             this.sataPanel1.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.sataPanel1.BorderColor = System.Drawing.Color.Black;
-            borderRadius1.BottomLeft = 20;
-            borderRadius1.BottomRight = 20;
-            borderRadius1.TopLeft = 20;
-            borderRadius1.TopRight = 20;
-            this.sataPanel1.BorderRadius = borderRadius1;
+            borderRadius3.BottomLeft = 20;
+            borderRadius3.BottomRight = 20;
+            borderRadius3.TopLeft = 20;
+            borderRadius3.TopRight = 20;
+            this.sataPanel1.BorderRadius = borderRadius3;
             this.sataPanel1.BorderThickness = 0;
             this.sataPanel1.Controls.Add(this.uiButton1);
             this.sataPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -583,90 +590,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // cbbSet
-            // 
-            this.cbbSet.DataSource = null;
-            this.cbbSet.FillColor = System.Drawing.Color.White;
-            this.cbbSet.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.cbbSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cbbSet.ItemHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.cbbSet.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbbSet.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.cbbSet.Location = new System.Drawing.Point(183, 241);
-            this.cbbSet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbbSet.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbbSet.Name = "cbbSet";
-            this.cbbSet.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbbSet.Size = new System.Drawing.Size(150, 29);
-            this.cbbSet.SymbolSize = 24;
-            this.cbbSet.TabIndex = 20;
-            this.cbbSet.Text = "uiComboBox1";
-            this.cbbSet.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbbSet.Watermark = "";
-            // 
-            // pictbSourceImage
-            // 
-            this.pictbSourceImage.Image = ((System.Drawing.Image)(resources.GetObject("pictbSourceImage.Image")));
-            this.pictbSourceImage.Location = new System.Drawing.Point(68, 22);
-            this.pictbSourceImage.Name = "pictbSourceImage";
-            this.pictbSourceImage.Size = new System.Drawing.Size(120, 118);
-            this.pictbSourceImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictbSourceImage.TabIndex = 14;
-            this.pictbSourceImage.TabStop = false;
-            this.pictbSourceImage.Click += new System.EventHandler(this.pictbSourceImage_Click);
-            // 
-            // sataButton1
-            // 
-            this.sataButton1.ButtonText = "Store";
-            this.sataButton1.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.sataButton1.CheckedForeColor = System.Drawing.Color.White;
-            this.sataButton1.CheckedImageTint = System.Drawing.Color.White;
-            this.sataButton1.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.sataButton1.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.sataButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sataButton1.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.sataButton1.HoverForeColor = System.Drawing.Color.White;
-            this.sataButton1.HoverImage = null;
-            this.sataButton1.HoverImageTint = System.Drawing.Color.White;
-            this.sataButton1.HoverOutline = System.Drawing.Color.Empty;
-            this.sataButton1.Image = global::GUI.Properties.Resources.report;
-            this.sataButton1.ImageAutoCenter = false;
-            this.sataButton1.ImageExpand = new System.Drawing.Point(0, 0);
-            this.sataButton1.ImageOffset = new System.Drawing.Point(15, 0);
-            this.sataButton1.ImageTint = System.Drawing.Color.White;
-            this.sataButton1.IsToggleButton = false;
-            this.sataButton1.IsToggled = false;
-            this.sataButton1.Location = new System.Drawing.Point(6, 152);
-            this.sataButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.sataButton1.Name = "sataButton1";
-            this.sataButton1.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.sataButton1.NormalForeColor = System.Drawing.Color.WhiteSmoke;
-            this.sataButton1.NormalOutline = System.Drawing.Color.Empty;
-            this.sataButton1.OutlineThickness = 2F;
-            this.sataButton1.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.sataButton1.PressedForeColor = System.Drawing.Color.White;
-            this.sataButton1.PressedImageTint = System.Drawing.Color.White;
-            this.sataButton1.PressedOutline = System.Drawing.Color.Empty;
-            this.sataButton1.Rounding = new System.Windows.Forms.Padding(5);
-            this.sataButton1.Size = new System.Drawing.Size(242, 62);
-            this.sataButton1.TabIndex = 7;
-            this.sataButton1.TextAutoCenter = false;
-            this.sataButton1.TextOffset = new System.Drawing.Point(15, 0);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1282, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(81, 96);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // UserSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -684,12 +607,12 @@
             this.Load += new System.EventHandler(this.UserSetting_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictbSourceImage)).EndInit();
             this.pane.ResumeLayout(false);
             this.pane.PerformLayout();
             this.sataPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictbSourceImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -702,7 +625,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Panel pane;
         private System.Windows.Forms.PictureBox pictbSourceImage;
-        private FrameworkTest.SATAButton sataButton1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Sunny.UI.UITextBox txtName;
         private System.Windows.Forms.Label label9;
@@ -724,7 +646,6 @@
         private Sunny.UI.UITextBox txtSdt;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
-        private FrameworkTest.SATAButton btnLanLogin;
         private Sunny.UI.UIDatePicker datepBirth;
         private FrameworkTest.SATAButton btnSearchFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

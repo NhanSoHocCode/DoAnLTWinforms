@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace GUI_QuanLyThuVien.Administration
 {
     public partial class GUI_QuanLyDocGia : Form
     {
+
         public GUI_QuanLyDocGia()
         {
             InitializeComponent();
@@ -67,8 +69,9 @@ namespace GUI_QuanLyThuVien.Administration
 
             var sataPanel = new SATAUiFramework.SATAPanel();
             sataPanel.Size = new Size(350, 170);
-            sataPanel.BackColor = Color.FromArgb(169, 169, 169); 
-            sataPanel.Margin = new Padding(10);
+            sataPanel.BackColor = Color.FromArgb(169, 169, 169);
+            sataPanel.BackColor2 = Color.FromArgb(169, 169, 169);
+            sataPanel.Margin = new Padding(28);
             sataPanel.BorderRadius = new SATAUiFramework.BorderRadius()
             {
                 TopLeft = 15,
@@ -198,7 +201,8 @@ namespace GUI_QuanLyThuVien.Administration
                     sDiaChi = diaChi,
                     sUsername = name,
                     sSourceImage = imagePath,
-                    sNgaySinh = DateTime.Parse(DOB),
+                    sNgaySinh = DateTime.ParseExact(DOB, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+
                     sPassword = password
                 };
                 controlChiTietDocGia.DocGia = true;

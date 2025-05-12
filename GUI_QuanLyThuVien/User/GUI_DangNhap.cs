@@ -127,5 +127,10 @@ namespace GUI_QuanLyThuVien
                 isPasswordVisible = true;
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

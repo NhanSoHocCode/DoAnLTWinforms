@@ -80,7 +80,19 @@
     <Compile Include="UserControl\GUI_XacNhanNgayMuon.Designer.cs">
       <DependentUpon>GUI_XacNhanNgayMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\GUI_XemChiTietPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\GUI_XemChiTietPhieuMuon.Designer.cs">
+      <DependentUpon>GUI_XemChiTietPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\HandleWithDatabase.cs" />
+    <Compile Include="UserControl\UserPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\UserPhieuMuon.Designer.cs">
+      <DependentUpon>UserPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\UserSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     </Compile>
     <EmbeddedResource Include="UserControl\GUI_XacNhanNgayMuon.resx">
       <DependentUpon>GUI_XacNhanNgayMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\GUI_XemChiTietPhieuMuon.resx">
+      <DependentUpon>GUI_XemChiTietPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UserPhieuMuon.resx">
+      <DependentUpon>UserPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\UserSetting.resx">
       <DependentUpon>UserSetting.cs</DependentUpon>

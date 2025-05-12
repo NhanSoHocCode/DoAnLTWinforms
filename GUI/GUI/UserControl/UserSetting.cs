@@ -126,5 +126,10 @@ namespace GUI.UserControl
         {
 
         }
+
+        private void sataButton1_Click(object sender, EventArgs e)  // xem gio hang cua minh 
+        {
+
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel3 = new System.Windows.Forms.Panel();
             this.uiContextMenuStrip1 = new Sunny.UI.UIContextMenuStrip();
+            this.sataButton2 = new FrameworkTest.SATAButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -144,6 +145,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.sataButton2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.sataButton1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -219,6 +221,45 @@
             this.uiContextMenuStrip1.Name = "uiContextMenuStrip1";
             this.uiContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // sataButton2
+            // 
+            this.sataButton2.ButtonText = "Phiếu mượn";
+            this.sataButton2.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.sataButton2.CheckedForeColor = System.Drawing.Color.White;
+            this.sataButton2.CheckedImageTint = System.Drawing.Color.White;
+            this.sataButton2.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.sataButton2.CustomDialogResult = System.Windows.Forms.DialogResult.None;
+            this.sataButton2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sataButton2.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.sataButton2.HoverForeColor = System.Drawing.Color.White;
+            this.sataButton2.HoverImage = null;
+            this.sataButton2.HoverImageTint = System.Drawing.Color.White;
+            this.sataButton2.HoverOutline = System.Drawing.Color.Empty;
+            this.sataButton2.Image = ((System.Drawing.Image)(resources.GetObject("sataButton2.Image")));
+            this.sataButton2.ImageAutoCenter = false;
+            this.sataButton2.ImageExpand = new System.Drawing.Point(0, 0);
+            this.sataButton2.ImageOffset = new System.Drawing.Point(15, 0);
+            this.sataButton2.ImageTint = System.Drawing.Color.White;
+            this.sataButton2.IsToggleButton = false;
+            this.sataButton2.IsToggled = false;
+            this.sataButton2.Location = new System.Drawing.Point(30, 166);
+            this.sataButton2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.sataButton2.Name = "sataButton2";
+            this.sataButton2.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.sataButton2.NormalForeColor = System.Drawing.Color.WhiteSmoke;
+            this.sataButton2.NormalOutline = System.Drawing.Color.Empty;
+            this.sataButton2.OutlineThickness = 2F;
+            this.sataButton2.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.sataButton2.PressedForeColor = System.Drawing.Color.White;
+            this.sataButton2.PressedImageTint = System.Drawing.Color.White;
+            this.sataButton2.PressedOutline = System.Drawing.Color.Empty;
+            this.sataButton2.Rounding = new System.Windows.Forms.Padding(5);
+            this.sataButton2.Size = new System.Drawing.Size(253, 62);
+            this.sataButton2.TabIndex = 13;
+            this.sataButton2.TextAutoCenter = false;
+            this.sataButton2.TextOffset = new System.Drawing.Point(15, 0);
+            this.sataButton2.Click += new System.EventHandler(this.sataButton2_Click);
+            // 
             // UserMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -257,5 +298,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private Sunny.UI.UIContextMenuStrip uiContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2TextBox txtUser;
+        private FrameworkTest.SATAButton sataButton2;
     }
 }

@@ -411,5 +411,12 @@ namespace GUI.UserControl
                 Load_all();
             }
         }
+
+        private void sataButton2_Click(object sender, EventArgs e) // xem phieu muon 
+        {
+            DTO_PhieuMuon pm = new DTO_PhieuMuon();
+            pm.sTenDocGia = person.sHoTen;
+            parentForm.phieumuon(pm);
+        }
     }
 }

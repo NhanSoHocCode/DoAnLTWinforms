@@ -84,8 +84,9 @@ private void Form1_Load(object sender, EventArgs e)
             var sataPanel = new SATAUiFramework.SATAPanel();
             sataPanel.Size = new Size(350, 170);
             sataPanel.BackColor = Color.FromArgb(169, 169, 169);
+            sataPanel.BackColor2 = Color.FromArgb(169, 169, 169);
             //sataPanel.BackColor2 = Color.RosyBrown;
-            sataPanel.Margin = new Padding(10);
+            sataPanel.Margin = new Padding(28);
             sataPanel.BorderRadius = new SATAUiFramework.BorderRadius()
             {
                 TopLeft = 15,
@@ -93,8 +94,6 @@ private void Form1_Load(object sender, EventArgs e)
                 BottomLeft = 15,
                 BottomRight = 15
             };
-
-            // Hình đại diện
             PictureBox avatar = new PictureBox();
             try
             {
@@ -108,9 +107,12 @@ private void Form1_Load(object sender, EventArgs e)
             avatar.SizeMode = PictureBoxSizeMode.StretchImage;
             avatar.Size = new Size(100, 130);
             avatar.Location = new Point(10, 10);
+            avatar.Margin = new Padding(10);
             sataPanel.Controls.Add(avatar);
-
-            int left = 120; // khoảng cách trái cho các label
+            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+            gp.AddEllipse(0, 0, avatar.Width, avatar.Height);
+            avatar.Region = new Region(gp);
+            int left = 120;
 
             // Label: Họ tên
             Label lblName = new Label();
@@ -161,6 +163,14 @@ private void Form1_Load(object sender, EventArgs e)
             sataPanel.Controls.Add(lblDocGia);
 
             // Ngày sinh & Giới tính
+            if (gioiTinh == "True")
+            {
+                gioiTinh = "Nam";
+            }
+            else
+            {
+                gioiTinh = "Nữ";
+            }
             Label lblDOBGender = new Label();
             lblDOBGender.Text = $"Ngày sinh: {DOB}   |   Giới tính: {gioiTinh}";
             lblDOBGender.ForeColor = Color.WhiteSmoke;
@@ -173,8 +183,8 @@ private void Form1_Load(object sender, EventArgs e)
             // Nút Sửa
             Button btnDetail = new Button();
             btnDetail.Text = "Sửa";
-            btnDetail.ForeColor = Color.White;
-            btnDetail.BackColor = Color.Teal;
+            btnDetail.ForeColor = Color.Transparent;
+            btnDetail.BackColor = Color.FromArgb(50, 50, 50);
             btnDetail.FlatStyle = FlatStyle.Flat;
             btnDetail.FlatAppearance.BorderSize = 0;
             btnDetail.Font = new Font("Segoe UI", 9, FontStyle.Bold);
@@ -187,8 +197,8 @@ private void Form1_Load(object sender, EventArgs e)
             // Nút Xóa
             Button btnXoa = new Button();
             btnXoa.Text = "Xóa";
-            btnXoa.ForeColor = Color.White;
-            btnXoa.BackColor = Color.Teal;
+            btnXoa.ForeColor = Color.Transparent;
+            btnXoa.BackColor = Color.FromArgb(50, 50, 50);
             btnXoa.FlatStyle = FlatStyle.Flat;
             btnXoa.FlatAppearance.BorderSize = 0;
             btnXoa.Font = new Font("Segoe UI", 9, FontStyle.Bold);
@@ -210,7 +220,7 @@ private void Form1_Load(object sender, EventArgs e)
                     sDiaChi = diaChi,
                     sUsername = name,
                     sSourceImage = imagePath,
-                    sNgaySinh = DateTime.Parse(DOB),
+                    sNgaySinh = DateTime.ParseExact(DOB, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                     sPassword = password
                 };
                 controlChiTietDocGia.DocGia = false;

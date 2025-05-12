@@ -43,7 +43,7 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
             txtSdt.Text = person.sSDT;
             lbHocten.Text = person.sHoTen;
             lbMa.Text = person.sMa;
-            lbNgaySinh.Text = person.sNgaySinh.ToString();
+            lbNgaySinh.Text = person.sNgaySinh.ToString("dd-MM-yyyy");
             lbSet.Text = person.sGioiTinh == true ? "Nam" : "Nữ";
             anhtheold = person.sSourceImage;
             try
@@ -184,7 +184,7 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
             person.sEmail = txtEmail.Text;
             person.sUsername = txtUsername.Text;
             person.sSDT = txtSdt.Text;
-            person.sNgaySinh = DateTime.Parse(lbNgaySinh.Text);
+            //person.sNgaySinh = DateTime.Parse(lbNgaySinh.Text);
             person.sHoTen = lbHocten.Text;
             person.sGioiTinh = lbSet.Text == "Nam" ? true : false;
             person.sPassword = txtPassword.Text;

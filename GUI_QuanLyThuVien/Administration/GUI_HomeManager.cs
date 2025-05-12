@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using BLL_QuanLyThuVien;
 using BLL_QuanLyThuVien.Functions;
 using Guna.UI2.WinForms;
@@ -23,6 +24,7 @@ namespace GUI_QuanLyThuVien.Administration
         {
             role = quyen;
             InitializeComponent();
+
             guna2DragControl1.TargetControl = guna2Panel1;
             guna2DGV1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             guna2DGV1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -111,6 +113,7 @@ namespace GUI_QuanLyThuVien.Administration
             lbgiotinh.Location = new Point(300, 320); // đặt vị trí rõ ràng
             lbgiotinh.Size = new Size(200, 50);
             panelInfor.Controls.Add(lbgiotinh);
+
             Label lbgiotinhR = new Label();
             lbgiotinhR.Text = $"{gioiTinh}";
             lbgiotinhR.ForeColor = Color.Black;
@@ -160,23 +163,23 @@ namespace GUI_QuanLyThuVien.Administration
             panelInfor.Controls.Add(lbSDTR);
 
 
-            Label lbEmail = new Label();
-            lbEmail.Text = "Email: ";
-            lbEmail.ForeColor = Color.Black;
-            lbEmail.Font = new Font("Segoe UI", 20, FontStyle.Bold);
-            //lbEmail.BackColor = Color.Transparent;
-            lbEmail.Location = new Point(300, 470); // đặt vị trí rõ ràng
-            lbEmail.Size = new Size(500, 50);
-            panelInfor.Controls.Add(lbEmail);
+            //Label lbEmail = new Label();
+            //lbEmail.Text = "Email: ";
+            //lbEmail.ForeColor = Color.Black;
+            //lbEmail.Font = new Font("Segoe UI", 20, FontStyle.Bold);
+            ////lbEmail.BackColor = Color.Transparent;
+            //lbEmail.Location = new Point(300, 470); // đặt vị trí rõ ràng
+            //lbEmail.Size = new Size(500, 50);
+            //panelInfor.Controls.Add(lbEmail);
 
-            Label lbEmailR = new Label();
-            lbEmailR.Text = $"{email}";
-            lbEmailR.ForeColor = Color.Black;
-            lbEmailR.Font = new Font("Segoe UI", 20, FontStyle.Bold);
-            //DOBR.BackColor = Color.Transparent;
-            lbEmailR.Location = new Point(550, 470); // đặt vị trí rõ ràng
-            lbEmailR.Size = new Size(500, 50);
-            panelInfor.Controls.Add(lbEmailR);
+            //Label lbEmailR = new Label();
+            //lbEmailR.Text = $"{email}";
+            //lbEmailR.ForeColor = Color.Black;
+            //lbEmailR.Font = new Font("Segoe UI", 20, FontStyle.Bold);
+            //lbEmailR.BackColor = Color.Transparent;
+            //lbEmailR.Location = new Point(550, 470); // đặt vị trí rõ ràng
+            //lbEmailR.Size = new Size(500, 50);
+            //panelInfor.Controls.Add(lbEmailR);
 
 
             Label lbuserName = new Label();
@@ -196,10 +199,10 @@ namespace GUI_QuanLyThuVien.Administration
             lbuserNameR.Location = new Point(550, 520); // đặt vị trí rõ ràng
             lbuserNameR.Size = new Size(500, 50);
             panelInfor.Controls.Add(lbuserNameR);
-
         }
         private void GUI_HomeManager_Load_1(object sender, EventArgs e)
         {
+            lbName.Text = "Xin chào '" + username + "' đến với hệ thống";
             BLL_LayAnhThe bll = new BLL_LayAnhThe();
             guna2DGV1.DataSource = BLL_TaiKhoan.viewlistTimeLogin();
 
@@ -223,6 +226,7 @@ namespace GUI_QuanLyThuVien.Administration
                 HideTabPage1(tabPage1);
                 //HideTabPage1(tabAdmin);
                 HideTabPage1(tabPageThuThu);
+                HideTabPage1(tabPageDocGia);
             }
             DataTable dt = bll_quanlythuthu.SearchThuThuToUsername(username);
             foreach (DataRow dr in dt.Rows)
@@ -305,18 +309,10 @@ namespace GUI_QuanLyThuVien.Administration
         {
 
         }
-        //private void btnClose_Click(object sender, EventArgs e)
-        //{
-        //    Close();
-        //}
 
+        private void guna2DGV1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-
-        //private void buttonClose_Click(object sender, EventArgs e)
-        //{
-        //    Close();
-        //}
-
-
+        }
     }
 }

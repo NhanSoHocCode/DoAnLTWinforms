@@ -35,7 +35,6 @@ namespace GUI_QuanLyThuVien.Administration
             txtMaThuThu.Text = sach1.sMaThuThu.ToString();
             txtTenSach.Text = sach1.sTenSach;
             npdSoLuong.Value = sach1.sSoLuong;
-            MessageBox.Show(sach1.sSoLuong.ToString());
             txtTheLoai.Text = sach1.sTheLoai;
             txtSource.Text = sach1.sSourceImange;
             DataTable dt = new DataTable();

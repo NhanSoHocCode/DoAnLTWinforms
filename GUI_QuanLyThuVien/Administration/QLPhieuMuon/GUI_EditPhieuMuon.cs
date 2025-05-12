@@ -67,5 +67,10 @@ namespace GUI_QuanLyThuVien.Administration
         {
 
         }
+
+        private void cbbTT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
