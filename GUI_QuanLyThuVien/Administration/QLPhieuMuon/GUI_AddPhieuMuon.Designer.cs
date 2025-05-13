@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_AddPhieuMuon));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,9 +62,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(31, 51);
+            this.label4.Location = new System.Drawing.Point(36, 51);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(335, 25);
+            this.label4.Size = new System.Drawing.Size(229, 17);
             this.label4.TabIndex = 34;
             this.label4.Text = "mở giao diện thêm cho khách hàng";
             // 
@@ -74,17 +75,17 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(29, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(483, 25);
+            this.label2.Size = new System.Drawing.Size(329, 17);
             this.label2.TabIndex = 33;
             this.label2.Text = "Vui lòng nhập thông tin độc giả cần tạo để tiếp tục ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(100, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.Size = new System.Drawing.Size(84, 16);
             this.label1.TabIndex = 30;
             this.label1.Text = "Mã độc giả";
             // 
@@ -114,6 +115,7 @@
             this.cbbMaDG.Name = "cbbMaDG";
             this.cbbMaDG.Size = new System.Drawing.Size(133, 36);
             this.cbbMaDG.TabIndex = 27;
+            this.cbbMaDG.SelectedIndexChanged += new System.EventHandler(this.cbbMaDG_SelectedIndexChanged);
             // 
             // btnOK
             // 
@@ -136,9 +138,9 @@
             // 
             // guna2PictureBox5
             // 
-            this.guna2PictureBox5.Image = global::GUI_QuanLyThuVien.Properties.Resources.user2;
+            this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(53, 118);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(53, 109);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(41, 41);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

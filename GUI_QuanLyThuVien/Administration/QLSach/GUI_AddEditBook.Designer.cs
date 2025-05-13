@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_AddEditBook));
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -50,6 +51,7 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -65,6 +67,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2ControlBox2);
             this.panel1.Controls.Add(this.guna2ControlBox1);
             this.panel1.Controls.Add(this.guna2CirclePictureBox1);
@@ -194,7 +197,7 @@
             this.btnOK.FillColor = System.Drawing.Color.Gray;
             this.btnOK.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(173, 507);
+            this.btnOK.Location = new System.Drawing.Point(172, 483);
             this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(192, 42);
@@ -208,7 +211,7 @@
             this.btnSearchFile.AutoRoundedCorners = true;
             this.btnSearchFile.BackColor = System.Drawing.Color.Gainsboro;
             this.btnSearchFile.BorderColor = System.Drawing.Color.Gainsboro;
-            this.btnSearchFile.BorderRadius = 22;
+            this.btnSearchFile.BorderRadius = 19;
             this.btnSearchFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSearchFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSearchFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -219,7 +222,7 @@
             this.btnSearchFile.Location = new System.Drawing.Point(290, 414);
             this.btnSearchFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchFile.Name = "btnSearchFile";
-            this.btnSearchFile.Size = new System.Drawing.Size(167, 46);
+            this.btnSearchFile.Size = new System.Drawing.Size(167, 40);
             this.btnSearchFile.TabIndex = 33;
             this.btnSearchFile.Text = "Chọn ảnh";
             this.btnSearchFile.Click += new System.EventHandler(this.btnSearchFile1_Click);
@@ -229,7 +232,7 @@
             this.txtSource.Animated = true;
             this.txtSource.AutoRoundedCorners = true;
             this.txtSource.BackColor = System.Drawing.Color.Transparent;
-            this.txtSource.BorderRadius = 22;
+            this.txtSource.BorderRadius = 15;
             this.txtSource.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSource.DefaultText = "";
             this.txtSource.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -244,7 +247,7 @@
             this.txtSource.Name = "txtSource";
             this.txtSource.PlaceholderText = "Source Image";
             this.txtSource.SelectedText = "";
-            this.txtSource.Size = new System.Drawing.Size(192, 46);
+            this.txtSource.Size = new System.Drawing.Size(192, 33);
             this.txtSource.TabIndex = 32;
             // 
             // txtTheLoai
@@ -365,7 +368,7 @@
             // 
             // guna2PictureBox7
             // 
-            this.guna2PictureBox7.Image = global::GUI_QuanLyThuVien.Properties.Resources.lammoi;
+            this.guna2PictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox7.Image")));
             this.guna2PictureBox7.ImageRotate = 0F;
             this.guna2PictureBox7.Location = new System.Drawing.Point(261, 228);
             this.guna2PictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -413,7 +416,7 @@
             // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.Image = global::GUI_QuanLyThuVien.Properties.Resources.user2;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(34, 181);
             this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -439,6 +442,16 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(35, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(367, 20);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Lưu ý: kiểm tra kỹ thôngtin trước khi thêm sách mới ";
+            // 
             // GUI_AddEditBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -453,6 +466,7 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.GUI_AddEditBook_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.npdSoLuong)).EndInit();
@@ -489,5 +503,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
