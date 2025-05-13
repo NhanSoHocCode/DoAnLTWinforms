@@ -23,7 +23,7 @@ namespace GUI
         public Form1()
         {
             InitializeComponent();
-            Form1_Load();
+            //Form1_Load();
         }
         private Form currentFormChild;
         private void OpenChildForm(Form childForm)
@@ -105,6 +105,11 @@ namespace GUI
         private void sataButton7_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Form1_Load();
         }
     }
 }

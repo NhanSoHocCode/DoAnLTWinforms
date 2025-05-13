@@ -19,6 +19,15 @@ namespace BLL_QuanLyThuVien
         }
         public String ThemSachMoi(DTO_Sach book) // tra ve thong bao khi them sach
         {
+            if (book.sTenSach == "" || book.sTacGia == "" || book.sTheLoai == "" || book.sNhaXuatBan == ""
+                || book.sSoLuong == 0 || book.sDonGia == 0)
+            {
+                return "Vui lòng nhập đầy đủ thông tin!";
+            }
+            if (book.sSourceImange == "")
+            {
+                return "Vui lòng chọn hình ảnh!";
+            }
             return dal_QuanLySach.ThemSach(book);
         }
         public DataTable TimKiemSach(string search)
@@ -47,6 +56,11 @@ namespace BLL_QuanLyThuVien
         }
         public string SuaSach(DTO_Sach book)
         {
+            if (book.sTenSach == "" || book.sTacGia == "" || book.sTheLoai == "" || book.sNhaXuatBan == ""
+                || book.sSoLuong == 0 || book.sDonGia == 0)
+            {
+                return "Vui lòng nhập đầy đủ thông tin!";
+            }
             return dal_QuanLySach.SuaSach(book);
         }
         public DataTable ListMaThuThu()

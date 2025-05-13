@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL_QuanLyThuVien;
 using DTO_QuanLyThuVien;
+using Sunny.UI.Win32;
 
 namespace BLL_QuanLyThuVien
 { 
@@ -22,17 +23,27 @@ namespace BLL_QuanLyThuVien
         }
         public string EditThuThu(DTO_Person person)
         {
+            if (person.sUsername == "" || person.sPassword == "" || person.sHoTen == "" || person.sSDT == "" 
+                || person.sDiaChi == "")
+            {
+                return "Vui lòng nhập đầy đủ thông tin!"; 
+            }
             return dal_quanlythuthu.EditPerson(person, "proc_editthuthu");
         }
         public string DelThuThu(string ma)
         {
             return dal_quanlythuthu.DelPerson(int.Parse(ma), "proc_delthuthu");
         }
-        public string AddThuThu(DTO_Person ps)
+        public string AddThuThu(DTO_Person person)
         {
+            if (person.sUsername == "" || person.sPassword == "" || person.sHoTen == "" || person.sSDT == ""
+                || person.sDiaChi == "")
+            {
+                return "Không được bỏ trống thông tin!";
+            }
             DAL_TaiKhoanAccess tk = new DAL_TaiKhoanAccess();
-            tk.ThemTaiKhoan(ps);
-            return dal_quanlythuthu.AddThuThu(ps);
+            tk.ThemTaiKhoan(person);
+            return dal_quanlythuthu.AddThuThu(person);
         }
         public DataTable SearchThuThu(string search)
         {

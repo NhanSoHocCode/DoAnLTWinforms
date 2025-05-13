@@ -202,7 +202,6 @@ namespace GUI_QuanLyThuVien.Administration
                     sUsername = name,
                     sSourceImage = imagePath,
                     sNgaySinh = DateTime.ParseExact(DOB, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-
                     sPassword = password
                 };
                 controlChiTietDocGia.DocGia = true;

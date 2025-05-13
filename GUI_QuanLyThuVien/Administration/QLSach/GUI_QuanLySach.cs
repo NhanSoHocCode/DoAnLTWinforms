@@ -170,7 +170,7 @@ namespace GUI_QuanLyThuVien
 
             // Thủ thư
             Label lblLibrarian = new Label();
-            lblLibrarian.Text = "Thủ thư: " + librarianID;
+            lblLibrarian.Text = "Số lượng: " + soLuong;
             lblLibrarian.Font = new Font("Segoe UI", 9);
             lblLibrarian.ForeColor = Color.BlueViolet;
             lblLibrarian.BackColor = Color.Transparent;

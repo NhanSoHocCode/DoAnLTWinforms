@@ -20,41 +20,21 @@ namespace GUI_QuanLyThuVien.Administration
         {
             InitializeComponent();
         }
+        Boolean isListCanhCao = false;
         BLL_QuanLyPhieuMuon bll_quanlyphieumuon = new BLL_QuanLyPhieuMuon();
         string Function;
         private void btnRefesh_Click(object sender, EventArgs e)
         {
-            //dtg1.ClearSelection();
-            //dtg1.DataSource = bll_quanlyphieumuon.viewListPM();
             guna2DGV1.ClearSelection();
             guna2DGV1.DataSource = bll_quanlyphieumuon.viewListPM();
         }
         private void GUI_QuanLyPhieuMuon_Load_1(object sender, EventArgs e)
         {
-            //dtg1.ClearSelection();
-            //dtg1.DataSource = bll_quanlyphieumuon.viewListPM();
             guna2DGV1.ClearSelection();
             guna2DGV1.DataSource = bll_quanlyphieumuon.viewListPM();
-        }
-        private void btnListCanhCaoQuaHan_Click(object sender, EventArgs e)
-        {
-            //dtg1.ClearSelection();
-            //dtg1.DataSource = bll_quanlyphieumuon.ListCanhCaoQuaHan();
-            guna2DGV1.ClearSelection();
-            guna2DGV1.DataSource = bll_quanlyphieumuon.ListCanhCaoQuaHan();
-        }
-
-        
-
+        }     
         private void txtSearchPhieu_KeyDown(object sender, KeyEventArgs e)
         {
-            //dtg1.ClearSelection();
-            //DTO_PhieuMuon pm = new DTO_PhieuMuon();
-            //pm.sMaPhieuMuon = int.TryParse(txtSearchPhieu.Text, out int maPhieu) ? maPhieu : 0;
-            //pm.sTenDocGia = txtSearchPhieu.Text;
-            //dtg1.ClearSelection();
-            //dtg1.DataSource = bll_quanlyphieumuon.TimKiemPhieuMuon(pm);
-
             guna2DGV1.ClearSelection();
             DTO_PhieuMuon pm = new DTO_PhieuMuon();
             pm.sMaPhieuMuon = int.TryParse(txtSearchPhieu.Text, out int maPhieu) ? maPhieu : 0;
@@ -65,6 +45,7 @@ namespace GUI_QuanLyThuVien.Administration
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            isListCanhCao = false;
             guna2DGV1.ClearSelection();
             guna2DGV1.DataSource = bll_quanlyphieumuon.viewListPM();
         }
@@ -85,45 +66,63 @@ namespace GUI_QuanLyThuVien.Administration
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+            isListCanhCao = true;
             guna2DGV1.ClearSelection();
             guna2DGV1.DataSource = bll_quanlyphieumuon.ListCanhCaoQuaHan();
         }
 
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (guna2DGV1 == null || bll_quanlyphieumuon == null || Function == null)
+            if (!isListCanhCao)
             {
-                MessageBox.Show(
-                    "Vui lòng chọn chức năng!", 
-                    "Cảnh Báo",                                 
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning                      
-                );
-                return;
-            }
 
-            if (Function == "Delete")
-            {
-                if (e.RowIndex >= 0)
+                if (guna2DGV1 == null || bll_quanlyphieumuon == null || Function == null)
                 {
-                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa dòng này?",
-                                                          "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    MessageBox.Show(
+                        "Vui lòng chọn chức năng!", 
+                        "Cảnh Báo",                                 
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning                      
+                    );
+                    return;
+                }
+
+                if (Function == "Delete")
+                {
+                    if (e.RowIndex >= 0)
+                    {
+                        DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa dòng này?",
+                                                              "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            DataGridViewRow row = guna2DGV1.Rows[e.RowIndex];
+                            int maphieumuon = int.Parse(row.Cells[0].Value?.ToString());
+                            guna2DGV1.Rows.RemoveAt(e.RowIndex);
+                            //da them phan + so luong sach vao .
+                            MessageBox.Show(bll_quanlyphieumuon.XoaPhieuMuon(maphieumuon));        // Xoa sach trong database   
+                        }
+                    }
+                }
+                else if (Function == "Edit")
+                {
+
+                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sửa dòng này?",
+                                                          "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
                         DataGridViewRow row = guna2DGV1.Rows[e.RowIndex];
-                        int maphieumuon = int.Parse(row.Cells[0].Value?.ToString());
-                        guna2DGV1.Rows.RemoveAt(e.RowIndex);
-                        //da them phan + so luong sach vao .
-                        MessageBox.Show(bll_quanlyphieumuon.XoaPhieuMuon(maphieumuon));        // Xoa sach trong database   
+                        DTO_PhieuMuon pm = new DTO_PhieuMuon();
+                        pm.sMaPhieuMuon = int.Parse(guna2DGV1.Rows[e.RowIndex].Cells[0].Value?.ToString());
+                        pm.sNgayMuon = DateTime.Parse(guna2DGV1.Rows[e.RowIndex].Cells[1].Value?.ToString());
+                        pm.sNgayTra = DateTime.Parse(guna2DGV1.Rows[e.RowIndex].Cells[2].Value?.ToString());
+                        pm.sTrangThai = guna2DGV1.Rows[e.RowIndex].Cells[3].Value?.ToString();
+                        pm.sTenDocGia = guna2DGV1.Rows[e.RowIndex].Cells[4].Value?.ToString();
+                        GUI_EditPhieuMuon form = new GUI_EditPhieuMuon();
+                        form.pm = pm;
+                        form.ShowDialog();
                     }
                 }
-            }
-            else if (Function == "Edit")
-            {
-
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sửa dòng này?",
-                                                      "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                else if (Function == "Details")
                 {
                     DataGridViewRow row = guna2DGV1.Rows[e.RowIndex];
                     DTO_PhieuMuon pm = new DTO_PhieuMuon();
@@ -132,23 +131,10 @@ namespace GUI_QuanLyThuVien.Administration
                     pm.sNgayTra = DateTime.Parse(guna2DGV1.Rows[e.RowIndex].Cells[2].Value?.ToString());
                     pm.sTrangThai = guna2DGV1.Rows[e.RowIndex].Cells[3].Value?.ToString();
                     pm.sTenDocGia = guna2DGV1.Rows[e.RowIndex].Cells[4].Value?.ToString();
-                    GUI_EditPhieuMuon form = new GUI_EditPhieuMuon();
+                    GUI_XemChiTietPM form = new GUI_XemChiTietPM();
                     form.pm = pm;
                     form.ShowDialog();
                 }
-            }
-            else if (Function == "Details")
-            {
-                DataGridViewRow row = guna2DGV1.Rows[e.RowIndex];
-                DTO_PhieuMuon pm = new DTO_PhieuMuon();
-                pm.sMaPhieuMuon = int.Parse(guna2DGV1.Rows[e.RowIndex].Cells[0].Value?.ToString());
-                pm.sNgayMuon = DateTime.Parse(guna2DGV1.Rows[e.RowIndex].Cells[1].Value?.ToString());
-                pm.sNgayTra = DateTime.Parse(guna2DGV1.Rows[e.RowIndex].Cells[2].Value?.ToString());
-                pm.sTrangThai = guna2DGV1.Rows[e.RowIndex].Cells[3].Value?.ToString();
-                pm.sTenDocGia = guna2DGV1.Rows[e.RowIndex].Cells[4].Value?.ToString();
-                GUI_XemChiTietPM form = new GUI_XemChiTietPM();
-                form.pm = pm;
-                form.ShowDialog();
             }
         }
 

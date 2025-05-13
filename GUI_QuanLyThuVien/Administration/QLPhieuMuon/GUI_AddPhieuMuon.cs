@@ -67,14 +67,7 @@ namespace GUI_QuanLyThuVien.Administration.QLPhieuMuon
              );
             if (result == DialogResult.Yes)
             {
-                //// Xử lý khi người dùng chọn Yes
-                //DTO_PhieuMuon pm = new DTO_PhieuMuon();
-                //pm.sMaDocGia = int.Parse(cbbMaDG.Text);
-                ////pm.sNgayTra = dtp2.Value;
-                //int maPMnew = bllpm.CreatePMtoDocGia(pm);
-                //bllpm.ThemSachVaoPhieuMuonV3(maPMnew, int.Parse(cbbMaDG.Text));
-                //MessageBox.Show($"Phiếu có mã {maPMnew} lập thành công", "Thông báo");
-                ////bllpm.DelBookToCartOnDocGia(int.Parse(cbbMaDG.Text));
+                this.Close();
                 DTO_Person person = new DTO_Person();
                 BLL_QuanLyDocGia bllqldg = new BLL_QuanLyDocGia();
                 DataTable dt = bllqldg.SearchDocGia(cbbMaDG.Text);

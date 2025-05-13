@@ -77,7 +77,7 @@ namespace GUI_QuanLyThuVien.Administration
             }
             catch (Exception ex)
             {
-                throw ex;
+                return;
             }
         }
 
@@ -120,6 +120,11 @@ namespace GUI_QuanLyThuVien.Administration
                 sach1.sTacGia = txtTacGia.Text;
                 sach1.sNhaXuatBan = txtNhaXB.Text;
                 sach1.sDonGia = decimal.Parse(txtDonGia.Text);
+                if (txtMaThuThu.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập mã thủ thư");
+                    return;
+                }
                 sach1.sMaThuThu = int.Parse(txtMaThuThu.Text);
                 sach1.sTenSach = txtTenSach.Text;
                 sach1.sSoLuong = (int)npdSoLuong.Value;
@@ -143,6 +148,7 @@ namespace GUI_QuanLyThuVien.Administration
                 sach1.sSourceImange = txtSource.Text;
                 MessageBox.Show(bll_quanlysach.SuaSach(sach1));   //  xet xem du lieu da oke chua trong BLL
             }
+            this.Close();
         }
 
         private void label8_Click(object sender, EventArgs e)

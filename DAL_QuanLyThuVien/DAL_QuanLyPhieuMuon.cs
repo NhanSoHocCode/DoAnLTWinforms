@@ -131,7 +131,7 @@ namespace DAL_QuanLyThuVien
                 cmd.Parameters.AddWithValue("@maphieumuon", maPhieuMuon);
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                return "Xoa phieu muon thanh cong";
+                return "Xóa phiếu thành công";
             }
             catch (Exception ex)
             {
@@ -185,7 +185,7 @@ namespace DAL_QuanLyThuVien
                 cmd.Parameters.AddWithValue("@ngaytra", pm.sNgayTra);
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                return "Chinh sua thanh cong";
+                return "Chỉnh sửa thành công";
             }
             catch (Exception ex)
             {
@@ -286,7 +286,7 @@ namespace DAL_QuanLyThuVien
                 cmd.Parameters.AddWithValue("@maDocGia", maDocGia);
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                return "Xoas thành công";
+                return "Xóa sách khỏi giỏ thành công";
             }
             catch (Exception ex)
             {
@@ -305,7 +305,7 @@ namespace DAL_QuanLyThuVien
                 cmd.Parameters.AddWithValue("@maDG", maDG);
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                return "Thêm thành công";
+                return "Thêm sách vào phiếu thành công";
             }
             catch (Exception ex)
             {

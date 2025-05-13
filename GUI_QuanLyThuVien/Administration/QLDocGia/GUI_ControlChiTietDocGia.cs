@@ -37,14 +37,14 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
             }
             txtPassword.Text = person.sPassword;
             txtAddress.Text = person.sDiaChi;
-            txtEmail.Text = person.sEmail;
+            lbEmail.Text = person.sEmail;
             txtUsername.Text = person.sUsername;
             usernameold = person.sUsername;
             txtSdt.Text = person.sSDT;
-            lbHocten.Text = person.sHoTen;
+            txtTen.Text = person.sHoTen;
             lbMa.Text = person.sMa;
-            lbNgaySinh.Text = person.sNgaySinh.ToString("dd-MM-yyyy");
-            lbSet.Text = person.sGioiTinh == true ? "Nam" : "Nữ";
+            dtpNgaySinh.Value = person.sNgaySinh;
+            cbbset.Text = person.sGioiTinh == true ? "Nam" : "Nữ";
             anhtheold = person.sSourceImage;
             try
             {
@@ -160,6 +160,7 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
             {
                 MessageBox.Show(bll_QuanLyDocGia.DelDocGia(person.sMa));
             }
+            this.Close();
         }
 
         private void guna2Button1_Click_2(object sender, EventArgs e)
@@ -181,20 +182,16 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
             person.sDiaChi = txtAddress.Text;
-            person.sEmail = txtEmail.Text;
+            person.sEmail = lbEmail.Text;
             person.sUsername = txtUsername.Text;
             person.sSDT = txtSdt.Text;
-            //person.sNgaySinh = DateTime.Parse(lbNgaySinh.Text);
-            person.sHoTen = lbHocten.Text;
-            person.sGioiTinh = lbSet.Text == "Nam" ? true : false;
+            person.sNgaySinh = dtpNgaySinh.Value;
+            person.sHoTen = txtTen.Text;
+            person.sGioiTinh = cbbset.Text == "Nam" ? true : false;
             person.sPassword = txtPassword.Text;
             if (ChangeImage == true)
             {
                 SaveImageToFolder(fileNameLong);
-                //string path = "D:\\K25_Project_LTWinform\\DoAn\\images\\DocGia\\" + anhtheold;
-                //ptbAnhThe.Image?.Dispose();
-                //ptbAnhThe.Image = null;
-                //File.Delete(person.sSourceImage);
                 person.sSourceImage = anhtheold;
             }
             if (DocGia == true)
@@ -205,6 +202,7 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
             {
                 MessageBox.Show(bll_QuanLyThuThu.UpdateThuThu(person, usernameold));
             }
+            this.Close();
         }
     }
 }
