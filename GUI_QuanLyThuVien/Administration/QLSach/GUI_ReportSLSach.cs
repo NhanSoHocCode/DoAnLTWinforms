@@ -27,6 +27,7 @@ namespace GUI_QuanLyThuVien.Administration.QLSach
                 ReportDataSource reportDataSource = new ReportDataSource();
                 reportDataSource.Name = "DataSet1"; // Tên DataSet trong RDLC
                 reportDataSource.Value = bll_QuanLySach.DanhSachSachReportSL(); // Dữ liệu của bạn ở đây
+                reportViewer1.ZoomPercent = 150;
                 reportViewer1.LocalReport.DataSources.Add(reportDataSource);
                 this.reportViewer1.RefreshReport();
             }

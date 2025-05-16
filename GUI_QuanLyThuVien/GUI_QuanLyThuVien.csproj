@@ -80,6 +80,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\QLDocGia\GUI_ReportDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\QLDocGia\GUI_ReportDocGia.Designer.cs">
+      <DependentUpon>GUI_ReportDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administration\QLPhieuMuon\GUI_AddPhieuMuon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,12 @@
     </Compile>
     <Compile Include="Administration\QLSach\GUI_ReportSLSach.Designer.cs">
       <DependentUpon>GUI_ReportSLSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\QLThuThu\GUI_ReportThuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\QLThuThu\GUI_ReportThuThu.Designer.cs">
+      <DependentUpon>GUI_ReportThuThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Administration\QLThuThu\GUI_AddThuThu.cs">
       <SubType>Form</SubType>
@@ -184,6 +196,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyThuVIenNewDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyThuVIenNewDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVIenNewDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThuVIenNewDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVIenNewDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="User\GUI_DangKyDG.cs">
       <SubType>Form</SubType>
@@ -238,6 +260,9 @@
     <EmbeddedResource Include="Administration\QLDocGia\GUI_ControlChiTietDocGia.resx">
       <DependentUpon>GUI_ControlChiTietDocGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\QLDocGia\GUI_ReportDocGia.resx">
+      <DependentUpon>GUI_ReportDocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\QLPhieuMuon\GUI_AddPhieuMuon.resx">
       <DependentUpon>GUI_AddPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,8 +302,13 @@
     <EmbeddedResource Include="Administration\QLPhieuMuon\GUI_Report.resx">
       <DependentUpon>GUI_Report.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\QLThuThu\GUI_ReportThuThu.resx">
+      <DependentUpon>GUI_ReportThuThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="User\GUI_DangKyDG.resx">
       <DependentUpon>GUI_DangKyDG.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +424,28 @@
     </None>
     <None Include="QuanLyThuVIenNewDataSet3.xss">
       <DependentUpon>QuanLyThuVIenNewDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyThuVIenNewDataSet4.xsc">
+      <DependentUpon>QuanLyThuVIenNewDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyThuVIenNewDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyThuVIenNewDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyThuVIenNewDataSet4.xss">
+      <DependentUpon>QuanLyThuVIenNewDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyThuVIenNewDataSet5.xsc">
+      <DependentUpon>QuanLyThuVIenNewDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyThuVIenNewDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyThuVIenNewDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyThuVIenNewDataSet5.xss">
+      <DependentUpon>QuanLyThuVIenNewDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Resources\user.png" />
   </ItemGroup>

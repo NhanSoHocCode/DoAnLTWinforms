@@ -1,6 +1,6 @@
-﻿namespace GUI_QuanLyThuVien.Administration.QLSach
+﻿namespace GUI_QuanLyThuVien.Administration.QLThuThu
 {
-    partial class GUI_ReportSLSach
+    partial class GUI_ReportThuThu
     {
         /// <summary>
         /// Required designer variable.
@@ -37,20 +37,20 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1555, 1203);
+            this.reportViewer1.Size = new System.Drawing.Size(1555, 1225);
             this.reportViewer1.TabIndex = 0;
             // 
-            // GUI_ReportSLSach
+            // GUI_ReportThuThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 962);
+            this.ClientSize = new System.Drawing.Size(1244, 980);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "GUI_ReportSLSach";
+            this.Name = "GUI_ReportThuThu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GUI_ReportSLSach";
-            this.Load += new System.EventHandler(this.GUI_ReportSLSach_Load);
+            this.Text = "Report Thủ Thư";
+            this.Load += new System.EventHandler(this.GUI_ReportThuThu_Load);
             this.ResumeLayout(false);
 
         }

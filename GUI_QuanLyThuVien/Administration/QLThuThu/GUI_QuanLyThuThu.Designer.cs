@@ -33,6 +33,7 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnaddtt = new Guna.UI2.WinForms.Guna2Button();
             this.btnListTT = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.btnaddtt);
             this.panel1.Controls.Add(this.btnListTT);
@@ -122,13 +124,35 @@
             this.btnListTT.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnListTT.ForeColor = System.Drawing.Color.White;
             this.btnListTT.Image = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
-            this.btnListTT.Location = new System.Drawing.Point(32, 25);
+            this.btnListTT.Location = new System.Drawing.Point(30, 2);
             this.btnListTT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListTT.Name = "btnListTT";
             this.btnListTT.Size = new System.Drawing.Size(211, 54);
             this.btnListTT.TabIndex = 6;
             this.btnListTT.Text = "Xem danh sách";
             this.btnListTT.Click += new System.EventHandler(this.btnListTT_Click_1);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 26;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Gray;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
+            this.guna2Button1.Location = new System.Drawing.Point(30, 60);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(211, 54);
+            this.guna2Button1.TabIndex = 16;
+            this.guna2Button1.Text = "Báo Cáo Thủ Thư";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // GUI_QuanLyThuThu
             // 
@@ -155,5 +179,6 @@
         private Guna.UI2.WinForms.Guna2Button btnaddtt;
         private Guna.UI2.WinForms.Guna2Button btnListTT;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

@@ -252,5 +252,11 @@ private void Form1_Load(object sender, EventArgs e)
             flowLayoutPanel1.Controls.Clear();
             LoadListTT(dt);
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            GUI_ReportThuThu report = new GUI_ReportThuThu();
+            report.ShowDialog();
+        }
     }
 }

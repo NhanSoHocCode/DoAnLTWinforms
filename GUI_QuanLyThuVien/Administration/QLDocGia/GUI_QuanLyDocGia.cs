@@ -251,5 +251,11 @@ namespace GUI_QuanLyThuVien.Administration
             GUI_XacNhapMailDangKy form = new GUI_XacNhapMailDangKy();
             form.ShowDialog();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            GUI_ReportDocGia form = new GUI_ReportDocGia();
+            form.ShowDialog();
+        }
     }
 }

@@ -493,10 +493,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>5.08cm</Height>
+    <Height>2.01083cm</Height>
     <Style />
   </Body>
-  <Width>16.85396cm</Width>
+  <Width>17.63713cm</Width>
   <Page>
     <PageHeader>
       <Height>3.70099cm</Height>
@@ -508,7 +508,7 @@
           <Value>tảixuống1</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.09597in</Top>
-          <Left>0.14583in</Left>
+          <Left>0.3375in</Left>
           <Height>0.71875in</Height>
           <Width>6.36458in</Width>
           <Style>
@@ -536,9 +536,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.99875in</Top>
-          <Left>1.62375in</Left>
+          <Left>1.97084in</Left>
           <Height>0.38889in</Height>
-          <Width>3.48958in</Width>
+          <Width>4.22639in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -558,7 +558,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>4.55083cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -569,7 +569,69 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>TP.Hồ Chí Minh, ...../..../........</Value>
+                  <Value>TP.Hồ Chí Minh,</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox14</rd:DefaultName>
+          <Top>0.275in</Top>
+          <Left>4.40625in</Left>
+          <Height>0.27083in</Height>
+          <Width>1.14375in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="txtGetDate">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Format(Now(), "dd/MM/yyyy")</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.275in</Top>
+          <Left>5.45in</Left>
+          <Height>0.29861in</Height>
+          <Width>1.14375in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox16">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Ký tên</Value>
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -580,7 +642,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>                      Ký tên </Value>
+                  <Value />
                   <Style>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -590,10 +652,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
-          <Top>0.21875in</Top>
-          <Left>3.95708in</Left>
-          <Height>0.52083in</Height>
-          <Width>2.34375in</Width>
+          <Top>0.61528in</Top>
+          <Left>5.05348in</Left>
+          <Height>0.27083in</Height>
+          <Width>1.14375in</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
