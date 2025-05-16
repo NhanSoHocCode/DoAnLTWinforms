@@ -185,6 +185,10 @@ namespace GUI.UserControl
                         try
                         {
                             product.SoLuong = int.Parse(txtQuantity.Text); // Cập nhật số lượng trong dữ liệu
+                            DTO_Sach book = new DTO_Sach();
+                            book.sMaSach = product.MaSach;
+                            book.sSoLuong = int.Parse(txtQuantity.Text);
+                            bll_quanlysach.InsertBookToCart(book, int.Parse(person.sMa));
                         } 
                         catch(Exception ex)
                         {
@@ -207,6 +211,19 @@ namespace GUI.UserControl
                     if (int.TryParse(txtQuantity.Text, out currentValue))
                     {
                         txtQuantity.Text = (currentValue + 1).ToString();
+                        try
+                        {
+                            product.SoLuong = int.Parse(txtQuantity.Text); // Cập nhật số lượng trong dữ liệu
+                            DTO_Sach book = new DTO_Sach();
+                            book.sMaSach = product.MaSach;
+                            book.sSoLuong = int.Parse(txtQuantity.Text);
+                            bll_quanlysach.InsertBookToCart(book, int.Parse(person.sMa));
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Lỗi cập nhật số lượng: {ex.Message}");
+                            return;   // thoat 
+                        }
                     }
                 };
                 // Thêm các control vào Panel

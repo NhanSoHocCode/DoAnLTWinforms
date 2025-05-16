@@ -144,5 +144,11 @@ namespace GUI_QuanLyThuVien.Administration
             gUI_AddPhieuMuon.ShowDialog();
 
         }
+
+        private void guna2Button1_Click_2(object sender, EventArgs e)
+        {
+            GUI_Report gUI_Report = new GUI_Report();
+            gUI_Report.ShowDialog();
+        }
     }
 }

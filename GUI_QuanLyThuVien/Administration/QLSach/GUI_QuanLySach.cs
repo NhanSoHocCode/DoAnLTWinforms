@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using BLL_QuanLyThuVien;
 using DTO_QuanLyThuVien;
 using GUI_QuanLyThuVien.Administration;
+using GUI_QuanLyThuVien.Administration.QLSach;
 using Sunny.UI;
 
 namespace GUI_QuanLyThuVien
@@ -294,6 +295,12 @@ namespace GUI_QuanLyThuVien
                     AddBookToPanel(img, maSach, tenSach, tacGia, NXB, donGia, theLoai, MTT, int.Parse(soLuong));
                 }
             }
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            GUI_ReportSLSach gUI_Report = new GUI_ReportSLSach();
+            gUI_Report.ShowDialog();
         }
     }
 }

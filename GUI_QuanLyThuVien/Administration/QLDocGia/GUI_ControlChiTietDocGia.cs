@@ -194,6 +194,10 @@ namespace GUI_QuanLyThuVien.Administration.QLDocGia
                 SaveImageToFolder(fileNameLong);
                 person.sSourceImage = anhtheold;
             }
+            else
+            {
+                person.sSourceImage = Path.GetFileName(anhtheold);
+            }
             if (DocGia == true)
             {
                 MessageBox.Show(bll_QuanLyDocGia.UpdateDocGia(person, usernameold));

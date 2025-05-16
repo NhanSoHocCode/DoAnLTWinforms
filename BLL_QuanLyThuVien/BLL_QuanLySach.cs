@@ -49,7 +49,10 @@ namespace BLL_QuanLyThuVien
             }
             return dal_QuanLySach.TimKiemSach(dieuKienTimKiem);
         }
-
+        public DataTable DanhSachSachReportSL()
+        {
+            return dal_QuanLySach.DanhSachReport();
+        }
         public string XoaSach(string ma) 
         {
             return dal_QuanLySach.XoaSach(int.Parse(ma));

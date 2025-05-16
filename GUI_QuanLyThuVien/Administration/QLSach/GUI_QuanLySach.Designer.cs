@@ -28,18 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_QuanLySach));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
             this.cbbChooseTheLoai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddBook = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.btnRefesh);
             this.panel1.Controls.Add(this.cbbChooseTheLoai);
             this.panel1.Controls.Add(this.txtUser);
@@ -65,7 +68,7 @@
             this.btnRefesh.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnRefesh.ForeColor = System.Drawing.Color.White;
             this.btnRefesh.Image = global::GUI_QuanLyThuVien.Properties.Resources.eeg;
-            this.btnRefesh.Location = new System.Drawing.Point(32, 25);
+            this.btnRefesh.Location = new System.Drawing.Point(12, 2);
             this.btnRefesh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Size = new System.Drawing.Size(211, 54);
@@ -149,6 +152,28 @@
             this.flowLayoutPanelMain.Size = new System.Drawing.Size(1726, 893);
             this.flowLayoutPanelMain.TabIndex = 0;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.guna2Button1.BorderRadius = 26;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Gray;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.Location = new System.Drawing.Point(12, 58);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(211, 54);
+            this.guna2Button1.TabIndex = 38;
+            this.guna2Button1.Text = "Báo cáo số lượng";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
+            // 
             // GUI_QuanLySach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -178,5 +203,6 @@
         private Guna.UI2.WinForms.Guna2Button btnRefesh;
         private Guna.UI2.WinForms.Guna2Button btnAddBook;
         private Guna.UI2.WinForms.Guna2ComboBox cbbChooseTheLoai;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

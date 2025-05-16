@@ -56,5 +56,9 @@ namespace BLL_QuanLyThuVien
         {
             return dllPhieuMuon.ThemSachVaoPhieuMuonV3(maPM, maDG);
         }
+        public DataTable ListPMchuatra()
+        {
+            return dllPhieuMuon.ListPMchuatra();
+        }
     }
 }

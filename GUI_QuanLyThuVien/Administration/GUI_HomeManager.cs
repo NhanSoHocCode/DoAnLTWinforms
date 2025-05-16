@@ -314,5 +314,10 @@ namespace GUI_QuanLyThuVien.Administration
         {
 
         }
+
+        private void guna2DGV1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
